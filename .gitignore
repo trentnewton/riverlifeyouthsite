@@ -29,7 +29,7 @@
 Thumbs.db
 /logs/*
 
-favicon.ico
+default
 readme.txt
 
 craft/app/*
@@ -47,6 +47,7 @@ public/config
 public/images
 public/video
 
+public/favicon.ico
 public/index.php
 public/htaccess
 public/robots.txt
