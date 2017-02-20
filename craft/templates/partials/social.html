@@ -1,22 +1,23 @@
 <ul class="menu social-share align-center">
-	<li>
+	<li class="facebook">
 		<div class="fb-like"
 			data-href="{{ entry.url }}"
-			data-layout="standard"
+			data-layout="button"
 			data-action="like"
+			data-share="true"
 			data-show-faces="false">
 		</div>
 	</li>
-	<li>
-		<a class="twitter-share-button" href="https://twitter.com/intent/tweet?text={{ title|url_encode }}%20-%20{{ siteName|url_encode }}">Tweet</a>
+	<li class="twitter">
+		<a href="https://twitter.com/intent/tweet?text={{ title|url_encode }}%20-%20{{ siteName|url_encode }}" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 	</li>
-	<li>
+	<li class="pinterest">
 		<a data-pin-do="buttonPin" data-pin-save="true" href="https://www.pinterest.com/pin/create/button/?url={{ entry.url|url_encode }}&media={% for asset in entry.coverImage %}{{ siteUrl|url_encode }}{{ asset.getUrl('metaImageFit')|url_encode }}{% endfor %}&description={{ title|url_encode }}%20-%20{{ siteName|url_encode }}"></a>
 	</li>
-	<li>
+	<li class="google-plus">
 		<div class="g-plusone" data-annotation="none"></div>
 	</li>
-	<li>
+	<li class="share">
 		<a href="mailto:?to=&amp;subject={{ title }} - {{ siteName }}&amp;body={{ entry.url|url_encode }}" rel="nofollow"><svg class="icon icon-share"><use xlink:href="#icon-share"></use></svg></a>
 	</li>
 </ul>

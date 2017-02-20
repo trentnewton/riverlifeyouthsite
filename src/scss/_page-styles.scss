@@ -352,11 +352,14 @@ p.post-meta {
 	flex-flow: row wrap;
 
 	> li {
+		position: relative;
+		margin-right: rem-calc(10);
 
 		> a {
 			font-size: rem-calc(map-deep-get($header-styles, 'medium', 'h5', 'font-size') * 1px);
-			margin: 0.5rem;
-			text-align: center;
+			padding: 0;
+			// margin: 0.5rem;
+			// text-align: center;
 
 			// &:hover,
 			// &:focus {
@@ -374,6 +377,23 @@ p.post-meta {
 
 		}
 
+	}
+
+	.twitter {
+		top: rem-calc(6);
+	}
+
+	.pinterest {
+		top: rem-calc(1);
+	}
+
+	.google-plus {
+		top: rem-calc(6);
+	}
+
+	.share {
+		top: rem-calc(2);
+		margin-right: 0;
 	}
 
 }
