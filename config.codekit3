@@ -15,6 +15,12 @@
 		"oAP": "\/.bowerrc",
 		"oF": 0
 		},
+	"\/.gitignore": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/.gitignore",
+		"oF": 0
+		},
 	"\/bower.json": {
 		"ft": 524288,
 		"oA": 1,
@@ -28888,6 +28894,12 @@
 		"oAP": "\/craft\/storage\/backups\/riverlife-youth_170216_051933_8znotnqywx_v2.6.2961.sql",
 		"oF": 0
 		},
+	"\/craft\/storage\/backups\/riverlife-youth_170220_073725_eswdxwtyvw_v2.6.2962.sql": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/storage\/backups\/riverlife-youth_170220_073725_eswdxwtyvw_v2.6.2962.sql",
+		"oF": 0
+		},
 	"\/craft\/storage\/rebrand\/logo\/RiverlifeYouthLogo_Black-login.png": {
 		"ft": 32768,
 		"iS": 13566,
@@ -31814,6 +31826,12 @@
 		"oO": 0,
 		"oS": 1
 		},
+	"\/craft\/storage\/runtime\/temp\/riverlife-youth_170220_073725_eswdxwtyvw_v2.6.2962.zip": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/storage\/runtime\/temp\/riverlife-youth_170220_073725_eswdxwtyvw_v2.6.2962.zip",
+		"oF": 0
+		},
 	"\/craft\/storage\/runtime\/URI\/4.8.0,3478238e680361cd87bf880f5b3cc50a1e7abc6c,1.ser": {
 		"ft": 8192,
 		"oA": 2,
@@ -31944,6 +31962,12 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/craft\/web.config",
+		"oF": 0
+		},
+	"\/default": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/default",
 		"oF": 0
 		},
 	"\/package.json": {
@@ -34377,7 +34401,7 @@
 	},
 "projectAttributes": {
 	"creationDate": 508656575,
-	"displayValue": "riverlifeyouthsite2",
+	"displayValue": "riverlifeyouthsite",
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "meme-trap"
 	},
