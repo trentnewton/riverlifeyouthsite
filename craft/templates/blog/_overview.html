@@ -1,0 +1,30 @@
+{% extends 'layouts/_regular' %}
+{% set heroTitle = entry.title %}
+
+{% block content %}
+	{% include 'partials/hero.html' %}
+	<section class="page-main slope-page">
+		<article class="row">
+			<div class="column">
+				<h2 class="header">{{ 'Latest' | translate }}</h2>
+			</div>
+		</article>
+		<div class="row small-up-1 medium-up-3">
+			{% for entry in craft.entries.section('blog').limit(3) %}
+				{% include 'partials/snippets.html' %}
+			{% endfor %}
+		</div>
+	</section>
+	<section class="page-secondary">
+		<div class="row">
+			<div class="small-12 column">
+				<h2 class="header">{{ 'Older' | translate }}</h2>
+			</div>
+		</div>
+		<div class="row small-up-1 medium-up-3">
+			{% for entry in craft.entries.section('blog').limit().offset(3) %}
+				{% include 'partials/snippets.html' %}
+			{% endfor %}
+		</div>
+	</section>
+{% endblock %}

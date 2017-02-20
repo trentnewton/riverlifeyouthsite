@@ -1,0 +1,54 @@
+.error-page {
+	height: 100vh;
+
+	canvas {
+		position: absolute;
+		left: 0;
+		top: 0;
+		z-index: -1;
+
+	}
+
+}
+
+.error-page-content {
+	height: 100%;
+	color: $white;
+	background: linear-gradient(50deg, rgba($primary-color, 0.8) 0, rgba($secondary-color, 0.8) 100%);
+
+	.header,
+	.description,
+	p {
+		text-shadow: 1px 1px 7px rgba($black, 0.5);
+	}
+
+	a {
+		color: $white;
+
+		&:hover,
+		&:focus {
+			color: $secondary-color;
+		}
+
+	}
+
+	.header {
+		font-family: 'Sushi Bar';
+		font-weight: normal;
+		font-size: rem-calc(120);
+		color: $white;
+	}
+
+	blockquote {
+		font-size: rem-calc(map-deep-get($header-styles, 'medium', 'h6', 'font-size') * 1px);
+	}
+
+	cite {
+		font-size: rem-calc(12);
+	}
+
+	.icon {
+		margin-top: rem-calc(-3px);
+	}
+
+}

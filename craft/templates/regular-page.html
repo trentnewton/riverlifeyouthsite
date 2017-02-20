@@ -1,0 +1,69 @@
+{% extends 'layouts/_regular' %}
+{% set heroTitle = entry.title %}
+
+{% block content %}
+	{% include 'partials/hero.html' %}
+	<section class="page-main slope-page content">
+		<div class="row">
+			<div class="column">
+				{% for block in entry.lead %}
+					{% switch block.type %}{% case "lead" %}
+						<h2 class="header" itemprop="headline">{{ block.header|raw }}</h2>{% default %}
+					{% endswitch %}
+				{% endfor %}
+				{% for block in entry.lead %}
+					<div class="content">
+						<div class="lead-paragraphs">
+							{% switch block.type %}
+
+								{% case "lead" %}
+									{{ block.text }}
+
+								{% default %}
+
+							{% endswitch %}
+						</div>
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+	</section>
+	<section class="page-secondary content">
+		<div class="row">
+			<div class="column" itemprop="text">
+				{% for block in entry.body %}
+					{% switch block.type %}
+
+						{% case "header" %}
+							<h2 class="header">{{ block.header }}</h2>
+
+						{% case "text" %}
+							{{ block.text }}
+
+						{% case "blockquote" %}
+							<blockquote>{{ block.quote|striptags('<strong><em><br>')|raw|nl2br }}{% if block.citation|length %}<cite>{{ block.citation }}</cite>{% endif %}</blockquote>
+
+						{% case "button" %}
+							<a href="{{ block.buttonLink.url }}" class="button text-span" data-text="{{ block.buttonLink.text }}">{{ block.buttonLink.text }}</a>
+
+						{% case "videoEmbed" %}
+							<div class="responsive-embed widescreen">{{ block.videoEmbed|raw }}</div>
+
+						{% case "callout" %}
+							<div class="callout">
+								<h3>{{ block.header }}</h3>
+								{{ block.text }}
+							</div>
+
+						{% for asset in block.image %}
+							<figure><img src="{{ asset.getUrl('entryImageBodyInsert') }}" width="{{ asset.getWidth('entryImageBodyInsert') }}" height="{{ asset.getHeight('entryImageBodyInsert') }}" alt="{{ asset.title }}"></figure>
+						{% endfor %}
+
+						{% default %}
+
+					{% endswitch %}
+				{% endfor %}
+			</div>
+		</div>
+	</section>
+{% endblock %}

@@ -1,0 +1,77 @@
+<footer class="footer-section" role="contentinfo" itemscope itemtype="http://schema.org/WPFooter">
+	<div class="top-footer">
+		<div class="row scroll-to-top">
+			<div class="small-12 column">
+				<a href="#top" title="{{ 'Scroll to Top' | translate }}">
+					<svg class="icon icon-chevron-up"><use xlink:href="#icon-chevron-up"></use></svg>
+				</a>
+			</div>
+		</div>
+		<ul class="social-links menu align-center">
+			{% if footer.facebookPage is defined %}
+				<li>
+					<a href="{{ footer.facebookPage }}" title="{{ 'Like us on Facebook' | translate }}" class="facebook" target="_blank">
+						<svg class="icon icon-facebook"><use xlink:href="#icon-facebook"></use></svg>
+					</a>
+				</li>
+			{% endif %}
+			{% if footer.instagramUserName is defined %}
+				<li>
+					<a href="https://www.instagram.com/{{ footer.instagramUserName }}" title="{{ 'Follow us on Instagram' | translate }}" class="instagram" target="_blank">
+						<svg class="icon icon-instagram"><use xlink:href="#icon-instagram"></use></svg>
+					</a>
+				</li>
+			{% endif %}
+			{% if footer.snapchatUsername is defined %}
+				<li>
+					<a data-open="snapchatModal" title="{{ 'Add us on Snapchat' | translate }}" class="snapchat">
+						<svg class="icon icon-snapchat"><use xlink:href="#icon-snapchat"></use></svg>
+					</a>
+				</li>
+			{% endif %}
+			{% if footer.vimeoPage is defined %}
+				<li>
+					<a href="{{ footer.vimeoPage }}" title="{{ 'View our Vimeo page' | translate }}" class="vimeo" target="_blank">
+						<svg class="icon icon-vimeo"><use xlink:href="#icon-vimeo"></use></svg>
+					</a>
+				</li>
+			{% endif %}
+			{% if footer.twitterHandle is defined %}
+				<li>
+					<a href="https://twitter.com/{{ footer.twitterHandle }}" title="{{ 'Follow us on Twitter' | translate }}" class="twitter" target="_blank">
+						<svg class="icon icon-twitter"><use xlink:href="#icon-twitter"></use></svg>
+					</a>
+				</li>
+			{% endif %}
+			{# <li>
+				<a href="" class="rss" title="Subscribe to RSS feed">
+					<svg class="icon icon-rss"><use xlink:href="#icon-rss"></use></svg>
+				</a>
+			</li> #}
+		</ul>
+	</div>
+	{% if footer.snapchatUsername is defined %}
+		<div class="reveal text-center" id="snapchatModal" data-reveal data-animation-in="fade-in" data-animation-out="fade-out">
+			<object data="https://feelinsonice-hrd.appspot.com/web/deeplink/snapcode?username={{ footer.snapchatUsername }}&amp;type=PNG" type="image/png" height="200px" width="200px">
+				<object data="//www.snapchat.com/deeplink/static/image/ghost.svg" height="200px" width="200px"></object>
+			</object>
+			<h5>{{ footer.snapchatUsername }}</h5>
+			<button class="close-button" data-close aria-label="Close modal" type="button">
+				<span aria-hidden="true">&times;</span>
+			</button>
+		</div>
+	{% endif %}
+	<div class="bottom-footer">
+		<div class="row">
+			<div class="small-12 columns">
+				<p class="of-text">{{ 'A ministry of' | translate }}</p>
+				<a href="{{ footer.footerLogoLink }}" title="{% for block in svgLogos.logos.type('footerLogo').limit(1) %}{% switch block.type %}{% case "footerLogo" %}{{ block.footerLogoName }}{% default %}{% endswitch %}{% endfor %}" target="_blank">
+					<svg class="footer-logo" aria-labelledby="logo" preserveAspectRatio="xMinYMin meet"><use xlink:href="#footer-logo"></use></svg>
+				</a>
+				{% if general.copyright is defined %}
+					<p class="copyright-text">{{ general.copyright }}</p>
+				{% endif %}
+			</div>
+		</div>
+	</div>
+</footer>

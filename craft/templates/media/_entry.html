@@ -1,0 +1,83 @@
+{% extends 'layouts/_regular' %}
+{% set heroTitle = 'Media' %}
+
+{% block content %}
+	{% include 'partials/hero.html' %}
+	<section class="page-main slope-page">
+		<article class="row">
+			<div class="column">
+				<p class="post-meta">
+					<a href="/media">
+						<span class="back"><svg class="icon icon-chevron-up"><use xlink:href="#icon-chevron-up"></use></svg>{{ 'Back' | translate }}</span>
+					</a>
+				</p>
+				<h2 class="header" itemprop="headline">{{ title }}</h2>
+				{% for block in entry.lead %}
+					<div class="content">
+						<div class="lead-paragraphs">
+							{% switch block.type %}
+
+								{% case "lead" %}
+									{{ block.text }}
+
+								{% default %}
+
+							{% endswitch %}
+						</div>
+					</div>
+				{% endfor %}
+			</div>
+		</article>
+	</section>
+	<section class="page-secondary">
+		<div class="row">
+			<div class="column" itemprop="text">
+				{% for block in entry.body %}
+					{% switch block.type %}
+
+						{% case "header" %}
+							<h4>{{ block.header }}</h4>
+
+						{% case "text" %}
+							{{ block.text }}
+
+						{% case "blockquote" %}
+							<blockquote>{{ block.quote|striptags('<strong><em><br>')|raw|nl2br }}{% if block.citation|length %}<cite>{{ block.citation }}</cite>{% endif %}</blockquote>
+
+						{% case "button" %}
+							{{ block.buttonLink }}
+
+						{% case "videoEmbed" %}
+							<div class="responsive-embed widescreen">{{ block.videoEmbed|raw }}</div>
+
+						{% case "callout" %}
+							<div class="callout">
+								<h3>{{ block.header }}</h3>
+								{{ block.text }}
+							</div>
+
+						{% case "image" %}
+							{% for asset in block.image %}
+								<figure><img src="{{ asset.getUrl('entryImageBodyInsert') }}" width="{{ asset.getWidth('entryImageBodyInsert') }}" height="{{ asset.getHeight('entryImageBodyInsert') }}" alt="{{ asset.title }}"></figure>
+							{% endfor %}
+
+						{% default %}
+
+					{% endswitch %}
+				{% endfor %}
+			</div>
+		</div>
+		<div class="row">
+			<div class="column">
+				<div class="row small-up-2 medium-up-4 media-gallery" id="lightgallery">
+					{% for myAsset in entry.gallery %}
+						<a class="column" href="{{ myAsset.getUrl('galleryImage') }}">
+							<img alt="{{ myAsset.title }}" class="thumbnail" src="{{ myAsset.getUrl('galleryImageThumbnail') }}" width="540" height="54">
+						</a>
+					{% endfor %}
+				</div>
+				{% include 'partials/social.html' %}
+			</div>
+		</div>
+	</section>
+{% endblock %}

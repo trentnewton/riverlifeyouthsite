@@ -1,0 +1,16 @@
+<a href="{{ entry.url }}" class="column snippet">
+	<figure class="snippet__figure">
+		<div class="snippet__image" style="background-image: url('{% for asset in entry.coverImage %}{{ asset.getUrl('snippetThumbnail') }}{% endfor %}')"></div>
+		<div class="snippet__deco snippet__deco--shine">
+			<div></div>
+		</div>
+		<div class="snippet__deco snippet__deco--overlay"></div>
+			<figcaption class="snippet__caption">
+			<h3 class="snippet__title">{{ entry.title }}</h3>
+			{% if entry.summary|length %}<p class="snippet__description">{{ entry.summary }}&hellip;</p>{% endif %}
+		</figcaption>
+		<svg class="snippet__deco snippet__deco--lines" viewBox="0 0 300 415">
+			<path d="M20.5,20.5h260v375h-260V20.5z" />
+		</svg>
+	</figure>
+</a>

@@ -1,0 +1,29 @@
+.off-canvas {
+
+	ul {
+		@extend .menu, .vertical;
+		margin-top: 0.5rem;
+		font-size: rem-calc(map-deep-get($header-styles, 'medium', 'h5', 'font-size') * 1px);
+
+		a {
+			color: $white;
+
+			&:hover,
+			&:focus {
+
+				&,
+				&.active {
+					color: $anchor-color-hover;
+				}
+
+			}
+
+			&.active {
+				color: $light-gray;
+			}
+
+		}
+
+	}
+
+}

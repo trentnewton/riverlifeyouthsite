@@ -1,0 +1,119 @@
+{#
+ # News entry template
+ # -------------------
+ #
+ # This template gets loaded whenever a News entry’s URL is
+ # requested. That’s because the News section’s Template setting is
+ # set to “news/_entry”, the path to this template.
+ #
+ # When this template is loaded, it will already have an ‘entry’
+ # variable, set to the requested News entry.
+ #
+ # See this page for more details on how Craft routes requests:
+ # http://craftcms.com/docs/routing
+ #}
+
+{% extends 'layouts/_regular' %}
+{% set heroTitle = 'Blog' %}
+
+{% block content %}
+	{% include 'partials/hero.html' %}
+	<section class="page-main slope-page">
+		<article class="row">
+			<div class="column">
+				<p class="post-meta">
+					<a href="/blog">
+						<span class="back"><svg class="icon icon-chevron-up"><use xlink:href="#icon-chevron-up"></use></svg>{{ 'Back' | translate }}</span>
+					</a>
+					<span class="author" itemprop="name"><svg class="icon icon-user"><use xlink:href="#icon-user"></use></svg>{{ entry.author.fullName }}</span>
+					<span class="date"><svg class="icon icon-clock"><use xlink:href="#icon-clock"></use></svg>{{ entry.postDate.format('F d, Y') }}</span>
+				</p>
+				<h2 class="header" itemprop="headline">{{ title }}</h2>
+				{% for block in entry.lead %}
+					<div class="content">
+						<div class="lead-paragraphs">
+							{% switch block.type %}
+
+								{% case "lead" %}
+									{{ block.text }}
+
+								{% default %}
+
+							{% endswitch %}
+						</div>
+					</div>
+				{% endfor %}
+			</div>
+		</article>
+	</section>
+	<section class="page-secondary">
+
+		{% for block in entry.body %}
+			{% switch block.type %}
+
+				{% case "header" %}
+					<div class="row align-center">
+						<div class="small-12 medium-8 column" itemprop="text">
+							<h4>{{ block.header }}</h4>
+						</div>
+					</div>
+
+				{% case "text" %}
+					<div class="row align-center">
+						<div class="small-12 medium-8 column" itemprop="text">
+							{{ block.text }}
+						</div>
+					</div>
+
+				{% case "blockquote" %}
+					<div class="row align-center">
+						<div class="small-12 medium-8 column" itemprop="text">
+							<blockquote>{{ block.quote|striptags('<strong><em><br>')|raw|nl2br }}{% if block.citation|length %}<cite>{{ block.citation }}</cite>{% endif %}</blockquote>
+						</div>
+					</div>
+
+				{% case "button" %}
+					<div class="row align-center">
+						<div class="small-12 medium-8 column" itemprop="text">
+							{{ block.buttonLink }}
+						</div>
+					</div>
+
+				{% case "videoEmbed" %}
+					<div class="row align-center">
+						<div class="small-12 column">
+							<div class="responsive-embed widescreen">{{ block.videoEmbed|raw }}</div>
+						</div>
+					</div>
+
+				{% case "callout" %}
+					<div class="row align-center">
+						<div class="small-12 medium-8 column" itemprop="text">
+							<div class="callout">
+								<h3>{{ block.header }}</h3>
+								{{ block.text }}
+							</div>
+						</div>
+					</div>
+
+
+				{% case "image" %}
+					<div class="row align-left">
+						<div class="small-12 medium-10 column">
+							{% for asset in block.image %}
+								<figure><img src="{{ asset.getUrl('entryImageBodyInsert') }}" width="{{ asset.getWidth('entryImageBodyInsert') }}" height="{{ asset.getHeight('entryImageBodyInsert') }}" alt="{{ asset.title }}"></figure>
+							{% endfor %}
+						</div>
+					</div>
+
+				{% default %}
+
+			{% endswitch %}
+		{% endfor %}
+		<div class="row align-center">
+			<div class="small-12 medium-8 column">
+				{% include 'partials/social.html' %}
+			</div>
+		</div>
+	</section>
+{% endblock %}

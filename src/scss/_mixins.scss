@@ -1,0 +1,31 @@
+@mixin small-portrait {
+
+    @media screen and #{breakpoint(small down)} and #{breakpoint(portrait)} {
+        @content;
+    }
+
+}
+
+@mixin small-landscape {
+
+    @media screen and #{breakpoint(small down)} and #{breakpoint(landscape)} {
+        @content;
+    }
+
+}
+
+@mixin medium-portrait {
+
+    @media screen and #{breakpoint(medium only)} and #{breakpoint(portrait)} {
+        @content;
+    }
+
+}
+
+@mixin medium-landscape {
+
+    @media screen and #{breakpoint(medium only)} and #{breakpoint(landscape)} {
+        @content;
+    }
+
+}

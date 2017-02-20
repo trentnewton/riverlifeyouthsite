@@ -1,0 +1,220 @@
+{#
+ # Homepage template
+ # ---------------
+ #
+ # When this template gets loaded, it will be because someone has accessed
+ # http://yoursite.com/ (without any URI). Craft checks to see if you have
+ # a Single section set to be the Homepage (as you do, by default), and
+ # loads the section’s Template (this file). A special ‘entry’ variable
+ # will already be set for you, assigned to the Homepage entry.
+ #
+ # It's worth noting that even if you didn't have a Homepage Single section,
+ # as long as this template remains at craft/templates/index.html, it
+ # would still be the one to get loaded when accessing http://yoursite.com/,
+ # albeit without an ‘entry’ variable already set for you.
+ #
+ # See this page for more details on how Craft routes requests:
+ # http://craftcms.com/docs/routing
+ #}
+
+{% extends 'layouts/_regular' %}
+
+{% block content %}
+	<section class="hero-section home">
+		<div class="hero-bg-overlay home--hero-bg-overlay"></div>
+	  	<div data-interchange="[assets/partials/video-bg.html, small], [assets/partials/video.html, large]"></div>
+		<div class="row carousel-slider">
+			<div class="small-12 column">
+				<div class="homepage-slider">
+					<div class="homepage-slide logo-slide align-self-middle">
+						<svg class="hero-logo" width="181.1px" height="181.1px" aria-labelledby="logo" preserveAspectRatio="xMinYMin meet"><use xlink:href="#logo"></use></svg>
+					</div>
+					<div class="homepage-slide term-flyer align-self-middle">
+						<div class="container">
+							<h3>{{ 'Current Term' | translate }}</h3>
+							<div class="term-dates row small-up-1 medium-up-2">
+								{% set category = craft.categories.group('events') %}
+								{% set entries = craft.entries.section('event').relatedTo(category).order('dayStart asc') %}
+								{% for entry in entries %}
+									<div class="column">
+										<span class="event-information">{{ entry.dayStart | date('d.m') }}{% if entry.dayEnd | length %}&nbsp;+&nbsp;{{ entry.dayEnd | date('d.m') }}{% endif %}&nbsp;&#8212;&nbsp;{{ entry.title }} ({% if entry.category | length > 2 %}7&#8212;12{% else %}{{ entry.category.first().title }}{% endif %})</span>
+									</div>
+								{% endfor %}
+							</div>
+							<a href="whats-on" data-text="{{ 'More' | translate }}" class="button tiny text-span">{{ 'More' | translate }}</a>
+						</div>
+					</div>
+					{% for entry in craft.entries.section('event').search('frontPageSlide:1') %}
+						<div class="homepage-slide event-flyer align-self-middle">
+							<p class="day">
+								{% if entry.reoccurring %}
+									{{ entry.dayStart | date('l') }}s at {{ entry.timeStart | date('ga') }}
+								{% else %}
+									{{ entry.dayStart | date('l') }}{% if entry.dayEnd | length %}&mdash;{{ entry.dayEnd | date('l') }}{% endif %}&nbsp;{{ entry.dayStart | date('F jS') }}
+								{% endif %}
+							</p>
+							<h3 class="event-title">{{ entry.title }}</h3>
+							{% if entry.reoccurring %}
+							{% else %}
+								{% if entry.timeStart | length %}
+									<p class="time">
+										{{ entry.timeStart | date('g:ia') }}&mdash;{{ entry.timeEnd | date('g:ia') }}
+									</p>
+								{% endif %}
+							{% endif %}
+							{% if entry.details | length %}
+								<p class="details">{{ entry.details }}</p>
+							{% endif %}
+							{% if entry.location | length %}
+								<p class="location">
+									at&nbsp;{{ entry.location.first().title }}
+								</p>
+							{% endif %}
+							{% if entry.moreInfoLink|length %}
+								<a href="{{ entry.moreInfoLink.url }}" class="button text-span" data-text="{{ entry.moreInfoLink.text }}">{{ entry.moreInfoLink.text }}</a>
+							{% endif %}
+						</div>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="ministry-introductions">
+		<div class="ministry welcome">
+			<div class="row">
+				<div class="content small-6 medium-3 columns">
+					{% for block in entry.body %}
+						{% switch block.type %}
+
+							{% case "header" %}
+								<h4>{{ block.header|raw }}</h4>
+
+							{% case "text" %}
+								{{ block.text }}
+
+							{% case "button" %}
+								<a href="{{ block.buttonLink.url }}" class="button text-span" data-text="{{ block.buttonLink.text }}">{{ block.buttonLink.text }}</a>
+
+							{% default %}
+
+						{% endswitch %}
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+		{% for block in entry.ministrySection.offset(0).limit(1) %}
+			{% switch block.type %}
+
+				{% case "ministrySection" %}
+					<div class="ministry ministry-1" style="background: linear-gradient(rgba({{ block.colour }}, .8), rgba({{ block.colour }}, .8)), url('{% for asset in block.image %}{{ asset.getUrl('ministrySection') }}{% endfor %}') 50%/cover no-repeat">
+						<div class="row align-right">
+							<div class="content small-12 medium-7 columns">
+								<h2 class="ministry-name" itemprop="headline">
+									{% for block in svgLogos.logos.type('ministryLogo').offset(0).limit(1) %}
+										{% switch block.type %}
+
+											{% case "ministryLogo" %}
+												<svg class="ministry-logo" viewBox="{{ block.viewbox }}" aria-labelledby="ministry-{{ block.ministryName|lower }}-logo" preserveAspectRatio="xMinYMin meet"><use xlink:href="#ministry-{{ block.ministryName|lower }}-logo"></use></svg><span class="show-for-sr">{{ block.ministryName }}</span>
+											{% default %}
+
+										{% endswitch %}
+									{% endfor %}
+								</h2>
+								{{ block.body }}
+							</div>
+						</div>
+					</div>
+
+				{% default %}
+
+			{% endswitch %}
+		{% endfor %}
+		{% for block in entry.ministrySection.offset(1).limit(1) %}
+			{% switch block.type %}
+
+				{% case "ministrySection" %}
+					<div class="ministry ministry-2" style="background: linear-gradient(rgba({{ block.colour }}, .8), rgba({{ block.colour }}, .8)), url('{% for asset in block.image %}{{ asset.getUrl('ministrySection') }}{% endfor %}') 50%/cover no-repeat">
+						<div class="row">
+							<div class="content small-12 medium-7 columns">
+								<h2 class="ministry-name" itemprop="headline">
+									{% for block in svgLogos.logos.type('ministryLogo').offset(1).limit(1) %}
+										{% switch block.type %}
+
+											{% case "ministryLogo" %}
+												<svg class="ministry-logo" viewBox="{{ block.viewbox }}" aria-labelledby="ministry-{{ block.ministryName|lower }}-logo" preserveAspectRatio="xMinYMin meet"><use xlink:href="#ministry-{{ block.ministryName|lower }}-logo"></use></svg><span class="show-for-sr">{{ block.ministryName }}</span>
+											{% default %}
+
+										{% endswitch %}
+									{% endfor %}
+								</h2>
+								{{ block.body }}
+							</div>
+						</div>
+					</div>
+
+				{% default %}
+
+			{% endswitch %}
+		{% endfor %}
+	  	{% for block in entry.ministrySection.offset(2).limit(1) %}
+			{% switch block.type %}
+
+				{% case "ministrySection" %}
+					<div class="ministry ministry-3" style="background: linear-gradient(rgba({{ block.colour }}, .8), rgba({{ block.colour }}, .8)), url('{% for asset in block.image %}{{ asset.getUrl('ministrySection') }}{% endfor %}') 50%/cover no-repeat">
+						<div class="row align-right">
+							<div class="content small-12 medium-7 columns">
+								<h2 class="ministry-name" itemprop="headline">
+									{% for block in svgLogos.logos.type('ministryLogo').offset(2).limit(1) %}
+										{% switch block.type %}
+
+											{% case "ministryLogo" %}
+												<svg class="ministry-logo" viewBox="{{ block.viewbox }}" aria-labelledby="ministry-{{ block.ministryName|lower }}-logo" preserveAspectRatio="xMinYMin meet"><use xlink:href="#ministry-{{ block.ministryName|lower }}-logo"></use></svg><span class="show-for-sr">{{ block.ministryName }}</span>
+											{% default %}
+
+										{% endswitch %}
+									{% endfor %}
+								</h2>
+								{{ block.body }}
+							</div>
+						</div>
+					</div>
+
+				{% default %}
+
+			{% endswitch %}
+		{% endfor %}
+		{% for block in entry.quote %}
+			{% switch block.type %}
+
+				{% case "quote" %}
+					<div class="ministry quote">
+						<div class="row">
+							<div class="content small-12 medium-4 columns">
+								<blockquote>{{ block.quote|striptags('<strong><em><br>')|raw|nl2br }}<cite>{{ block.citation }}</cite></blockquote>
+							</div>
+						</div>
+					</div>
+
+				{% default %}
+
+			{% endswitch %}
+		{% endfor %}
+	</section>
+	<section class="blog-entries">
+		<div class="row">
+			<div class="small-12 column">
+				<h1 class="header">{{ 'Blog' | translate }}</h1>
+			</div>
+		</div>
+		<div class="row small-up-1 medium-up-3">
+			{% for entry in craft.entries.section('blog').limit(3).find() %}
+				{% include 'partials/snippets.html' %}
+			{% endfor %}
+		</div>
+		<div class="row">
+			<div class="small-12 column">
+				<a href="blog" data-text="{{ 'More' | translate }}" class="button text-span">{{ 'More' | translate }}</a>
+			</div>
+		</div>
+	</section>
+{% endblock %}

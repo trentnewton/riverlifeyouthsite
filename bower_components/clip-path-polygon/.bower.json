@@ -1,0 +1,30 @@
+{
+  "name": "clip-path-polygon",
+  "homepage": "https://github.com/andrusieczko/clip-path-polygon",
+  "authors": [
+    "Karol Andrusieczko <karol.andrusieczko@gmail.com>"
+  ],
+  "description": "jQuery plugin that makes easy to use clip-path on whatever tag under different browsers",
+  "main": "build/clip-path-polygon.min.js",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "clip-path",
+    "polygon",
+    "clipping",
+    "svg",
+    "image",
+    "background"
+  ],
+  "license": "MIT",
+  "_release": "057cbbfee3",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "057cbbfee377b7376463661f0ac99e4c9fafc9c5"
+  },
+  "_source": "https://github.com/andrusieczko/clip-path-polygon.git",
+  "_target": "*",
+  "_originalSource": "clip-path-polygon"
+}

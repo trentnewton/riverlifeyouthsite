@@ -1,0 +1,13 @@
+<header class="main-navigation" data-nav-status="toggle" itemscope itemtype="http://schema.org/WPHeader">
+    <nav class="top-bar" itemscope itemtype="http://schema.org/SiteNavigationElement">
+        <div class="top-bar-title">
+            <a class="menu-icon hide-for-large" data-toggle="offCanvas"></a>
+            <a class="logo" href="/" title="{{ 'Home' | translate }}">
+                <svg class="top-bar-logo" width="80" height="80" aria-labelledby="logo" preserveAspectRatio="xMinYMin meet"><use xlink:href="#logo"></use></svg>
+            </a>
+        </div>
+        <div class="show-for-large">
+            {{craft.olivemenus.getMenuHTML('mainMenu',{ 'menu-class': 'main-menu' })}}
+        </div>
+    </nav>
+</header>

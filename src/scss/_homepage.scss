@@ -1,0 +1,344 @@
+.context-homepage {
+
+	.hero-bg-overlay {
+		background: linear-gradient(50deg, $secondary-color 0, $primary-color 100%);
+	}
+
+}
+
+.ministry-introductions {
+	position: relative;
+	z-index: 2;
+
+	.ministry-logo {
+		width: 40%;
+		height: auto;
+		fill: currentColor;
+
+		@include breakpoint(small only) {
+			width: 60%;
+		}
+
+	}
+
+	.old-ie & {
+
+		.ministry-logo {
+			width: 30%;
+			height: 60%;
+		}
+
+	}
+
+	blockquote {
+		color: inherit;
+		font-size: rem-calc(map-deep-get($header-styles, 'medium', 'h5', 'font-size') * 1px);
+		border: 0;
+		margin: 0;
+		padding: 0;
+		background: none;
+
+		&::before {
+			content: normal;
+		}
+
+	}
+
+	cite {
+		color: inherit;
+	}
+
+	.button {
+		background: transparent;
+		border: 2px $button-background solid;
+		color: $button-background;
+
+		&:hover,
+		&:focus {
+			background: $button-background-hover;
+			border: 2px $button-background-hover solid;
+		}
+
+	}
+
+}
+
+.ministry {
+	position: relative;
+	margin-top: rem-calc(-400);
+
+	@include breakpoint(small only) {
+		margin-top: rem-calc(-300);
+	}
+
+	.content {
+		padding-top: rem-calc(200);
+		padding-bottom: rem-calc(300);
+	}
+
+	&.ie-fix {
+		margin-top: 0;
+
+		.content {
+			text-align: center;
+			padding-top: rem-calc(120);
+			padding-bottom: rem-calc(120);
+		}
+
+	}
+
+}
+
+.ministry-name {
+	padding: 0;
+	margin: 0;
+}
+
+.ministry-1,
+.ministry-3 {
+
+	.content {
+		text-align: right;
+	}
+
+}
+
+.welcome {
+	background-color: $white;
+	margin-top: rem-calc(-250);
+	z-index: 0;
+	// clip-path: polygon(
+	// 	//0 0, /* left top */
+	// 	//100% 80%, /* right top */
+	// 	//100% 100%, /* right bottom */
+	// 	//0 100% /* left bottom */
+	// 	100% 70%, 0 0, 0 100%
+	// );
+
+	.content {
+		padding-top: rem-calc(120);
+		padding-bottom: rem-calc(120);
+	}
+
+	@include breakpoint(small only) {
+
+		z-index: 1;
+		// clip-path: polygon(
+		// 	//0 0, /* left top */
+		// 	//100% 80%, /* right top */
+		// 	//100% 100%, /* right bottom */
+		// 	//0 100% /* left bottom */
+		// 	0 0, 100% 30%, 100% 70%, 0 100%
+		// );
+
+		.content {
+			padding-bottom: rem-calc(100);
+		}
+
+	}
+
+	@include medium-landscape {
+
+		margin-top: rem-calc(-50);
+		// clip-path: polygon(
+		// 	//0 0, /* left top */
+		// 	//100% 80%, /* right top */
+		// 	//100% 100%, /* right bottom */
+		// 	//0 100% /* left bottom */
+		// 	0 0, 100% 150px, 100% 100%, 0 100%
+		// );
+
+	}
+
+	@include breakpoint(xlarge up) {
+
+		margin-top: rem-calc(-300);
+
+		.content {
+			padding-top: rem-calc(200);
+			padding-bottom: rem-calc(200);
+		}
+
+	}
+
+	&.ie-fix {
+
+		.content {
+			padding-top: rem-calc(60);
+			padding-bottom: rem-calc(60);
+		}
+
+	}
+
+}
+
+.ministry-1 {
+	z-index: 1;
+	// background:
+	// 	linear-gradient(rgba($freshman, 0.8), rgba($freshman, 0.8)),
+	// 	url('../img/freshman.jpg') center center / cover no-repeat;
+	// clip-path: polygon(
+	// 	//0 0, /* left top */
+	// 	//100% 80%, /* right top */
+	// 	//100% 100%, /* right bottom */
+	// 	//0 100% /* left bottom */
+	// 	0 40%, 100% 0, 100% 100%, 0 100%
+	// );
+
+	@include breakpoint(small only) {
+
+		margin-top: rem-calc(-220);
+		z-index: 0;
+		// clip-path: polygon(
+		// 	//0 0, /* left top */
+		// 	//100% 80%, /* right top */
+		// 	//100% 100%, /* right bottom */
+		// 	//0 100% /* left bottom */
+		// 	0 20%, 100% 0, 100% 100%, 0 100%
+		// );
+
+	}
+
+}
+
+.ministry-2 {
+	z-index: 2;
+	// background:
+	// 	linear-gradient(rgba($sophomore, 0.8), rgba($sophomore, 0.8)),
+	// 	url('../img/sophomore.jpg') center center / cover no-repeat;
+	// clip-path: polygon(
+	// 	//0 0, /* left top */
+	// 	//100% 80%, /* right top */
+	// 	//100% 100%, /* right bottom */
+	// 	//0 100% /* left bottom */
+	// 	0 0, 100% 40%, 100% 100%, 0 100%
+	// );
+
+	// @include breakpoint(small only) {
+	// 	clip-path: polygon(
+	// 		//0 0, /* left top */
+	// 		//100% 80%, /* right top */
+	// 		//100% 100%, /* right bottom */
+	// 		//0 100% /* left bottom */
+	// 		0 0, 100% 20%, 100% 100%, 0 100%
+	// 	);
+	// }
+
+}
+
+.ministry-3 {
+	z-index: 4;
+	// background:
+	// 	linear-gradient(rgba($varsity, 0.8), rgba($varsity, 0.8)),
+	// 	url('../img/varsity.jpg') center center / cover no-repeat;
+	// margin-top: rem-calc(-550);
+	// clip-path: polygon(
+	// 	//0 0, /* left top */
+	// 	//100% 80%, /* right top */
+	// 	//100% 100%, /* right bottom */
+	// 	//0 100% /* left bottom */
+	// 	100% 100%, 100% 0, 0 50%
+	// );
+
+	// .content {
+	// 	padding-top: rem-calc(300);
+	// 	padding-bottom: rem-calc(300);
+	// }
+
+	@include breakpoint(small only) {
+
+		margin-top: rem-calc(-300);
+		z-index: 3;
+		// clip-path: polygon(
+		// 	//0 0, /* left top */
+		// 	//100% 80%, /* right top */
+		// 	//100% 100%, /* right bottom */
+		// 	//0 100% /* left bottom */
+		// 	0 20%, 100% 0, 100% 100%, 0 100%
+		// );
+
+		.content {
+			padding-top: rem-calc(150);
+			padding-bottom: rem-calc(300);
+		}
+
+	}
+
+	// @include medium-landscape {
+	// 	margin-top: rem-calc(-570);
+	// }
+
+}
+
+.quote {
+	background-color: $primary-color;
+	z-index: 3;
+	// margin-top: rem-calc(-488);
+	// clip-path: polygon(
+	// 	//0 0, /* left top */
+	// 	//100% 80%, /* right top */
+	// 	//100% 100%, /* right bottom */
+	// 	//0 100% /* left bottom */
+	// 	0 100%, 100% 60%, 0 0
+	// );
+
+	&::before {
+		content: '';
+		background-image: url("data:image/svg+xml,%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='32' height='32' viewBox='0 0 32 32'%3E %3Cpath class='icon-quotes-left' d='M7.031 14c3.866 0 7 3.134 7 7s-3.134 7-7 7-7-3.134-7-7l-0.031-1c0-7.732 6.268-14 14-14v4c-2.671 0-5.182 1.040-7.071 2.929-0.364 0.364-0.695 0.751-0.995 1.157 0.357-0.056 0.724-0.086 1.097-0.086zM25.031 14c3.866 0 7 3.134 7 7s-3.134 7-7 7-7-3.134-7-7l-0.031-1c0-7.732 6.268-14 14-14v4c-2.671 0-5.182 1.040-7.071 2.929-0.364 0.364-0.695 0.751-0.995 1.157 0.358-0.056 0.724-0.086 1.097-0.086z'%3E%3C/path%3E %3C/svg%3E");
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		background-repeat: no-repeat;
+		background-size: rem-calc(320);
+		z-index: -1;
+		opacity: 0.2;
+	}
+
+	.content {
+		padding-top: rem-calc(200);
+		padding-bottom: rem-calc(100);
+	}
+
+	@include breakpoint(small only) {
+
+		margin-top: rem-calc(-200);
+		z-index: 4;
+		// clip-path: polygon(
+		// 	//0 0, /* left top */
+		// 	//100% 80%, /* right top */
+		// 	//100% 100%, /* right bottom */
+		// 	//0 100% /* left bottom */
+		// 	0 0, 100% 30%, 100% 70%, 0 100%
+		// );
+
+		.content {
+			padding-top: rem-calc(200);
+			padding-bottom: rem-calc(200);
+		}
+
+	}
+
+	@include medium-landscape {
+
+		margin-top: rem-calc(-465);
+
+	}
+
+	@include medium-portrait {
+
+		margin-top: rem-calc(-550);
+
+	}
+
+	&.ie-fix {
+
+		.content {
+			padding-top: rem-calc(60);
+			padding-bottom: rem-calc(60);
+		}
+
+	}
+
+}

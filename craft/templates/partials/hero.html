@@ -1,0 +1,4 @@
+<section class="hero-section page-header aligner-middle" style="background-image: url('{% for asset in entry.coverImage %}{{ asset.getUrl('coverImageResize') }}{% endfor %}')">
+	<div class="hero-bg-overlay"></div>
+	<h1 class="hero-title" itemprop="headline">{{ heroTitle }}</h1>
+</section>

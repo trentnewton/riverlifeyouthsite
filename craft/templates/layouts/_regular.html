@@ -1,0 +1,153 @@
+{#
+ # Layout template
+ # ---------------
+ #
+ # This template defines your site’s global layout. It can be
+ # “extended” by other templates to fill in the gaps.
+ #
+ # See Twig’s Template Inheritance documentation for more details:
+ # http://twig.sensiolabs.org/doc/templates.html#template-inheritance
+ #}
+
+ {% set title = entry.title %}
+ {% set description = entry.summary %}
+ {% set handle = entry.section.handle %}
+
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+	<head>
+		<meta charset="utf-8" />
+		{% if metatags.xUaCompatible is defined %}<meta http-equiv="x-ua-compatible" content="{{ metatags.xUaCompatible }}">{% endif %}
+		{% if metatags.viewport is defined %}<meta name="viewport" content="{{ metatags.viewport }}">{% endif %}
+		{% if entry.type.handle == 'homepage' %}
+			<title>{{ siteName }}</title>
+		{% else %}
+			<title>{% if title is defined %}{{ title }} - {% endif %}{{ siteName }}</title>
+		{% endif %}
+		{% for asset in metatags.appleTouchIcon %}
+			<link rel="apple-touch-icon" sizes="180x180" href="{{ asset.url }}">
+		{% endfor %}
+		{% for asset in metatags.favicon32x32 %}
+			<link rel="icon" type="image/png" href="{{ asset.url }}" sizes="32x32">
+		{% endfor %}
+		{% for asset in metatags.favicon16x16 %}
+			<link rel="icon" type="image/png" href="{{ asset.url }}" sizes="16x16">
+		{% endfor %}
+		{% for asset in metatags.manifest %}
+			<link rel="manifest" href="{{ asset.url }}">
+		{% endfor %}
+		{% for asset in metatags.maskIcon %}
+			<link rel="mask-icon" href="{{ asset.url }}" color="#ff4169">
+		{% endfor %}
+		{% for asset in entry.coverImage %}
+			<link rel="image_src" href="{{ siteUrl }}{{ asset.getUrl('metaImageFit') }}">
+		{% endfor %}
+		{% if metatags.themeColor and metatags.themeColor != '#000000' %}
+			<meta name="theme-color" content="{{ metatags.themeColor }}">
+		{% endif %}
+		{% if general.copyright is defined %}
+			<meta name="rights" content="{{ general.copyright }}">
+		{% endif %}
+		{% if metatags.handheldfriendly is defined %}<meta name="HandheldFriendly" content="true">{% endif %}
+		{% if description is defined %}<meta name="description" content="{{ description }}">{% endif %}
+		{% if title is defined %}
+			<meta itemprop="name" content="{{ title }}">
+		{% else %}
+			<meta itemprop="name" content="{{ siteName }}">
+		{% endif %}
+		{% if description is defined %}<meta itemprop="description" content="{{ description }}">{% endif %}
+		{% if title is defined %}
+			<meta property="og:title" content="{{ title }}">
+		{% else %}
+			<meta property="og:title" content="{{ siteName }}">
+		{% endif %}
+		<meta property="og:url" content="{{ entry.url }}">
+		{% if description is defined %}<meta property="og:description" content="{{ description }}">{% endif %}
+		<meta property="og:site_name" content="{{ siteName }}">
+		<meta property="og:type" content="website">
+		{% for asset in entry.coverImage %}
+			<meta property="og:image" content="{{ siteUrl }}{{ asset.getUrl('metaImageFit') }}">
+			<meta property="og:image:width" content="{{ asset.getWidth('metaImageFit') }}">
+			<meta property="og:image:height" content="{{ asset.getHeight('metaImageFit') }}">
+			<meta property="og:image:type" content="{{ asset.getMimeType('metaImageFit') }}">
+		{% endfor %}
+		{% if metatags.facebookAppId is defined %}<meta property="fb:app_id" content="{{ metatags.facebookAppId }}">{% endif %}
+		{% if title is defined %}
+			<meta name="twitter:title" content="{{ title }}">
+		{% else %}
+			<meta name="twitter:title" content="{{ siteName }}">
+		{% endif %}
+		{% if description is defined %}<meta name="twitter:description" content="{{ description }}">{% endif %}
+		<meta name="twitter:card" content="summary">
+		{% if footer.twitterHandle is defined %}
+            <meta name="twitter:creator" content="{{ footer.twitterHandle }}">
+        {% endif %}
+        {% if footer.twitterHandle is defined %}
+            <meta name="twitter:site" content="{{ footer.twitterHandle }}">
+        {% endif %}
+		{% for asset in entry.coverImage %}
+			<meta name="twitter:image" content="{{ siteUrl }}{{ asset.getUrl('metaImageFit') }}">
+			<meta name="twitter:image:width" content="{{ asset.getWidth('metaImageFit') }}">
+			<meta name="twitter:image:height" content="{{ asset.getHeight('metaImageFit') }}">
+			<meta name="twitter:image:alt" content="{% if title is defined %}{{ title }} - {% endif %}{{ siteName }}">
+		{% endfor %}
+		{% if metatags.rating is defined %}<meta name="rating" content="{{ metatags.rating }}">{% endif %}
+		<link rel="stylesheet" href="assets/css/app.css">
+		{% if metatags.robots is defined %}<meta name="robots" content="{{ metatags.robots }}">{% endif %}
+		<script src="https://use.typekit.net/wrd6xsa.js"></script>
+		<script>try{Typekit.load({ async: true });}catch(e){}</script>
+		{% if metatags.googleAnalylticsCode is defined %}
+			<script>
+				(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+				m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+				})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+				ga('create', '{{ metatags.googleAnalylticsCode }}', 'auto');
+				ga('send', 'pageview');
+			</script>
+		{% endif %}
+	</head>
+	<body class="context-{{ handle }} page-{{ entry.slug }}" itemscope itemtype="http://schema.org/WebPage">
+		{% include 'partials/svg.html' %}
+		<div class="off-canvas-wrapper animsition" id="top">
+			<nav class="off-canvas position-left" id="offCanvas" data-off-canvas itemscope itemtype="http://schema.org/SiteNavigationElement">
+				<button class="close-button" aria-label="Close menu" type="button" data-close>
+					<span aria-hidden="true">&times;</span>
+				</button>
+				{{craft.olivemenus.getMenuHTML('mainMenu')}}
+			</nav>
+			<div class="off-canvas-content" data-off-canvas-content>
+				{% include 'partials/navigation.html' %}
+				<main class="main-content" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/WebPageElement">
+					{% block content %}
+						<p>If you see me, you haven’t set your <code>{% verbatim %}{% block content %}…{% endblock %}{% endverbatim %}</code> yet.</p>
+						<p>See Twig’s <a href="http://twig.sensiolabs.org/doc/templates.html#template-inheritance">Template Inheritance</a> documentation for an explanation.</p>
+					{% endblock %}
+				</main>
+				{% include 'partials/footer.html' %}
+			</div>
+		</div>
+		<script src="assets/js/app.js"></script>
+		<script src="https://cdn.jsdelivr.net/lightgallery/1.3.8/js/lightgallery.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function () {
+				$('#lightgallery').lightGallery();
+			});
+		</script>
+		<div id="fb-root"></div>
+		<script>
+			(function (d, s, id) {
+				var js, fjs = d.getElementsByTagName(s)[0];
+				if (d.getElementById(id)) return;
+				js = d.createElement(s); js.id = id;
+				js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1";
+				fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));
+		</script>
+		<script src="https://apis.google.com/js/platform.js" async defer>
+			{lang: 'en-GB'}
+		</script>
+		<script async defer src="//assets.pinterest.com/js/pinit.js"></script>
+	</body>
+</html>
