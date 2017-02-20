@@ -50,16 +50,24 @@
 		{% endif %}
 		{% if metatags.handheldfriendly is defined %}<meta name="HandheldFriendly" content="true">{% endif %}
 		{% if description is defined %}<meta name="description" content="{{ description }}">{% endif %}
-		{% if title is defined %}
-			<meta itemprop="name" content="{{ title }}">
-		{% else %}
+		{% if entry.type.handle == 'homepage' %}
 			<meta itemprop="name" content="{{ siteName }}">
+		{% else %}
+			{% if title is defined %}
+				<meta itemprop="name" content="{{ title }}">
+			{% else %}
+				<meta itemprop="name" content="{{ siteName }}">
+			{% endif %}
 		{% endif %}
 		{% if description is defined %}<meta itemprop="description" content="{{ description }}">{% endif %}
-		{% if title is defined %}
-			<meta property="og:title" content="{{ title }}">
-		{% else %}
+		{% if entry.type.handle == 'homepage' %}
 			<meta property="og:title" content="{{ siteName }}">
+		{% else %}
+			{% if title is defined %}
+				<meta property="og:title" content="{{ title }}">
+			{% else %}
+				<meta property="og:title" content="{{ siteName }}">
+			{% endif %}
 		{% endif %}
 		<meta property="og:url" content="{{ entry.url }}">
 		{% if description is defined %}<meta property="og:description" content="{{ description }}">{% endif %}
@@ -72,19 +80,23 @@
 			<meta property="og:image:type" content="{{ asset.getMimeType('metaImageFit') }}">
 		{% endfor %}
 		{% if metatags.facebookAppId is defined %}<meta property="fb:app_id" content="{{ metatags.facebookAppId }}">{% endif %}
-		{% if title is defined %}
-			<meta name="twitter:title" content="{{ title }}">
-		{% else %}
+		{% if entry.type.handle == 'homepage' %}
 			<meta name="twitter:title" content="{{ siteName }}">
+		{% else %}
+			{% if title is defined %}
+				<meta name="twitter:title" content="{{ title }}">
+			{% else %}
+				<meta name="twitter:title" content="{{ siteName }}">
+			{% endif %}
 		{% endif %}
 		{% if description is defined %}<meta name="twitter:description" content="{{ description }}">{% endif %}
 		<meta name="twitter:card" content="summary">
 		{% if footer.twitterHandle is defined %}
-            <meta name="twitter:creator" content="{{ footer.twitterHandle }}">
-        {% endif %}
-        {% if footer.twitterHandle is defined %}
-            <meta name="twitter:site" content="{{ footer.twitterHandle }}">
-        {% endif %}
+			<meta name="twitter:creator" content="@{{ footer.twitterHandle }}">
+		{% endif %}
+		{% if footer.twitterHandle is defined %}
+			<meta name="twitter:site" content="@{{ footer.twitterHandle }}">
+		{% endif %}
 		{% for asset in entry.coverImage %}
 			<meta name="twitter:image" content="{{ siteUrl }}{{ asset.getUrl('metaImageFit') }}">
 			<meta name="twitter:image:width" content="{{ asset.getWidth('metaImageFit') }}">
