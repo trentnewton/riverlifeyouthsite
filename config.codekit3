@@ -28522,6 +28522,78 @@
 		"oAP": "\/craft\/plugins\/fruitlinkit\/templates\/_fieldtype\/settings.html",
 		"oF": 0
 		},
+	"\/craft\/plugins\/htmlcache\/_config.yml": {
+		"ft": 8192,
+		"oA": 1,
+		"oAP": "\/craft\/plugins\/htmlcache\/_config.yml",
+		"oF": 0
+		},
+	"\/craft\/plugins\/htmlcache\/functions\/htmlcache.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/htmlcache\/functions\/htmlcache.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/htmlcache\/HtmlcachePlugin.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/htmlcache\/HtmlcachePlugin.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/htmlcache\/LICENSE": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/htmlcache\/LICENSE",
+		"oF": 0
+		},
+	"\/craft\/plugins\/htmlcache\/README.md": {
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"eLB": 0,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 0,
+		"oAP": "\/craft\/plugins\/htmlcache\/README.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"\/craft\/plugins\/htmlcache\/releases.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "\/craft\/plugins\/htmlcache\/releases-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"\/craft\/plugins\/htmlcache\/resources\/icon.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/htmlcache\/resources\/icon.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/craft\/plugins\/htmlcache\/services\/Htmlcache_HtmlcacheService.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/htmlcache\/services\/Htmlcache_HtmlcacheService.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/htmlcache\/templates\/_settings.html": {
+		"ft": 8192,
+		"oA": 1,
+		"oAP": "\/craft\/plugins\/htmlcache\/templates\/_settings.html",
+		"oF": 0
+		},
 	"\/craft\/plugins\/minify\/composer.json": {
 		"ft": 524288,
 		"oA": 1,
@@ -35892,6 +35964,12 @@
 		"oAP": "\/craft\/storage\/runtime\/compiled_templates\/19\/1925825adfd70e19106c4e04a5ef561057a7fd2f542bfc0e5b53f445f0df4a26.php",
 		"oF": 0
 		},
+	"\/craft\/storage\/runtime\/compiled_templates\/19\/1997b566a2478b7bbf80899bde3a22cd832a150c8dafcc565084705f4ec60af7.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/storage\/runtime\/compiled_templates\/19\/1997b566a2478b7bbf80899bde3a22cd832a150c8dafcc565084705f4ec60af7.php",
+		"oF": 0
+		},
 	"\/craft\/storage\/runtime\/compiled_templates\/19\/19d1527c71c6a945976a927f4c8ddd74fa6014a1ce02cae3f6bbd290c2041a6f.php": {
 		"ft": 8192,
 		"oA": 2,
@@ -36570,6 +36648,12 @@
 		"oAP": "\/craft\/storage\/runtime\/compiled_templates\/8b\/8b3fe4b5453cf1b092445370ca2fe1d2253c4ca4fcb80bb492445f942afa9ea2.php",
 		"oF": 0
 		},
+	"\/craft\/storage\/runtime\/compiled_templates\/8c\/8ce2584d115696b9440b2626cce61b230f5c146cf6cd20b200b46811014a0ee9.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/storage\/runtime\/compiled_templates\/8c\/8ce2584d115696b9440b2626cce61b230f5c146cf6cd20b200b46811014a0ee9.php",
+		"oF": 0
+		},
 	"\/craft\/storage\/runtime\/compiled_templates\/8f\/8ff204c209077886360e6d9284d2da6ddafb62ad83b2fb5eb90e747707c23565.php": {
 		"ft": 8192,
 		"oA": 2,
@@ -36700,6 +36784,12 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/craft\/storage\/runtime\/compiled_templates\/ac\/accd6713a142507d39642a7de58c239c1b4693ce73f7499575c07f7018e4c998.php",
+		"oF": 0
+		},
+	"\/craft\/storage\/runtime\/compiled_templates\/ae\/ae7a42d447712cb396a1b5fc302a2484f8cb5fa8106b59c5147d6c80d7d06c6c.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/storage\/runtime\/compiled_templates\/ae\/ae7a42d447712cb396a1b5fc302a2484f8cb5fa8106b59c5147d6c80d7d06c6c.php",
 		"oF": 0
 		},
 	"\/craft\/storage\/runtime\/compiled_templates\/af\/afc268d96f53a79cddf2988945f8715d863bf2de631070e6dd71d60a3e43f675.php": {
@@ -37182,6 +37272,12 @@
 		"oAP": "\/craft\/storage\/runtime\/compiled_templates\/f2\/f2ec8156121c57e601a6b1065b8581ee6324b12afcf20ac3a2fc60c78713fd78.php",
 		"oF": 0
 		},
+	"\/craft\/storage\/runtime\/compiled_templates\/f5\/f5df41faa95403eaa967a43673b055e4b657c48189b479dca115a8f281728f23.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/storage\/runtime\/compiled_templates\/f5\/f5df41faa95403eaa967a43673b055e4b657c48189b479dca115a8f281728f23.php",
+		"oF": 0
+		},
 	"\/craft\/storage\/runtime\/compiled_templates\/f6\/f696218937a8d56f03cf1b8e97dc2be61b07b86686bf61fb767c645c29e71829.php": {
 		"ft": 8192,
 		"oA": 2,
@@ -37253,6 +37349,14 @@
 		"oA": 2,
 		"oAP": "\/craft\/storage\/runtime\/HTML\/4.8.0,8f8ac40458a1a4631e0dfd4a0ed502a22734a66a,1.ser",
 		"oF": 0
+		},
+	"\/craft\/storage\/runtime\/htmlcache\/settings.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "\/craft\/storage\/runtime\/htmlcache\/settings-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
 		},
 	"\/craft\/storage\/runtime\/logs": {
 		"ft": 65536,
