@@ -2,14 +2,12 @@
 // 	background-image: url('../img/about-us.jpg');
 // }
 
-.context-regularPage,
-.page-about-us {
+.context-regularPage {
 
 	.hero-bg-overlay {
 		background: linear-gradient(50deg, $tertiary-colour 0, $quaternary-colour 100%);
 	}
 
-	.off-canvas .menu,
 	.main-menu {
 
 		a[href*="about-us"] {

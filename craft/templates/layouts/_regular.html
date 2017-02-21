@@ -129,7 +129,7 @@
 					<button class="close-button" aria-label="Close menu" type="button" data-close>
 						<span aria-hidden="true">&times;</span>
 					</button>
-					{{craft.olivemenus.getMenuHTML('mainMenu')}}
+					{{craft.olivemenus.getMenuHTML('mainMenu',{ 'menu-class': 'main-menu' })}}
 				</nav>
 				<div class="off-canvas-content" data-off-canvas-content>
 					{% include 'partials/navigation.html' %}
