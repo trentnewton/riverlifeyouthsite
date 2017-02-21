@@ -9,401 +9,407 @@
  # http://twig.sensiolabs.org/doc/templates.html#template-inheritance
  #}
 
- {% set title = pageTitle %}
- {% set description = pageSummary %}
+{% set title = pageTitle %}
+{% set description = pageSummary %}
 
-<!DOCTYPE html>
-<html class="no-js" lang="en">
-    <head>
-        <meta charset="utf-8" />
-        {% if metatags.xUaCompatible is defined %}<meta http-equiv="x-ua-compatible" content="{{ metatags.xUaCompatible }}">{% endif %}
-        {% if metatags.viewport is defined %}<meta name="viewport" content="{{ metatags.viewport }}">{% endif %}
-        <title>{% if title is defined %}{{ title }} - {% endif %}{{ siteName }}</title>
-        {% for asset in metatags.appleTouchIcon %}
-            <link rel="apple-touch-icon" sizes="180x180" href="{{ asset.url }}">
-        {% endfor %}
-        {% for asset in metatags.favicon32x32 %}
-            <link rel="icon" type="image/png" href="{{ asset.url }}" sizes="32x32">
-        {% endfor %}
-        {% for asset in metatags.favicon16x16 %}
-            <link rel="icon" type="image/png" href="{{ asset.url }}" sizes="16x16">
-        {% endfor %}
-        {% for asset in metatags.manifest %}
-            <link rel="manifest" href="{{ asset.url }}">
-        {% endfor %}
-        {% for asset in metatags.maskIcon %}
-            <link rel="mask-icon" href="{{ asset.url }}" color="#ff4169">
-        {% endfor %}
-        {# for asset in entry.coverImage %}
-            <link rel="image_src" href="{{ asset.getUrl('metaImageFit') }}">
-        {% endfor #}
-        {% if metatags.themeColor and metatags.themeColor != '#000000' %}
-            <meta name="theme-color" content="{{ metatags.themeColor }}">
-        {% endif %}
-        {% if general.copyright is defined %}
-            <meta name="rights" content="{{ general.copyright }}">
-        {% endif %}
-        {% if metatags.handheldfriendly is defined %}<meta name="HandheldFriendly" content="true">{% endif %}
-        {% if description is defined %}<meta name="description" content="{{ description }}">{% endif %}
-        {% if entry.type.handle == 'homepage' %}
-            <meta itemprop="name" content="{{ siteName }}">
-        {% else %}
-            {% if title is defined %}
-                <meta itemprop="name" content="{{ title }}">
-            {% else %}
-                <meta itemprop="name" content="{{ siteName }}">
-            {% endif %}
-        {% endif %}
-        {% if description is defined %}<meta itemprop="description" content="{{ description }}">{% endif %}
-        {% if entry.type.handle == 'homepage' %}
-            <meta property="og:title" content="{{ siteName }}">
-        {% else %}
-            {% if title is defined %}
-                <meta property="og:title" content="{{ title }}">
-            {% else %}
-                <meta property="og:title" content="{{ siteName }}">
-            {% endif %}
-        {% endif %}
-        {% if entry.url is defined %}
-            <meta property="og:url" content="{{ entry.url }}">
-        {% endif %}
-        {% if description is defined %}<meta property="og:description" content="{{ description }}">{% endif %}
-        <meta property="og:site_name" content="{{ siteName }}">
-        <meta property="og:type" content="website">
-        {# for asset in entry.coverImage %}
-            <meta property="og:image" content="{{ asset.getUrl('metaImageFit') }}">
-            <meta property="og:image:width" content="{{ asset.getWidth('metaImageFit') }}">
-            <meta property="og:image:height" content="{{ asset.getHeight('metaImageFit') }}">
-            <meta property="og:image:type" content="image/jpg">
-        {% endfor #}
-        {% if metatags.facebookAppId is defined %}<meta property="fb:app_id" content="{{ metatags.facebookAppId }}">{% endif %}
-        {% if entry.type.handle == 'homepage' %}
-            <meta name="twitter:title" content="{{ siteName }}">
-        {% else %}
-            {% if title is defined %}
-                <meta name="twitter:title" content="{{ title }}">
-            {% else %}
-                <meta name="twitter:title" content="{{ siteName }}">
-            {% endif %}
-        {% endif %}
-        {% if description is defined %}<meta name="twitter:description" content="{{ description }}">{% endif %}
-        <meta name="twitter:card" content="summary">
-        {% if footer.twitterHandle is defined %}
-            <meta name="twitter:creator" content="@{{ footer.twitterHandle }}">
-        {% endif %}
-        {% if footer.twitterHandle is defined %}
-            <meta name="twitter:site" content="@{{ footer.twitterHandle }}">
-        {% endif %}
-        {# for asset in entry.coverImage %}
-            <meta name="twitter:image" content="{{ asset.getUrl('metaImageFit') }}">
-            <meta name="twitter:image:width" content="{{ asset.getWidth('metaImageFit') }}">
-            <meta name="twitter:image:height" content="{{ asset.getHeight('metaImageFit') }}">
-            <meta name="twitter:image:alt" content="{% if title is defined %}{{ title }} - {% endif %}{{ siteName }}">
-        {% endfor #}
-        {% if metatags.rating is defined %}<meta name="rating" content="{{ metatags.rating }}">{% endif %}
-        <link rel="stylesheet" href="/assets/css/app.css">
-        {% if metatags.robots is defined %}<meta name="robots" content="{{ metatags.robots }}">{% endif %}
-        <script src="https://use.typekit.net/wrd6xsa.js"></script>
-        <script>try{Typekit.load({ async: true });}catch(e){}</script>
-        {% if metatags.googleAnalylticsCode is defined %}
-            <script>
-                (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-                })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+{% cache %}
+    {% minify %}
 
-                ga('create', '{{ metatags.googleAnalylticsCode }}', 'auto');
-                ga('send', 'pageview');
-            </script>
-        {% endif %}
-    </head>
-    <body class="error-page" itemscope itemtype="http://schema.org/WebPage">
-        {% include 'partials/svg.html' %}
-        {% block content %}
-            <p>If you see me, you haven’t set your <code>{% verbatim %}{% block content %}…{% endblock %}{% endverbatim %}</code> yet.</p>
-            <p>See Twig’s <a href="http://twig.sensiolabs.org/doc/templates.html#template-inheritance">Template Inheritance</a> documentation for an explanation.</p>
-        {% endblock %}
-        <script src="/assets/js/app.js"></script>
-        <script src="http://cdnjs.cloudflare.com/ajax/libs/three.js/r58/three.min.js"></script>
-        <script type="text/javascript">
-            $(function (){
-            /*
-                :glitchBox
-            */
-                function glitchBox(canvas){
-                    this.canvas = canvas;
-                    this.ctx = canvas.getContext('2d');
-                    this.width = canvas.width;
-                    this.height = canvas.height;
-                }
-                glitchBox.prototype.glitchWave = function (renderLineHeight, cuttingHeight){
-                    var image = this.ctx.getImageData(0, renderLineHeight, this.width, cuttingHeight);
-                    this.ctx.putImageData(image, 0, renderLineHeight - 10);
-                };
-                glitchBox.prototype.glitchSlip = function (waveDistance){
-                    var startHeight = this.height * Math.random();
-                    var endHeight = startHeight + 30 + (Math.random() * 40);
-                    for (var h = startHeight; h < endHeight; h++){
-                        if (Math.random() < 0.1)h++;
-                        var image = this.ctx.getImageData(0, h, this.width, 1);
-                        this.ctx.putImageData(image, Math.random()*waveDistance-(waveDistance/2), h);
-                    }
-                };
-                glitchBox.prototype.glitchSlipColor = function (waveDistance){
-                    var startHeight = this.height * Math.random();
-                    var endHeight = startHeight + 30 + (Math.random() * 40);
-                    var imageData = this.ctx.getImageData(0, startHeight,
-                        this.width, endHeight);
-                    var data = imageData.data;
-                    var r = g = b = 0;
-                    for (var i = 0, len = imageData.width * imageData.height; i<len; i++){
-                        if (i % imageData.width ==0){
-                            r = i + Math.floor((Math.random() -0.5) * waveDistance);
-                            g = i + Math.floor((Math.random() -0.5) * waveDistance);
-                            b = i + Math.floor((Math.random() -0.5) * waveDistance);
+        <!DOCTYPE html>
+        <html class="no-js" lang="en">
+            <head>
+                <meta charset="utf-8" />
+                {% if metatags.xUaCompatible is defined %}<meta http-equiv="x-ua-compatible" content="{{ metatags.xUaCompatible }}">{% endif %}
+                {% if metatags.viewport is defined %}<meta name="viewport" content="{{ metatags.viewport }}">{% endif %}
+                <title>{% if title is defined %}{{ title }} - {% endif %}{{ siteName }}</title>
+                {% for asset in metatags.appleTouchIcon %}
+                    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset.url }}">
+                {% endfor %}
+                {% for asset in metatags.favicon32x32 %}
+                    <link rel="icon" type="image/png" href="{{ asset.url }}" sizes="32x32">
+                {% endfor %}
+                {% for asset in metatags.favicon16x16 %}
+                    <link rel="icon" type="image/png" href="{{ asset.url }}" sizes="16x16">
+                {% endfor %}
+                {% for asset in metatags.manifest %}
+                    <link rel="manifest" href="{{ asset.url }}">
+                {% endfor %}
+                {% for asset in metatags.maskIcon %}
+                    <link rel="mask-icon" href="{{ asset.url }}" color="#ff4169">
+                {% endfor %}
+                {# for asset in entry.coverImage %}
+                    <link rel="image_src" href="{{ asset.getUrl('metaImageFit') }}">
+                {% endfor #}
+                {% if metatags.themeColor and metatags.themeColor != '#000000' %}
+                    <meta name="theme-color" content="{{ metatags.themeColor }}">
+                {% endif %}
+                {% if general.copyright is defined %}
+                    <meta name="rights" content="{{ general.copyright }}">
+                {% endif %}
+                {% if metatags.handheldfriendly is defined %}<meta name="HandheldFriendly" content="true">{% endif %}
+                {% if description is defined %}<meta name="description" content="{{ description }}">{% endif %}
+                {% if entry.type.handle == 'homepage' %}
+                    <meta itemprop="name" content="{{ siteName }}">
+                {% else %}
+                    {% if title is defined %}
+                        <meta itemprop="name" content="{{ title }}">
+                    {% else %}
+                        <meta itemprop="name" content="{{ siteName }}">
+                    {% endif %}
+                {% endif %}
+                {% if description is defined %}<meta itemprop="description" content="{{ description }}">{% endif %}
+                {% if entry.type.handle == 'homepage' %}
+                    <meta property="og:title" content="{{ siteName }}">
+                {% else %}
+                    {% if title is defined %}
+                        <meta property="og:title" content="{{ title }}">
+                    {% else %}
+                        <meta property="og:title" content="{{ siteName }}">
+                    {% endif %}
+                {% endif %}
+                {% if entry.url is defined %}
+                    <meta property="og:url" content="{{ entry.url }}">
+                {% endif %}
+                {% if description is defined %}<meta property="og:description" content="{{ description }}">{% endif %}
+                <meta property="og:site_name" content="{{ siteName }}">
+                <meta property="og:type" content="website">
+                {# for asset in entry.coverImage %}
+                    <meta property="og:image" content="{{ asset.getUrl('metaImageFit') }}">
+                    <meta property="og:image:width" content="{{ asset.getWidth('metaImageFit') }}">
+                    <meta property="og:image:height" content="{{ asset.getHeight('metaImageFit') }}">
+                    <meta property="og:image:type" content="image/jpg">
+                {% endfor #}
+                {% if metatags.facebookAppId is defined %}<meta property="fb:app_id" content="{{ metatags.facebookAppId }}">{% endif %}
+                {% if entry.type.handle == 'homepage' %}
+                    <meta name="twitter:title" content="{{ siteName }}">
+                {% else %}
+                    {% if title is defined %}
+                        <meta name="twitter:title" content="{{ title }}">
+                    {% else %}
+                        <meta name="twitter:title" content="{{ siteName }}">
+                    {% endif %}
+                {% endif %}
+                {% if description is defined %}<meta name="twitter:description" content="{{ description }}">{% endif %}
+                <meta name="twitter:card" content="summary">
+                {% if footer.twitterHandle is defined %}
+                    <meta name="twitter:creator" content="@{{ footer.twitterHandle }}">
+                {% endif %}
+                {% if footer.twitterHandle is defined %}
+                    <meta name="twitter:site" content="@{{ footer.twitterHandle }}">
+                {% endif %}
+                {# for asset in entry.coverImage %}
+                    <meta name="twitter:image" content="{{ asset.getUrl('metaImageFit') }}">
+                    <meta name="twitter:image:width" content="{{ asset.getWidth('metaImageFit') }}">
+                    <meta name="twitter:image:height" content="{{ asset.getHeight('metaImageFit') }}">
+                    <meta name="twitter:image:alt" content="{% if title is defined %}{{ title }} - {% endif %}{{ siteName }}">
+                {% endfor #}
+                {% if metatags.rating is defined %}<meta name="rating" content="{{ metatags.rating }}">{% endif %}
+                <link rel="stylesheet" href="/assets/css/app.css">
+                {% if metatags.robots is defined %}<meta name="robots" content="{{ metatags.robots }}">{% endif %}
+                <script src="https://use.typekit.net/wrd6xsa.js"></script>
+                <script>try{Typekit.load({ async: true });}catch(e){}</script>
+                {% if metatags.googleAnalylticsCode is defined %}
+                    <script>
+                        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+                        ga('create', '{{ metatags.googleAnalylticsCode }}', 'auto');
+                        ga('send', 'pageview');
+                    </script>
+                {% endif %}
+            </head>
+            <body class="error-page" itemscope itemtype="http://schema.org/WebPage">
+                {% include 'partials/svg.html' %}
+                {% block content %}
+                    <p>If you see me, you haven’t set your <code>{% verbatim %}{% block content %}…{% endblock %}{% endverbatim %}</code> yet.</p>
+                    <p>See Twig’s <a href="http://twig.sensiolabs.org/doc/templates.html#template-inheritance">Template Inheritance</a> documentation for an explanation.</p>
+                {% endblock %}
+                <script src="/assets/js/app.js"></script>
+                <script src="http://cdnjs.cloudflare.com/ajax/libs/three.js/r58/three.min.js"></script>
+                <script type="text/javascript">
+                    $(function (){
+                    /*
+                        :glitchBox
+                    */
+                        function glitchBox(canvas){
+                            this.canvas = canvas;
+                            this.ctx = canvas.getContext('2d');
+                            this.width = canvas.width;
+                            this.height = canvas.height;
                         }
-                        data[i*4] = data[r*4];      //r
-                        data[i*4 + 1] = data[g*4 + 1];  //g
-                        data[i*4 + 2] = data[b*4 + 2]; //b
-                        // data[i*4 + 3] = data[a*4 + 3];  //a
+                        glitchBox.prototype.glitchWave = function (renderLineHeight, cuttingHeight){
+                            var image = this.ctx.getImageData(0, renderLineHeight, this.width, cuttingHeight);
+                            this.ctx.putImageData(image, 0, renderLineHeight - 10);
+                        };
+                        glitchBox.prototype.glitchSlip = function (waveDistance){
+                            var startHeight = this.height * Math.random();
+                            var endHeight = startHeight + 30 + (Math.random() * 40);
+                            for (var h = startHeight; h < endHeight; h++){
+                                if (Math.random() < 0.1)h++;
+                                var image = this.ctx.getImageData(0, h, this.width, 1);
+                                this.ctx.putImageData(image, Math.random()*waveDistance-(waveDistance/2), h);
+                            }
+                        };
+                        glitchBox.prototype.glitchSlipColor = function (waveDistance){
+                            var startHeight = this.height * Math.random();
+                            var endHeight = startHeight + 30 + (Math.random() * 40);
+                            var imageData = this.ctx.getImageData(0, startHeight,
+                                this.width, endHeight);
+                            var data = imageData.data;
+                            var r = g = b = 0;
+                            for (var i = 0, len = imageData.width * imageData.height; i<len; i++){
+                                if (i % imageData.width ==0){
+                                    r = i + Math.floor((Math.random() -0.5) * waveDistance);
+                                    g = i + Math.floor((Math.random() -0.5) * waveDistance);
+                                    b = i + Math.floor((Math.random() -0.5) * waveDistance);
+                                }
+                                data[i*4] = data[r*4];      //r
+                                data[i*4 + 1] = data[g*4 + 1];  //g
+                                data[i*4 + 2] = data[b*4 + 2]; //b
+                                // data[i*4 + 3] = data[a*4 + 3];  //a
+                            }
+                            this.ctx.putImageData(imageData, 0, startHeight);
+                        };
+                        glitchBox.prototype.glitchFillRandom = function (fillCnt, cuttingMaxHeight){
+                            var cw = this.width;
+                            var ch = this.height;
+                            for (var i = 0; i< fillCnt; i++){
+                                var rndX = cw * Math.random();
+                                var rndY = ch * Math.random();
+                                var rndW = cw * Math.random();
+                                var rndH = cuttingMaxHeight * Math.random();
+                                var image = this.ctx.getImageData(rndX,rndY,rndW, rndH);
+                                this.ctx.putImageData(image, (rndX* Math.random())%cw, rndY);
+                            }
+                        }
+
+                        /*
+                        :canvasView
+                        */
+                        function canvasView(canvas, FPS, loopFPS){
+                            if (canvas == null){
+                                canvas = document.createElement('canvas');
+                            }
+                            this.canvas = canvas;
+                            this.ctx = canvas.getContext('2d');
+                            this.width = 0;
+                            this.height = 0;
+                            this.GRID_X = 50;
+                            this.GRID_Y = 50;
+                            this.frm = 0;
+                            this.FPS = FPS;
+                            this.loopFPS = loopFPS;
+                            this.bgCanvasImage;
+                        }
+                        canvasView.prototype.initCanvas = function (){
+                            this.canvas.width = this.width = window.innerWidth;
+                            this.canvas.height = this.height = window.innerHeight;
+                            this.ctx.clearRect(0, 0, this.width, this.height);
+                            this.ctx.globalAlpha = 1;
+                        }
+
+                        canvasView.prototype.drawCanvas = function (){
+                            var cw = this.width;
+                            var ch = this.height;
+                            var ctx = this.ctx;
+                            this.drawBG();
+                            // circle
+                            ctx.strokeStyle = 'rgba(200,255,255,1)';
+                            ctx.beginPath();
+                            ctx.lineWidth = 10;
+                            var taskFPS = (this.frm % this.loopFPS)/this.loopFPS;
+                            ctx.arc(cw/2, ch/2, cw*0.4705, 0, 2*Math.PI*taskFPS, false);
+                            ctx.stroke();
+                            // bar
+                            ctx.fillStyle = this.makeGradientStyle();
+                            var taskFPS = this.frm % this.loopFPS;
+                            ctx.fillRect(cw/this.loopFPS * taskFPS, ch*0.45,
+                                cw*0.5, ch*0.1);
+                            ctx.fillRect(cw/this.loopFPS * taskFPS - cw, ch*0.45,
+                                cw*0.5, ch*0.1);
+                            // text
+                            ctx.fillStyle = '#000000';
+                            ctx.textAlign = "center";
+                            ctx.textBaseline = "top";
+                            ctx.font = "14px 'sofia-pro'";
+                            ctx.fillText("frame : " + this.frm,
+                                cw/2, ch*0.855, 500);
+                            ctx.fillText("width : " + cw + " / height : " +   ch + "px",
+                                cw/2, ch*0.89, 500);
+                                ctx.font = "24px 'sofia-pro'";
+                                ctx.fillText(yyyymmdd(), cw/2, ch*0.065, 500);
+                                ctx.font = "55px 'sofia-pro'";
+                                ctx.fillText(hhmissms(), cw/2, ch*0.1, 500);
+                        }
+                        canvasView.prototype.drawBG = function (){
+                            if (this.bgCanvasImage == null){
+                                var cw = this.width;
+                                var ch = this.height;
+                                var ctx = this.ctx;
+                                // set grid
+                                this.setGrid();
+                                // set circle
+                                ctx.strokeStyle = 'rgba(30,30,30,0.8)';
+                                ctx.beginPath();
+                                ctx.lineWidth = 40;
+                                ctx.arc(cw/2, ch/2, cw/2, 0, Math.PI*2, false);
+                                ctx.stroke();
+                                ctx.strokeStyle = 'rgba(30,30,30,0.8)';
+                                ctx.beginPath();
+                                ctx.lineWidth = 10;
+                                ctx.arc(cw/2, ch/2, cw*0.460, 0, Math.PI*2, false);
+                                ctx.stroke();
+                                // set slash
+                                ctx.lineWidth = 0.5;
+                                ctx.strokeStyle = 'rgba(0,0,0,0.15)';
+                                ctx.beginPath();
+                                ctx.moveTo(0, 0);
+                                ctx.lineTo(cw,ch);
+                                ctx.stroke();
+                                ctx.moveTo(cw, 0);
+                                ctx.lineTo(0, ch);
+                                ctx.stroke();
+                                // save Image
+                                this.bgCanvasImage = ctx.getImageData(0, 0,cw,ch);
+                            }
+                            // put saved image
+                            this.ctx.putImageData(this.bgCanvasImage, 0,0);
+                        }
+
+                        canvasView.prototype.setGrid = function (){
+                            var pointR = 5;
+                            var detailCeparetCnt = 5;
+                            var gridW = this.width / this.GRID_X*10;
+                            var gridH = this.height / this.GRID_Y*10;
+
+                            // detailDot
+                            var patternCanvas1 = document.createElement("canvas");
+                            patternCanvas1.width = gridW/detailCeparetCnt;
+                            patternCanvas1.height = gridH/detailCeparetCnt;
+                            var pCtx = patternCanvas1.getContext("2d");
+                            pCtx.arc(gridW/detailCeparetCnt/2,gridH/detailCeparetCnt/2,
+                                1.2,0,Math.PI * 2);
+                            pCtx.fillStyle = "rgba(0,0,0,0.2)";
+                            pCtx.fill();
+
+                            // grid+
+                            var patternCanvas2 = document.createElement("canvas");
+                            patternCanvas2.width = gridW;
+                            patternCanvas2.height = gridH;
+                            var pCtx2 = patternCanvas2.getContext("2d");
+                            pCtx2.arc((gridW/2),(gridH/2),2,0,Math.PI * 2);
+                            pCtx2.fillStyle = "rgba(0,0,0,0.5)";
+                            pCtx2.fill();
+                            pCtx2.lineWidth = 0.5;
+                            pCtx2.strokeStyle = 'rgba(0,0,0,0.1)';
+                            pCtx2.moveTo(0, (gridH/2));
+                            pCtx2.lineTo(gridW, (gridH/2));
+                            pCtx2.stroke();
+                            pCtx2.moveTo((gridW/2), 0);
+                            pCtx2.lineTo((gridW/2), gridH);
+                            pCtx2.stroke();
+
+                            pCtx2.fillStyle = pCtx2.createPattern(patternCanvas1, "repeat");
+                            pCtx2.fillRect(0, 0,patternCanvas2.width, patternCanvas2.height);
+
+                            var ctx = this.ctx;
+                            ctx.fillStyle = ctx.createPattern(patternCanvas2, "repeat");
+                            ctx.fillRect(0, 0,this.width, this.height);
+                        }
+
+                        canvasView.prototype.makeGradientStyle = function (){
+                            var grad  = this.ctx.createLinearGradient(0,0, this.width,0);
+                            grad.addColorStop(0,'rgb(220, 0, 0)');
+                            grad.addColorStop(0.5,'rgb(220, 0, 220)');
+                            grad.addColorStop(1,'rgb(0, 0, 220)');
+                            return grad;
+                        }
+
+                        // other
+                        // 1桁の数字を0埋めで2桁にする
+                        var toDoubleDigits = function (num) {
+                            num += "";
+                            if (num.length === 1)num = "0" + num;
+                            return num;
+                        };
+                        var toTripleDigits = function (num) {
+                            num += "";
+                            if (num.length === 1)num = "0" + num;
+                            if (num.length === 2)num = "0" + num;
+                            return num;
+                        };
+
+                        // 日付をYYYY/MM/DD HH:DD:MI:SS形式で取得
+                        var yyyymmdd = function () {
+                            var date = new Date();
+                            var yyyy = date.getFullYear();
+                            var mm = toDoubleDigits(date.getMonth() + 1);
+                            var dd = toDoubleDigits(date.getDate());
+                            return yyyy + '/' + mm + '/' + dd;
+                        };
+                        var hhmissms = function () {
+                            var date = new Date();
+                            var hh = toDoubleDigits(date.getHours());
+                            var mi = toDoubleDigits(date.getMinutes());
+                            var ss = toDoubleDigits(date.getSeconds());
+                            var ms = toTripleDigits(date.getMilliseconds())
+                            return hh + ':' + mi + ':' + ss + ':' + ms;
+                        };
+                        var getRandOffsetNum = function (){
+                            var num = Math.random() * 1800 + 250;
+                            if (Math.random() < 0.6){
+                                num *= -1;
+                            }
+                            return num;
+                        }
+
+                        var FPS = 30;
+                        var loopFPS = 100;
+                        var canvasView = new canvasView(null, FPS, loopFPS);
+                        canvasView.initCanvas();
+                        var glitch = new glitchBox(canvasView.canvas);
+                        document.body.appendChild(canvasView.canvas);
+                        var render = function (){
+                        canvasView.frm++;
+                        canvasView.drawCanvas();
+                        if (canvasView.frm %100 < 10){
+                            // fillCnt, cuttingMaxHeight
+                            glitch.glitchFillRandom(5, 20);
+                        }
+                        if (canvasView.frm%100 < 20){
+                            glitch.glitchSlip(8);
+                        }
+                        if (94 < canvasView.frm%100){
+                            glitch.glitchSlipColor(50);
+                        }
+                        // renderLineHeight, cuttingHeight
+                        glitch.glitchWave((canvasView.frm * 3) % canvasView.height, 3);
+                        // if(counter >= 10)clearInterval(timer);
                     }
-                    this.ctx.putImageData(imageData, 0, startHeight);
-                };
-                glitchBox.prototype.glitchFillRandom = function (fillCnt, cuttingMaxHeight){
-                    var cw = this.width;
-                    var ch = this.height;
-                    for (var i = 0; i< fillCnt; i++){
-                        var rndX = cw * Math.random();
-                        var rndY = ch * Math.random();
-                        var rndW = cw * Math.random();
-                        var rndH = cuttingMaxHeight * Math.random();
-                        var image = this.ctx.getImageData(rndX,rndY,rndW, rndH);
-                        this.ctx.putImageData(image, (rndX* Math.random())%cw, rndY);
-                    }
-                }
 
-                /*
-                :canvasView
-                */
-                function canvasView(canvas, FPS, loopFPS){
-                    if (canvas == null){
-                        canvas = document.createElement('canvas');
-                    }
-                    this.canvas = canvas;
-                    this.ctx = canvas.getContext('2d');
-                    this.width = 0;
-                    this.height = 0;
-                    this.GRID_X = 50;
-                    this.GRID_Y = 50;
-                    this.frm = 0;
-                    this.FPS = FPS;
-                    this.loopFPS = loopFPS;
-                    this.bgCanvasImage;
-                }
-                canvasView.prototype.initCanvas = function (){
-                    this.canvas.width = this.width = window.innerWidth;
-                    this.canvas.height = this.height = window.innerHeight;
-                    this.ctx.clearRect(0, 0, this.width, this.height);
-                    this.ctx.globalAlpha = 1;
-                }
+                    // animation task
+                    window.requestAnimationFrame = (function (){
+                        return window.requestAnimationFrame  ||
+                        window.webkitRequestAnimationFrame ||
+                        window.mozRequestAnimationFrame    ||
+                        window.oRequestAnimationFrame      ||
+                        window.msRequestAnimationFrame     ||
+                        function (callback, element){
+                            window.setTimeout(callback, 1000 / FPS);
+                        };
+                    })();
+                    function animationLoop(){
+                        render();
+                        requestAnimationFrame(animationLoop);
+                    };
+                    animationLoop();
+                    });
 
-                canvasView.prototype.drawCanvas = function (){
-                    var cw = this.width;
-                    var ch = this.height;
-                    var ctx = this.ctx;
-                    this.drawBG();
-                    // circle
-                    ctx.strokeStyle = 'rgba(200,255,255,1)';
-                    ctx.beginPath();
-                    ctx.lineWidth = 10;
-                    var taskFPS = (this.frm % this.loopFPS)/this.loopFPS;
-                    ctx.arc(cw/2, ch/2, cw*0.4705, 0, 2*Math.PI*taskFPS, false);
-                    ctx.stroke();
-                    // bar
-                    ctx.fillStyle = this.makeGradientStyle();
-                    var taskFPS = this.frm % this.loopFPS;
-                    ctx.fillRect(cw/this.loopFPS * taskFPS, ch*0.45,
-                        cw*0.5, ch*0.1);
-                    ctx.fillRect(cw/this.loopFPS * taskFPS - cw, ch*0.45,
-                        cw*0.5, ch*0.1);
-                    // text
-                    ctx.fillStyle = '#000000';
-                    ctx.textAlign = "center";
-                    ctx.textBaseline = "top";
-                    ctx.font = "14px 'sofia-pro'";
-                    ctx.fillText("frame : " + this.frm,
-                        cw/2, ch*0.855, 500);
-                    ctx.fillText("width : " + cw + " / height : " +   ch + "px",
-                        cw/2, ch*0.89, 500);
-                        ctx.font = "24px 'sofia-pro'";
-                        ctx.fillText(yyyymmdd(), cw/2, ch*0.065, 500);
-                        ctx.font = "55px 'sofia-pro'";
-                        ctx.fillText(hhmissms(), cw/2, ch*0.1, 500);
-                }
-                canvasView.prototype.drawBG = function (){
-                    if (this.bgCanvasImage == null){
-                        var cw = this.width;
-                        var ch = this.height;
-                        var ctx = this.ctx;
-                        // set grid
-                        this.setGrid();
-                        // set circle
-                        ctx.strokeStyle = 'rgba(30,30,30,0.8)';
-                        ctx.beginPath();
-                        ctx.lineWidth = 40;
-                        ctx.arc(cw/2, ch/2, cw/2, 0, Math.PI*2, false);
-                        ctx.stroke();
-                        ctx.strokeStyle = 'rgba(30,30,30,0.8)';
-                        ctx.beginPath();
-                        ctx.lineWidth = 10;
-                        ctx.arc(cw/2, ch/2, cw*0.460, 0, Math.PI*2, false);
-                        ctx.stroke();
-                        // set slash
-                        ctx.lineWidth = 0.5;
-                        ctx.strokeStyle = 'rgba(0,0,0,0.15)';
-                        ctx.beginPath();
-                        ctx.moveTo(0, 0);
-                        ctx.lineTo(cw,ch);
-                        ctx.stroke();
-                        ctx.moveTo(cw, 0);
-                        ctx.lineTo(0, ch);
-                        ctx.stroke();
-                        // save Image
-                        this.bgCanvasImage = ctx.getImageData(0, 0,cw,ch);
-                    }
-                    // put saved image
-                    this.ctx.putImageData(this.bgCanvasImage, 0,0);
-                }
+                </script>
+            </body>
+        </html>
 
-                canvasView.prototype.setGrid = function (){
-                    var pointR = 5;
-                    var detailCeparetCnt = 5;
-                    var gridW = this.width / this.GRID_X*10;
-                    var gridH = this.height / this.GRID_Y*10;
-
-                    // detailDot
-                    var patternCanvas1 = document.createElement("canvas");
-                    patternCanvas1.width = gridW/detailCeparetCnt;
-                    patternCanvas1.height = gridH/detailCeparetCnt;
-                    var pCtx = patternCanvas1.getContext("2d");
-                    pCtx.arc(gridW/detailCeparetCnt/2,gridH/detailCeparetCnt/2,
-                        1.2,0,Math.PI * 2);
-                    pCtx.fillStyle = "rgba(0,0,0,0.2)";
-                    pCtx.fill();
-
-                    // grid+
-                    var patternCanvas2 = document.createElement("canvas");
-                    patternCanvas2.width = gridW;
-                    patternCanvas2.height = gridH;
-                    var pCtx2 = patternCanvas2.getContext("2d");
-                    pCtx2.arc((gridW/2),(gridH/2),2,0,Math.PI * 2);
-                    pCtx2.fillStyle = "rgba(0,0,0,0.5)";
-                    pCtx2.fill();
-                    pCtx2.lineWidth = 0.5;
-                    pCtx2.strokeStyle = 'rgba(0,0,0,0.1)';
-                    pCtx2.moveTo(0, (gridH/2));
-                    pCtx2.lineTo(gridW, (gridH/2));
-                    pCtx2.stroke();
-                    pCtx2.moveTo((gridW/2), 0);
-                    pCtx2.lineTo((gridW/2), gridH);
-                    pCtx2.stroke();
-
-                    pCtx2.fillStyle = pCtx2.createPattern(patternCanvas1, "repeat");
-                    pCtx2.fillRect(0, 0,patternCanvas2.width, patternCanvas2.height);
-
-                    var ctx = this.ctx;
-                    ctx.fillStyle = ctx.createPattern(patternCanvas2, "repeat");
-                    ctx.fillRect(0, 0,this.width, this.height);
-                }
-
-                canvasView.prototype.makeGradientStyle = function (){
-                    var grad  = this.ctx.createLinearGradient(0,0, this.width,0);
-                    grad.addColorStop(0,'rgb(220, 0, 0)');
-                    grad.addColorStop(0.5,'rgb(220, 0, 220)');
-                    grad.addColorStop(1,'rgb(0, 0, 220)');
-                    return grad;
-                }
-
-                // other
-                // 1桁の数字を0埋めで2桁にする
-                var toDoubleDigits = function (num) {
-                    num += "";
-                    if (num.length === 1)num = "0" + num;
-                    return num;
-                };
-                var toTripleDigits = function (num) {
-                    num += "";
-                    if (num.length === 1)num = "0" + num;
-                    if (num.length === 2)num = "0" + num;
-                    return num;
-                };
-
-                // 日付をYYYY/MM/DD HH:DD:MI:SS形式で取得
-                var yyyymmdd = function () {
-                    var date = new Date();
-                    var yyyy = date.getFullYear();
-                    var mm = toDoubleDigits(date.getMonth() + 1);
-                    var dd = toDoubleDigits(date.getDate());
-                    return yyyy + '/' + mm + '/' + dd;
-                };
-                var hhmissms = function () {
-                    var date = new Date();
-                    var hh = toDoubleDigits(date.getHours());
-                    var mi = toDoubleDigits(date.getMinutes());
-                    var ss = toDoubleDigits(date.getSeconds());
-                    var ms = toTripleDigits(date.getMilliseconds())
-                    return hh + ':' + mi + ':' + ss + ':' + ms;
-                };
-                var getRandOffsetNum = function (){
-                    var num = Math.random() * 1800 + 250;
-                    if (Math.random() < 0.6){
-                        num *= -1;
-                    }
-                    return num;
-                }
-
-                var FPS = 30;
-                var loopFPS = 100;
-                var canvasView = new canvasView(null, FPS, loopFPS);
-                canvasView.initCanvas();
-                var glitch = new glitchBox(canvasView.canvas);
-                document.body.appendChild(canvasView.canvas);
-                var render = function (){
-                canvasView.frm++;
-                canvasView.drawCanvas();
-                if (canvasView.frm %100 < 10){
-                    // fillCnt, cuttingMaxHeight
-                    glitch.glitchFillRandom(5, 20);
-                }
-                if (canvasView.frm%100 < 20){
-                    glitch.glitchSlip(8);
-                }
-                if (94 < canvasView.frm%100){
-                    glitch.glitchSlipColor(50);
-                }
-                // renderLineHeight, cuttingHeight
-                glitch.glitchWave((canvasView.frm * 3) % canvasView.height, 3);
-                // if(counter >= 10)clearInterval(timer);
-            }
-
-            // animation task
-            window.requestAnimationFrame = (function (){
-                return window.requestAnimationFrame  ||
-                window.webkitRequestAnimationFrame ||
-                window.mozRequestAnimationFrame    ||
-                window.oRequestAnimationFrame      ||
-                window.msRequestAnimationFrame     ||
-                function (callback, element){
-                    window.setTimeout(callback, 1000 / FPS);
-                };
-            })();
-            function animationLoop(){
-                render();
-                requestAnimationFrame(animationLoop);
-            };
-            animationLoop();
-            });
-
-        </script>
-    </body>
-</html>
+    {% endminify %}
+{% endcache %}
