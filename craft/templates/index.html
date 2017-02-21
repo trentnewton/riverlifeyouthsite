@@ -106,7 +106,7 @@
 			{% switch block.type %}
 
 				{% case "ministrySection" %}
-					<div class="ministry ministry-1" style="background: linear-gradient(rgba({{ block.colour }}, .8), rgba({{ block.colour }}, .8)), url('{% for asset in block.image %}{{ asset.getUrl('ministrySection') }}{% endfor %}') 50%/cover no-repeat">
+					<div class="ministry ministry-1" style="background: linear-gradient(rgba({{ block.colour|hexToRgb }}, .8), rgba({{ block.colour|hexToRgb }}, .8)), url('{% for asset in block.image %}{{ asset.getUrl('ministrySection') }}{% endfor %}') 50%/cover no-repeat">
 						<div class="row align-right">
 							<div class="content small-12 medium-7 columns">
 								<h2 class="ministry-name" itemprop="headline">
@@ -133,7 +133,7 @@
 			{% switch block.type %}
 
 				{% case "ministrySection" %}
-					<div class="ministry ministry-2" style="background: linear-gradient(rgba({{ block.colour }}, .8), rgba({{ block.colour }}, .8)), url('{% for asset in block.image %}{{ asset.getUrl('ministrySection') }}{% endfor %}') 50%/cover no-repeat">
+					<div class="ministry ministry-2" style="background: linear-gradient(rgba({{ block.colour|hexToRgb }}, .8), rgba({{ block.colour|hexToRgb }}, .8)), url('{% for asset in block.image %}{{ asset.getUrl('ministrySection') }}{% endfor %}') 50%/cover no-repeat">
 						<div class="row">
 							<div class="content small-12 medium-7 columns">
 								<h2 class="ministry-name" itemprop="headline">
@@ -160,7 +160,7 @@
 			{% switch block.type %}
 
 				{% case "ministrySection" %}
-					<div class="ministry ministry-3" style="background: linear-gradient(rgba({{ block.colour }}, .8), rgba({{ block.colour }}, .8)), url('{% for asset in block.image %}{{ asset.getUrl('ministrySection') }}{% endfor %}') 50%/cover no-repeat">
+					<div class="ministry ministry-3" style="background: linear-gradient(rgba({{ block.colour|hexToRgb }}, .8), rgba({{ block.colour|hexToRgb }}, .8)), url('{% for asset in block.image %}{{ asset.getUrl('ministrySection') }}{% endfor %}') 50%/cover no-repeat">
 						<div class="row align-right">
 							<div class="content small-12 medium-7 columns">
 								<h2 class="ministry-name" itemprop="headline">
