@@ -7,9 +7,11 @@
 		<article class="row">
 			<div class="column">
 				<p class="post-meta">
-					<a href="{{ siteRoot }}media">
-						<span class="back"><svg class="icon icon-chevron-up"><use xlink:href="#icon-chevron-up"></use></svg>{{ 'Back' | translate }}</span>
-					</a>
+					{% for entry in craft.entries.section('mediaOverview').find() %}
+						<a href="{{ entry.url }}">
+							<span class="back"><svg class="icon icon-chevron-up"><use xlink:href="#icon-chevron-up"></use></svg>{{ 'Back' | translate }}</span>
+						</a>
+					{% endfor %}
 				</p>
 				<h2 class="header" itemprop="headline">{{ title }}</h2>
 				{% for block in entry.lead %}
