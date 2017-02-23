@@ -30,6 +30,7 @@ Thumbs.db
 /logs/*
 
 default
+php.ini
 readme.txt
 
 craft/app/*
