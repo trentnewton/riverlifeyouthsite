@@ -48,25 +48,9 @@
             {% endif %}
             {% if metatags.handheldfriendly is defined %}<meta name="HandheldFriendly" content="true">{% endif %}
             {% if description is defined %}<meta name="description" content="{{ description }}">{% endif %}
-            {% if entry.type.handle == 'homepage' %}
-                <meta itemprop="name" content="{{ siteName }}">
-            {% else %}
-                {% if title is defined %}
-                    <meta itemprop="name" content="{{ title }}">
-                {% else %}
-                    <meta itemprop="name" content="{{ siteName }}">
-                {% endif %}
-            {% endif %}
+            <meta itemprop="name" content="{{ title }}">
             {% if description is defined %}<meta itemprop="description" content="{{ description }}">{% endif %}
-            {% if entry.type.handle == 'homepage' %}
-                <meta property="og:title" content="{{ siteName }}">
-            {% else %}
-                {% if title is defined %}
-                    <meta property="og:title" content="{{ title }}">
-                {% else %}
-                    <meta property="og:title" content="{{ siteName }}">
-                {% endif %}
-            {% endif %}
+            <meta property="og:title" content="{{ title }}">
             {% if entry.url is defined %}
                 <meta property="og:url" content="{{ entry.url }}">
             {% endif %}
@@ -80,15 +64,7 @@
                 <meta property="og:image:type" content="image/jpg">
             {% endfor #}
             {% if metatags.facebookAppId is defined %}<meta property="fb:app_id" content="{{ metatags.facebookAppId }}">{% endif %}
-            {% if entry.type.handle == 'homepage' %}
-                <meta name="twitter:title" content="{{ siteName }}">
-            {% else %}
-                {% if title is defined %}
-                    <meta name="twitter:title" content="{{ title }}">
-                {% else %}
-                    <meta name="twitter:title" content="{{ siteName }}">
-                {% endif %}
-            {% endif %}
+            <meta name="twitter:title" content="{{ title }}">
             {% if description is defined %}<meta name="twitter:description" content="{{ description }}">{% endif %}
             <meta name="twitter:card" content="summary">
             {% if footer.twitterHandle is defined %}
