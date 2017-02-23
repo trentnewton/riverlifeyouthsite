@@ -1,7 +1,7 @@
 .button {
 	overflow: hidden;
 	font-weight: $global-weight-bold;
-	letter-spacing: 2px;
+	letter-spacing: rem-calc(2);
 	text-transform: uppercase;
 	position: relative;
 	z-index: 1;

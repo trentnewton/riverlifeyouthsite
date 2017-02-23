@@ -21,9 +21,6 @@
 
 .top-bar {
 	color: $white;
-	font-weight: $global-weight-bold;
-	text-transform: uppercase;
-	letter-spacing: rem-calc(2);
 
 	a.logo {
 		border-radius: 100%;
@@ -95,6 +92,10 @@
 		color: inherit;
 		position: relative;
 		transition: all .3s ease;
+		font-weight: $global-weight-bold;
+		text-transform: uppercase;
+		letter-spacing: rem-calc(2);
+		margin-right: rem-calc(-2);
 
 		&::after {
 			content: '';

@@ -218,7 +218,8 @@
 
 	.day {
 		text-transform: uppercase;
-		letter-spacing: 5px;
+		letter-spacing: rem-calc(5);
+		margin-right: rem-calc(-5);
 	}
 
 	.time,

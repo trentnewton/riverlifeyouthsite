@@ -91,6 +91,7 @@
 
 .of-text {
 	letter-spacing: rem-calc(10);
+	margin-right: rem-calc(-10);
 }
 
 .footer-logo {
@@ -100,6 +101,8 @@
 }
 
 .copyright-text {
-	margin: $paragraph-margin-bottom 0;
+	margin-top: $paragraph-margin-bottom;
+	margin-bottom: $paragraph-margin-bottom;
+	margin-right: rem-calc(-3);
 	letter-spacing: rem-calc(3);
 }
