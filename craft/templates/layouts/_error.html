@@ -11,6 +11,7 @@
 
 {% set title = pageTitle %}
 {% set description = pageSummary %}
+{% set siteRoot = '/' %}
 
 {% minify %}
 
@@ -103,7 +104,7 @@
                 <meta name="twitter:image:alt" content="{% if title is defined %}{{ title }} - {% endif %}{{ siteName }}">
             {% endfor #}
             {% if metatags.rating is defined %}<meta name="rating" content="{{ metatags.rating }}">{% endif %}
-            <link rel="stylesheet" href="/assets/css/app.css">
+            <link rel="stylesheet" href="{{ siteRoot }}assets/css/app.css">
             {% if metatags.robots is defined %}<meta name="robots" content="{{ metatags.robots }}">{% endif %}
             <script src="https://use.typekit.net/wrd6xsa.js"></script>
             <script>try{Typekit.load({ async: true });}catch(e){}</script>
@@ -125,7 +126,7 @@
                 <p>If you see me, you haven’t set your <code>{% verbatim %}{% block content %}…{% endblock %}{% endverbatim %}</code> yet.</p>
                 <p>See Twig’s <a href="http://twig.sensiolabs.org/doc/templates.html#template-inheritance">Template Inheritance</a> documentation for an explanation.</p>
             {% endblock %}
-            <script src="/assets/js/app.js"></script>
+            <script src="{{ siteRoot }}assets/js/app.js"></script>
             <script src="http://cdnjs.cloudflare.com/ajax/libs/three.js/r58/three.min.js"></script>
             <script type="text/javascript">
                 $(function (){

@@ -41,7 +41,7 @@
 									</div>
 								{% endfor %}
 							</div>
-							<a href="whats-on" data-text="{{ 'More' | translate }}" class="button tiny text-span">{{ 'More' | translate }}</a>
+							<a href="{{ siteRoot }}whats-on" data-text="{{ 'More' | translate }}" class="button tiny text-span">{{ 'More' | translate }}</a>
 						</div>
 					</div>
 					{% for entry in craft.entries.section('event').search('frontPageSlide:1') %}
@@ -213,7 +213,7 @@
 		</div>
 		<div class="row">
 			<div class="small-12 column">
-				<a href="blog" data-text="{{ 'More' | translate }}" class="button text-span">{{ 'More' | translate }}</a>
+				<a href="{{ siteRoot }}blog" data-text="{{ 'More' | translate }}" class="button text-span">{{ 'More' | translate }}</a>
 			</div>
 		</div>
 	</section>

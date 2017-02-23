@@ -12,6 +12,7 @@
 {% set title = entry.title %}
 {% set description = entry.summary %}
 {% set handle = entry.section.handle %}
+{% set siteRoot = '/' %}
 
 {% minify %}
 
@@ -106,9 +107,9 @@
 				<meta name="twitter:image:alt" content="{% if title is defined %}{{ title }} - {% endif %}{{ siteName }}">
 			{% endfor %}
 			{% if metatags.rating is defined %}<meta name="rating" content="{{ metatags.rating }}">{% endif %}
-			<link rel="stylesheet" href="/assets/css/app.css">
+			<link rel="stylesheet" href="{{ siteRoot }}assets/css/app.css">
 			{% if metatags.robots is defined %}<meta name="robots" content="{{ metatags.robots }}">{% endif %}
-			<link rel="alternate" type="application/rss+xml" title="{{ siteName }} | Blog" href="/feed.rss" />
+			<link rel="alternate" type="application/rss+xml" title="{{ siteName }} | Blog" href="{{ siteRoot }}feed.rss" />
 			<script src="https://use.typekit.net/wrd6xsa.js"></script>
 			<script>try{Typekit.load({ async: true });}catch(e){}</script>
 			{% if metatags.googleAnalylticsCode is defined %}
@@ -143,7 +144,7 @@
 					{% include 'partials/footer.html' %}
 				</div>
 			</div>
-			<script src="/assets/js/app.js"></script>
+			<script src="{{ siteRoot }}assets/js/app.js"></script>
 			<script src="https://cdn.jsdelivr.net/lightgallery/1.3.8/js/lightgallery.min.js"></script>
 			<script type="text/javascript">
 				$(document).ready(function () {
