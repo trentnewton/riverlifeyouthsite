@@ -1,20 +1,22 @@
-{% for entry in craft.entries.section('homepage').find() %}
-	{% for block in entry.videoBackground %}
-		{% switch block.type %}
+{% minify %}
+	{% for entry in craft.entries.section('homepage').find() %}
+		{% for block in entry.videoBackground %}
+			{% switch block.type %}
 
-			{% case "videoBackground" %}
+				{% case "videoBackground" %}
 
-				<video autoplay loop preload muted poster="{% for asset in block.videoBackgroundPoster %}{{ asset.url }}{% endfor %}" class="video-bg">
-					{% for asset in block.videoBackgroundWebm %}
-						<source src="{{ asset.url }}" type="video/webm">
-					{% endfor %}
-					{% for asset in block.videoBackgroundMp4 %}
-						<source src="{{ asset.url }}" type="video/mp4">
-					{% endfor %}
-				</video>
+					<video autoplay loop preload muted poster="{% for asset in block.videoBackgroundPoster %}{{ asset.url }}{% endfor %}" class="video-bg">
+						{% for asset in block.videoBackgroundWebm %}
+							<source src="{{ asset.url }}" type="video/webm">
+						{% endfor %}
+						{% for asset in block.videoBackgroundMp4 %}
+							<source src="{{ asset.url }}" type="video/mp4">
+						{% endfor %}
+					</video>
 
-			{% default %}
+				{% default %}
 
-		{% endswitch %}
+			{% endswitch %}
+		{% endfor %}
 	{% endfor %}
-{% endfor %}
+{% endminify %}

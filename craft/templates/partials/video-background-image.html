@@ -1,13 +1,15 @@
-{% for entry in craft.entries.section('homepage').find() %}
-	{% for block in entry.videoBackground %}
-		{% switch block.type %}
+{% minify %}
+	{% for entry in craft.entries.section('homepage').find() %}
+		{% for block in entry.videoBackground %}
+			{% switch block.type %}
 
-			{% case "videoBackground" %}
+				{% case "videoBackground" %}
 
-				<div class="video-bg" style="background-image: url('{% for asset in block.videoBackgroundPoster %}{{ asset.getUrl }}{% endfor %}');"></div>
+					<div class="video-bg" style="background-image: url('{% for asset in block.videoBackgroundPoster %}{{ asset.getUrl }}{% endfor %}');"></div>
 
-			{% default %}
+				{% default %}
 
-		{% endswitch %}
+			{% endswitch %}
+		{% endfor %}
 	{% endfor %}
-{% endfor %}
+{% endminify %}
