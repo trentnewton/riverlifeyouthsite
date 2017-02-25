@@ -15,6 +15,17 @@
 
 {% extends 'layouts/_regular' %}
 {% set heroTitle = 'Blog' %}
+{% set summary = null %}
+{% for block in entry.lead %}
+	{% switch block.type %}
+
+		{% case "lead" %}
+			{% set summary = block.text|striptags|slice(0,60) %}
+
+		{% default %}
+
+	{% endswitch %}
+{% endfor %}
 
 {% block content %}
 	{% include 'partials/hero.html' %}

@@ -52,7 +52,11 @@
 				<meta name="rights" content="{{ general.copyright }}">
 			{% endif %}
 			{% if metatags.handheldfriendly is defined %}<meta name="HandheldFriendly" content="true">{% endif %}
-			{% if description is defined %}<meta name="description" content="{{ description }}">{% endif %}
+			{% if summary != null %}
+				<meta name="description" content="{{ summary }}&hellip;">
+			{% elseif description is defined %}
+				<meta name="description" content="{{ description }}">
+			{% endif %}
 			{% if entry.type.handle == 'homepage' %}
 				<meta itemprop="name" content="{{ siteName }}">
 			{% else %}
@@ -62,7 +66,11 @@
 					<meta itemprop="name" content="{{ siteName }}">
 				{% endif %}
 			{% endif %}
-			{% if description is defined %}<meta itemprop="description" content="{{ description }}">{% endif %}
+			{% if summary != null %}
+				<meta itemprop="description" content="{{ summary }}&hellip;">
+			{% elseif description is defined %}
+				<meta itemprop="description" content="{{ description }}">
+			{% endif %}
 			{% if entry.type.handle == 'homepage' %}
 				<meta property="og:title" content="{{ siteName }}">
 			{% else %}
@@ -73,7 +81,11 @@
 				{% endif %}
 			{% endif %}
 			<meta property="og:url" content="{{ entry.url }}">
-			{% if description is defined %}<meta property="og:description" content="{{ description }}">{% endif %}
+			{% if summary != null %}
+				<meta property="og:description" content="{{ summary }}&hellip;">
+			{% elseif description is defined %}
+				<meta property="og:description" content="{{ description }}">
+			{% endif %}
 			<meta property="og:site_name" content="{{ siteName }}">
 			<meta property="og:type" content="Website">
 			{% for asset in entry.coverImage %}
@@ -92,7 +104,11 @@
 					<meta name="twitter:title" content="{{ siteName }}">
 				{% endif %}
 			{% endif %}
-			{% if description is defined %}<meta name="twitter:description" content="{{ description }}">{% endif %}
+			{% if summary != null %}
+				<meta name="twitter:description" content="{{ summary }}&hellip;">
+			{% elseif description is defined %}
+				<meta name="twitter:description" content="{{ description }}">
+			{% endif %}
 			<meta name="twitter:card" content="summary">
 			{% if footer.twitterHandle is defined %}
 				<meta name="twitter:creator" content="@{{ footer.twitterHandle }}">

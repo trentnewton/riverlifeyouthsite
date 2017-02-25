@@ -5,9 +5,18 @@
 			<div></div>
 		</div>
 		<div class="snippet__deco snippet__deco--overlay"></div>
-			<figcaption class="snippet__caption">
+		<figcaption class="snippet__caption">
 			<h3 class="snippet__title">{{ entry.title }}</h3>
-			{% if entry.summary|length %}<p class="snippet__description">{{ entry.summary }}&hellip;</p>{% endif %}
+			{% for block in entry.lead %}
+				{% switch block.type %}
+
+					{% case "lead" %}
+						<p class="snippet__description">{{ block.text|striptags|slice(0,60) }}&hellip;</p>
+
+					{% default %}
+
+				{% endswitch %}
+			{% endfor %}
 		</figcaption>
 		<svg class="snippet__deco snippet__deco--lines" viewBox="0 0 300 415">
 			<path d="M20.5,20.5h260v375h-260V20.5z" />
