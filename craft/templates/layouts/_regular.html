@@ -139,6 +139,37 @@
 					ga('send', 'pageview');
 				</script>
 			{% endif %}
+			{% for entry in craft.entries.section('homepage').find() %}
+				<style type="text/css">
+					{% for block in entry.ministrySection.offset(0).limit(1) %}
+					       {% switch block.type %}
+
+								{% case "ministrySection" %}
+									.freshman{background-color: rgba({{ block.colour|hexToRgb }}, 0.7)}
+								{% default %}
+
+							{% endswitch %}
+					{% endfor %}
+					{% for block in entry.ministrySection.offset(1).limit(1) %}
+					       {% switch block.type %}
+
+								{% case "ministrySection" %}
+									.sophomore{background-color: rgba({{ block.colour|hexToRgb }}, 0.7)}
+								{% default %}
+
+							{% endswitch %}
+					{% endfor %}
+					{% for block in entry.ministrySection.offset(2).limit(1) %}
+					       {% switch block.type %}
+
+								{% case "ministrySection" %}
+									.varsity{background-color: rgba({{ block.colour|hexToRgb }}, 0.7)}
+								{% default %}
+
+							{% endswitch %}
+					{% endfor %}
+				</style>
+			{% endfor %}
 		</head>
 		<body class="context-{{ handle }} page-{{ entry.slug }}" itemscope itemtype="http://schema.org/WebPage">
 			{% include 'partials/svg.html' %}

@@ -37,7 +37,7 @@
 								{% set category = craft.categories.group('events') %}
 								{% set entries = craft.entries.section('event').relatedTo(category).order('dayStart asc') %}
 								{% for entry in entries %}
-									<div class="column">
+									<div class="column{% if entry.category | length < 2 %} {{ entry.category.first().title|lower }}{% else %} all-grades{% endif %}">
 										<span class="event-information">{{ entry.dayStart | date('d.m') }}{% if entry.dayEnd | length %}&nbsp;+&nbsp;{{ entry.dayEnd | date('d.m') }}{% endif %}&nbsp;&#8212;&nbsp;{{ entry.title }} ({% if entry.category | length > 2 %}7&#8212;12{% else %}{{ entry.category.first().title }}{% endif %})</span>
 									</div>
 								{% endfor %}
