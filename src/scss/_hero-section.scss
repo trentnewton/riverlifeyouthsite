@@ -190,11 +190,13 @@
 
 	.column {
 		border-bottom: 2px solid $white;
-	}
 
-	// .event-information {
-	// 	border-bottom: 2px solid $white;
-	// }
+		@include breakpoint(small only) {
+			font-size: rem-calc(10);
+			line-height: 1.4;
+		}
+
+	}
 
 }
 
