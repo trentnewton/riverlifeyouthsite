@@ -1,7 +1,7 @@
 <footer class="footer-section" role="contentinfo" itemscope itemtype="http://schema.org/WPFooter">
 	<div class="top-footer">
 		<div class="row scroll-to-top">
-			<div class="small-12 column">
+			<div class="column">
 				<a href="#top" title="{{ 'Scroll to Top' | translate }}">
 					<svg class="icon icon-chevron-up"><use xlink:href="#icon-chevron-up"></use></svg>
 				</a>
@@ -63,7 +63,7 @@
 	{% endif %}
 	<div class="bottom-footer">
 		<div class="row">
-			<div class="small-12 columns">
+			<div class="column">
 				<p class="of-text">{{ 'A ministry of' | translate }}</p>
 				<a href="{{ footer.footerLogoLink }}" title="{% for block in svgLogos.logos.type('footerLogo').limit(1) %}{% switch block.type %}{% case "footerLogo" %}{{ block.footerLogoName }}{% default %}{% endswitch %}{% endfor %}" target="_blank">
 					<svg class="footer-logo" aria-labelledby="logo" preserveAspectRatio="xMinYMin meet"><use xlink:href="#footer-logo"></use></svg>
