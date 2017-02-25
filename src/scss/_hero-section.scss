@@ -215,6 +215,7 @@
 		font-weight: normal;
 		font-size: rem-calc(100);
 		margin: 0;
+		line-height: 1;
 
 		@include breakpoint(small only) {
 			font-size: rem-calc(60);
