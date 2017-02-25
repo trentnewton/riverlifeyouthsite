@@ -75,7 +75,7 @@
 			<meta property="og:url" content="{{ entry.url }}">
 			{% if description is defined %}<meta property="og:description" content="{{ description }}">{% endif %}
 			<meta property="og:site_name" content="{{ siteName }}">
-			<meta property="og:type" content="website">
+			<meta property="og:type" content="Website">
 			{% for asset in entry.coverImage %}
 				<meta property="og:image" content="{{ asset.getUrl('metaImageFit') }}">
 				<meta property="og:image:width" content="{{ asset.getWidth('metaImageFit') }}">
