@@ -73,7 +73,7 @@
 								</p>
 							{% endif %}
 							{% if entry.moreInfoLink|length %}
-								<a href="{{ entry.moreInfoLink.url }}" target="{{ entry.moreInfoLink.target }}" class="button text-span" data-text="{{ entry.moreInfoLink.text }}">{{ entry.moreInfoLink.text }}</a>
+								<a href="{{ entry.moreInfoLink.url }}" {% if entry.moreInfoLink.target | length %}target="{{ entry.moreInfoLink.target }}"{% endif %} class="button text-span" data-text="{{ entry.moreInfoLink.text }}">{{ entry.moreInfoLink.text }}</a>
 							{% endif %}
 						</div>
 					{% endfor %}
@@ -95,7 +95,7 @@
 								{{ block.text }}
 
 							{% case "button" %}
-								<a href="{{ block.buttonLink.url }}" target="{{ block.buttonLink.target }}" class="button text-span" data-text="{{ block.buttonLink.text }}">{{ block.buttonLink.text }}</a>
+								<a href="{{ block.buttonLink.url }}" {% if block.buttonLink.target | length %}target="{{ block.buttonLink.target }}"{% endif %} class="button text-span" data-text="{{ block.buttonLink.text }}">{{ block.buttonLink.text }}</a>
 
 							{% default %}
 
