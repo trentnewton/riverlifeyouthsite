@@ -290,6 +290,10 @@ jQuery(function ($){
 		// adaptiveHeight: true
 	});
 
+	// add active class for pages in channels
+
+	$('.context-blog .main-menu .blog, .context-gallery .main-menu .media').addClass('active');
+
 	// ajax contact page
 	$('#ajax-contact').submit(function (ev) {
 	    // Prevent the form from actually submitting
