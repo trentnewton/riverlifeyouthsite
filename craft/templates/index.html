@@ -51,9 +51,9 @@
 						<div class="homepage-slide event-flyer align-self-middle">
 							<p class="day">
 								{% if entry.reoccurring %}
-									{{ entry.dayStart | date('l') }}s at {{ entry.timeStart | date('ga') }}
+									{{ entry.dayStart | date('l') }}s at {{ entry.timeStart | date('g') }}<sub>{{ entry.timeStart | date('a') }}</sub>
 								{% else %}
-									{{ entry.dayStart | date('l') }}{% if entry.dayEnd | length %}&mdash;{{ entry.dayEnd | date('l') }}{% endif %}&nbsp;{{ entry.dayStart | date('F jS') }}
+									{{ entry.dayStart | date('l') }}{% if entry.dayEnd | length %}&mdash;{{ entry.dayEnd | date('l') }}{% endif %}&nbsp;{{ entry.dayStart | date('F j') }}<sup>{{ entry.dayStart | date('S') }}</sup>
 								{% endif %}
 							</p>
 							<h3 class="event-title">{{ entry.title }}</h3>

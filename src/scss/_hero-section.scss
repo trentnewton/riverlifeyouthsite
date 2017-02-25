@@ -227,6 +227,20 @@
 		text-transform: uppercase;
 		letter-spacing: rem-calc(5);
 		margin-right: rem-calc(-5);
+
+		sub,
+		sup {
+			font-size: rem-calc(12);
+		}
+
+		sub {
+			bottom: 0;
+		}
+
+		sup {
+			top: rem-calc(-4);
+		}
+
 	}
 
 	.time,
