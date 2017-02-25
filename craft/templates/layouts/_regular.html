@@ -109,7 +109,7 @@
 			{% if metatags.rating is defined %}<meta name="rating" content="{{ metatags.rating }}">{% endif %}
 			<link rel="stylesheet" href="{{ siteRoot }}assets/css/app.css">
 			{% if metatags.robots is defined %}<meta name="robots" content="{{ metatags.robots }}">{% endif %}
-			<link rel="alternate" type="application/rss+xml" title="{{ siteName }} | Blog" href="{{ siteRoot }}feed.rss" />
+			<link rel="alternate" type="application/rss+xml" title="{{ siteName }} | {% for entry in craft.entries.section('blogOverview').find() %}{{ entry.title }}{% endfor %}" href="{{ siteRoot }}feed.rss" />
 			<script src="https://use.typekit.net/wrd6xsa.js"></script>
 			<script>try{Typekit.load({ async: true });}catch(e){}</script>
 			{% if metatags.googleAnalylticsCode is defined %}

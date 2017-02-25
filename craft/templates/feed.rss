@@ -4,7 +4,7 @@
     {% set rss = craft.entries.section('blog').limit(10) %}
 
     <channel>
-        <title>{{ siteName }} | Blog</title>
+        <title>{{ siteName }} | {% for entry in craft.entries.section('blogOverview').find() %}{{ entry.title }}{% endfor %}</title>
         <link>{{ siteUrl }}</link>
         <description>{{ general.description }}</description>
         <language>en-au</language>
