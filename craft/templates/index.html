@@ -217,7 +217,7 @@
 		</div>
 		<div class="row">
 			<div class="small-12 column">
-			{% for entry in craft.entries.section('blogOverview').find() %}
+				{% for entry in craft.entries.section('blogOverview').find() %}
 					<a href="{{ entry.url }}" data-text="{{ 'More' | translate }}" class="button text-span">{{ 'More' | translate }}</a>
 				{% endfor %}
 			</div>
