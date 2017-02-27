@@ -74,7 +74,7 @@
 								</p>
 							{% endif %}
 							{% if entry.moreInfoLink|length %}
-								<a href="{{ entry.moreInfoLink.url }}" {% if entry.moreInfoLink.target | length %}target="{{ entry.moreInfoLink.target }}"{% endif %} class="button text-span" data-text="{{ entry.moreInfoLink.text }}">{{ entry.moreInfoLink.text }}</a>
+								<a href="{{ entry.moreInfoLink.url }}"{% if entry.moreInfoLink.target | length %} target="{{ entry.moreInfoLink.target }}"{% endif %} class="button text-span" data-text="{{ entry.moreInfoLink.text }}">{{ entry.moreInfoLink.text }}</a>
 							{% endif %}
 						</div>
 					{% endfor %}
