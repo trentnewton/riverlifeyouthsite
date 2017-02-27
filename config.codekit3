@@ -1685,7 +1685,7 @@
 	"\/bower_components\/foundation-sites\/js\/foundation.interchange.js": {
 		"ft": 64,
 		"mi": 1,
-		"oA": 1,
+		"oA": 2,
 		"oAP": "\/bower_components\/foundation-sites\/js\/foundation.interchange.js",
 		"oF": 0,
 		"sC": 1,
@@ -1829,7 +1829,7 @@
 	"\/bower_components\/foundation-sites\/js\/foundation.util.nest.js": {
 		"ft": 64,
 		"mi": 1,
-		"oA": 1,
+		"oA": 2,
 		"oAP": "\/bower_components\/foundation-sites\/js\/foundation.util.nest.js",
 		"oF": 0,
 		"sC": 1,
@@ -1838,7 +1838,7 @@
 	"\/bower_components\/foundation-sites\/js\/foundation.util.timerAndImageLoader.js": {
 		"ft": 64,
 		"mi": 1,
-		"oA": 1,
+		"oA": 2,
 		"oAP": "\/bower_components\/foundation-sites\/js\/foundation.util.timerAndImageLoader.js",
 		"oF": 0,
 		"sC": 1,
@@ -1847,7 +1847,7 @@
 	"\/bower_components\/foundation-sites\/js\/foundation.util.touch.js": {
 		"ft": 64,
 		"mi": 1,
-		"oA": 1,
+		"oA": 2,
 		"oAP": "\/bower_components\/foundation-sites\/js\/foundation.util.touch.js",
 		"oF": 0,
 		"sC": 1,
@@ -39041,50 +39041,26 @@
 			},
 		{
 			"followForSyntaxChecking": 0,
-			"linkedFileAbbreviatedPath": "\/bower_components\/foundation-sites\/js\/foundation.util.nest.js",
+			"linkedFileAbbreviatedPath": "\/bower_components\/foundation-sites\/js\/foundation.util.triggers.js",
 			"position": 10,
 			"type": 0
 			},
 		{
 			"followForSyntaxChecking": 0,
-			"linkedFileAbbreviatedPath": "\/bower_components\/foundation-sites\/js\/foundation.util.timerAndImageLoader.js",
+			"linkedFileAbbreviatedPath": "\/bower_components\/foundation-sites\/js\/foundation.accordion.js",
 			"position": 11,
 			"type": 0
 			},
 		{
 			"followForSyntaxChecking": 0,
-			"linkedFileAbbreviatedPath": "\/bower_components\/foundation-sites\/js\/foundation.util.touch.js",
+			"linkedFileAbbreviatedPath": "\/bower_components\/foundation-sites\/js\/foundation.offcanvas.js",
 			"position": 12,
 			"type": 0
 			},
 		{
 			"followForSyntaxChecking": 0,
-			"linkedFileAbbreviatedPath": "\/bower_components\/foundation-sites\/js\/foundation.util.triggers.js",
-			"position": 13,
-			"type": 0
-			},
-		{
-			"followForSyntaxChecking": 0,
-			"linkedFileAbbreviatedPath": "\/bower_components\/foundation-sites\/js\/foundation.accordion.js",
-			"position": 14,
-			"type": 0
-			},
-		{
-			"followForSyntaxChecking": 0,
-			"linkedFileAbbreviatedPath": "\/bower_components\/foundation-sites\/js\/foundation.interchange.js",
-			"position": 15,
-			"type": 0
-			},
-		{
-			"followForSyntaxChecking": 0,
-			"linkedFileAbbreviatedPath": "\/bower_components\/foundation-sites\/js\/foundation.offcanvas.js",
-			"position": 16,
-			"type": 0
-			},
-		{
-			"followForSyntaxChecking": 0,
 			"linkedFileAbbreviatedPath": "\/bower_components\/foundation-sites\/js\/foundation.reveal.js",
-			"position": 17,
+			"position": 13,
 			"type": 0
 			}
 		]
