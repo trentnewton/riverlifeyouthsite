@@ -72,7 +72,17 @@
 
 		.date-small {
 			font-size: rem-calc(map-deep-get($header-styles, 'medium', 'h6', 'font-size') * 1px);
-			top: -1.3em;
+			top: rem-calc(-20.8);
+		}
+
+		@include breakpoint(small only) {
+			font-size: rem-calc(48);
+
+			.date-small {
+				font-size: rem-calc(12);
+				top: rem-calc(-24);
+			}
+
 		}
 
 	}
@@ -81,6 +91,11 @@
 		text-transform: uppercase;
 		font-size: rem-calc(map-deep-get($header-styles, 'medium', 'h5', 'font-size') * 1px);
 		margin-bottom: rem-calc(3);
+
+		@include breakpoint(small only) {
+			line-height: 1.1;
+		}
+
 	}
 
 	.event-meta {
