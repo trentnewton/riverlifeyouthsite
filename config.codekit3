@@ -36598,6 +36598,12 @@
 		"oAP": "\/craft\/templates\/partials\/hero.html",
 		"oF": 0
 		},
+	"\/craft\/templates\/partials\/lead-section.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/templates\/partials\/lead-section.html",
+		"oF": 0
+		},
 	"\/craft\/templates\/partials\/navigation.html": {
 		"ft": 8192,
 		"oA": 2,

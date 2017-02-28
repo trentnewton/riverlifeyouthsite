@@ -4,34 +4,7 @@
 
 {% block content %}
 	{% include 'partials/hero.html' %}
-	<section class="page-main slope-page">
-		<article class="row">
-			<div class="column">
-				<p class="post-meta">
-					{% for entry in craft.entries.section('mediaOverview').find() %}
-						<a href="{{ entry.url }}">
-							<span class="back"><svg class="icon icon-chevron-up"><use xlink:href="#icon-chevron-up"></use></svg>{{ 'Back' | translate }}</span>
-						</a>
-					{% endfor %}
-				</p>
-				<h2 class="header" itemprop="headline">{{ title }}</h2>
-				{% for block in entry.lead %}
-					<div class="content">
-						<div class="lead-paragraphs">
-							{% switch block.type %}
-
-								{% case "lead" %}
-									{{ block.text }}
-
-								{% default %}
-
-							{% endswitch %}
-						</div>
-					</div>
-				{% endfor %}
-			</div>
-		</article>
-	</section>
+	{% include 'partials/lead-section.html' %}
 	<section class="page-secondary">
 		<div class="row">
 			<div class="column" itemprop="text">

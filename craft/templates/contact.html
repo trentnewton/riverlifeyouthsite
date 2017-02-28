@@ -4,31 +4,7 @@
 
 {% block content %}
 	{% include 'partials/hero.html' %}
-	<section class="page-main slope-page content">
-		<div class="row">
-			<div class="column">
-				{% for block in entry.lead %}
-					{% switch block.type %}{% case "lead" %}
-						<h2 class="header" itemprop="headline">{{ block.header|raw }}</h2>{% default %}
-					{% endswitch %}
-				{% endfor %}
-				{% for block in entry.lead %}
-					<div class="content">
-						<div class="lead-paragraphs">
-							{% switch block.type %}
-
-								{% case "lead" %}
-									{{ block.text }}
-
-								{% default %}
-
-							{% endswitch %}
-						</div>
-					</div>
-				{% endfor %}
-			</div>
-		</div>
-	</section>
+	{% include 'partials/lead-section.html' %}
 	<section class="contact-page page-secondary">
 		<div class="contact-details">
 			<div class="contact-form">
