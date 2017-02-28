@@ -23,7 +23,7 @@
 {% block content %}
 	<section class="hero-section home">
 		<div class="hero-bg-overlay home--hero-bg-overlay"></div>
-	  	<div data-interchange="[partials/video-background-image.html, small], [partials/video-background.html, large]"></div>
+		<div data-interchange="[partials/video-background-image.html, small], [partials/video-background.html, large]"></div>
 		<div class="row carousel-slider">
 			<div class="small-12 column">
 				<div class="homepage-slider">
@@ -159,7 +159,7 @@
 
 			{% endswitch %}
 		{% endfor %}
-	  	{% for block in entry.ministrySection.offset(2).limit(1) %}
+		{% for block in entry.ministrySection.offset(2).limit(1) %}
 			{% switch block.type %}
 
 				{% case "ministrySection" %}

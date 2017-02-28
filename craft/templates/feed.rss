@@ -1,62 +1,62 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 
-    {% set rss = craft.entries.section('blog').limit(10) %}
+	{% set rss = craft.entries.section('blog').limit(10) %}
 
-    <channel>
-        <title>{{ siteName }} | {% for entry in craft.entries.section('blogOverview').find() %}{{ entry.title }}{% endfor %}</title>
-        <link>{{ siteUrl }}</link>
-        <description>{{ general.description }}</description>
-        <language>en-au</language>
-        <atom:link href="{{ url() }}" rel="self" type="application/rss+xml" />
+	<channel>
+		<title>{{ siteName }} | {% for entry in craft.entries.section('blogOverview').find() %}{{ entry.title }}{% endfor %}</title>
+		<link>{{ siteUrl }}</link>
+		<description>{{ general.description }}</description>
+		<language>en-au</language>
+		<atom:link href="{{ url() }}" rel="self" type="application/rss+xml" />
 
-        {% for item in rss %}
-            <item>
-                <title><![CDATA[{{ item.title|raw }}]]></title>
-                <link>{{ item.url() }}</link>
-                <description>
-                    <![CDATA[
+		{% for item in rss %}
+			<item>
+				<title><![CDATA[{{ item.title|raw }}]]></title>
+				<link>{{ item.url() }}</link>
+				<description>
+					<![CDATA[
 
-                        {% for block in item.lead %}
-                            {% switch block.type %}
+						{% for block in item.lead %}
+							{% switch block.type %}
 
-                                {% case "lead" %}
-                                    {{ block.text }}
+								{% case "lead" %}
+									{{ block.text }}
 
-                                {% default %}
+								{% default %}
 
-                            {% endswitch %}
-                        {% endfor %}
+							{% endswitch %}
+						{% endfor %}
 
-                        {% for block in item.body %}
-                            {% switch block.type %}
+						{% for block in item.body %}
+							{% switch block.type %}
 
-                                {% case "header" %}
-                                    <strong>{{ block.header }}</strong>
+								{% case "header" %}
+									<strong>{{ block.header }}</strong>
 
-                                {% case "text" %}
-                                    {{ block.text }}
+								{% case "text" %}
+									{{ block.text }}
 
-                                {% case "blockquote" %}
-                                    <em>{{ block.quote }}</em>
-                                    - {{ block.citation }}
+								{% case "blockquote" %}
+									<em>{{ block.quote }}</em>
+									- {{ block.citation }}
 
-                                {% case "callout" %}
-                                    {{ block.header }}
-                                    {{ block.text }}
+								{% case "callout" %}
+									{{ block.header }}
+									{{ block.text }}
 
-                                {% default %}
+								{% default %}
 
-                            {% endswitch %}
-                        {% endfor %}
+							{% endswitch %}
+						{% endfor %}
 
-                    ]]>
-                </description>
-                <pubDate>{{ item.postDate.rfc2822() }}</pubDate>
-                <guid>{{ item.url() }}</guid>
-            </item>
-        {% endfor %}
+					]]>
+				</description>
+				<pubDate>{{ item.postDate.rfc2822() }}</pubDate>
+				<guid>{{ item.url() }}</guid>
+			</item>
+		{% endfor %}
 
-    </channel>
+	</channel>
 
 </rss>
