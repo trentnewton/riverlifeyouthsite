@@ -78,7 +78,7 @@
 						</div>
 					</div>
 
-				{% case "blockquote" %}
+				{% case "pullquote" %}
 					<div class="row align-center">
 						<div class="small-12 medium-8 column" itemprop="text">
 							<blockquote>{{ block.quote|striptags('<strong><em><br>')|raw|nl2br }}{% if block.citation|length %}<cite>{{ block.citation }}</cite>{% endif %}</blockquote>

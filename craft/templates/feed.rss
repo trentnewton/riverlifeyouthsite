@@ -37,7 +37,7 @@
 								{% case "text" %}
 									{{ block.text }}
 
-								{% case "blockquote" %}
+								{% case "pullquote" %}
 									<em>{{ block.quote }}</em>
 									- {{ block.citation }}
 

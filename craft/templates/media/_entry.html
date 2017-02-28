@@ -44,7 +44,7 @@
 						{% case "text" %}
 							{{ block.text }}
 
-						{% case "blockquote" %}
+						{% case "pullquote" %}
 							<blockquote>{{ block.quote|striptags('<strong><em><br>')|raw|nl2br }}{% if block.citation|length %}<cite>{{ block.citation }}</cite>{% endif %}</blockquote>
 
 						{% case "button" %}
