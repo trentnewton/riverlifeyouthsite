@@ -57,7 +57,7 @@
 								{% endif %}
 							</p>
 							<h3 class="event-title">{{ entry.title }}</h3>
-							{% if entry.reoccurring %}
+							{% if entry.reoccurring or entry.dayEnd %}
 							{% else %}
 								{% if entry.timeStart | length %}
 									<p class="time">
