@@ -50,7 +50,7 @@ jQuery(function ($){
 	    overlay : true,
 	    overlayClass : 'animsition-overlay-slide',
 	    overlayParentElement : 'body',
-	    transition: function(url){ window.location.href = url; }
+	    transition: function (url){ window.location.href = url; }
 	  });
 
 	// toggle fade on menu icon when clicked
