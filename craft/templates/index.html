@@ -70,7 +70,7 @@
 							{% endif %}
 							{% if entry.location | length %}
 								<p class="location">
-									at&nbsp;{{ entry.location.first().title }}
+									{{ 'at' | translate }}&nbsp;{{ entry.location.first().title }}
 								</p>
 							{% endif %}
 							{% if entry.moreInfoLink|length %}
@@ -96,7 +96,7 @@
 								{{ block.text }}
 
 							{% case "button" %}
-								<a href="{{ block.buttonLink.url }}" {% if block.buttonLink.target | length %}target="{{ block.buttonLink.target }}"{% endif %} class="button text-span" data-text="{{ block.buttonLink.text }}">{{ block.buttonLink.text }}</a>
+								<a href="{{ block.buttonLink.url }}"{% if block.buttonLink.target | length %} target="{{ block.buttonLink.target }}"{% endif %} class="button text-span" data-text="{{ block.buttonLink.text }}">{{ block.buttonLink.text }}</a>
 
 							{% default %}
 
