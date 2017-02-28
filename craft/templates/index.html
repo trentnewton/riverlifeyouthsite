@@ -61,7 +61,7 @@
 							{% else %}
 								{% if entry.timeStart | length %}
 									<p class="time">
-										{{ entry.timeStart | date('g:ia') }}&mdash;{{ entry.timeEnd | date('g:ia') }}
+										{{ entry.timeStart | date('g:ia') }}{% if entry.timeEnd | length %}&mdash;{{ entry.timeEnd | date('g:ia') }}{% endif %}
 									</p>
 								{% endif %}
 							{% endif %}
