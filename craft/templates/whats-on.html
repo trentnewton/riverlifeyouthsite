@@ -19,7 +19,7 @@
 						<div class="dates">
 							{% for eventDate, entries in eventEntries | group("dayStart|date('F Y')") %}
 								<h5>{{ eventDate }}</h5>
-								<ul class="accordion" data-accordion data-multi-expand="true">
+								<ul class="accordion" data-accordion data-multi-expand="true" data-allow-all-closed="true">
 									{% for entry in entries if (category.id in entry.category.ids()) %}
 										<li class="accordion-item" data-accordion-item>
 											<a href="#" class="accordion-title flex-container">
