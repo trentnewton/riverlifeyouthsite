@@ -211,26 +211,26 @@
 				</div>
 			</div>
 			<script src="{{ siteRoot }}assets/js/app.js"></script>
-			<script src="//cdn.jsdelivr.net/lightgallery/1.3.8/js/lightgallery.min.js"></script>
-			<script type="text/javascript">
-				$(document).ready(function () {
-					$('#lightgallery').lightGallery();
-				});
-			</script>
-			<div id="fb-root"></div>
-			<script>
-				(function (d, s, id) {
-					var js, fjs = d.getElementsByTagName(s)[0];
-					if (d.getElementById(id)) return;
-					js = d.createElement(s); js.id = id;
-					js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.8&appId={{ metatags.facebookAppId }}";
-					fjs.parentNode.insertBefore(js, fjs);
-				}(document, 'script', 'facebook-jssdk'));
-			</script>
-			<script src="//apis.google.com/js/platform.js" async defer>
-				{lang: 'en-GB'}
-			</script>
-			<script async defer src="//assets.pinterest.com/js/pinit.js"></script>
+			{% if entry.type.handle == 'blog' or 'gallery' %}
+				<div id="fb-root"></div>
+				<script type="text/javascript" src="//cdn.jsdelivr.net/g/lightgallery,lg-fullscreen,lg-pager,lg-share,lg-thumbnail,lg-video,lg-zoom"></script>
+				<script>
+					$(document).ready(function () {
+						$('#lightgallery').lightGallery();
+					});
+					(function (d, s, id) {
+						var js, fjs = d.getElementsByTagName(s)[0];
+						if (d.getElementById(id)) return;
+						js = d.createElement(s); js.id = id;
+						js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.8&appId={{ metatags.facebookAppId }}";
+						fjs.parentNode.insertBefore(js, fjs);
+					}(document, 'script', 'facebook-jssdk'));
+				</script>
+				<script src="//apis.google.com/js/platform.js" async defer>
+					{lang: 'en-GB'}
+				</script>
+				<script async defer src="//assets.pinterest.com/js/pinit.js"></script>
+			{% endif %}
 		</body>
 	</html>
 

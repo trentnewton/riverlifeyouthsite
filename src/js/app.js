@@ -290,6 +290,8 @@
 		// adaptiveHeight: true
 	});
 
+	// $('#lightgallery').lightGallery();
+
 	// add active class for pages in channels
 
 	$('.context-blog .main-menu .blog, .context-gallery .main-menu .media').addClass('active');

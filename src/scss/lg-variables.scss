@@ -1,7 +1,7 @@
 $backdrop-opacity: 1 !default;
 $lg-toolbar-bg: rgba($black, 0.45);
 $lg-border-radius-base: 2px !default;
-$lg-theme-highlight: rgb(169, 7, 7) !default;
+$lg-theme-highlight: $secondary-color;
 $lg-theme: #0D0A0A !default;
 
 // basic icon colours
@@ -39,7 +39,7 @@ $lg-sub-html-bg: rgba(0, 0, 0, 0.45) !default;
 $lg-sub-html-color: #EEE !default;
 
 // thumbnail toggle button
-$lg-thumb-toggle-bg: #0D0A0A !default;
+$lg-thumb-toggle-bg: $black;
 $lg-thumb-toggle-color: $lg-icon-color !default;
 $lg-thumb-toggle-hover-color: $lg-icon-hover-color !default;
 $lg-thumb-bg: #0D0A0A !default;
