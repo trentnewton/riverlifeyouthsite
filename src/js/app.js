@@ -1,4 +1,4 @@
-jQuery(function ($){
+(function ($){
 
 	'use strict';
 
@@ -327,4 +327,4 @@ jQuery(function ($){
 		return false;
 	});
 
-});
+})(jQuery);
