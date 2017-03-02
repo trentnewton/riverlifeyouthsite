@@ -1,6 +1,6 @@
 <a href="{{ entry.url }}" class="column snippet">
 	<figure class="snippet__figure">
-		<div class="snippet__image" style="background-image: url('{% for asset in entry.coverImage %}{{ asset.getUrl('snippetThumbnail') }}{% endfor %}')"></div>
+		<div class="snippet__image"{% for asset in entry.coverImage %} style="background-image: url('{{ asset.getUrl('snippetThumbnail') }}')"{% endfor %}></div>
 		<div class="snippet__deco snippet__deco--shine">
 			<div></div>
 		</div>

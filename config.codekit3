@@ -34440,28 +34440,10 @@
 		"oAP": "\/build\/craft\/storage\/runtime\/cache",
 		"oF": 0
 		},
-	"\/craft\/storage\/runtime\/compiled_templates\/1d\/1d30fac65944448cc80c4abb6ca5107aff6d93ddf9dd11099b1b9744f38ebf65.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/storage\/runtime\/compiled_templates\/1d\/1d30fac65944448cc80c4abb6ca5107aff6d93ddf9dd11099b1b9744f38ebf65.php",
-		"oF": 0
-		},
-	"\/craft\/storage\/runtime\/compiled_templates\/36\/366e3f2434e128f9464bfe87528e8ded969339845297c9f87e51faf379646851.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/storage\/runtime\/compiled_templates\/36\/366e3f2434e128f9464bfe87528e8ded969339845297c9f87e51faf379646851.php",
-		"oF": 0
-		},
 	"\/craft\/storage\/runtime\/compiled_templates\/43\/43465b0dff1ab3bc840cd0155fd0cbfc8b27e2fbbd5262841f026e08abc9a48d.php": {
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/craft\/storage\/runtime\/compiled_templates\/43\/43465b0dff1ab3bc840cd0155fd0cbfc8b27e2fbbd5262841f026e08abc9a48d.php",
-		"oF": 0
-		},
-	"\/craft\/storage\/runtime\/compiled_templates\/47\/4799706c418c7b48186c26dd9afd4367137145b77635d1b5e99df004c20b5788.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/storage\/runtime\/compiled_templates\/47\/4799706c418c7b48186c26dd9afd4367137145b77635d1b5e99df004c20b5788.php",
 		"oF": 0
 		},
 	"\/craft\/storage\/runtime\/compiled_templates\/51\/5187dcd786ea073acac39d487ad1912d9501d9a3724bfb13668863390bf78a14.php": {
@@ -34470,94 +34452,10 @@
 		"oAP": "\/craft\/storage\/runtime\/compiled_templates\/51\/5187dcd786ea073acac39d487ad1912d9501d9a3724bfb13668863390bf78a14.php",
 		"oF": 0
 		},
-	"\/craft\/storage\/runtime\/compiled_templates\/55\/55e7c0fea7b593fd2dd09e087f671694c4b7b849ddd9e40492c4d07acd1649b7.php": {
+	"\/craft\/storage\/runtime\/compiled_templates\/76\/766c87720dd3de08d2720fd6e54b66e13ee63db85984edc58e9542bb4c598aeb.php": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/craft\/storage\/runtime\/compiled_templates\/55\/55e7c0fea7b593fd2dd09e087f671694c4b7b849ddd9e40492c4d07acd1649b7.php",
-		"oF": 0
-		},
-	"\/craft\/storage\/runtime\/compiled_templates\/65\/65fdec59a5ee8bcdaa579c5afde9a4cef6040271367a99d77e13532a44e101a0.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/storage\/runtime\/compiled_templates\/65\/65fdec59a5ee8bcdaa579c5afde9a4cef6040271367a99d77e13532a44e101a0.php",
-		"oF": 0
-		},
-	"\/craft\/storage\/runtime\/compiled_templates\/66\/660db58158df0f78133db75e4570268df5a1fa39d4ed411e94ee0b77782de02e.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/storage\/runtime\/compiled_templates\/66\/660db58158df0f78133db75e4570268df5a1fa39d4ed411e94ee0b77782de02e.php",
-		"oF": 0
-		},
-	"\/craft\/storage\/runtime\/compiled_templates\/66\/66e3894d1aa04cf2a90dae672b0705927a9f5815c2d319c2f8f330f791c224df.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/storage\/runtime\/compiled_templates\/66\/66e3894d1aa04cf2a90dae672b0705927a9f5815c2d319c2f8f330f791c224df.php",
-		"oF": 0
-		},
-	"\/craft\/storage\/runtime\/compiled_templates\/68\/687cd33b82101ac2abd75c408726b269a57b88f53327b9d4e7c911ae0e3354e4.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/storage\/runtime\/compiled_templates\/68\/687cd33b82101ac2abd75c408726b269a57b88f53327b9d4e7c911ae0e3354e4.php",
-		"oF": 0
-		},
-	"\/craft\/storage\/runtime\/compiled_templates\/69\/69e50b9fc46bd87448ae11d79066307b0c88c8795a3537d313361bcef1a413bb.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/storage\/runtime\/compiled_templates\/69\/69e50b9fc46bd87448ae11d79066307b0c88c8795a3537d313361bcef1a413bb.php",
-		"oF": 0
-		},
-	"\/craft\/storage\/runtime\/compiled_templates\/6d\/6dbe777838fe9b85e182190461254ddc4e3dad59fa9925e1931af0f7d41190bf.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/storage\/runtime\/compiled_templates\/6d\/6dbe777838fe9b85e182190461254ddc4e3dad59fa9925e1931af0f7d41190bf.php",
-		"oF": 0
-		},
-	"\/craft\/storage\/runtime\/compiled_templates\/6d\/6de1c47e7ab2a9bb3cabd71bde781716a96967b50db3174c7de1f24ff1c2926c.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/storage\/runtime\/compiled_templates\/6d\/6de1c47e7ab2a9bb3cabd71bde781716a96967b50db3174c7de1f24ff1c2926c.php",
-		"oF": 0
-		},
-	"\/craft\/storage\/runtime\/compiled_templates\/6e\/6e5692f1d04048710b9e5ec82028e2268d3f5509af15f4b4f1688fed5333277b.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/storage\/runtime\/compiled_templates\/6e\/6e5692f1d04048710b9e5ec82028e2268d3f5509af15f4b4f1688fed5333277b.php",
-		"oF": 0
-		},
-	"\/craft\/storage\/runtime\/compiled_templates\/6e\/6ecc3b8782506ebcb04666195095563efff78912aedc10fbef3d1d894ab57f4b.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/storage\/runtime\/compiled_templates\/6e\/6ecc3b8782506ebcb04666195095563efff78912aedc10fbef3d1d894ab57f4b.php",
-		"oF": 0
-		},
-	"\/craft\/storage\/runtime\/compiled_templates\/6f\/6f9632f4537812bcd683b35cb05f028c7ad8e5a9942feaa657de4b77b2986f05.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/storage\/runtime\/compiled_templates\/6f\/6f9632f4537812bcd683b35cb05f028c7ad8e5a9942feaa657de4b77b2986f05.php",
-		"oF": 0
-		},
-	"\/craft\/storage\/runtime\/compiled_templates\/73\/7320c2808f535b7b5687001c43b2c242b5bc919a001fad8c08bb4efcdeb47b11.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/storage\/runtime\/compiled_templates\/73\/7320c2808f535b7b5687001c43b2c242b5bc919a001fad8c08bb4efcdeb47b11.php",
-		"oF": 0
-		},
-	"\/craft\/storage\/runtime\/compiled_templates\/89\/897f61eccc903b5fc5e850d60b9b874e44f61059245d4efd7fcb7a1a9734d288.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/storage\/runtime\/compiled_templates\/89\/897f61eccc903b5fc5e850d60b9b874e44f61059245d4efd7fcb7a1a9734d288.php",
-		"oF": 0
-		},
-	"\/craft\/storage\/runtime\/compiled_templates\/8b\/8b9af2adae26af9667391ce603dd49715c1ed17caa20ef31aac15926a1bc82ff.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/storage\/runtime\/compiled_templates\/8b\/8b9af2adae26af9667391ce603dd49715c1ed17caa20ef31aac15926a1bc82ff.php",
-		"oF": 0
-		},
-	"\/craft\/storage\/runtime\/compiled_templates\/8b\/8bc1d120d3c2e94ceee1e57b144113edbffc274a7316e3bb6288618933dc5599.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/storage\/runtime\/compiled_templates\/8b\/8bc1d120d3c2e94ceee1e57b144113edbffc274a7316e3bb6288618933dc5599.php",
+		"oAP": "\/craft\/storage\/runtime\/compiled_templates\/76\/766c87720dd3de08d2720fd6e54b66e13ee63db85984edc58e9542bb4c598aeb.php",
 		"oF": 0
 		},
 	"\/craft\/storage\/runtime\/compiled_templates\/8c\/8cda2d44de687d64fbf3dae7dbafbf7150ff83fd2d98d2f3e170d3e71798e738.php": {
@@ -34566,64 +34464,10 @@
 		"oAP": "\/craft\/storage\/runtime\/compiled_templates\/8c\/8cda2d44de687d64fbf3dae7dbafbf7150ff83fd2d98d2f3e170d3e71798e738.php",
 		"oF": 0
 		},
-	"\/craft\/storage\/runtime\/compiled_templates\/9c\/9c947a7da9296cd6c9d19de81421a78dfe6dde494f2bd411fb4ed79ac3d7f80f.php": {
+	"\/craft\/storage\/runtime\/compiled_templates\/ba\/baf5fcf36d1078b985a2adceeee7f49d8af09b2fb3e40e2566dde49ff3e91490.php": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/craft\/storage\/runtime\/compiled_templates\/9c\/9c947a7da9296cd6c9d19de81421a78dfe6dde494f2bd411fb4ed79ac3d7f80f.php",
-		"oF": 0
-		},
-	"\/craft\/storage\/runtime\/compiled_templates\/9d\/9d4fead4aef66e93d98c8f9684779ec028dff66b62f2b35abd00fe1db1692512.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/storage\/runtime\/compiled_templates\/9d\/9d4fead4aef66e93d98c8f9684779ec028dff66b62f2b35abd00fe1db1692512.php",
-		"oF": 0
-		},
-	"\/craft\/storage\/runtime\/compiled_templates\/aa\/aa0aa66afa07b7a335646386cbe4eb7b4f895786379dfc099839de228ecd92a6.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/storage\/runtime\/compiled_templates\/aa\/aa0aa66afa07b7a335646386cbe4eb7b4f895786379dfc099839de228ecd92a6.php",
-		"oF": 0
-		},
-	"\/craft\/storage\/runtime\/compiled_templates\/bd\/bde656923540443dadb721da9d48c5073632e52c5653a69b66cdfd2e7204a367.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/storage\/runtime\/compiled_templates\/bd\/bde656923540443dadb721da9d48c5073632e52c5653a69b66cdfd2e7204a367.php",
-		"oF": 0
-		},
-	"\/craft\/storage\/runtime\/compiled_templates\/bf\/bf986a81443cf111d794a6425a35370fb76292f8d85a02e6c41e374519f52f8f.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/storage\/runtime\/compiled_templates\/bf\/bf986a81443cf111d794a6425a35370fb76292f8d85a02e6c41e374519f52f8f.php",
-		"oF": 0
-		},
-	"\/craft\/storage\/runtime\/compiled_templates\/cb\/cb299234b51603bba766eb305555014fac9485be4948df19b2fb246a98a712b1.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/storage\/runtime\/compiled_templates\/cb\/cb299234b51603bba766eb305555014fac9485be4948df19b2fb246a98a712b1.php",
-		"oF": 0
-		},
-	"\/craft\/storage\/runtime\/compiled_templates\/cd\/cda80f03c1f59e5fd4fcdf3736240488fdc5d2bf1d5f2ce7f4c6400484e841e7.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/storage\/runtime\/compiled_templates\/cd\/cda80f03c1f59e5fd4fcdf3736240488fdc5d2bf1d5f2ce7f4c6400484e841e7.php",
-		"oF": 0
-		},
-	"\/craft\/storage\/runtime\/compiled_templates\/cf\/cf2919c9c2992be1cf9f250bbac847dabff0b433d36226a3e691604742ebb119.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/storage\/runtime\/compiled_templates\/cf\/cf2919c9c2992be1cf9f250bbac847dabff0b433d36226a3e691604742ebb119.php",
-		"oF": 0
-		},
-	"\/craft\/storage\/runtime\/compiled_templates\/d0\/d0315eaf110673e88330b13b23941e302cf827f74c05cfd85da5437f8db9c711.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/storage\/runtime\/compiled_templates\/d0\/d0315eaf110673e88330b13b23941e302cf827f74c05cfd85da5437f8db9c711.php",
-		"oF": 0
-		},
-	"\/craft\/storage\/runtime\/compiled_templates\/d0\/d0e4c814567078b159654e12da806cab759ad97cb3972bc1ed7444d6b88cfa16.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/storage\/runtime\/compiled_templates\/d0\/d0e4c814567078b159654e12da806cab759ad97cb3972bc1ed7444d6b88cfa16.php",
+		"oAP": "\/craft\/storage\/runtime\/compiled_templates\/ba\/baf5fcf36d1078b985a2adceeee7f49d8af09b2fb3e40e2566dde49ff3e91490.php",
 		"oF": 0
 		},
 	"\/craft\/storage\/runtime\/compiled_templates\/d2\/d26b3370c01fdd5eded9074b2251d93e12d5cd5ff0cb47664999d049ddc6b81b.php": {
@@ -34638,6 +34482,12 @@
 		"oAP": "\/craft\/storage\/runtime\/compiled_templates\/d5\/d5e3423c5cf6d2a63eb29130273bce715fd1f380272cd28ea58b60f695cd2d3a.php",
 		"oF": 0
 		},
+	"\/craft\/storage\/runtime\/compiled_templates\/d7\/d7d7ae3f86d6e3a40a3800bf3972895050f189837750a2c801efcf80789ce433.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/storage\/runtime\/compiled_templates\/d7\/d7d7ae3f86d6e3a40a3800bf3972895050f189837750a2c801efcf80789ce433.php",
+		"oF": 0
+		},
 	"\/craft\/storage\/runtime\/compiled_templates\/db\/dbdc445fd05d7de1a48db219d745f5a5c9fd332a7676cb371a04884215ce152e.php": {
 		"ft": 8192,
 		"oA": 2,
@@ -34650,28 +34500,16 @@
 		"oAP": "\/craft\/storage\/runtime\/compiled_templates\/de\/de9fe9375a15ab0781e348778d88db70e793405de9be420dd4b5888d9e19c2d6.php",
 		"oF": 0
 		},
-	"\/craft\/storage\/runtime\/compiled_templates\/e3\/e38009b5f35a5a50f8f673c43254dba18440267bc5fcf1f730ab0a135fa71766.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/storage\/runtime\/compiled_templates\/e3\/e38009b5f35a5a50f8f673c43254dba18440267bc5fcf1f730ab0a135fa71766.php",
-		"oF": 0
-		},
-	"\/craft\/storage\/runtime\/compiled_templates\/e3\/e3e197db3c6938bd3f194abf6a02428d9354fc3c87eb5a686848e2a25ecd1c69.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/storage\/runtime\/compiled_templates\/e3\/e3e197db3c6938bd3f194abf6a02428d9354fc3c87eb5a686848e2a25ecd1c69.php",
-		"oF": 0
-		},
 	"\/craft\/storage\/runtime\/compiled_templates\/ea\/eaae0d53f5c717d326a47667990c731f03f5e2be92245debfd081e5be12f33da.php": {
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/craft\/storage\/runtime\/compiled_templates\/ea\/eaae0d53f5c717d326a47667990c731f03f5e2be92245debfd081e5be12f33da.php",
 		"oF": 0
 		},
-	"\/craft\/storage\/runtime\/compiled_templates\/ee\/ee29ab628770cbb0d06722d33ad40a70867d50aa55672c1b181508246dfb0fcf.php": {
+	"\/craft\/storage\/runtime\/compiled_templates\/f5\/f55280ba8bb79226bc0ae3076d8adeb5f1fe880ace692f0a9d551db3a1c3cc9b.php": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/craft\/storage\/runtime\/compiled_templates\/ee\/ee29ab628770cbb0d06722d33ad40a70867d50aa55672c1b181508246dfb0fcf.php",
+		"oAP": "\/craft\/storage\/runtime\/compiled_templates\/f5\/f55280ba8bb79226bc0ae3076d8adeb5f1fe880ace692f0a9d551db3a1c3cc9b.php",
 		"oF": 0
 		},
 	"\/craft\/storage\/runtime\/compiled_templates\/f6\/f6b54f9ee42f1654ee526b855a2927620ff58d37b1cd3850ec99349ebbb98218.php": {
@@ -34959,254 +34797,6 @@
 		"oAP": "\/public\/htaccess",
 		"oF": 0
 		},
-	"\/public\/images\/13009728_10153565811533499_214780686_o.jpg": {
-		"ft": 16384,
-		"iS": 395225,
-		"oA": 0,
-		"oAP": "\/public\/images\/13009728_10153565811533499_214780686_o.jpg",
-		"oF": 0,
-		"opt": 0
-		},
-	"\/public\/images\/13040878_10205916952755401_5406231467158727942_o.jpg": {
-		"ft": 16384,
-		"iS": 379228,
-		"oA": 0,
-		"oAP": "\/public\/images\/13040878_10205916952755401_5406231467158727942_o.jpg",
-		"oF": 0,
-		"opt": 0
-		},
-	"\/public\/images\/615898587.jpg": {
-		"ft": 16384,
-		"iS": 197004,
-		"oA": 0,
-		"oAP": "\/public\/images\/615898587.jpg",
-		"oF": 0,
-		"opt": 0
-		},
-	"\/public\/images\/_coverImageResize\/13040878_10205916952755401_5406231467158727942_o.jpg": {
-		"ft": 16384,
-		"iS": 269356,
-		"oA": 0,
-		"oAP": "\/public\/images\/_coverImageResize\/13040878_10205916952755401_5406231467158727942_o.jpg",
-		"oF": 0,
-		"opt": 0
-		},
-	"\/public\/images\/_coverImageResize\/615898587.jpg": {
-		"ft": 16384,
-		"iS": 208960,
-		"oA": 0,
-		"oAP": "\/public\/images\/_coverImageResize\/615898587.jpg",
-		"oF": 0,
-		"opt": 0
-		},
-	"\/public\/images\/_coverImageResize\/about-us.jpg": {
-		"ft": 16384,
-		"iS": 311330,
-		"oA": 0,
-		"oAP": "\/public\/images\/_coverImageResize\/about-us.jpg",
-		"oF": 0,
-		"opt": 0
-		},
-	"\/public\/images\/_coverImageResize\/blog.jpg": {
-		"ft": 16384,
-		"iS": 249781,
-		"oA": 0,
-		"oAP": "\/public\/images\/_coverImageResize\/blog.jpg",
-		"oF": 0,
-		"opt": 0
-		},
-	"\/public\/images\/_coverImageResize\/contact.jpg": {
-		"ft": 16384,
-		"iS": 138498,
-		"oA": 0,
-		"oAP": "\/public\/images\/_coverImageResize\/contact.jpg",
-		"oF": 0,
-		"opt": 0
-		},
-	"\/public\/images\/_coverImageResize\/glory-to-glory.jpg": {
-		"ft": 16384,
-		"iS": 134221,
-		"oA": 0,
-		"oAP": "\/public\/images\/_coverImageResize\/glory-to-glory.jpg",
-		"oF": 0,
-		"opt": 0
-		},
-	"\/public\/images\/_coverImageResize\/JanSlam-Slide_slide.jpg": {
-		"ft": 16384,
-		"iS": 408311,
-		"oA": 0,
-		"oAP": "\/public\/images\/_coverImageResize\/JanSlam-Slide_slide.jpg",
-		"oF": 0,
-		"opt": 0
-		},
-	"\/public\/images\/_coverImageResize\/media.jpg": {
-		"ft": 16384,
-		"iS": 113106,
-		"oA": 0,
-		"oAP": "\/public\/images\/_coverImageResize\/media.jpg",
-		"oF": 0,
-		"opt": 0
-		},
-	"\/public\/images\/_coverImageResize\/pexels-photo-187996.jpg": {
-		"ft": 16384,
-		"iS": 74092,
-		"oA": 0,
-		"oAP": "\/public\/images\/_coverImageResize\/pexels-photo-187996.jpg",
-		"oF": 0,
-		"opt": 0
-		},
-	"\/public\/images\/_coverImageResize\/pexels-photo-29773.jpg": {
-		"ft": 16384,
-		"iS": 156439,
-		"oA": 0,
-		"oAP": "\/public\/images\/_coverImageResize\/pexels-photo-29773.jpg",
-		"oF": 0,
-		"opt": 0
-		},
-	"\/public\/images\/_coverImageResize\/poolparty47.jpg": {
-		"ft": 16384,
-		"iS": 503640,
-		"oA": 0,
-		"oAP": "\/public\/images\/_coverImageResize\/poolparty47.jpg",
-		"oF": 0,
-		"opt": 0
-		},
-	"\/public\/images\/_coverImageResize\/whats-on.jpg": {
-		"ft": 16384,
-		"iS": 361217,
-		"oA": 0,
-		"oAP": "\/public\/images\/_coverImageResize\/whats-on.jpg",
-		"oF": 0,
-		"opt": 0
-		},
-	"\/public\/images\/_metaImageFit\/13009728_10153565811533499_214780686_o.jpg": {
-		"ft": 16384,
-		"iS": 48880,
-		"oA": 0,
-		"oAP": "\/public\/images\/_metaImageFit\/13009728_10153565811533499_214780686_o.jpg",
-		"oF": 0,
-		"opt": 0
-		},
-	"\/public\/images\/_metaImageFit\/13040878_10205916952755401_5406231467158727942_o.jpg": {
-		"ft": 16384,
-		"iS": 119447,
-		"oA": 0,
-		"oAP": "\/public\/images\/_metaImageFit\/13040878_10205916952755401_5406231467158727942_o.jpg",
-		"oF": 0,
-		"opt": 0
-		},
-	"\/public\/images\/_metaImageFit\/615898587.jpg": {
-		"ft": 16384,
-		"iS": 107965,
-		"oA": 0,
-		"oAP": "\/public\/images\/_metaImageFit\/615898587.jpg",
-		"oF": 0,
-		"opt": 0
-		},
-	"\/public\/images\/_metaImageFit\/about-us.jpg": {
-		"ft": 16384,
-		"iS": 127998,
-		"oA": 0,
-		"oAP": "\/public\/images\/_metaImageFit\/about-us.jpg",
-		"oF": 0,
-		"opt": 0
-		},
-	"\/public\/images\/_metaImageFit\/blog.jpg": {
-		"ft": 16384,
-		"iS": 92695,
-		"oA": 0,
-		"oAP": "\/public\/images\/_metaImageFit\/blog.jpg",
-		"oF": 0,
-		"opt": 0
-		},
-	"\/public\/images\/_metaImageFit\/contact.jpg": {
-		"ft": 16384,
-		"iS": 74064,
-		"oA": 0,
-		"oAP": "\/public\/images\/_metaImageFit\/contact.jpg",
-		"oF": 0,
-		"opt": 0
-		},
-	"\/public\/images\/_metaImageFit\/cuddly-toy-costume-disguised-easter-bunny.jpg": {
-		"ft": 16384,
-		"iS": 148163,
-		"oA": 0,
-		"oAP": "\/public\/images\/_metaImageFit\/cuddly-toy-costume-disguised-easter-bunny.jpg",
-		"oF": 0,
-		"opt": 0
-		},
-	"\/public\/images\/_metaImageFit\/glory-to-glory.jpg": {
-		"ft": 16384,
-		"iS": 66581,
-		"oA": 0,
-		"oAP": "\/public\/images\/_metaImageFit\/glory-to-glory.jpg",
-		"oF": 0,
-		"opt": 0
-		},
-	"\/public\/images\/_metaImageFit\/JanSlam-Slide_slide.jpg": {
-		"ft": 16384,
-		"iS": 153198,
-		"oA": 0,
-		"oAP": "\/public\/images\/_metaImageFit\/JanSlam-Slide_slide.jpg",
-		"oF": 0,
-		"opt": 0
-		},
-	"\/public\/images\/_metaImageFit\/me-culture.jpg": {
-		"ft": 16384,
-		"iS": 48486,
-		"oA": 0,
-		"oAP": "\/public\/images\/_metaImageFit\/me-culture.jpg",
-		"oF": 0,
-		"opt": 0
-		},
-	"\/public\/images\/_metaImageFit\/media.jpg": {
-		"ft": 16384,
-		"iS": 45048,
-		"oA": 0,
-		"oAP": "\/public\/images\/_metaImageFit\/media.jpg",
-		"oF": 0,
-		"opt": 0
-		},
-	"\/public\/images\/_metaImageFit\/pexels-photo-187996.jpg": {
-		"ft": 16384,
-		"iS": 36909,
-		"oA": 0,
-		"oAP": "\/public\/images\/_metaImageFit\/pexels-photo-187996.jpg",
-		"oF": 0,
-		"opt": 0
-		},
-	"\/public\/images\/_metaImageFit\/pexels-photo-29773.jpg": {
-		"ft": 16384,
-		"iS": 63514,
-		"oA": 0,
-		"oAP": "\/public\/images\/_metaImageFit\/pexels-photo-29773.jpg",
-		"oF": 0,
-		"opt": 0
-		},
-	"\/public\/images\/_metaImageFit\/poolparty47.jpg": {
-		"ft": 16384,
-		"iS": 183818,
-		"oA": 0,
-		"oAP": "\/public\/images\/_metaImageFit\/poolparty47.jpg",
-		"oF": 0,
-		"opt": 0
-		},
-	"\/public\/images\/_metaImageFit\/screenshot-www.riverlifeyouth.org.jpg": {
-		"ft": 16384,
-		"iS": 68203,
-		"oA": 0,
-		"oAP": "\/public\/images\/_metaImageFit\/screenshot-www.riverlifeyouth.org.jpg",
-		"oF": 0,
-		"opt": 0
-		},
-	"\/public\/images\/_metaImageFit\/whats-on.jpg": {
-		"ft": 16384,
-		"iS": 120184,
-		"oA": 0,
-		"oAP": "\/public\/images\/_metaImageFit\/whats-on.jpg",
-		"oF": 0,
-		"opt": 0
-		},
 	"\/public\/images\/_ministrySection\/freshman.jpg": {
 		"ft": 16384,
 		"iS": 279786,
@@ -35231,115 +34821,251 @@
 		"oF": 0,
 		"opt": 0
 		},
-	"\/public\/images\/_snippetThumbnail\/13009728_10153565811533499_214780686_o.jpg": {
+	"\/public\/images\/covers\/13009728_10153565811533499_214780686_o.jpg": {
 		"ft": 16384,
-		"iS": 43599,
+		"iS": 395213,
 		"oA": 0,
-		"oAP": "\/public\/images\/_snippetThumbnail\/13009728_10153565811533499_214780686_o.jpg",
+		"oAP": "\/public\/images\/covers\/13009728_10153565811533499_214780686_o.jpg",
 		"oF": 0,
 		"opt": 0
 		},
-	"\/public\/images\/_snippetThumbnail\/13040878_10205916952755401_5406231467158727942_o.jpg": {
+	"\/public\/images\/covers\/13040878_10205916952755401_5406231467158727942_o.jpg": {
 		"ft": 16384,
-		"iS": 57295,
+		"iS": 379032,
 		"oA": 0,
-		"oAP": "\/public\/images\/_snippetThumbnail\/13040878_10205916952755401_5406231467158727942_o.jpg",
+		"oAP": "\/public\/images\/covers\/13040878_10205916952755401_5406231467158727942_o.jpg",
 		"oF": 0,
 		"opt": 0
 		},
-	"\/public\/images\/_snippetThumbnail\/615898587.jpg": {
+	"\/public\/images\/covers\/615898587.jpg": {
 		"ft": 16384,
-		"iS": 67715,
+		"iS": 197428,
 		"oA": 0,
-		"oAP": "\/public\/images\/_snippetThumbnail\/615898587.jpg",
+		"oAP": "\/public\/images\/covers\/615898587.jpg",
 		"oF": 0,
 		"opt": 0
 		},
-	"\/public\/images\/_snippetThumbnail\/cuddly-toy-costume-disguised-easter-bunny.jpg": {
+	"\/public\/images\/covers\/_coverImageResize\/about-us.jpg": {
 		"ft": 16384,
-		"iS": 107585,
+		"iS": 311362,
 		"oA": 0,
-		"oAP": "\/public\/images\/_snippetThumbnail\/cuddly-toy-costume-disguised-easter-bunny.jpg",
+		"oAP": "\/public\/images\/covers\/_coverImageResize\/about-us.jpg",
 		"oF": 0,
 		"opt": 0
 		},
-	"\/public\/images\/_snippetThumbnail\/glory-to-glory.jpg": {
+	"\/public\/images\/covers\/_coverImageResize\/blog.jpg": {
+		"ft": 16384,
+		"iS": 249781,
+		"oA": 0,
+		"oAP": "\/public\/images\/covers\/_coverImageResize\/blog.jpg",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/public\/images\/covers\/_coverImageResize\/contact.jpg": {
+		"ft": 16384,
+		"iS": 138498,
+		"oA": 0,
+		"oAP": "\/public\/images\/covers\/_coverImageResize\/contact.jpg",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/public\/images\/covers\/_coverImageResize\/whats-on.jpg": {
+		"ft": 16384,
+		"iS": 361217,
+		"oA": 0,
+		"oAP": "\/public\/images\/covers\/_coverImageResize\/whats-on.jpg",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/public\/images\/covers\/_metaImageFit\/about-us.jpg": {
+		"ft": 16384,
+		"iS": 128017,
+		"oA": 0,
+		"oAP": "\/public\/images\/covers\/_metaImageFit\/about-us.jpg",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/public\/images\/covers\/_metaImageFit\/blog.jpg": {
+		"ft": 16384,
+		"iS": 92695,
+		"oA": 0,
+		"oAP": "\/public\/images\/covers\/_metaImageFit\/blog.jpg",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/public\/images\/covers\/_metaImageFit\/contact.jpg": {
+		"ft": 16384,
+		"iS": 74064,
+		"oA": 0,
+		"oAP": "\/public\/images\/covers\/_metaImageFit\/contact.jpg",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/public\/images\/covers\/_metaImageFit\/screenshot-www.riverlifeyouth.org.jpg": {
+		"ft": 16384,
+		"iS": 68203,
+		"oA": 0,
+		"oAP": "\/public\/images\/covers\/_metaImageFit\/screenshot-www.riverlifeyouth.org.jpg",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/public\/images\/covers\/_metaImageFit\/whats-on.jpg": {
+		"ft": 16384,
+		"iS": 120184,
+		"oA": 0,
+		"oAP": "\/public\/images\/covers\/_metaImageFit\/whats-on.jpg",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/public\/images\/covers\/_snippetThumbnail\/13009728_10153565811533499_214780686_o.jpg": {
+		"ft": 16384,
+		"iS": 43612,
+		"oA": 0,
+		"oAP": "\/public\/images\/covers\/_snippetThumbnail\/13009728_10153565811533499_214780686_o.jpg",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/public\/images\/covers\/_snippetThumbnail\/cuddly-toy-costume-disguised-easter-bunny.jpg": {
+		"ft": 16384,
+		"iS": 107577,
+		"oA": 0,
+		"oAP": "\/public\/images\/covers\/_snippetThumbnail\/cuddly-toy-costume-disguised-easter-bunny.jpg",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/public\/images\/covers\/_snippetThumbnail\/glory-to-glory.jpg": {
 		"ft": 16384,
 		"iS": 41205,
 		"oA": 0,
-		"oAP": "\/public\/images\/_snippetThumbnail\/glory-to-glory.jpg",
+		"oAP": "\/public\/images\/covers\/_snippetThumbnail\/glory-to-glory.jpg",
 		"oF": 0,
 		"opt": 0
 		},
-	"\/public\/images\/_snippetThumbnail\/JanSlam-Slide_slide.jpg": {
+	"\/public\/images\/covers\/_snippetThumbnail\/me-culture.jpg": {
 		"ft": 16384,
-		"iS": 78187,
+		"iS": 36256,
 		"oA": 0,
-		"oAP": "\/public\/images\/_snippetThumbnail\/JanSlam-Slide_slide.jpg",
+		"oAP": "\/public\/images\/covers\/_snippetThumbnail\/me-culture.jpg",
 		"oF": 0,
 		"opt": 0
 		},
-	"\/public\/images\/_snippetThumbnail\/me-culture.jpg": {
+	"\/public\/images\/covers\/_snippetThumbnail\/pexels-photo-187996.jpg": {
 		"ft": 16384,
-		"iS": 36249,
+		"iS": 22951,
 		"oA": 0,
-		"oAP": "\/public\/images\/_snippetThumbnail\/me-culture.jpg",
+		"oAP": "\/public\/images\/covers\/_snippetThumbnail\/pexels-photo-187996.jpg",
 		"oF": 0,
 		"opt": 0
 		},
-	"\/public\/images\/_snippetThumbnail\/pexels-photo-187996.jpg": {
+	"\/public\/images\/covers\/_snippetThumbnail\/pexels-photo-29773.jpg": {
 		"ft": 16384,
-		"iS": 22946,
+		"iS": 34937,
 		"oA": 0,
-		"oAP": "\/public\/images\/_snippetThumbnail\/pexels-photo-187996.jpg",
+		"oAP": "\/public\/images\/covers\/_snippetThumbnail\/pexels-photo-29773.jpg",
 		"oF": 0,
 		"opt": 0
 		},
-	"\/public\/images\/_snippetThumbnail\/pexels-photo-29773.jpg": {
+	"\/public\/images\/covers\/about-us.jpg": {
 		"ft": 16384,
-		"iS": 34936,
+		"iS": 311330,
 		"oA": 0,
-		"oAP": "\/public\/images\/_snippetThumbnail\/pexels-photo-29773.jpg",
+		"oAP": "\/public\/images\/covers\/about-us.jpg",
 		"oF": 0,
 		"opt": 0
 		},
-	"\/public\/images\/_snippetThumbnail\/poolparty47.jpg": {
-		"ft": 16384,
-		"iS": 135819,
-		"oA": 0,
-		"oAP": "\/public\/images\/_snippetThumbnail\/poolparty47.jpg",
-		"oF": 0,
-		"opt": 0
-		},
-	"\/public\/images\/about-us.jpg": {
-		"ft": 16384,
-		"iS": 311368,
-		"oA": 0,
-		"oAP": "\/public\/images\/about-us.jpg",
-		"oF": 0,
-		"opt": 0
-		},
-	"\/public\/images\/blog.jpg": {
+	"\/public\/images\/covers\/blog.jpg": {
 		"ft": 16384,
 		"iS": 114120,
 		"oA": 0,
-		"oAP": "\/public\/images\/blog.jpg",
+		"oAP": "\/public\/images\/covers\/blog.jpg",
 		"oF": 0,
 		"opt": 0
 		},
-	"\/public\/images\/contact.jpg": {
+	"\/public\/images\/covers\/contact.jpg": {
 		"ft": 16384,
 		"iS": 124838,
 		"oA": 0,
-		"oAP": "\/public\/images\/contact.jpg",
+		"oAP": "\/public\/images\/covers\/contact.jpg",
 		"oF": 0,
 		"opt": 0
 		},
-	"\/public\/images\/cuddly-toy-costume-disguised-easter-bunny.jpg": {
+	"\/public\/images\/covers\/cuddly-toy-costume-disguised-easter-bunny.jpg": {
 		"ft": 16384,
-		"iS": 572422,
+		"iS": 572498,
 		"oA": 0,
-		"oAP": "\/public\/images\/cuddly-toy-costume-disguised-easter-bunny.jpg",
+		"oAP": "\/public\/images\/covers\/cuddly-toy-costume-disguised-easter-bunny.jpg",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/public\/images\/covers\/glory-to-glory.jpg": {
+		"ft": 16384,
+		"iS": 206147,
+		"oA": 0,
+		"oAP": "\/public\/images\/covers\/glory-to-glory.jpg",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/public\/images\/covers\/JanSlam-Slide_slide.jpg": {
+		"ft": 16384,
+		"iS": 277707,
+		"oA": 0,
+		"oAP": "\/public\/images\/covers\/JanSlam-Slide_slide.jpg",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/public\/images\/covers\/me-culture.jpg": {
+		"ft": 16384,
+		"iS": 197173,
+		"oA": 0,
+		"oAP": "\/public\/images\/covers\/me-culture.jpg",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/public\/images\/covers\/media.jpg": {
+		"ft": 16384,
+		"iS": 71978,
+		"oA": 0,
+		"oAP": "\/public\/images\/covers\/media.jpg",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/public\/images\/covers\/pexels-photo-187996.jpg": {
+		"ft": 16384,
+		"iS": 73903,
+		"oA": 0,
+		"oAP": "\/public\/images\/covers\/pexels-photo-187996.jpg",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/public\/images\/covers\/pexels-photo-29773.jpg": {
+		"ft": 16384,
+		"iS": 354153,
+		"oA": 0,
+		"oAP": "\/public\/images\/covers\/pexels-photo-29773.jpg",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/public\/images\/covers\/poolparty47.jpg": {
+		"ft": 16384,
+		"iS": 807681,
+		"oA": 0,
+		"oAP": "\/public\/images\/covers\/poolparty47.jpg",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/public\/images\/covers\/screenshot-www.riverlifeyouth.org.jpg": {
+		"ft": 16384,
+		"iS": 259232,
+		"oA": 0,
+		"oAP": "\/public\/images\/covers\/screenshot-www.riverlifeyouth.org.jpg",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/public\/images\/covers\/whats-on.jpg": {
+		"ft": 16384,
+		"iS": 320012,
+		"oA": 0,
+		"oAP": "\/public\/images\/covers\/whats-on.jpg",
 		"oF": 0,
 		"opt": 0
 		},
@@ -36551,14 +36277,6 @@
 		"oF": 0,
 		"opt": 0
 		},
-	"\/public\/images\/glory-to-glory.jpg": {
-		"ft": 16384,
-		"iS": 206126,
-		"oA": 0,
-		"oAP": "\/public\/images\/glory-to-glory.jpg",
-		"oF": 0,
-		"opt": 0
-		},
 	"\/public\/images\/icons\/android-chrome-192x192.png": {
 		"ft": 32768,
 		"iS": 11723,
@@ -36617,62 +36335,6 @@
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"\/public\/images\/JanSlam-Slide_slide.jpg": {
-		"ft": 16384,
-		"iS": 277607,
-		"oA": 0,
-		"oAP": "\/public\/images\/JanSlam-Slide_slide.jpg",
-		"oF": 0,
-		"opt": 0
-		},
-	"\/public\/images\/me-culture.jpg": {
-		"ft": 16384,
-		"iS": 197164,
-		"oA": 0,
-		"oAP": "\/public\/images\/me-culture.jpg",
-		"oF": 0,
-		"opt": 0
-		},
-	"\/public\/images\/media.jpg": {
-		"ft": 16384,
-		"iS": 71978,
-		"oA": 0,
-		"oAP": "\/public\/images\/media.jpg",
-		"oF": 0,
-		"opt": 0
-		},
-	"\/public\/images\/pexels-photo-187996.jpg": {
-		"ft": 16384,
-		"iS": 73919,
-		"oA": 0,
-		"oAP": "\/public\/images\/pexels-photo-187996.jpg",
-		"oF": 0,
-		"opt": 0
-		},
-	"\/public\/images\/pexels-photo-29773.jpg": {
-		"ft": 16384,
-		"iS": 354159,
-		"oA": 0,
-		"oAP": "\/public\/images\/pexels-photo-29773.jpg",
-		"oF": 0,
-		"opt": 0
-		},
-	"\/public\/images\/poolparty47.jpg": {
-		"ft": 16384,
-		"iS": 806850,
-		"oA": 0,
-		"oAP": "\/public\/images\/poolparty47.jpg",
-		"oF": 0,
-		"opt": 0
-		},
-	"\/public\/images\/screenshot-www.riverlifeyouth.org.jpg": {
-		"ft": 16384,
-		"iS": 259232,
-		"oA": 0,
-		"oAP": "\/public\/images\/screenshot-www.riverlifeyouth.org.jpg",
-		"oF": 0,
-		"opt": 0
-		},
 	"\/public\/images\/sophomore.jpg": {
 		"ft": 16384,
 		"iS": 294494,
@@ -36686,14 +36348,6 @@
 		"iS": 75350,
 		"oA": 0,
 		"oAP": "\/public\/images\/varsity.jpg",
-		"oF": 0,
-		"opt": 0
-		},
-	"\/public\/images\/whats-on.jpg": {
-		"ft": 16384,
-		"iS": 320012,
-		"oA": 0,
-		"oAP": "\/public\/images\/whats-on.jpg",
 		"oF": 0,
 		"opt": 0
 		},
