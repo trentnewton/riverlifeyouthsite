@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+{% for block in metatags.windowsMetroTile %}
+	<browserconfig>
+		<msapplication>
+			<tile>
+				{% switch block.type %}
+
+					{% case "windowsMetroTile" %}
+						{% for asset in block.tileImage %}
+							<square150x150logo src="{{ asset.url }}"/>
+						{% endfor %}
+						<TileColor>{{ block.tileColour }}</TileColor>
+
+					{% default %}
+
+				{% endswitch %}
+			</tile>
+		</msapplication>
+	</browserconfig>
+{% endfor %}
