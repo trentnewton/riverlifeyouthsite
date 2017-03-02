@@ -1,0 +1,24 @@
+{
+	"name": "{{ siteName }}",
+	"icons": [
+		{% for asset in metatags.androidChromeIcon192 %}
+			{
+				"src": "{{ asset.url }}",
+				"sizes": "{{ asset.getWidth }}x{{ asset.getHeight }}",
+				"type": "{{ asset.getMimeType }}"
+			},
+		{% endfor %}
+		{% for asset in metatags.androidChromeIcon512 %}
+			{
+				"src": "{{ asset.url }}",
+				"sizes": "{{ asset.getWidth }}x{{ asset.getHeight }}",
+				"type": "{{ asset.getMimeType }}"
+			}
+		{% endfor %}
+	],
+	{% if metatags.themeColor and metatags.themeColor != '#000000' %}
+		"theme_color": "{{ metatags.themeColor }}",
+		"background_color": "{{ metatags.themeColor }}",
+	{% endif %}
+	"display": "standalone"
+}
