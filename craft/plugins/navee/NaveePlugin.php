@@ -5,7 +5,7 @@ class NaveePlugin extends BasePlugin {
 
   public function getName()
   {
-    return Craft::t('Navee');
+    return Craft::t('Menus');
   }
 
   public function getVersion()
