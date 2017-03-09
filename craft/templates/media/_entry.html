@@ -43,15 +43,15 @@
 				{% endfor %}
 			</div>
 		</div>
+		<div class="row small-up-2 medium-up-4 media-gallery" id="lightgallery">
+			{% for myAsset in entry.gallery %}
+				<a class="column" href="{{ myAsset.getUrl('galleryImage') }}">
+					<img alt="{{ myAsset.title }}" class="thumbnail" src="{{ myAsset.getUrl('galleryImageThumbnail') }}" width="540" height="54">
+				</a>
+			{% endfor %}
+		</div>
 		<div class="row">
 			<div class="column">
-				<div class="row small-up-2 medium-up-4 media-gallery" id="lightgallery">
-					{% for myAsset in entry.gallery %}
-						<a class="column" href="{{ myAsset.getUrl('galleryImage') }}">
-							<img alt="{{ myAsset.title }}" class="thumbnail" src="{{ myAsset.getUrl('galleryImageThumbnail') }}" width="540" height="54">
-						</a>
-					{% endfor %}
-				</div>
 				{% include 'partials/social.html' %}
 			</div>
 		</div>
