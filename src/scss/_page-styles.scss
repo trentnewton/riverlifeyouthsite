@@ -1,3 +1,7 @@
+.loading-icon {
+	@include loading-icon;
+}
+
 .page-main,
 .page-secondary {
 	padding-top: rem-calc(60);
@@ -359,14 +363,6 @@ p.post-meta {
 		> a {
 			font-size: rem-calc(map-deep-get($header-styles, 'medium', 'h5', 'font-size') * 1px);
 			padding: 0;
-			// margin: 0.5rem;
-			// text-align: center;
-
-			// &:hover,
-			// &:focus {
-			// 	background-color: $primary-color;
-			// 	color: $white;
-			// }
 
 			svg {
 				margin: 0;

@@ -37,7 +37,7 @@
 }
 
 .animsition-loading {
-  @extend .loading-icon;
+  @include loading-icon;
   // background-color: transparent;
   // border-top: 5px solid rgba(0, 0, 0, 0.2);
   // border-right: 5px solid rgba(0, 0, 0, 0.2);

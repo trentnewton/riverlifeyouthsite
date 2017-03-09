@@ -121,7 +121,6 @@
 				<meta name="twitter:image:alt" content="{% if title is defined %}{{ title }} - {% endif %}{{ siteName }}">
 			{% endfor %}
 			{% if metatags.rating is defined %}<meta name="rating" content="{{ metatags.rating }}">{% endif %}
-			<link rel="stylesheet" href="{{ siteRoot }}assets/css/app.css">
 			{% if metatags.robots is defined %}<meta name="robots" content="{{ metatags.robots }}">{% endif %}
 			<link rel="alternate" type="application/rss+xml" title="{{ siteName }} | {% for entry in craft.entries.section('blogOverview').find() %}{{ entry.title }}{% endfor %}" href="{{ siteRoot }}feed.rss" />
 			<script src="//use.typekit.net/wrd6xsa.js"></script>
@@ -138,40 +137,43 @@
 					ga('send', 'pageview');
 				{% endif %}
 			</script>
-			{# create background colour styles for ministry sections #}
-			{% if entry.type.handle == 'homepage' %}
-				{% for entry in craft.entries.section('homepage').find() %}
-					<style type="text/css">
-						{% for block in entry.ministrySection.offset(0).limit(1) %}
-						       {% switch block.type %}
+{% endminify %}
+			<style type="text/css">
+				{% include 'css/critical.css' %}
+				{# create background colour styles for ministry sections #}
+				{% if entry.type.handle == 'homepage' %}
+					{% for entry in craft.entries.section('homepage').find() %}
+							{% for block in entry.ministrySection.offset(0).limit(1) %}
+							       {% switch block.type %}
 
-									{% case "ministrySection" %}
-										.freshman{background-color: rgba({{ block.colour|hexToRgb }}, 0.7)}
-									{% default %}
+										{% case "ministrySection" %}
+											.freshman{background-color: rgba({{ block.colour|hexToRgb }}, 0.7)}
+										{% default %}
 
-								{% endswitch %}
-						{% endfor %}
-						{% for block in entry.ministrySection.offset(1).limit(1) %}
-						       {% switch block.type %}
+									{% endswitch %}
+							{% endfor %}
+							{% for block in entry.ministrySection.offset(1).limit(1) %}
+							       {% switch block.type %}
 
-									{% case "ministrySection" %}
-										.sophomore{background-color: rgba({{ block.colour|hexToRgb }}, 0.7)}
-									{% default %}
+										{% case "ministrySection" %}
+											.sophomore{background-color: rgba({{ block.colour|hexToRgb }}, 0.7)}
+										{% default %}
 
-								{% endswitch %}
-						{% endfor %}
-						{% for block in entry.ministrySection.offset(2).limit(1) %}
-						       {% switch block.type %}
+									{% endswitch %}
+							{% endfor %}
+							{% for block in entry.ministrySection.offset(2).limit(1) %}
+							       {% switch block.type %}
 
-									{% case "ministrySection" %}
-										.varsity{background-color: rgba({{ block.colour|hexToRgb }}, 0.7)}
-									{% default %}
+										{% case "ministrySection" %}
+											.varsity{background-color: rgba({{ block.colour|hexToRgb }}, 0.7)}
+										{% default %}
 
-								{% endswitch %}
-						{% endfor %}
-					</style>
-				{% endfor %}
-			{% endif %}
+									{% endswitch %}
+							{% endfor %}
+					{% endfor %}
+				{% endif %}
+			</style>
+{% minify %}
 		</head>
 		<body class="context-{{ handle }} page-{{ entry.slug }}" itemscope itemtype="http://schema.org/WebPage">
 			{% include 'partials/svg.html' %}
@@ -213,6 +215,18 @@
 			</div>
 			{# load site javascript #}
 			<script src="{{ siteRoot }}assets/js/app.js"></script>
+			<script>
+				{# generate css after the browser is finished loading #}
+				var cb = function () {
+					var l = document.createElement('link'); l.rel = 'stylesheet';
+					l.href = '{{ siteRoot }}assets/css/app.css';
+					var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
+				};
+				var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+					webkitRequestAnimationFrame || msRequestAnimationFrame;
+				if (raf) raf(cb);
+				else window.addEventListener('load', cb);
+			</script>
 			{# load image gallery and social sharing buttons for blog and gallery entries #}
 			{% if entry.type.handle == 'blog' or 'gallery' %}
 				<div id="fb-root"></div>
