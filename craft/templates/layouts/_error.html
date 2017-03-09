@@ -82,7 +82,7 @@
 			{% if metatags.rating is defined %}<meta name="rating" content="{{ metatags.rating }}">{% endif %}
 			{% if metatags.robots is defined %}<meta name="robots" content="{{ metatags.robots }}">{% endif %}
 			<link rel="alternate" type="application/rss+xml" title="{{ siteName }} | {% for entry in craft.entries.section('blogOverview').find() %}{{ entry.title }}{% endfor %}" href="{{ siteRoot }}feed.rss" />
-			<script async src="https://use.typekit.net/wrd6xsa.js"></script>
+			<script src="https://use.typekit.net/wrd6xsa.js"></script>
 			<script>
 				{# load fonts from Typekit #}
 				try{Typekit.load({ async: true });}catch(e){}
