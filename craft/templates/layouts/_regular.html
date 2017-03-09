@@ -123,11 +123,11 @@
 			{% if metatags.rating is defined %}<meta name="rating" content="{{ metatags.rating }}">{% endif %}
 			{% if metatags.robots is defined %}<meta name="robots" content="{{ metatags.robots }}">{% endif %}
 			<link rel="alternate" type="application/rss+xml" title="{{ siteName }} | {% for entry in craft.entries.section('blogOverview').find() %}{{ entry.title }}{% endfor %}" href="{{ siteRoot }}feed.rss" />
-			<script src="//use.typekit.net/wrd6xsa.js"></script>
-			<script>
-				{# load fonts from Typekit #}
-				try{Typekit.load({ async: true });}catch(e){}
-				{% if metatags.googleAnalylticsCode is defined %}
+			{# load fonts from Typekit #}
+			<script src="//use.typekit.net/wrd6xsa.js" onload="try{Typekit.load({ async: true });}catch(e){}"></script>
+			{# Google Analytics #}
+			{% if metatags.googleAnalylticsCode is defined %}
+				<script>
 					(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 					(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 					m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -135,8 +135,8 @@
 
 					ga('create', '{{ metatags.googleAnalylticsCode }}', 'auto');
 					ga('send', 'pageview');
-				{% endif %}
-			</script>
+				</script>
+			{% endif %}
 {% endminify %}
 			<style type="text/css">
 				{% include 'css/critical.css' %}
