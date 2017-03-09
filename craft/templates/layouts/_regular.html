@@ -124,7 +124,7 @@
 			{% if metatags.robots is defined %}<meta name="robots" content="{{ metatags.robots }}">{% endif %}
 			<link rel="alternate" type="application/rss+xml" title="{{ siteName }} | {% for entry in craft.entries.section('blogOverview').find() %}{{ entry.title }}{% endfor %}" href="{{ siteRoot }}feed.rss" />
 			{# load fonts from Typekit #}
-			<script src="//use.typekit.net/wrd6xsa.js" onload="try{Typekit.load({ async: true });}catch(e){}"></script>
+			<script src="//use.typekit.net/wrd6xsa.js" onload="try{Typekit.load({ async: true });}catch(e){}" async></script>
 			{# Google Analytics #}
 			{% if metatags.googleAnalylticsCode is defined %}
 				<script>
@@ -214,7 +214,7 @@
 				</div>
 			</div>
 			{# load site javascript #}
-			<script src="{{ siteRoot }}assets/js/app.js"></script>
+			<script src="{{ siteRoot }}assets/js/app.js" async></script>
 			<script>
 				{# generate css after the browser is finished loading #}
 				var cb = function () {
@@ -230,7 +230,7 @@
 			{# load image gallery and social sharing buttons for blog and gallery entries #}
 			{% if entry.type.handle == 'blog' or 'gallery' %}
 				<div id="fb-root"></div>
-				<script type="text/javascript" src="//cdn.jsdelivr.net/g/lightgallery,lg-fullscreen,lg-pager,lg-share,lg-thumbnail,lg-video,lg-zoom"></script>
+				<script type="text/javascript" src="//cdn.jsdelivr.net/g/lightgallery,lg-fullscreen,lg-pager,lg-share,lg-thumbnail,lg-video,lg-zoom" async></script>
 				<script>
 					{# initiate lightGallery plugin #}
 					(function ($){

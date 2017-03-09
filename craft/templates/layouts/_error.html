@@ -82,11 +82,11 @@
 			{% if metatags.rating is defined %}<meta name="rating" content="{{ metatags.rating }}">{% endif %}
 			{% if metatags.robots is defined %}<meta name="robots" content="{{ metatags.robots }}">{% endif %}
 			<link rel="alternate" type="application/rss+xml" title="{{ siteName }} | {% for entry in craft.entries.section('blogOverview').find() %}{{ entry.title }}{% endfor %}" href="{{ siteRoot }}feed.rss" />
-			<script src="https://use.typekit.net/wrd6xsa.js"></script>
-			<script>
-				{# load fonts from Typekit #}
-				try{Typekit.load({ async: true });}catch(e){}
-				{% if metatags.googleAnalylticsCode is defined %}
+			{# load fonts from Typekit #}
+			<script src="//use.typekit.net/wrd6xsa.js" onload="try{Typekit.load({ async: true });}catch(e){}" async></script>
+			{# Google Analytics #}
+			{% if metatags.googleAnalylticsCode is defined %}
+				<script>
 					(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 					(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 					m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -94,8 +94,8 @@
 
 					ga('create', '{{ metatags.googleAnalylticsCode }}', 'auto');
 					ga('send', 'pageview');
-				{% endif %}
-			</script>
+				</script>
+			{% endif %}
 {% endminify %}
 			<style type="text/css">
 				{% include 'css/critical.css' %}
@@ -108,8 +108,8 @@
 				<p>If you see me, you haven’t set your <code>{% verbatim %}{% block content %}…{% endblock %}{% endverbatim %}</code> yet.</p>
 				<p>See Twig’s <a href="http://twig.sensiolabs.org/doc/templates.html#template-inheritance">Template Inheritance</a> documentation for an explanation.</p>
 			{% endblock %}
-			<script src="{{ siteRoot }}assets/js/app.js"></script>
-			<script async src="http://cdnjs.cloudflare.com/ajax/libs/three.js/r58/three.min.js"></script>
+			<script src="{{ siteRoot }}assets/js/app.js" async></script>
+			<script src="http://cdnjs.cloudflare.com/ajax/libs/three.js/r58/three.min.js" async></script>
 			<script>
 				{# generate css after the browser is finished loading #}
 				var cb = function () {
