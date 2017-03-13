@@ -31,9 +31,7 @@
 			{% for asset in metatags.favicon16x16 %}
 				<link rel="icon" type="image/png" href="{{ asset.url }}" sizes="16x16">
 			{% endfor %}
-			{% for asset in metatags.manifest %}
-				<link rel="manifest" href="{{ asset.url }}">
-			{% endfor %}
+			<link rel="manifest" href="{{ siteRoot }}manifest.json">
 			{% for asset in metatags.maskIcon %}
 				<link rel="mask-icon" href="{{ asset.url }}" color="#ff4169">
 			{% endfor %}
