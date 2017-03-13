@@ -228,9 +228,9 @@
 				else window.addEventListener('load', cb);
 			</script>
 			{# load image gallery and social sharing buttons for blog and gallery entries #}
-			{% if entry.type.handle == 'blog' or 'gallery' %}
+			{% if entry.type.handle == 'blog' or entry.type.handle == 'gallery' %}
 				<div id="fb-root"></div>
-				<script type="text/javascript" src="//cdn.jsdelivr.net/g/lightgallery,lg-fullscreen,lg-pager,lg-share,lg-thumbnail,lg-video,lg-zoom"></script>
+				<script src="//cdn.jsdelivr.net/g/lightgallery,lg-fullscreen,lg-pager,lg-share,lg-thumbnail,lg-video,lg-zoom" defer></script>
 				<script>
 					{# initiate lightGallery plugin #}
 					(function ($){

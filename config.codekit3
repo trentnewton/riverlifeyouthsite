@@ -35295,7 +35295,7 @@
 		"oA": 0,
 		"oAP": "\/public\/images\/covers\/_metaImageFit\/media.jpg",
 		"oF": 0,
-		"opt": 0
+		"opt": 1
 		},
 	"\/public\/images\/covers\/_metaImageFit\/pexels-photo-187996.jpg": {
 		"ft": 16384,
@@ -35671,7 +35671,7 @@
 		"oA": 0,
 		"oAP": "\/public\/images\/gallery\/_galleryImage\/poolparty25.jpg",
 		"oF": 0,
-		"opt": 0
+		"opt": 1
 		},
 	"\/public\/images\/gallery\/_galleryImage\/poolparty26.jpg": {
 		"ft": 16384,
@@ -35751,7 +35751,7 @@
 		"oA": 0,
 		"oAP": "\/public\/images\/gallery\/_galleryImage\/poolparty34.jpg",
 		"oF": 0,
-		"opt": 0
+		"opt": 1
 		},
 	"\/public\/images\/gallery\/_galleryImage\/poolparty35.jpg": {
 		"ft": 16384,
@@ -36151,7 +36151,7 @@
 		"oA": 0,
 		"oAP": "\/public\/images\/gallery\/_galleryImageThumbnail\/poolparty34.jpg",
 		"oF": 0,
-		"opt": 0
+		"opt": 1
 		},
 	"\/public\/images\/gallery\/_galleryImageThumbnail\/poolparty35.jpg": {
 		"ft": 16384,
