@@ -85,6 +85,7 @@
 			{# Google Analytics #}
 			{% if metatags.googleAnalylticsCode is defined %}
 				<script>
+					var fired = false;
 					window.addEventListener('scroll', function (){
 						if ((document.documentElement.scrollTop != 0 && fired === false) || (document.body.scrollTop != 0 && fired === false)) {
 
