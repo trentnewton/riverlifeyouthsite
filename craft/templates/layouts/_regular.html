@@ -213,8 +213,6 @@
 					{% include 'partials/footer.html' %}
 				</div>
 			</div>
-			{# load site javascript #}
-			<script src="{{ siteRoot }}assets/js/app.js"></script>
 			<script>
 				{# generate css after the browser is finished loading #}
 				var cb = function () {
@@ -229,6 +227,8 @@
 			</script>
 			{# load image gallery and social sharing buttons for blog and gallery entries #}
 			{% if entry.type.handle == 'blog' or entry.type.handle == 'gallery' %}
+				{# load site javascript #}
+				<script src="{{ siteRoot }}assets/js/app.js"></script>
 				<div id="fb-root"></div>
 				<script src="//cdn.jsdelivr.net/g/lightgallery,lg-fullscreen,lg-pager,lg-share,lg-thumbnail,lg-video,lg-zoom" defer></script>
 				<script>
@@ -252,6 +252,9 @@
 					{lang: 'en-GB'}
 				</script>
 				<script async defer src="//assets.pinterest.com/js/pinit.js"></script>
+			{% else %}
+				{# load site javascript #}
+				<script src="{{ siteRoot }}assets/js/app.js" async defer></script>
 			{% endif %}
 		</body>
 	</html>
