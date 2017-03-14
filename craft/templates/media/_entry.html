@@ -1,5 +1,7 @@
 {% extends 'layouts/_regular' %}
-{% set heroTitle = 'Media' %}
+{% set heroTitle %}
+	{% for entry in craft.entries.section('mediaOverview') %}{{ entry.title }}{% endfor %}
+{% endset%}
 {% set summary = null %}
 
 {% block content %}
