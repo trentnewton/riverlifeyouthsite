@@ -5,7 +5,7 @@
 
 				{% case "videoBackground" %}
 
-					<video autoplay loop preload muted poster="{% for asset in block.videoBackgroundPoster %}{{ asset.url }}{% endfor %}" class="video-bg">
+					<video autoplay loop preload="none" muted poster="{% for asset in block.videoBackgroundPoster %}{{ asset.url }}{% endfor %}" class="video-bg">
 						{% for asset in block.videoBackgroundWebm %}
 							<source src="{{ asset.url }}" type="video/webm">
 						{% endfor %}
