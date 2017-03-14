@@ -350,7 +350,7 @@ p.post-meta {
 
 // social
 
-.social-share {
+.social-share.menu {
 	margin-top: $paragraph-margin-bottom;
 	border-top: 2px dotted $body-font-color;
 	padding-top: $paragraph-margin-bottom;
@@ -374,6 +374,10 @@ p.post-meta {
 
 		}
 
+	}
+
+	svg {
+		margin: 0;
 	}
 
 	// .facebook {
