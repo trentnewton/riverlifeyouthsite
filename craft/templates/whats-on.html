@@ -12,7 +12,9 @@
 				{% set eventEntries = craft.entries.section('event').order('dayStart asc') %}
 				{% for category in eventCategories %}
 					<div class="calendar">
-						<svg class="ministry-logo" aria-labelledby="ministry-{{ category.title|lower }}-logo" preserveAspectRatio="xMinYMin meet"><use xlink:href="#ministry-{{ category.title|lower }}-logo"></use></svg>
+						{% if category.title | length %}
+							<svg class="ministry-logo" aria-labelledby="ministry-{{ category.title|lower }}-logo" preserveAspectRatio="xMinYMin meet"><use xlink:href="#ministry-{{ category.title|lower }}-logo"></use></svg>
+						{% endif %}
 						{% if category.categoryDescription | length %}
 							<h4 class="subheader">{{ category.categoryDescription }}</h4>
 						{% endif %}
