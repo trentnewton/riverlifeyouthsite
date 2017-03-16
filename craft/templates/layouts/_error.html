@@ -65,11 +65,11 @@
 			<meta name="twitter:title" content="{{ title }}">
 			{% if description is defined %}<meta name="twitter:description" content="{{ description }}">{% endif %}
 			<meta name="twitter:card" content="summary">
-			{% if footer.twitterHandle is defined %}
-				<meta name="twitter:creator" content="@{{ footer.twitterHandle }}">
+			{% if socialMedia.twitterHandle is defined %}
+				<meta name="twitter:creator" content="@{{ socialMedia.twitterHandle }}">
 			{% endif %}
-			{% if footer.twitterHandle is defined %}
-				<meta name="twitter:site" content="@{{ footer.twitterHandle }}">
+			{% if socialMedia.twitterHandle is defined %}
+				<meta name="twitter:site" content="@{{ socialMedia.twitterHandle }}">
 			{% endif %}
 			{# for asset in entry.coverImage %}
 				<meta name="twitter:image" content="{{ asset.getUrl('metaImageFit') }}">
