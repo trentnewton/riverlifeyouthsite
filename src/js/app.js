@@ -142,6 +142,7 @@
 
 	if (version === false) {
 		// for not-ie
+		return false;
 	} else if (version >= 12) {
 		$('.ministry, .blog-entries, .hero-section').addClass('ie-fix');
 		$('.page-main').removeClass('slope-page');
