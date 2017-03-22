@@ -61,16 +61,6 @@ require('what-input');
 // or
 
 var whatInput = require('what-input');
-
-// or
-
-requirejs.config({
-  paths: {
-    whatInput: 'path/to/what-input'
-  }
-});
-
-require(['whatInput'], function() {});
 ```
 
 What Input will start doing its thing while you do yours.
