@@ -241,7 +241,7 @@ $breadcrumbs-item-slash: true;
 // ----------
 
 $button-padding: 0 2em;
-$button-margin: 0 0 $global-margin 0;
+$button-margin: $global-margin 0;
 $button-fill: solid;
 $button-background: $anchor-color;
 $button-background-hover: $anchor-color-hover;
