@@ -135,7 +135,11 @@
 		.column	{
 			border-right: 0.5px solid $body-font-color;
 			border-left: 0.5px solid $body-font-color;
+			border-bottom: 0.5px solid $body-font-color;
 			text-align: left;
+			padding-top: $paragraph-margin-bottom;
+			padding-bottom: $paragraph-margin-bottom;
+			margin-bottom: $paragraph-margin-bottom;
 		}
 
 		p {
