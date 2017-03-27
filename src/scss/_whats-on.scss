@@ -134,16 +134,47 @@
 
 		.column	{
 			border-right: 0.5px solid $body-font-color;
-			border-left: 0.5px solid $body-font-color;
 			border-bottom: 0.5px solid $body-font-color;
 			text-align: left;
 			padding-top: $paragraph-margin-bottom;
 			padding-bottom: $paragraph-margin-bottom;
-			margin-bottom: $paragraph-margin-bottom;
+
+			&:nth-child(even) {
+				border-right: 0px solid $body-font-color;
+			}
+
+			&:nth-last-child(2) {
+				border-bottom: 0px solid $body-font-color;
+
+				@include breakpoint(small only) {
+					border-bottom: 0.5px solid $body-font-color;
+				}
+
+			}
+
+			&:last-child {
+				border-bottom: 0px solid $body-font-color;
+
+				@include breakpoint(small only) {
+					padding-bottom: 0;
+					border-bottom: 0 solid $body-font-color;
+				}
+
+			}
+
+			@include breakpoint(small only) {
+				border-right: 0px solid $body-font-color;
+			}
+
 		}
 
 		p {
 			margin-bottom: ($paragraph-margin-bottom / 2);
+		}
+
+		.oc-night-details-body {
+			margin-left: 0;
+			margin-right: 0;
 		}
 
 	}
