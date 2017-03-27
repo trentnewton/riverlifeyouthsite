@@ -28720,10 +28720,10 @@
 		"oAP": "\/craft\/plugins\/.htaccess",
 		"oF": 0
 		},
-	"\/craft\/plugins\/cheatsheet\/cheatSheetPlugin.php": {
+	"\/craft\/plugins\/cheatsheet\/CheatSheetPlugin.php": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/craft\/plugins\/cheatsheet\/cheatSheetPlugin.php",
+		"oAP": "\/craft\/plugins\/cheatsheet\/CheatSheetPlugin.php",
 		"oF": 0
 		},
 	"\/craft\/plugins\/cheatsheet\/controllers\/CheatSheet_RoutesController.php": {
@@ -29181,6 +29181,24 @@
 		"oAP": "\/craft\/plugins\/htmlcache\/templates\/_settings.html",
 		"oF": 0
 		},
+	"\/craft\/plugins\/minify\/CHANGELOG.md": {
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"eLB": 0,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 0,
+		"oAP": "\/craft\/plugins\/minify\/CHANGELOG.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
 	"\/craft\/plugins\/minify\/composer.json": {
 		"ft": 524288,
 		"oA": 1,
@@ -29297,6 +29315,12 @@
 		"oAP": "\/craft\/plugins\/minify\/vendor\/composer\/autoload_real.php",
 		"oF": 0
 		},
+	"\/craft\/plugins\/minify\/vendor\/composer\/autoload_static.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/composer\/autoload_static.php",
+		"oF": 0
+		},
 	"\/craft\/plugins\/minify\/vendor\/composer\/ClassLoader.php": {
 		"ft": 8192,
 		"oA": 2,
@@ -29311,517 +29335,594 @@
 		"oO": 0,
 		"oS": 1
 		},
+	"\/craft\/plugins\/minify\/vendor\/composer\/installers\/.editorconfig": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/composer\/installers\/.editorconfig",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/composer\/installers\/.gitignore": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/composer\/installers\/.gitignore",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/composer\/installers\/.travis.yml": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/composer\/installers\/.travis.yml",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/composer\/installers\/composer.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/composer\/installers\/composer-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"\/craft\/plugins\/minify\/vendor\/composer\/installers\/LICENSE": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/composer\/installers\/LICENSE",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/composer\/installers\/phpunit.xml.dist": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/composer\/installers\/phpunit.xml.dist",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/composer\/installers\/README.md": {
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"eLB": 0,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 0,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/composer\/installers\/README.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/bootstrap.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/bootstrap.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/AglInstaller.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/AglInstaller.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/AimeosInstaller.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/AimeosInstaller.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/AnnotateCmsInstaller.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/AnnotateCmsInstaller.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/AsgardInstaller.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/AsgardInstaller.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/AttogramInstaller.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/AttogramInstaller.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/BaseInstaller.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/BaseInstaller.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/BitrixInstaller.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/BitrixInstaller.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/BonefishInstaller.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/BonefishInstaller.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/CakePHPInstaller.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/CakePHPInstaller.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/ChefInstaller.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/ChefInstaller.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/ClanCatsFrameworkInstaller.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/ClanCatsFrameworkInstaller.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/CockpitInstaller.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/CockpitInstaller.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/CodeIgniterInstaller.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/CodeIgniterInstaller.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/Concrete5Installer.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/Concrete5Installer.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/CraftInstaller.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/CraftInstaller.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/CroogoInstaller.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/CroogoInstaller.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/DecibelInstaller.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/DecibelInstaller.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/DokuWikiInstaller.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/DokuWikiInstaller.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/DolibarrInstaller.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/DolibarrInstaller.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/DrupalInstaller.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/DrupalInstaller.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/ElggInstaller.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/ElggInstaller.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/ExpressionEngineInstaller.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/ExpressionEngineInstaller.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/FuelInstaller.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/FuelInstaller.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/FuelphpInstaller.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/FuelphpInstaller.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/GravInstaller.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/GravInstaller.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/HuradInstaller.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/HuradInstaller.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/ImageCMSInstaller.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/ImageCMSInstaller.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/Installer.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/Installer.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/JoomlaInstaller.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/JoomlaInstaller.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/KirbyInstaller.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/KirbyInstaller.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/KodiCMSInstaller.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/KodiCMSInstaller.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/KohanaInstaller.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/KohanaInstaller.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/LaravelInstaller.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/LaravelInstaller.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/LithiumInstaller.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/LithiumInstaller.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/MagentoInstaller.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/MagentoInstaller.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/MakoInstaller.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/MakoInstaller.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/MauticInstaller.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/MauticInstaller.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/MediaWikiInstaller.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/MediaWikiInstaller.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/MicroweberInstaller.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/MicroweberInstaller.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/MODULEWorkInstaller.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/MODULEWorkInstaller.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/MODXEvoInstaller.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/MODXEvoInstaller.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/MoodleInstaller.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/MoodleInstaller.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/OctoberInstaller.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/OctoberInstaller.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/OxidInstaller.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/OxidInstaller.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/PhiftyInstaller.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/PhiftyInstaller.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/PhpBBInstaller.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/PhpBBInstaller.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/PimcoreInstaller.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/PimcoreInstaller.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/PiwikInstaller.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/PiwikInstaller.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/PlentymarketsInstaller.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/PlentymarketsInstaller.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/Plugin.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/Plugin.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/PPIInstaller.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/PPIInstaller.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/PrestashopInstaller.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/PrestashopInstaller.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/PuppetInstaller.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/PuppetInstaller.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/RadPHPInstaller.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/RadPHPInstaller.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/RedaxoInstaller.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/RedaxoInstaller.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/ReIndexInstaller.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/ReIndexInstaller.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/RoundcubeInstaller.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/RoundcubeInstaller.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/ShopwareInstaller.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/ShopwareInstaller.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/SilverStripeInstaller.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/SilverStripeInstaller.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/SMFInstaller.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/SMFInstaller.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/Symfony1Installer.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/Symfony1Installer.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/TheliaInstaller.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/TheliaInstaller.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/TuskInstaller.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/TuskInstaller.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/TYPO3CmsInstaller.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/TYPO3CmsInstaller.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/TYPO3FlowInstaller.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/TYPO3FlowInstaller.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/VanillaInstaller.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/VanillaInstaller.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/WHMCSInstaller.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/WHMCSInstaller.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/WolfCMSInstaller.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/WolfCMSInstaller.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/WordPressInstaller.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/WordPressInstaller.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/YawikInstaller.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/YawikInstaller.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/ZendInstaller.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/ZendInstaller.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/ZikulaInstaller.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/composer\/installers\/src\/Composer\/Installers\/ZikulaInstaller.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/composer\/installers\/tests\/bootstrap.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/composer\/installers\/tests\/bootstrap.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/composer\/installers\/tests\/Composer\/Installers\/Test\/AsgardInstallerTest.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/composer\/installers\/tests\/Composer\/Installers\/Test\/AsgardInstallerTest.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/composer\/installers\/tests\/Composer\/Installers\/Test\/BitrixInstallerTest.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/composer\/installers\/tests\/Composer\/Installers\/Test\/BitrixInstallerTest.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/composer\/installers\/tests\/Composer\/Installers\/Test\/CakePHPInstallerTest.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/composer\/installers\/tests\/Composer\/Installers\/Test\/CakePHPInstallerTest.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/composer\/installers\/tests\/Composer\/Installers\/Test\/CraftInstallerTest.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/composer\/installers\/tests\/Composer\/Installers\/Test\/CraftInstallerTest.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/composer\/installers\/tests\/Composer\/Installers\/Test\/DokuWikiInstallerTest.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/composer\/installers\/tests\/Composer\/Installers\/Test\/DokuWikiInstallerTest.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/composer\/installers\/tests\/Composer\/Installers\/Test\/GravInstallerTest.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/composer\/installers\/tests\/Composer\/Installers\/Test\/GravInstallerTest.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/composer\/installers\/tests\/Composer\/Installers\/Test\/InstallerTest.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/composer\/installers\/tests\/Composer\/Installers\/Test\/InstallerTest.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/composer\/installers\/tests\/Composer\/Installers\/Test\/MediaWikiInstallerTest.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/composer\/installers\/tests\/Composer\/Installers\/Test\/MediaWikiInstallerTest.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/composer\/installers\/tests\/Composer\/Installers\/Test\/OctoberInstallerTest.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/composer\/installers\/tests\/Composer\/Installers\/Test\/OctoberInstallerTest.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/composer\/installers\/tests\/Composer\/Installers\/Test\/PimcoreInstallerTest.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/composer\/installers\/tests\/Composer\/Installers\/Test\/PimcoreInstallerTest.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/composer\/installers\/tests\/Composer\/Installers\/Test\/PiwikInstallerTest.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/composer\/installers\/tests\/Composer\/Installers\/Test\/PiwikInstallerTest.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/composer\/installers\/tests\/Composer\/Installers\/Test\/TestCase.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/composer\/installers\/tests\/Composer\/Installers\/Test\/TestCase.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/composer\/installers\/tests\/Composer\/Installers\/Test\/YawikInstallerTest.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/composer\/installers\/tests\/Composer\/Installers\/Test\/YawikInstallerTest.php",
+		"oF": 0
+		},
 	"\/craft\/plugins\/minify\/vendor\/composer\/LICENSE": {
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/craft\/plugins\/minify\/vendor\/composer\/LICENSE",
 		"oF": 0
 		},
-	"\/craft\/plugins\/minify\/vendor\/firephp\/firephp-core\/.gitignore": {
+	"\/craft\/plugins\/minify\/vendor\/mrclay\/jsmin-php\/tests\/Resources\/minify\/actual\/.gitkeep": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/firephp\/firephp-core\/.gitignore",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/firephp\/firephp-core\/CHANGELOG.md": {
-		"cS": 0,
-		"eF": 1,
-		"eL": 1,
-		"eLB": 0,
-		"ema": 1,
-		"eSQ": 1,
-		"ft": 4096,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/firephp\/firephp-core\/CHANGELOG.html",
-		"oF": 0,
-		"oFM": 0,
-		"oS": 0,
-		"pHT": 0,
-		"pME": 1,
-		"rFN": 0,
-		"uCM": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/firephp\/firephp-core\/composer.json": {
-		"ft": 524288,
-		"oA": 1,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/firephp\/firephp-core\/composer-min.json",
-		"oF": 0,
-		"oO": 0,
-		"oS": 1
-		},
-	"\/craft\/plugins\/minify\/vendor\/firephp\/firephp-core\/examples\/oo.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/firephp\/firephp-core\/examples\/oo.php",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/firephp\/firephp-core\/examples\/oo.php4": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/firephp\/firephp-core\/examples\/oo.php4",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/firephp\/firephp-core\/examples\/procedural.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/firephp\/firephp-core\/examples\/procedural.php",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/firephp\/firephp-core\/examples\/procedural.php4": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/firephp\/firephp-core\/examples\/procedural.php4",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/firephp\/firephp-core\/lib\/FirePHPCore\/fb.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/firephp\/firephp-core\/lib\/FirePHPCore\/fb.php",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/firephp\/firephp-core\/lib\/FirePHPCore\/fb.php4": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/firephp\/firephp-core\/lib\/FirePHPCore\/fb.php4",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/firephp\/firephp-core\/lib\/FirePHPCore\/FirePHP.class.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/firephp\/firephp-core\/lib\/FirePHPCore\/FirePHP.class.php",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/firephp\/firephp-core\/lib\/FirePHPCore\/FirePHP.class.php4": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/firephp\/firephp-core\/lib\/FirePHPCore\/FirePHP.class.php4",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/firephp\/firephp-core\/package.json": {
-		"ft": 524288,
-		"oA": 1,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/firephp\/firephp-core\/package-min.json",
-		"oF": 0,
-		"oO": 0,
-		"oS": 1
-		},
-	"\/craft\/plugins\/minify\/vendor\/firephp\/firephp-core\/program.json": {
-		"ft": 524288,
-		"oA": 1,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/firephp\/firephp-core\/program-min.json",
-		"oF": 0,
-		"oO": 0,
-		"oS": 1
-		},
-	"\/craft\/plugins\/minify\/vendor\/firephp\/firephp-core\/README.md": {
-		"cS": 0,
-		"eF": 1,
-		"eL": 1,
-		"eLB": 0,
-		"ema": 1,
-		"eSQ": 1,
-		"ft": 4096,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/firephp\/firephp-core\/README.html",
-		"oF": 0,
-		"oFM": 0,
-		"oS": 0,
-		"pHT": 0,
-		"pME": 1,
-		"rFN": 0,
-		"uCM": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/firephp\/firephp-core\/tests\/API\/newlines.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/firephp\/firephp-core\/tests\/API\/newlines.php",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/firephp\/firephp-core\/tests\/FirePHPCore\/FirePHPTest.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/firephp\/firephp-core\/tests\/FirePHPCore\/FirePHPTest.php",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/firephp\/firephp-core\/tests\/phpunit.xml": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/firephp\/firephp-core\/tests\/phpunit.xml",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/firephp\/firephp-core\/tests\/TestHelper.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/firephp\/firephp-core\/tests\/TestHelper.php",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/firephp\/firephp-core\/workspace\/lib\/project.js": {
-		"ft": 64,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/firephp\/firephp-core\/workspace\/lib\/project-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/firephp\/firephp-core\/workspace\/package.json": {
-		"ft": 524288,
-		"oA": 1,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/firephp\/firephp-core\/workspace\/package-min.json",
-		"oF": 0,
-		"oO": 0,
-		"oS": 1
-		},
-	"\/craft\/plugins\/minify\/vendor\/firephp\/firephp-core\/workspace\/program.json": {
-		"ft": 524288,
-		"oA": 1,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/firephp\/firephp-core\/workspace\/program-min.json",
-		"oF": 0,
-		"oO": 0,
-		"oS": 1
-		},
-	"\/craft\/plugins\/minify\/vendor\/firephp\/firephp-core\/workspace\/README.md": {
-		"cS": 0,
-		"eF": 1,
-		"eL": 1,
-		"eLB": 0,
-		"ema": 1,
-		"eSQ": 1,
-		"ft": 4096,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/firephp\/firephp-core\/workspace\/README.html",
-		"oF": 0,
-		"oFM": 0,
-		"oS": 0,
-		"pHT": 0,
-		"pME": 1,
-		"rFN": 0,
-		"uCM": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/firephp\/firephp-core\/workspace\/scripts\/build.js": {
-		"ft": 64,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/firephp\/firephp-core\/workspace\/scripts\/build-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/firephp\/firephp-core\/workspace\/scripts\/publish.js": {
-		"ft": 64,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/firephp\/firephp-core\/workspace\/scripts\/publish-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/firephp\/firephp-core\/workspace\/tpl\/license.tpl.md": {
-		"cS": 0,
-		"eF": 1,
-		"eL": 1,
-		"eLB": 0,
-		"ema": 1,
-		"eSQ": 1,
-		"ft": 4096,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/firephp\/firephp-core\/workspace\/tpl\/license.tpl.html",
-		"oF": 0,
-		"oFM": 0,
-		"oS": 0,
-		"pHT": 0,
-		"pME": 1,
-		"rFN": 0,
-		"uCM": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/firephp\/firephp-core\/workspace\/tpl\/pear.package.tpl.xml": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/firephp\/firephp-core\/workspace\/tpl\/pear.package.tpl.xml",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/firephp\/firephp-core\/workspace\/tpl\/readme.tpl.md": {
-		"cS": 0,
-		"eF": 1,
-		"eL": 1,
-		"eLB": 0,
-		"ema": 1,
-		"eSQ": 1,
-		"ft": 4096,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/firephp\/firephp-core\/workspace\/tpl\/readme.tpl.html",
-		"oF": 0,
-		"oFM": 0,
-		"oS": 0,
-		"pHT": 0,
-		"pME": 1,
-		"rFN": 0,
-		"uCM": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/jsmin-php\/.editorconfig": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/jsmin-php\/.editorconfig",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/jsmin-php\/.gitignore": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/jsmin-php\/.gitignore",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/jsmin-php\/composer.json": {
-		"ft": 524288,
-		"oA": 1,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/jsmin-php\/composer-min.json",
-		"oF": 0,
-		"oO": 0,
-		"oS": 1
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/jsmin-php\/HISTORY.txt": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/jsmin-php\/HISTORY.txt",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/jsmin-php\/LICENSE.txt": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/jsmin-php\/LICENSE.txt",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/jsmin-php\/phpunit.xml.dist": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/jsmin-php\/phpunit.xml.dist",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/jsmin-php\/src\/JSMin\/JSMin.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/jsmin-php\/src\/JSMin\/JSMin.php",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/jsmin-php\/src\/JSMin\/UnterminatedCommentException.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/jsmin-php\/src\/JSMin\/UnterminatedCommentException.php",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/jsmin-php\/src\/JSMin\/UnterminatedRegExpException.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/jsmin-php\/src\/JSMin\/UnterminatedRegExpException.php",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/jsmin-php\/src\/JSMin\/UnterminatedStringException.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/jsmin-php\/src\/JSMin\/UnterminatedStringException.php",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/jsmin-php\/tests\/bootstrap.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/jsmin-php\/tests\/bootstrap.php",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/jsmin-php\/tests\/Resources\/minify\/expected\/before.js": {
-		"ft": 64,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/jsmin-php\/tests\/Resources\/minify\/expected\/before-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/jsmin-php\/tests\/Resources\/minify\/expected\/condcomm.js": {
-		"ft": 64,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/jsmin-php\/tests\/Resources\/minify\/expected\/condcomm-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/jsmin-php\/tests\/Resources\/minify\/expected\/issue144.js": {
-		"ft": 64,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/jsmin-php\/tests\/Resources\/minify\/expected\/issue144-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/jsmin-php\/tests\/Resources\/minify\/expected\/issue256.js": {
-		"ft": 64,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/jsmin-php\/tests\/Resources\/minify\/expected\/issue256-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/jsmin-php\/tests\/Resources\/minify\/expected\/keyword-regex.js": {
-		"ft": 64,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/jsmin-php\/tests\/Resources\/minify\/expected\/keyword-regex-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/jsmin-php\/tests\/Resources\/minify\/expected\/not-regexp.js": {
-		"ft": 64,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/jsmin-php\/tests\/Resources\/minify\/expected\/not-regexp-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/jsmin-php\/tests\/Resources\/minify\/expected\/regexes.js": {
-		"ft": 64,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/jsmin-php\/tests\/Resources\/minify\/expected\/regexes-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/jsmin-php\/tests\/Resources\/minify\/expected\/starts-regex.js": {
-		"ft": 64,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/jsmin-php\/tests\/Resources\/minify\/expected\/starts-regex-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/jsmin-php\/tests\/Resources\/minify\/expected\/token-regexp.js": {
-		"ft": 64,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/jsmin-php\/tests\/Resources\/minify\/expected\/token-regexp-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/jsmin-php\/tests\/Resources\/minify\/input\/before.js": {
-		"ft": 64,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/jsmin-php\/tests\/Resources\/minify\/input\/before-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/jsmin-php\/tests\/Resources\/minify\/input\/condcomm.js": {
-		"ft": 64,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/jsmin-php\/tests\/Resources\/minify\/input\/condcomm-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/jsmin-php\/tests\/Resources\/minify\/input\/issue144.js": {
-		"ft": 64,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/jsmin-php\/tests\/Resources\/minify\/input\/issue144-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/jsmin-php\/tests\/Resources\/minify\/input\/issue256.js": {
-		"ft": 64,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/jsmin-php\/tests\/Resources\/minify\/input\/issue256-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/jsmin-php\/tests\/Resources\/minify\/input\/keyword-regex.js": {
-		"ft": 64,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/jsmin-php\/tests\/Resources\/minify\/input\/keyword-regex-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/jsmin-php\/tests\/Resources\/minify\/input\/not-regexp.js": {
-		"ft": 64,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/jsmin-php\/tests\/Resources\/minify\/input\/not-regexp-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/jsmin-php\/tests\/Resources\/minify\/input\/regexes.js": {
-		"ft": 64,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/jsmin-php\/tests\/Resources\/minify\/input\/regexes-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/jsmin-php\/tests\/Resources\/minify\/input\/starts-regex.js": {
-		"ft": 64,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/jsmin-php\/tests\/Resources\/minify\/input\/starts-regex-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/jsmin-php\/tests\/Resources\/minify\/input\/token-regexp.js": {
-		"ft": 64,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/jsmin-php\/tests\/Resources\/minify\/input\/token-regexp-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/jsmin-php\/tests\/Tests\/JSMin\/JSMinTest.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/jsmin-php\/tests\/Tests\/JSMin\/JSMinTest.php",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/jsmin-php\/web\/index.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/jsmin-php\/web\/index.php",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/jsmin-php\/web\/README.txt": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/jsmin-php\/web\/README.txt",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/.editorconfig": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/.editorconfig",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/.gitattributes": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/.gitattributes",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/.gitignore": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/.gitignore",
+		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/jsmin-php\/tests\/Resources\/minify\/actual\/.gitkeep",
 		"oF": 0
 		},
 	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/.htaccess": {
@@ -30117,6 +30218,24 @@
 		"rFN": 0,
 		"uCM": 0
 		},
+	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/docs\/old\/History.wiki.md": {
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"eLB": 0,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 0,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/docs\/old\/History.wiki.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
 	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/docs\/old\/HowItWorks.wiki.md": {
 		"cS": 0,
 		"eF": 1,
@@ -30284,6 +30403,12 @@
 		"pME": 1,
 		"rFN": 0,
 		"uCM": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/HISTORY.txt": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/HISTORY.txt",
+		"oF": 0
 		},
 	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/index.php": {
 		"ft": 8192,
@@ -30531,851 +30656,362 @@
 		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/LICENSE.txt",
 		"oF": 0
 		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_extras\/cli\/minify.php": {
+	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/MIN.txt": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_extras\/cli\/minify.php",
+		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/MIN.txt",
 		"oF": 0
 		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_extras\/cli\/rewrite-uris.php": {
+	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min\/.htaccess": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_extras\/cli\/rewrite-uris.php",
+		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min\/.htaccess",
 		"oF": 0
 		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_extras\/config.php": {
+	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min\/builder\/.htaccess": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_extras\/config.php",
+		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min\/builder\/.htaccess",
 		"oF": 0
 		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_extras\/README.txt": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_extras\/README.txt",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_extras\/tools\/minifyTextarea.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_extras\/tools\/minifyTextarea.php",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_extras\/tools\/minifyUrl.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_extras\/tools\/minifyUrl.php",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_extras\/tools\/testRewriteUri.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_extras\/tools\/testRewriteUri.php",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/.htaccess": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/.htaccess",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_inc.php": {
-		"ft": 8192,
+	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min\/builder\/_index.js": {
+		"ft": 64,
+		"mi": 1,
 		"oA": 1,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_inc.php",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/css\/comments.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/css\/comments-min.css",
+		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min\/builder\/_index-min.js",
 		"oF": 0,
-		"oS": 0
+		"sC": 1,
+		"tS": 0
 		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/css\/comments.min.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
+	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min\/builder\/bm.js": {
+		"ft": 64,
+		"mi": 1,
 		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/css\/comments.min-min.css",
+		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min\/builder\/bm-min.js",
 		"oF": 0,
-		"oS": 0
+		"sC": 1,
+		"tS": 0
 		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/css\/hacks.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
+	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min\/builder\/bm2.js": {
+		"ft": 64,
+		"mi": 1,
 		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/css\/hacks-min.css",
+		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min\/builder\/bm2-min.js",
 		"oF": 0,
-		"oS": 0
+		"sC": 1,
+		"tS": 0
 		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/css\/hacks.min.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/css\/hacks.min-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/css\/issue210.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/css\/issue210-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/css\/issue210.min.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/css\/issue210.min-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/css\/issue62.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/css\/issue62-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/css\/issue62.min.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/css\/issue62.min-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/css\/paths_prepend.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/css\/paths_prepend-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/css\/paths_prepend.min.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/css\/paths_prepend.min-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/css\/paths_rewrite.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/css\/paths_rewrite-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/css\/paths_rewrite.min.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/css\/paths_rewrite.min-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/css\/readme.txt": {
+	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min\/builder\/index.php": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/css\/readme.txt",
+		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min\/builder\/index.php",
 		"oF": 0
 		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/css\/selectors.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
+	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min\/builder\/jquery-1.6.3.min.js": {
+		"ft": 64,
+		"mi": 1,
 		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/css\/selectors-min.css",
+		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min\/builder\/jquery-1.6.3.min-min.js",
 		"oF": 0,
-		"oS": 0
+		"sC": 1,
+		"tS": 0
 		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/css\/selectors.min.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/css\/selectors.min-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/css\/styles.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/css\/styles-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/css\/styles.min.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/css\/styles.min-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/css\/subsilver.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/css\/subsilver-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/css\/subsilver.min.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/css\/subsilver.min-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/css\/unusual_strings.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/css\/unusual_strings-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/css\/unusual_strings.min.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/css\/unusual_strings.min-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/css\/vladmirated.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/css\/vladmirated-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/css\/vladmirated.min.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/css\/vladmirated.min-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/css_uriRewriter\/exp.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/css_uriRewriter\/exp-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/css_uriRewriter\/exp_prepend.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/css_uriRewriter\/exp_prepend-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/css_uriRewriter\/exp_prepend2.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/css_uriRewriter\/exp_prepend2-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/css_uriRewriter\/in.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/css_uriRewriter\/in-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/html\/before.html": {
+	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min\/builder\/ocCheck.php": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/html\/before.html",
+		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min\/builder\/ocCheck.php",
 		"oF": 0
 		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/html\/before.min.html": {
+	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min\/builder\/rewriteTest.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min\/builder\/rewriteTest-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min\/builder\/test.php": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/html\/before.min.html",
+		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min\/builder\/test.php",
 		"oF": 0
 		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/html\/before2.html": {
+	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min\/config-test.php": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/html\/before2.html",
+		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min\/config-test.php",
 		"oF": 0
 		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/html\/before2.min.html": {
+	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min\/config.php": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/html\/before2.min.html",
+		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min\/config.php",
 		"oF": 0
 		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/htmlHelper_groupsConfig.php": {
+	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min\/groupsConfig.php": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/htmlHelper_groupsConfig.php",
+		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min\/groupsConfig.php",
 		"oF": 0
 		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/importProcessor\/css\/1\/adjacent.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/importProcessor\/css\/1\/adjacent-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/importProcessor\/css\/1\/tv.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/importProcessor\/css\/1\/tv-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/importProcessor\/css\/adjacent.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/importProcessor\/css\/adjacent-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/importProcessor\/css\/input.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/importProcessor\/css\/input-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/importProcessor\/css\/output.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/importProcessor\/css\/output-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/importProcessor\/lib\/css\/example.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/importProcessor\/lib\/css\/example-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/js\/before.js": {
-		"ft": 64,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/js\/before-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/js\/before.min.js": {
-		"ft": 64,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/js\/before.min-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/js\/before.min_plus.js": {
-		"ft": 64,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/js\/before.min_plus-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/js\/condcomm.js": {
-		"ft": 64,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/js\/condcomm-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/js\/condcomm.min_plus.js": {
-		"ft": 64,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/js\/condcomm.min_plus-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/js\/issue132.js": {
-		"ft": 64,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/js\/issue132-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/js\/issue132.min.js": {
-		"ft": 64,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/js\/issue132.min-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/js\/issue141.min.js": {
-		"ft": 64,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/js\/issue141.min-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/js\/issue144.js": {
-		"ft": 64,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/js\/issue144-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/js\/issue144.min.js": {
-		"ft": 64,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/js\/issue144.min-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/js\/issue256.js": {
-		"ft": 64,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/js\/issue256-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/js\/issue256.min.js": {
-		"ft": 64,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/js\/issue256.min-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/js\/jquery-1.2.3.js": {
-		"ft": 64,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/js\/jquery-1.2.3-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/js\/regexes.js": {
-		"ft": 64,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/js\/regexes-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/js\/regexes.min.js": {
-		"ft": 64,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/js\/regexes.min-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/minify\/email.js": {
-		"ft": 64,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/minify\/email-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/minify\/issue143.js": {
-		"ft": 64,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/minify\/issue143-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/minify\/issue73_1.js": {
-		"ft": 64,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/minify\/issue73_1-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/minify\/issue73_2.js": {
-		"ft": 64,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/minify\/issue73_2-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/minify\/issue89_1.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/minify\/issue89_1-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/minify\/issue89_2.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/minify\/issue89_2-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/minify\/issue89_out.min.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/minify\/issue89_out.min-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/minify\/lines_bugs.js": {
-		"ft": 64,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/minify\/lines_bugs-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/minify\/lines_output.js": {
-		"ft": 64,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/minify\/lines_output-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/minify\/minified.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/minify\/minified-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/minify\/minified.js": {
-		"ft": 64,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/minify\/minified-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/minify\/QueryString.js": {
-		"ft": 64,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/_test_files\/minify\/QueryString-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/HTTP_ConditionalGet\/2.php": {
+	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min\/index.php": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/HTTP_ConditionalGet\/2.php",
+		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min\/index.php",
 		"oF": 0
 		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/HTTP_ConditionalGet\/3.php": {
+	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min\/lib\/CSSmin.php": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/HTTP_ConditionalGet\/3.php",
+		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min\/lib\/CSSmin.php",
 		"oF": 0
 		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/HTTP_ConditionalGet\/4.php": {
+	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min\/lib\/DooDigestAuth.php": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/HTTP_ConditionalGet\/4.php",
+		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min\/lib\/DooDigestAuth.php",
 		"oF": 0
 		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/HTTP_ConditionalGet\/5.php": {
+	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min\/lib\/FirePHP.php": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/HTTP_ConditionalGet\/5.php",
+		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min\/lib\/FirePHP.php",
 		"oF": 0
 		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/HTTP_ConditionalGet\/_include.php": {
+	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min\/lib\/HTTP\/ConditionalGet.php": {
 		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min\/lib\/HTTP\/ConditionalGet.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min\/lib\/HTTP\/Encoder.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min\/lib\/HTTP\/Encoder.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min\/lib\/JSMin.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min\/lib\/JSMin.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min\/lib\/JSMinPlus.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min\/lib\/JSMinPlus.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min\/lib\/Minify.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min\/lib\/Minify.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min\/lib\/Minify\/Build.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min\/lib\/Minify\/Build.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min\/lib\/Minify\/Cache": {
+		"ft": 65536,
 		"oA": 1,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/HTTP_ConditionalGet\/_include.php",
+		"oAP": "\/build\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min\/lib\/Minify\/Cache",
 		"oF": 0
 		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/HTTP_ConditionalGet\/index.php": {
+	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min\/lib\/Minify\/ClosureCompiler.php": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/HTTP_ConditionalGet\/index.php",
+		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min\/lib\/Minify\/ClosureCompiler.php",
 		"oF": 0
 		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/HTTP_Encoder\/green.png": {
-		"ft": 32768,
-		"iS": 202,
-		"l": 1,
+	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min\/lib\/Minify\/CommentPreserver.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min\/lib\/Minify\/CommentPreserver.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min\/lib\/Minify\/Controller\/Base.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min\/lib\/Minify\/Controller\/Base.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min\/lib\/Minify\/Controller\/Files.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min\/lib\/Minify\/Controller\/Files.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min\/lib\/Minify\/Controller\/Groups.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min\/lib\/Minify\/Controller\/Groups.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min\/lib\/Minify\/Controller\/MinApp.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min\/lib\/Minify\/Controller\/MinApp.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min\/lib\/Minify\/Controller\/Page.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min\/lib\/Minify\/Controller\/Page.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min\/lib\/Minify\/Controller\/Version1.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min\/lib\/Minify\/Controller\/Version1.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min\/lib\/Minify\/CSS.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min\/lib\/Minify\/CSS.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min\/lib\/Minify\/CSS\/Compressor.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min\/lib\/Minify\/CSS\/Compressor.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min\/lib\/Minify\/CSS\/UriRewriter.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min\/lib\/Minify\/CSS\/UriRewriter.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min\/lib\/Minify\/CSSmin.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min\/lib\/Minify\/CSSmin.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min\/lib\/Minify\/DebugDetector.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min\/lib\/Minify\/DebugDetector.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min\/lib\/Minify\/HTML.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min\/lib\/Minify\/HTML.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min\/lib\/Minify\/HTML\/Helper.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min\/lib\/Minify\/HTML\/Helper.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min\/lib\/Minify\/ImportProcessor.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min\/lib\/Minify\/ImportProcessor.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min\/lib\/Minify\/JS\/ClosureCompiler.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min\/lib\/Minify\/JS\/ClosureCompiler.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min\/lib\/Minify\/Lines.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min\/lib\/Minify\/Lines.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min\/lib\/Minify\/Loader.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min\/lib\/Minify\/Loader.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min\/lib\/Minify\/Logger.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min\/lib\/Minify\/Logger.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min\/lib\/Minify\/Packer.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min\/lib\/Minify\/Packer.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min\/lib\/Minify\/Source.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min\/lib\/Minify\/Source.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min\/lib\/Minify\/YUI\/CssCompressor.java": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min\/lib\/Minify\/YUI\/CssCompressor.java",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min\/lib\/Minify\/YUI\/CssCompressor.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min\/lib\/Minify\/YUI\/CssCompressor.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min\/lib\/Minify\/YUICompressor.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min\/lib\/Minify\/YUICompressor.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min\/lib\/MrClay\/Cli.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min\/lib\/MrClay\/Cli.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min\/lib\/MrClay\/Cli\/Arg.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min\/lib\/MrClay\/Cli\/Arg.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min\/quick-test.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
 		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/HTTP_Encoder\/green.png",
+		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min\/quick-test-min.css",
 		"oF": 0,
-		"opt": 0,
-		"q": 100
+		"oS": 0
 		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/HTTP_Encoder\/index.php": {
+	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min\/quick-test.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min\/quick-test-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min\/server-info.php": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/HTTP_Encoder\/index.php",
+		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min\/server-info.php",
 		"oF": 0
 		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/test_all.php": {
+	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min\/utils.php": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/test_all.php",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/test_environment.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/test_environment.php",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/test_HTTP_ConditionalGet.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/test_HTTP_ConditionalGet.php",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/test_HTTP_Encoder.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/test_HTTP_Encoder.php",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/test_js_in_browser.html": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/test_js_in_browser.html",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/test_JSMin.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/test_JSMin.php",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/test_Minify.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/test_Minify.php",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/test_Minify_Build.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/test_Minify_Build.php",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/test_Minify_Cache_APC.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/test_Minify_Cache_APC.php",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/test_Minify_Cache_File.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/test_Minify_Cache_File.php",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/test_Minify_Cache_Memcache.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/test_Minify_Cache_Memcache.php",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/test_Minify_Cache_WinCache.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/test_Minify_Cache_WinCache.php",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/test_Minify_Cache_ZendPlatform.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/test_Minify_Cache_ZendPlatform.php",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/test_Minify_ClosureCompiler.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/test_Minify_ClosureCompiler.php",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/test_Minify_CommentPreserver.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/test_Minify_CommentPreserver.php",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/test_Minify_CSS.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/test_Minify_CSS.php",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/test_Minify_CSS_UriRewriter.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/test_Minify_CSS_UriRewriter.php",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/test_Minify_HTML.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/test_Minify_HTML.php",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/test_Minify_HTML_Helper.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/test_Minify_HTML_Helper.php",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/test_Minify_ImportProcessor.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/test_Minify_ImportProcessor.php",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/test_Minify_JS_ClosureCompiler.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/test_Minify_JS_ClosureCompiler.php",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/test_Minify_Lines.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/test_Minify_Lines.php",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/test_Minify_YuiCSS.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min_unit_tests\/test_Minify_YuiCSS.php",
+		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/min\/utils.php",
 		"oF": 0
 		},
 	"\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/quick-test.css": {
@@ -31465,3044 +31101,6 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/craft\/plugins\/minify\/vendor\/mrclay\/minify\/utils.php",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/.gitignore": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/.gitignore",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/composer.json": {
-		"ft": 524288,
-		"oA": 1,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/composer-min.json",
-		"oF": 0,
-		"oO": 0,
-		"oS": 1
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/cssmin.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/cssmin.php",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/gui\/index.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/gui\/index.php",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/gui\/scripts.js": {
-		"ft": 64,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/gui\/scripts-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/gui\/styles.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/gui\/styles-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/gui\/third-party\/bootstrap\/css\/bootstrap.min.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/gui\/third-party\/bootstrap\/css\/bootstrap.min-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/gui\/third-party\/bootstrap\/js\/bootstrap.min.js": {
-		"ft": 64,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/gui\/third-party\/bootstrap\/js\/bootstrap.min-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/gui\/third-party\/jquery-1.7.2.min.js": {
-		"ft": 64,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/gui\/third-party\/jquery-1.7.2.min-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/gui\/third-party\/less-1.7.0.min.js": {
-		"ft": 64,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/gui\/third-party\/less-1.7.0.min-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/README.md": {
-		"cS": 0,
-		"eF": 1,
-		"eL": 1,
-		"eLB": 0,
-		"ema": 1,
-		"eSQ": 1,
-		"ft": 4096,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/README.html",
-		"oF": 0,
-		"oFM": 0,
-		"oS": 0,
-		"pHT": 0,
-		"pME": 1,
-		"rFN": 0,
-		"uCM": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/finediff.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/finediff.php",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/AtRules\/Charset.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/AtRules\/Charset-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/AtRules\/FontFace.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/AtRules\/FontFace-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/AtRules\/Import.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/AtRules\/Import-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/AtRules\/ImportColor_i.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/AtRules\/ImportColor_i-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/AtRules\/ImportComment.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/AtRules\/ImportComment-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/AtRules\/ImportComment_c.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/AtRules\/ImportComment_c-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/AtRules\/ImportComment_x.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/AtRules\/ImportComment_x-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/AtRules\/ImportLevel0Bar2_i.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/AtRules\/ImportLevel0Bar2_i-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/AtRules\/ImportLevel1Bar_i.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/AtRules\/ImportLevel1Bar_i-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/AtRules\/ImportLevel1Baz_i.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/AtRules\/ImportLevel1Baz_i-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/AtRules\/ImportLevel2Foo_i.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/AtRules\/ImportLevel2Foo_i-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/AtRules\/ImportLevel3Foo2_i.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/AtRules\/ImportLevel3Foo2_i-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/AtRules\/KeyFrames.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/AtRules\/KeyFrames-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/AtRules\/KeyFrames_p.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/AtRules\/KeyFrames_p-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/AtRules\/Media.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/AtRules\/Media-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/AtRules\/Namespace.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/AtRules\/Namespace-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/AtRules\/Other.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/AtRules\/Other-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/AtRules\/Page.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/AtRules\/Page-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/Collapse\/Numbers.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/Collapse\/Numbers-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/Collapse\/Numbers_n.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/Collapse\/Numbers_n-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/Collapse\/RGB.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/Collapse\/RGB-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/Collapse\/RGB_f.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/Collapse\/RGB_f-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/Collapse\/RGB_h.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/Collapse\/RGB_h-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/Collapse\/rrggbb.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/Collapse\/rrggbb-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/Collapse\/StringBreaks.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/Collapse\/StringBreaks-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/Collapse\/TermSemis.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/Collapse\/TermSemis-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/Collapse\/TermSemis_t.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/Collapse\/TermSemis_t-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/CommentHacks\/EmbeddedImportantComment.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/CommentHacks\/EmbeddedImportantComment-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/CommentHacks\/EmbeddedImportantComment_pretty.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/CommentHacks\/EmbeddedImportantComment_pretty-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/CommentHacks\/EmptyComments.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/CommentHacks\/EmptyComments-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/CommentHacks\/EmptyComments_nc.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/CommentHacks\/EmptyComments_nc-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/CommentHacks\/HideFromIE5.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/CommentHacks\/HideFromIE5-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/CommentHacks\/HideFromIE5_nc.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/CommentHacks\/HideFromIE5_nc-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/CommentHacks\/HideFromIE6.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/CommentHacks\/HideFromIE6-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/CommentHacks\/HideFromIE6_nc.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/CommentHacks\/HideFromIE6_nc-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/CommentHacks\/HideFromMacIE.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/CommentHacks\/HideFromMacIE-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/CommentHacks\/HideFromMacIE_nc.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/CommentHacks\/HideFromMacIE_nc-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/CommentHacks\/HideFromNS4.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/CommentHacks\/HideFromNS4-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/CommentHacks\/HideFromNS4_nc.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/CommentHacks\/HideFromNS4_nc-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/CommentHacks\/ImportantComment.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/CommentHacks\/ImportantComment-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/CommentHacks\/ImportantComment_All.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/CommentHacks\/ImportantComment_All-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/CommentHacks\/ImportantComment_Kill.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/CommentHacks\/ImportantComment_Kill-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/CommentHacks\/ImportantComment_None.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/CommentHacks\/ImportantComment_None-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/CommentHacks\/ImportantCommentHacks.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/CommentHacks\/ImportantCommentHacks-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/CommentHacks\/OnlyNS4.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/CommentHacks\/OnlyNS4-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/CommentHacks\/OnlyNS4_nc.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/CommentHacks\/OnlyNS4_nc-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/CommentHacks\/TwoImportantComments.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/CommentHacks\/TwoImportantComments-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/CommentHacks\/TwoImportantComments_pretty.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/CommentHacks\/TwoImportantComments_pretty-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/EmbeddedAspNetBlock\/StringWithBlock.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/EmbeddedAspNetBlock\/StringWithBlock-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/EmbeddedAspNetBlock\/TopLevel.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/EmbeddedAspNetBlock\/TopLevel-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/Encoding\/escaped.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/Encoding\/escaped-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/Encoding\/escaped_utf8.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/Encoding\/escaped_utf8-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/Errors\/InvalidClassName.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/Errors\/InvalidClassName-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/Errors\/ParsingErrors.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/Errors\/ParsingErrors-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/Errors\/UnterminatedString.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/Errors\/UnterminatedString-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/Hacks\/IEhacks.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/Hacks\/IEhacks-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/Replacements\/ColorNames.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/Replacements\/ColorNames-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/Replacements\/ColorNames_hex.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/Replacements\/ColorNames_hex-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/Replacements\/ColorNames_major.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/Replacements\/ColorNames_major-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/Replacements\/MajorColors.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/Replacements\/MajorColors-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/Replacements\/MajorColors_strict.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/Replacements\/MajorColors_strict-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/Replacements\/StringReplacement.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/Replacements\/StringReplacement-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/Replacements\/ValueReplacement.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/Replacements\/ValueReplacement-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/Selectors\/Attribute.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/Selectors\/Attribute-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/Selectors\/Combinator.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/Selectors\/Combinator-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/Selectors\/CSS3.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/Selectors\/CSS3-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/Selectors\/Grouping.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/Selectors\/Grouping-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/Selectors\/MatchCasing.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/Selectors\/MatchCasing-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/Selectors\/Namespace.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/Selectors\/Namespace-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/Selectors\/NoSpaceUniversal.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/Selectors\/NoSpaceUniversal-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/Selectors\/Not.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/Selectors\/Not-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/Selectors\/PseudoClass.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/Selectors\/PseudoClass-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/Selectors\/PseudoClass_utf8.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/Selectors\/PseudoClass_utf8-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/Selectors\/PseudoElement.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/Selectors\/PseudoElement-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/Selectors\/Simple.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/Selectors\/Simple-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/Selectors\/Universal.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/Selectors\/Universal-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/Syntax\/AlphaHash.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/Syntax\/AlphaHash-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/Syntax\/CDO.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/Syntax\/CDO-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/Syntax\/Escapes.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/Syntax\/Escapes-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/Syntax\/Expr.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/Syntax\/Expr-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/Syntax\/Expression.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/Syntax\/Expression-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/Syntax\/FontNames.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/Syntax\/FontNames-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/Syntax\/Function.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/Syntax\/Function-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/Syntax\/Function_f.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/Syntax\/Function_f-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/Syntax\/Important.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/Syntax\/Important-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/Syntax\/PointZeroEms.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/Syntax\/PointZeroEms-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/Syntax\/Strings.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/Syntax\/Strings-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/Syntax\/Term.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/Syntax\/Term-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/Syntax\/UnicodeRange.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/Syntax\/UnicodeRange-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/Syntax\/uri.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/Syntax\/uri-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/Values\/Attr.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/Values\/Attr-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/Values\/Calc.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/Values\/Calc-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/Values\/Cycle.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Expected\/Values\/Cycle-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/AtRules\/Charset.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/AtRules\/Charset-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/AtRules\/FontFace.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/AtRules\/FontFace-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/AtRules\/green.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/AtRules\/green-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/AtRules\/Import.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/AtRules\/Import-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/AtRules\/ImportColor.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/AtRules\/ImportColor-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/AtRules\/ImportComment.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/AtRules\/ImportComment-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/AtRules\/ImportLevel0Bar2.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/AtRules\/ImportLevel0Bar2-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/AtRules\/ImportLevel1Bar.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/AtRules\/ImportLevel1Bar-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/AtRules\/ImportLevel1Baz.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/AtRules\/ImportLevel1Baz-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/AtRules\/ImportLevel2Foo.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/AtRules\/ImportLevel2Foo-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/AtRules\/ImportLevel3Foo2.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/AtRules\/ImportLevel3Foo2-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/AtRules\/KeyFrames.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/AtRules\/KeyFrames-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/AtRules\/Media.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/AtRules\/Media-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/AtRules\/Namespace.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/AtRules\/Namespace-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/AtRules\/Other.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/AtRules\/Other-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/AtRules\/Page.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/AtRules\/Page-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/AtRules\/red.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/AtRules\/red-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/Collapse\/Numbers.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/Collapse\/Numbers-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/Collapse\/RGB.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/Collapse\/RGB-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/Collapse\/rrggbb.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/Collapse\/rrggbb-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/Collapse\/StringBreaks.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/Collapse\/StringBreaks-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/Collapse\/TermSemis.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/Collapse\/TermSemis-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/CommentHacks\/EmbeddedImportantComment.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/CommentHacks\/EmbeddedImportantComment-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/CommentHacks\/EmptyComments.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/CommentHacks\/EmptyComments-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/CommentHacks\/HideFromIE5.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/CommentHacks\/HideFromIE5-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/CommentHacks\/HideFromIE6.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/CommentHacks\/HideFromIE6-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/CommentHacks\/HideFromMacIE.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/CommentHacks\/HideFromMacIE-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/CommentHacks\/HideFromNS4.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/CommentHacks\/HideFromNS4-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/CommentHacks\/ImportantComment.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/CommentHacks\/ImportantComment-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/CommentHacks\/ImportantCommentHacks.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/CommentHacks\/ImportantCommentHacks-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/CommentHacks\/OnlyNS4.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/CommentHacks\/OnlyNS4-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/CommentHacks\/TwoImportantComments.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/CommentHacks\/TwoImportantComments-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/EmbeddedAspNetBlock\/StringWithBlock.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/EmbeddedAspNetBlock\/StringWithBlock-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/EmbeddedAspNetBlock\/TopLevel.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/EmbeddedAspNetBlock\/TopLevel-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/Encoding\/escaped.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/Encoding\/escaped-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/Errors\/InvalidClassName.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/Errors\/InvalidClassName-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/Errors\/ParsingErrors.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/Errors\/ParsingErrors-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/Errors\/UnterminatedString.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/Errors\/UnterminatedString-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/Hacks\/IEhacks.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/Hacks\/IEhacks-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/Replacements\/ColorNames.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/Replacements\/ColorNames-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/Replacements\/MajorColors.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/Replacements\/MajorColors-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/Replacements\/StringReplacement.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/Replacements\/StringReplacement-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/Replacements\/ValueReplacement.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/Replacements\/ValueReplacement-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/Replacements\/ValueReplacement.Designer.cs": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/Replacements\/ValueReplacement.Designer.cs",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/Replacements\/ValueReplacement.resx": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/Replacements\/ValueReplacement.resx",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/Selectors\/Attribute.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/Selectors\/Attribute-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/Selectors\/Combinator.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/Selectors\/Combinator-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/Selectors\/CSS3.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/Selectors\/CSS3-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/Selectors\/Grouping.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/Selectors\/Grouping-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/Selectors\/MatchCasing.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/Selectors\/MatchCasing-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/Selectors\/Namespace.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/Selectors\/Namespace-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/Selectors\/NoSpaceUniversal.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/Selectors\/NoSpaceUniversal-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/Selectors\/Not.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/Selectors\/Not-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/Selectors\/PseudoClass.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/Selectors\/PseudoClass-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/Selectors\/PseudoElement.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/Selectors\/PseudoElement-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/Selectors\/Simple.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/Selectors\/Simple-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/Selectors\/Universal.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/Selectors\/Universal-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/Syntax\/AlphaHash.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/Syntax\/AlphaHash-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/Syntax\/CDO.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/Syntax\/CDO-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/Syntax\/Escapes.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/Syntax\/Escapes-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/Syntax\/Expr.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/Syntax\/Expr-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/Syntax\/Expression.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/Syntax\/Expression-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/Syntax\/FontNames.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/Syntax\/FontNames-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/Syntax\/Function.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/Syntax\/Function-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/Syntax\/Important.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/Syntax\/Important-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/Syntax\/PointZeroEms.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/Syntax\/PointZeroEms-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/Syntax\/Strings.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/Syntax\/Strings-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/Syntax\/Term.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/Syntax\/Term-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/Syntax\/UnicodeRange.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/Syntax\/UnicodeRange-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/Syntax\/uri.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/Syntax\/uri-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/Values\/Attr.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/Values\/Attr-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/Values\/Calc.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/Values\/Calc-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/Values\/Cycle.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/microsoft-ajaxmin\/Input\/Values\/Cycle-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/mine\/background-none.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/mine\/background-none-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/mine\/background-none.css.min": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/mine\/background-none.css.min",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/mine\/border-none.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/mine\/border-none-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/mine\/border-none.css.min": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/mine\/border-none.css.min",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/mine\/bug2528134.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/mine\/bug2528134-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/mine\/bug2528134.css.min": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/mine\/bug2528134.css.min",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/mine\/calc.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/mine\/calc-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/mine\/calc.css.min": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/mine\/calc.css.min",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/mine\/charset-media.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/mine\/charset-media-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/mine\/charset-media.css.min": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/mine\/charset-media.css.min",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/mine\/comment.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/mine\/comment-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/mine\/comment.css.min": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/mine\/comment.css.min",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/mine\/concat-charset.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/mine\/concat-charset-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/mine\/concat-charset.css.min": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/mine\/concat-charset.css.min",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/mine\/decimals.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/mine\/decimals-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/mine\/decimals.css.min": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/mine\/decimals.css.min",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/mine\/ending-starhack.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/mine\/ending-starhack-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/mine\/ending-starhack.css.min": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/mine\/ending-starhack.css.min",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/mine\/hsl.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/mine\/hsl-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/mine\/hsl.css.min": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/mine\/hsl.css.min",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/mine\/important.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/mine\/important-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/mine\/important.css.min": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/mine\/important.css.min",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/mine\/keyframes.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/mine\/keyframes-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/mine\/keyframes.css.min": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/mine\/keyframes.css.min",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/mine\/lowercase-properties.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/mine\/lowercase-properties-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/mine\/lowercase-properties.css.min": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/mine\/lowercase-properties.css.min",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/mine\/multiline-filter.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/mine\/multiline-filter-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/mine\/multiline-filter.css.min": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/mine\/multiline-filter.css.min",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/mine\/pseudo-first.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/mine\/pseudo-first-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/mine\/pseudo-first.css.min": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/mine\/pseudo-first.css.min",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/mine\/pseudo.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/mine\/pseudo-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/mine\/pseudo.css.min": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/mine\/pseudo.css.min",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/mine\/rgb.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/mine\/rgb-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/mine\/rgb.css.min": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/mine\/rgb.css.min",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/mine\/signed-numbers.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/mine\/signed-numbers-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/mine\/signed-numbers.css.min": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/mine\/signed-numbers.css.min",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/mine\/text-shadow.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/mine\/text-shadow-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/mine\/text-shadow.css.min": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/mine\/text-shadow.css.min",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/mine\/zeros.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/mine\/zeros-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/mine\/zeros.css.min": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/mine\/zeros.css.min",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/run.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/run.php",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/_munge.js": {
-		"ft": 64,
-		"mi": 1,
-		"oA": 1,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/_munge-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/_munge.js.min": {
-		"ft": 8192,
-		"oA": 1,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/_munge.js.min",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/_string_combo.js": {
-		"ft": 64,
-		"mi": 1,
-		"oA": 1,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/_string_combo-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/_string_combo.js.min": {
-		"ft": 8192,
-		"oA": 1,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/_string_combo.js.min",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/_syntax_error.js": {
-		"ft": 64,
-		"mi": 1,
-		"oA": 1,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/_syntax_error-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/_syntax_error.js.min": {
-		"ft": 8192,
-		"oA": 1,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/_syntax_error.js.min",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/background-position.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/background-position-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/background-position.css.min": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/background-position.css.min",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/border-none.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/border-none-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/border-none.css.min": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/border-none.css.min",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/box-model-hack.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/box-model-hack-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/box-model-hack.css.min": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/box-model-hack.css.min",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/bug2527974.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/bug2527974-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/bug2527974.css.min": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/bug2527974.css.min",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/bug2527991.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/bug2527991-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/bug2527991.css.min": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/bug2527991.css.min",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/bug2527998.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/bug2527998-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/bug2527998.css.min": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/bug2527998.css.min",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/bug2528034.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/bug2528034-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/bug2528034.css.min": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/bug2528034.css.min",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/charset-media.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/charset-media-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/charset-media.css.min": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/charset-media.css.min",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/color-keyword.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/color-keyword-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/color-keyword.css.min": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/color-keyword.css.min",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/color-simple.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/color-simple-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/color-simple.css.min": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/color-simple.css.min",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/color.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/color-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/color.css.min": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/color.css.min",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/comment.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/comment-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/comment.css.min": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/comment.css.min",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/concat-charset.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/concat-charset-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/concat-charset.css.min": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/concat-charset.css.min",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/dataurl-base64-doublequotes.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/dataurl-base64-doublequotes-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/dataurl-base64-doublequotes.css.min": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/dataurl-base64-doublequotes.css.min",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/dataurl-base64-eof.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/dataurl-base64-eof-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/dataurl-base64-eof.css.min": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/dataurl-base64-eof.css.min",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/dataurl-base64-linebreakindata.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/dataurl-base64-linebreakindata-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/dataurl-base64-linebreakindata.css.min": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/dataurl-base64-linebreakindata.css.min",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/dataurl-base64-noquotes.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/dataurl-base64-noquotes-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/dataurl-base64-noquotes.css.min": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/dataurl-base64-noquotes.css.min",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/dataurl-base64-singlequotes.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/dataurl-base64-singlequotes-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/dataurl-base64-singlequotes.css.min": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/dataurl-base64-singlequotes.css.min",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/dataurl-base64-twourls.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/dataurl-base64-twourls-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/dataurl-base64-twourls.css.min": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/dataurl-base64-twourls.css.min",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/dataurl-dbquote-font.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/dataurl-dbquote-font-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/dataurl-dbquote-font.css.min": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/dataurl-dbquote-font.css.min",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/dataurl-nonbase64-doublequotes.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/dataurl-nonbase64-doublequotes-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/dataurl-nonbase64-doublequotes.css.min": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/dataurl-nonbase64-doublequotes.css.min",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/dataurl-nonbase64-noquotes.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/dataurl-nonbase64-noquotes-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/dataurl-nonbase64-noquotes.css.min": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/dataurl-nonbase64-noquotes.css.min",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/dataurl-nonbase64-singlequotes.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/dataurl-nonbase64-singlequotes-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/dataurl-nonbase64-singlequotes.css.min": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/dataurl-nonbase64-singlequotes.css.min",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/dataurl-noquote-multiline-font.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/dataurl-noquote-multiline-font-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/dataurl-noquote-multiline-font.css.min": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/dataurl-noquote-multiline-font.css.min",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/dataurl-realdata-doublequotes.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/dataurl-realdata-doublequotes-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/dataurl-realdata-doublequotes.css.min": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/dataurl-realdata-doublequotes.css.min",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/dataurl-realdata-noquotes.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/dataurl-realdata-noquotes-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/dataurl-realdata-noquotes.css.min": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/dataurl-realdata-noquotes.css.min",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/dataurl-realdata-singlequotes.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/dataurl-realdata-singlequotes-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/dataurl-realdata-singlequotes.css.min": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/dataurl-realdata-singlequotes.css.min",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/dataurl-realdata-yuiapp.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/dataurl-realdata-yuiapp-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/dataurl-realdata-yuiapp.css.min": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/dataurl-realdata-yuiapp.css.min",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/dataurl-singlequote-font.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/dataurl-singlequote-font-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/dataurl-singlequote-font.css.min": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/dataurl-singlequote-font.css.min",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/dataurl-validity.html": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/dataurl-validity.html",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/decimals.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/decimals-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/decimals.css.min": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/decimals.css.min",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/dollar-header.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/dollar-header-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/dollar-header.css.min": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/dollar-header.css.min",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/float.js": {
-		"ft": 64,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/float-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/float.js.min": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/float.js.min",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/font-face.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/font-face-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/font-face.css.min": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/font-face.css.min",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/hsla-issue81.css.FAIL": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/hsla-issue81.css.FAIL",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/hsla-issue81.css.min": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/hsla-issue81.css.min",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/ie5mac.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/ie5mac-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/ie5mac.css.min": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/ie5mac.css.min",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/issue86.js": {
-		"ft": 64,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/issue86-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/issue86.js.min": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/issue86.js.min",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/jquery-1.6.4.js": {
-		"ft": 64,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/jquery-1.6.4-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/jquery-1.6.4.js.min": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/jquery-1.6.4.js.min",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/lowercasing.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/lowercasing-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/lowercasing.css.min": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/lowercasing.css.min",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/media-empty-class.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/media-empty-class-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/media-empty-class.css.min": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/media-empty-class.css.min",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/media-multi.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/media-multi-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/media-multi.css.min": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/media-multi.css.min",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/media-test.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/media-test-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/media-test.css.min": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/media-test.css.min",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/old-ie-filter-matrix.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/old-ie-filter-matrix-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/old-ie-filter-matrix.css.min": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/old-ie-filter-matrix.css.min",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/opacity-filter.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/opacity-filter-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/opacity-filter.css.min": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/opacity-filter.css.min",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/opera-pixel-ratio.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/opera-pixel-ratio-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/opera-pixel-ratio.css.min": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/opera-pixel-ratio.css.min",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/preserve-case.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/preserve-case-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/preserve-case.css.min": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/preserve-case.css.min",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/preserve-important.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/preserve-important-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/preserve-important.css.min": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/preserve-important.css.min",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/preserve-new-line.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/preserve-new-line-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/preserve-new-line.css.min": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/preserve-new-line.css.min",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/preserve-strings.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/preserve-strings-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/preserve-strings.css.min": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/preserve-strings.css.min",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/pseudo-first.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/pseudo-first-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/pseudo-first.css.min": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/pseudo-first.css.min",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/pseudo.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/pseudo-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/pseudo.css.min": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/pseudo.css.min",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/README": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/README",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/rgb-issue81.css.FAIL": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/rgb-issue81.css.FAIL",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/rgb-issue81.css.min": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/rgb-issue81.css.min",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/special-comments.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/special-comments-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/special-comments.css.min": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/special-comments.css.min",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/star-underscore-hacks.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/star-underscore-hacks-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/star-underscore-hacks.css.min": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/star-underscore-hacks.css.min",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/string-in-comment.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/string-in-comment-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/string-in-comment.css.min": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/string-in-comment.css.min",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/suite.rhino": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/suite.rhino",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/suite.sh": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/suite.sh",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/webkit-transform.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/webkit-transform-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/webkit-transform.css.min": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/webkit-transform.css.min",
-		"oF": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/zeros.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/zeros-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/zeros.css.min": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/plugins\/minify\/vendor\/tubalmartin\/cssmin\/tests\/yui\/zeros.css.min",
 		"oF": 0
 		},
 	"\/craft\/plugins\/navee\/controllers\/Navee_NavigationsController.php": {
@@ -35200,6 +31798,12 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/craft\/storage\/runtime\/compiled_templates\/66\/66e3894d1aa04cf2a90dae672b0705927a9f5815c2d319c2f8f330f791c224df.php",
+		"oF": 0
+		},
+	"\/craft\/storage\/runtime\/compiled_templates\/67\/671bd51b320e2c9e333d8c307fed9f341a0569a2956887b8e474f02578ba774f.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/storage\/runtime\/compiled_templates\/67\/671bd51b320e2c9e333d8c307fed9f341a0569a2956887b8e474f02578ba774f.php",
 		"oF": 0
 		},
 	"\/craft\/storage\/runtime\/compiled_templates\/69\/69f4e2d591d3a27a7e7c441c29df842f1399f61f52b2acc93c43ec7b87a7b18c.php": {
