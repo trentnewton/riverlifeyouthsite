@@ -23,7 +23,7 @@
 								<h5>{{ eventDate }}</h5>
 								<ul class="accordion" data-accordion data-multi-expand="true" data-allow-all-closed="true">
 									{% for entry in entries if (category.id in entry.category.ids()) %}
-										<li class="accordion-item" data-accordion-item>
+										<li class="accordion-item" data-accordion-item id="{{ entry.slug }}-{{ entry.id }}">
 											<a href="#" class="accordion-title flex-container">
 												<div class="flex-child-shrink event-date">{{ entry.dayStart | date('j') }}{% if entry.dayEnd|length %}<sup class="date-small">&#8212;{{ entry.dayEnd | date('j') }}</sup>{% endif %}</div>
 												<div class="flex-child-auto event-details">
