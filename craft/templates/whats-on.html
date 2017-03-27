@@ -46,9 +46,7 @@
 																		<div class="column">
 																			{% for field in block.getFieldLayout().getFields() %}
 																				{# get properties #}
-																				<p><strong>{{ field.getField().name }}:</strong>&nbsp;
-																				{% set handle = field.getField().handle %}
-																				{{ block[handle] }}</p>
+																				<p><strong>{{ field.getField().name }}:</strong>&nbsp;{% set handle = field.getField().handle %}{{ block[handle] }}</p>
 																			{% endfor %}
 																		</div>
 
