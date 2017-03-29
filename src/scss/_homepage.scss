@@ -106,7 +106,7 @@
 .welcome {
 	background-color: $white;
 	margin-top: rem-calc(-250);
-	z-index: 0;
+	// z-index: 0;
 	// clip-path: polygon(
 	// 	//0 0, /* left top */
 	// 	//100% 80%, /* right top */
@@ -122,7 +122,7 @@
 
 	@include breakpoint(small only) {
 
-		z-index: 1;
+		// z-index: 1;
 		// clip-path: polygon(
 		// 	//0 0, /* left top */
 		// 	//100% 80%, /* right top */
@@ -173,7 +173,7 @@
 }
 
 .ministry-1 {
-	z-index: 1;
+	// z-index: 1;
 	// background:
 	// 	linear-gradient(rgba($freshman, 0.8), rgba($freshman, 0.8)),
 	// 	url('../img/freshman.jpg') center center / cover no-repeat;
@@ -202,7 +202,7 @@
 }
 
 .ministry-2 {
-	z-index: 2;
+	// z-index: 2;
 	// background:
 	// 	linear-gradient(rgba($sophomore, 0.8), rgba($sophomore, 0.8)),
 	// 	url('../img/sophomore.jpg') center center / cover no-repeat;
