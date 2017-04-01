@@ -21,6 +21,7 @@
   ],
   "private": true,
   "resolutions": {
-    "what-input": "^4.1.1"
+    "what-input": "^4.1.1",
+    "jquery": "^3.2.1"
   }
 }
