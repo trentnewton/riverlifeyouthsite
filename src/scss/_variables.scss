@@ -14,10 +14,16 @@ $quaternary-colour-light-20: lighten($quaternary-colour, 20%);
 $quaternary-colour-light-30: lighten($quaternary-colour, 30%);
 $quaternary-colour-light-43: lighten($quaternary-colour, 43%);
 
+$primary-color-bg: rgba(darken(get-color(primary), 16%), 0.99);
+$secondary-color-bg: rgba(darken(get-color(secondary), 25%), 0.99);
+$tertiary-colour-bg: rgba(darken($tertiary-colour, 15%), 0.99);
+$quaternary-colour-bg: rgba(darken($quaternary-colour, 3%), 0.99);
+
 $white-rgb: rgba($white, 0.99);
 $light-gray-rgb: rgba($light-gray, 0.99);
 $medium-gray-rgb: rgba($medium-gray, 0.99);
 $primary-color-rgb: rgba($primary-color, 0.99);
+$secondary-color-rgb: rgba($secondary-color, 0.99);
 $secondary-color-light-rgb: rgba($secondary-color-light-20, 0.99);
 
 $freshman: #ffe800;
