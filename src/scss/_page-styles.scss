@@ -354,6 +354,9 @@ p.post-meta {
 	margin-top: $paragraph-margin-bottom;
 	border-top: 2px dotted $body-font-color;
 	padding-top: $paragraph-margin-bottom;
+	margin-bottom: ($paragraph-margin-bottom * 2);
+	border-bottom: 2px dotted $body-font-color;
+	padding-bottom: $paragraph-margin-bottom;
 	flex-flow: row wrap;
 
 	> li {
@@ -401,4 +404,32 @@ p.post-meta {
 		margin-right: 0;
 	}
 
+}
+
+.small-text {
+	text-transform: uppercase;
+	font-size: rem-calc(8);
+	letter-spacing: rem-calc(3);
+
+	.next-post & {
+		margin-left: rem-calc(16);
+	}
+
+	.previous-post & {
+		margin-right: rem-calc(16);
+	}
+
+}
+
+.next-post {
+	text-align: left;
+
+	@include breakpoint(small only) {
+		margin-bottom: $paragraph-margin-bottom;
+	}
+
+}
+
+.previous-post {
+	text-align: right;
 }

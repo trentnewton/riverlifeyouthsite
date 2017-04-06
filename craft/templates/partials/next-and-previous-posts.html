@@ -1,0 +1,20 @@
+<div class="row">
+	<div class="column flex-container flex-dir-column medium-flex-dir-row">
+		{% if next %}
+			<div class="next-post flex-child-auto">
+				<div class="small-text">&nbsp;{{ 'Next Post' | translate }}</div>
+				<a href="{{ next.url }}" title="{{ 'Next Post' | translate }}">
+					<svg class="icon icon-chevron-left"><use xlink:href="#icon-chevron-left"></use></svg>&nbsp;{{ next.title }}
+				</a>
+			</div>
+		{% endif %}
+		{% if prev %}
+			<div class="previous-post flex-child-auto">
+				<div class="small-text">{{ 'Previous Post' | translate }}&nbsp;</div>
+				<a href="{{ prev.url }}" title="{{ 'Prevous Post' | translate }}">
+					{{ prev.title }}&nbsp;<svg class="icon icon-chevron-right"><use xlink:href="#icon-chevron-right"></use></svg>
+				</a>
+			</div>
+		{% endif %}
+	</div>
+</div>

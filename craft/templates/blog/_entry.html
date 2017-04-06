@@ -28,6 +28,9 @@
 
 	{% endswitch %}
 {% endfor %}
+{% set criteria = {section: 'blog', order: 'postDate'} %}
+{% set next = entry.getNext(criteria) %}
+{% set prev = entry.getPrev(criteria) %}
 
 {% block content %}
 	{% include 'partials/hero.html' %}
@@ -96,10 +99,14 @@
 
 			{% endswitch %}
 		{% endfor %}
+
+		{# for social sharing #}
 		<div class="row align-center">
 			<div class="small-12 medium-8 column">
 				{% include 'partials/social.html' %}
 			</div>
 		</div>
+		{# next and previous posts #}
+		{% include 'partials/next-and-previous-posts.html' %}
 	</section>
 {% endblock %}
