@@ -13,6 +13,14 @@
 
 	&.home {
 
+		@include medium-portrait {
+			height: 120vh;
+		}
+
+		@include medium-landscape {
+			height: 139vh;
+		}
+
 		@include small-landscape {
 			height: 240vh;
 		}

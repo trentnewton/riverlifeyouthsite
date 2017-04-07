@@ -125,6 +125,7 @@
 	}
 
 	@include breakpoint(small only) {
+		margin-top: rem-calc(-210);
 
 		// z-index: 1;
 		// clip-path: polygon(
@@ -142,7 +143,6 @@
 	}
 
 	@include medium-landscape {
-
 		margin-top: rem-calc(-50);
 		// clip-path: polygon(
 		// 	//0 0, /* left top */
