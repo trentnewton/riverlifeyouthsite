@@ -18,7 +18,7 @@
 			bottom: -.3em;
 			left: 50%;
 			right: 50%;
-			height: 3px;
+			height: rem-calc(3);
 			background: currentColor; // system color
 			transition: all ease $transition-time;
 		}
@@ -29,7 +29,6 @@
 			&::after {
 				left: 0;
 				right: 0;
-				height: 3px;
 			}
 
 		}

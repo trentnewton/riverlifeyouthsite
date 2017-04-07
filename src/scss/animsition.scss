@@ -24,14 +24,14 @@
 }
 /* loading option */
 .animsition-loading,
-.animsition-loading:after {
-  width: 100px;
-  height: 100px;
+.animsition-loading::after {
+  width: rem-calc(100);
+  height: rem-calc(100);
   position: fixed;
   top: 50%;
   left: 50%;
-  margin-top: -50px;
-  margin-left: -50px;
+  margin-top: rem-calc(-50);
+  margin-left: rem-calc(-50);
   border-radius: 50%;
   z-index: 100;
 }
