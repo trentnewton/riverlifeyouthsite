@@ -33475,22 +33475,6 @@
 		"oAP": "\/php.ini",
 		"oF": 0
 		},
-	"\/public\/assets\/css\/app.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/public\/assets\/css\/app-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/public\/assets\/css\/app.css.map": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/public\/assets\/css\/app.css.map",
-		"oF": 0
-		},
 	"\/public\/assets\/fonts\/sushi-bar-regular.woff": {
 		"ft": 8192,
 		"oA": 2,
@@ -36116,19 +36100,6 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "\/src\/scss\/_hero-section.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"\/src\/scss\/_homepage.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/src\/scss\/_homepage.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
