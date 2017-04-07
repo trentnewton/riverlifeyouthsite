@@ -120,6 +120,10 @@
 		padding-bottom: rem-calc(120);
 	}
 
+	@include medium-portrait {
+		margin-top: rem-calc(-400);
+	}
+
 	@include breakpoint(small only) {
 
 		// z-index: 1;
@@ -317,6 +321,12 @@
 			padding-top: rem-calc(200);
 			padding-bottom: rem-calc(200);
 		}
+
+	}
+
+	@include medium-portrait {
+
+		margin-top: rem-calc(-450);
 
 	}
 
