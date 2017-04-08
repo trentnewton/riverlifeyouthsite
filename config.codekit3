@@ -36041,19 +36041,6 @@
 		"sC": 3,
 		"tS": 1
 		},
-	"\/src\/scss\/_about-us.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/src\/scss\/_about-us.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
 	"\/src\/scss\/_blog.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -36219,6 +36206,19 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "\/src\/scss\/_page-styles.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/src\/scss\/_regular-page.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/src\/scss\/_regular-page.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1

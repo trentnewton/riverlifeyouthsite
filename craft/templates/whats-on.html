@@ -34,7 +34,9 @@
 													</p>
 												</div>
 											</a>
+											{# accordion expanded content #}
 											<div class="accordion-content" data-tab-content>
+												{# oc night details #}
 												{% if entry.ocNightDetails|length %}
 													<div class="oc-night-details top-container ">
 														<h5>{{ 'Details' | translate }}</h5>
@@ -57,6 +59,7 @@
 														</div>
 													</div>
 												{% endif %}
+												{# event details and link #}
 												{% if entry.details|length or entry.moreInfoLink|length %}
 													<div class="top-container flex-container">
 														{% if entry.details|length %}
@@ -78,6 +81,7 @@
 														{% endif %}
 													</div>
 												{% endif %}
+												{# time and location #}
 												<div class="flex-container">
 													<div class="reveal-time flex-container">
 														<div class="reveal-icon flex-child-shrink">
@@ -103,6 +107,7 @@
 									{% endfor %}
 								</ul>
 							{% endfor %}
+							{# descriptions for the event types found in event category fields #}
 							<div class="callout">
 								<ul class="vertical">
 									{% for block in category.eventDescriptions %}

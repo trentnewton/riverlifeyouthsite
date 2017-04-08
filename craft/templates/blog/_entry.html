@@ -16,7 +16,7 @@
 {% extends 'layouts/_regular' %}
 {% set heroTitle %}
 	{% for entry in craft.entries.section('blogOverview') %}{{ entry.title }}{% endfor %}
-{% endset%}
+{% endset %}
 {% set summary = null %}
 {% for block in entry.lead %}
 	{% switch block.type %}

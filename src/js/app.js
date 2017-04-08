@@ -31,27 +31,27 @@
 	//     transition: function(url){ window.location.href = url; }
 	// });
 	$('.animsition').animsition({
-	    inClass: 'overlay-slide-in-top',
-	    outClass: 'overlay-slide-out-top',
-	    inDuration: 1500,
-	    outDuration: 800,
-	    linkElement: '.animsition-link',
-	    // e.g. linkElement: 'a:not([target="_blank"]):not([href^="#"])'
-	    loading: true,
-	    loadingParentElement: 'body', //animsition wrapper element
-	    loadingClass: 'animsition-loading',
-	    loadingInner: '', // e.g '<img src="loading.svg" />'
-	    timeout: false,
-	    timeoutCountdown: 5000,
-	    onLoadEvent: true,
-	    browser: [ 'animation-duration', '-webkit-animation-duration'],
-	    // "browser" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
-	    // The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
-	    overlay : true,
-	    overlayClass : 'animsition-overlay-slide',
-	    overlayParentElement : 'body',
-	    transition: function (url){ window.location.href = url; }
-	  });
+		inClass: 'overlay-slide-in-top',
+		outClass: 'overlay-slide-out-top',
+		inDuration: 1500,
+		outDuration: 800,
+		linkElement: '.animsition-link',
+		// e.g. linkElement: 'a:not([target="_blank"]):not([href^="#"])'
+		loading: true,
+		loadingParentElement: 'body', //animsition wrapper element
+		loadingClass: 'animsition-loading',
+		loadingInner: '', // e.g '<img src="loading.svg" />'
+		timeout: false,
+		timeoutCountdown: 5000,
+		onLoadEvent: true,
+		browser: [ 'animation-duration', '-webkit-animation-duration'],
+		// "browser" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
+		// The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
+		overlay : true,
+		overlayClass : 'animsition-overlay-slide',
+		overlayParentElement : 'body',
+		transition: function (url){ window.location.href = url; }
+	});
 
 	// toggle fade on menu icon when clicked
 
@@ -62,12 +62,12 @@
 	// add span tags to characters inside selected element
 
 	$('.text-span').each(function () {
-	    var letters = $(this).text().split(''),
-	    $container = $(this).empty();
+		var letters = $(this).text().split(''),
+		$container = $(this).empty();
 
-	    $.each(letters, function (_, letter) {
-	       $('<span>', {text: letter}).appendTo($container);
-	    });
+		$.each(letters, function (_, letter) {
+			$('<span>', {text: letter}).appendTo($container);
+		});
 	});
 
 	// scroll to sections
@@ -93,13 +93,13 @@
 
 		var currentScroll = $(this).scrollTop();
 
-    	// If the current scroll position is greater than 0 (the top) AND the current scroll position is less than the document height minus the window height (the bottom) run the navigation if/else statement.
+		// If the current scroll position is greater than 0 (the top) AND the current scroll position is less than the document height minus the window height (the bottom) run the navigation if/else statement.
 
 		if (currentScroll > 0 && currentScroll < $(document).height() - $(window).height()){
 
 			// If the current scroll is greater than the previous scroll (i.e we're scrolling down the page), hide the nav.
 
-      		if (currentScroll > previousScroll){
+			if (currentScroll > previousScroll){
 				window.setTimeout(hideNav, 300);
 
 			// Else we are scrolling up (i.e the previous scroll is greater than the current scroll), so show the nav.
@@ -108,10 +108,10 @@
 				window.setTimeout(showNav, 300);
 			}
 
-      		// Set the previous scroll value equal to the current scroll.
+			// Set the previous scroll value equal to the current scroll.
 
 			previousScroll = currentScroll;
-    	}
+		}
 
 	});
 
@@ -212,17 +212,17 @@
 	function clippathPolyfill() {
 		var welcome = [[100, 70], [0, 0], [0, 100]];
 		var welcomeSmall = [[0, 0], [100, 30], [100, 70], [0, 100]];
-	    var ministry1 = [[0, 40], [100, 0], [100, 100], [0, 100]];
-	    var ministry1Small = [[0, 20], [100, 0], [100, 100], [0, 100]];
-	    var ministry2 = [[0, 0], [100, 40], [100, 100], [0, 100]];
-	    var ministry2Small = [[0, 0], [100, 20], [100, 100], [0, 100]];
-	    var ministry3 = [[0, 40], [100, 0], [100, 100], [0, 60]];
-	    var ministry3Small = [[0, 20], [100, 0], [100, 100], [0, 100]];
-	    var quote = [[100, 70], [0, 0], [0, 100]];
-	    var quoteSmall = [[0, 0], [100, 30], [100, 70], [0, 100]];
-	    var slope = [[0, 0], [100, 20], [100, 100], [0, 100]];
-	    var slopeSmall = [[0, 0], [100, 10], [100, 100], [0, 100]];
-	    var current_width = $(window).width();
+		var ministry1 = [[0, 40], [100, 0], [100, 100], [0, 100]];
+		var ministry1Small = [[0, 20], [100, 0], [100, 100], [0, 100]];
+		var ministry2 = [[0, 0], [100, 40], [100, 100], [0, 100]];
+		var ministry2Small = [[0, 0], [100, 20], [100, 100], [0, 100]];
+		var ministry3 = [[0, 40], [100, 0], [100, 100], [0, 60]];
+		var ministry3Small = [[0, 20], [100, 0], [100, 100], [0, 100]];
+		var quote = [[100, 70], [0, 0], [0, 100]];
+		var quoteSmall = [[0, 0], [100, 30], [100, 70], [0, 100]];
+		var slope = [[0, 0], [100, 20], [100, 100], [0, 100]];
+		var slopeSmall = [[0, 0], [100, 10], [100, 100], [0, 100]];
+		var current_width = $(window).width();
 		if (current_width < 640){
 			$('.ministry-introductions .welcome').clipPath(welcomeSmall, {
 				isPercentage: true,
@@ -298,29 +298,30 @@
 	$('.context-blog .main-menu .blog, .context-gallery .main-menu .media').addClass('active');
 
 	// ajax contact page
+
 	$('#ajax-contact').submit(function (ev) {
-	    // Prevent the form from actually submitting
-	    ev.preventDefault();
-	    $('#spinner').addClass('show');
+		// Prevent the form from actually submitting
+		ev.preventDefault();
+		$('#spinner').addClass('show');
 
-	    // Get the post data
-	    var data = $(this).serialize();
+		// Get the post data
+		var data = $(this).serialize();
 
-	    // Send it to the server
-	    $.post('/', data, function (response) {
-	        if (response.success) {
-	            $('#thanks').fadeIn();
-	            $('#error').fadeOut();
-	            $('.spinner').hide();
-	            $('#ajax-contact').each(function (){
+		// Send it to the server
+		$.post('/', data, function (response) {
+			if (response.success) {
+				$('#thanks').fadeIn();
+				$('#error').fadeOut();
+				$('.spinner').hide();
+				$('#ajax-contact').each(function (){
 					this.reset();
 				});
-	        } else {
-	            $('#error').fadeIn();
-	            $('#thanks').fadeOut();
-	            $('#spinner').hide();
-	        }
-	    });
+			} else {
+				$('#error').fadeIn();
+				$('#thanks').fadeOut();
+				$('#spinner').hide();
+			}
+		});
 	});
 
 	// hide maps overlay when clicked
