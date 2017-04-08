@@ -128,35 +128,26 @@ element-invisible {
 	white-space: nowrap;
 }
 
-// .off-canvas-content {
-// 	min-height: 100vh;
-// 	display: flex;
-// 	flex-direction: column;
-// }
-
-// .main-content {
-// 	flex: 1;
-// }
-
 // styling for Pace, an automatic web page progress bar.
 
 .pace {
 	pointer-events: none;
 	user-select: none;
+
+	.pace-progress {
+		background: $white;
+		position: fixed;
+		z-index: 2000;
+		top: 0;
+		right: 100%;
+		width: 100%;
+		height: rem-calc(10);
+	}
+
 }
 
 .pace-inactive {
 	display: none;
-}
-
-.pace .pace-progress {
-	background: $white;
-	position: fixed;
-	z-index: 2000;
-	top: 0;
-	right: 100%;
-	width: 100%;
-	height: rem-calc(10);
 }
 
 .off-canvas,
