@@ -318,6 +318,11 @@ p.post-meta {
 	letter-spacing: rem-calc(3);
 	margin-right: rem-calc(-3);
 
+	@include small-portrait {
+		font-size: 7.5px;
+		letter-spacing: rem-calc(1);
+	}
+
 	a {
 
 		&::after {
@@ -404,6 +409,8 @@ p.post-meta {
 
 }
 
+// next and previous post pagination
+
 .small-text {
 	text-transform: uppercase;
 	font-size: rem-calc(8);
@@ -415,6 +422,15 @@ p.post-meta {
 
 	.previous-post & {
 		margin-right: rem-calc(16);
+	}
+
+}
+
+.next-post,
+.previous-post {
+
+	a {
+		white-space: normal;
 	}
 
 }
