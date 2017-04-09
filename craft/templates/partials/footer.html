@@ -1,4 +1,4 @@
-<footer class="footer-section" role="contentinfo" itemscope itemtype="http://schema.org/WPFooter">
+<footer class="footer-section" itemscope itemtype="http://schema.org/WPFooter">
 	<div class="top-footer">
 		<div class="row scroll-to-top">
 			<div class="column">
@@ -52,8 +52,8 @@
 	</div>
 	{% if socialMedia.snapchatUsername is defined %}
 		<div class="reveal text-center" id="snapchatModal" data-reveal data-animation-in="fade-in" data-animation-out="fade-out">
-			<object data="https://feelinsonice-hrd.appspot.com/web/deeplink/snapcode?username={{ socialMedia.snapchatUsername }}&amp;type=PNG" type="image/png" height="200px" width="200px">
-				<object data="//www.snapchat.com/deeplink/static/image/ghost.svg" height="200px" width="200px"></object>
+			<object data="https://feelinsonice-hrd.appspot.com/web/deeplink/snapcode?username={{ socialMedia.snapchatUsername }}&amp;type=PNG" type="image/png" height="200" width="200">
+				<object data="//www.snapchat.com/deeplink/static/image/ghost.svg" height="200" width="200"></object>
 			</object>
 			<h5>{{ socialMedia.snapchatUsername }}</h5>
 			<button class="close-button" data-close aria-label="Close modal" type="button">
