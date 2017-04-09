@@ -17,7 +17,7 @@
 {% cache %}
 	{% minify %}
 		<!DOCTYPE html>
-		<html class="no-js" lang="en">
+		<html class="no-js" lang="en" itemscope itemtype="http://schema.org/WebPage">
 			<head>
 				<meta charset="utf-8" />
 				{% if metatags.xUaCompatible is defined %}<meta http-equiv="x-ua-compatible" content="{{ metatags.xUaCompatible }}">{% endif %}
@@ -175,7 +175,7 @@
 				</style>
 	{% minify %}
 			</head>
-			<body class="context-{{ handle }} page-{{ entry.slug }}" itemscope itemtype="http://schema.org/WebPage">
+			<body class="context-{{ handle }} page-{{ entry.slug }}">
 				{% include 'partials/svg.html' %}
 				<div class="off-canvas-wrapper animsition" id="top">
 					<nav class="off-canvas position-left" id="offCanvas" data-off-canvas itemscope itemtype="http://schema.org/SiteNavigationElement">
