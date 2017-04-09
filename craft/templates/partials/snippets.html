@@ -1,9 +1,9 @@
 <a href="{{ entry.url }}" class="column snippet">
-	<figure class="snippet__figure">
+	<div class="snippet__figure">
 		<div class="snippet__image"{% for asset in entry.coverImage %} style="background-image: url('{{ asset.getUrl('snippetThumbnail') }}')"{% endfor %}></div>
 		<div class="snippet__deco snippet__deco--shine"></div>
 		<div class="snippet__deco snippet__deco--overlay"></div>
-		<figcaption class="snippet__caption">
+		<div class="snippet__caption">
 			<h3 class="snippet__title">{{ entry.title }}</h3>
 			{% for block in entry.lead %}
 				{% switch block.type %}
@@ -15,9 +15,9 @@
 
 				{% endswitch %}
 			{% endfor %}
-		</figcaption>
+		</div>
 		<svg class="snippet__deco snippet__deco--lines" viewBox="0 0 300 415">
 			<path d="M20.5,20.5h260v375h-260V20.5z" />
 		</svg>
-	</figure>
+	</div>
 </a>
