@@ -43,7 +43,7 @@
 								{% endfor %}
 							</div>
 							{% for entry in craft.entries.section('whatsOn').find() %}
-								<a href="{{ entry.url }}" data-text="{{ 'More' | translate }}" class="button tiny text-span">{{ 'More' | translate }}</a>
+								<a href="{{ entry.url }}" title="{{ 'More on term events' | translate }}" data-text="{{ 'More' | translate }}" class="button tiny text-span">{{ 'More' | translate }}</a>
 							{% endfor %}
 						</div>
 					</div>
@@ -74,7 +74,7 @@
 								</p>
 							{% endif %}
 							{% if entry.moreInfoLink|length %}
-								<a href="{{ entry.moreInfoLink.url }}"{% if entry.moreInfoLink.target | length %} target="{{ entry.moreInfoLink.target }}"{% endif %} class="button text-span" data-text="{{ entry.moreInfoLink.text }}">{{ entry.moreInfoLink.text }}</a>
+								<a href="{{ entry.moreInfoLink.url }}"{% if entry.moreInfoLink.target | length %} target="{{ entry.moreInfoLink.target }}"{% endif %} title="{{ 'More about ' | translate }}{{ entry.title }}" class="button text-span" data-text="{{ entry.moreInfoLink.text }}">{{ entry.moreInfoLink.text }}</a>
 							{% endif %}
 						</div>
 					{% endfor %}
@@ -219,7 +219,7 @@
 		<div class="row">
 			<div class="column">
 				{% for entry in craft.entries.section('blogOverview').find() %}
-					<a href="{{ entry.url }}" data-text="{{ 'More' | translate }}" class="button text-span">{{ 'More' | translate }}</a>
+					<a href="{{ entry.url }}" title="{{ 'More blog posts' | translate }}" data-text="{{ 'More' | translate }}" class="button text-span">{{ 'More' | translate }}</a>
 				{% endfor %}
 			</div>
 		</div>

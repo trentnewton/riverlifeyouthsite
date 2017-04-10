@@ -5,11 +5,11 @@
 {% block content %}
 	{% include 'partials/hero.html' %}
 	<section class="page-main slope-page">
-		<article class="row">
+		<div class="row">
 			<div class="column">
 				<h2 class="header">{{ 'Latest' | translate }}</h2>
 			</div>
-		</article>
+		</div>
 		<div class="row small-up-1 medium-up-3">
 			{% for entry in craft.entries.section('blog').limit(3) %}
 				{% include 'partials/snippets.html' %}

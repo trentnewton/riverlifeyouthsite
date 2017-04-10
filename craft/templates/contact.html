@@ -22,7 +22,7 @@
 						{% endmacro %}
 
 						{% from _self import errorList %}
-						<form method="post" action="" accept-charset="UTF-8" id="ajax-contact">
+						<form method="post" accept-charset="UTF-8" id="ajax-contact">
 							{{ getCsrfInput() }}
 							<input type="hidden" name="action" value="contactForm/sendMessage">
 							<input type="hidden" name="redirect" value="contact/thanks">
@@ -34,7 +34,7 @@
 								</div>
 									<div class="small-9 medium-10 columns">
 									<span class="name">
-										<input type="text" id="fromName" name="fromName" value="{% if message is defined %}{{ message.fromName }}{% endif %}" size="40" aria-required="true" aria-invalid="false" placeholder="Enter your name here" required>
+										<input type="text" id="fromName" name="fromName" value="{% if message is defined %}{{ message.fromName }}{% endif %}" size="40" aria-invalid="false" placeholder="Enter your name here" required>
 										{{ message is defined and message ? errorList(message.getErrors('fromName')) }}
 									</span>
 								</div>
@@ -45,7 +45,7 @@
 								</div>
 								<div class="small-9 medium-10 columns">
 									<span class="email">
-										<input type="email" id="fromEmail" name="fromEmail" value="{% if message is defined %}{{ message.fromEmail }}{% endif %}" size="40" class="validates-as-required validates-as-email" aria-required="true" aria-invalid="false" placeholder="Enter your email here" required>
+										<input type="email" id="fromEmail" name="fromEmail" value="{% if message is defined %}{{ message.fromEmail }}{% endif %}" size="40" class="validates-as-required validates-as-email" aria-invalid="false" placeholder="Enter your email here" required>
 										{{ message is defined and message ? errorList(message.getErrors('fromEmail')) }}
 									</span>
 								</div>
@@ -56,7 +56,7 @@
 								</div>
 								<div class="small-9 medium-10 columns">
 									<span class="email">
-										<input type="email" id="subject" name="subject" value="{% if message is defined %}{{ message.subject }}{% endif %}" size="40" class="validates-as-required validates-as-email" aria-required="true" aria-invalid="false" placeholder="Enter your email here" required>
+										<input type="email" id="subject" name="subject" value="{% if message is defined %}{{ message.subject }}{% endif %}" size="40" class="validates-as-required validates-as-email" aria-invalid="false" placeholder="Enter your email here" required>
 										{{ message is defined and message ? errorList(message.getErrors('subject')) }}
 									</span>
 								</div>
@@ -67,7 +67,7 @@
 								</div>
 								<div class="small-9 medium-10 columns">
 									<span class="message">
-										<textarea name="message" id="message" cols="40" rows="10" aria-required="true" aria-invalid="false" placeholder="Enter your message here" required>{% if message is defined %}{{ message.message }}{% endif %}</textarea>
+										<textarea name="message" id="message" cols="40" rows="10" aria-invalid="false" placeholder="Enter your message here" required>{% if message is defined %}{{ message.message }}{% endif %}</textarea>
 										{{ message is defined and message ? errorList(message.getErrors('message')) }}
 									</span>
 								</div>
