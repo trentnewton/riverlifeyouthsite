@@ -75,7 +75,7 @@
 																	<svg class="icon icon-link-external"><use xlink:href="#icon-link-external"></use></svg>
 																</div>
 																<div class="reveal-information flex-child-auto">
-																	<p><a href="{{ entry.moreInfoLink.url }}"{% if entry.moreInfoLink.target | length %} target="{{ entry.moreInfoLink.target }}"{% endif %}>{{ entry.moreInfoLink.text }}</a></p>
+																	<p><a href="{{ entry.moreInfoLink.url }}"{% if entry.moreInfoLink.target | length %} target="{{ entry.moreInfoLink.target }}"{% endif %} title="{{ 'More about ' | translate }}{{ entry.title }}">{{ entry.moreInfoLink.text }}</a></p>
 																</div>
 															</div>
 														{% endif %}
