@@ -125,12 +125,12 @@
 
 	var lastScrollTop = 0;
 
-	window.addEventListener("scroll", function () {
+	window.addEventListener('scroll', function () {
 		var st = window.pageYOffset || document.documentElement.scrollTop;
 		if (st > lastScrollTop){
-			document.getElementById("main-navigation").style.top = "-100%";
+			document.getElementById('main-navigation').style.top = '-100%';
 		} else {
-			document.getElementById("main-navigation").style.top = "0";
+			document.getElementById('main-navigation').style.top = '0';
 		}
 		lastScrollTop = st;
 	}, false);
