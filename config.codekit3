@@ -33149,12 +33149,6 @@
 		"oAP": "\/craft\/storage\/runtime\/compiled_templates\/43\/43465b0dff1ab3bc840cd0155fd0cbfc8b27e2fbbd5262841f026e08abc9a48d.php",
 		"oF": 0
 		},
-	"\/craft\/storage\/runtime\/compiled_templates\/51\/5187dcd786ea073acac39d487ad1912d9501d9a3724bfb13668863390bf78a14.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/storage\/runtime\/compiled_templates\/51\/5187dcd786ea073acac39d487ad1912d9501d9a3724bfb13668863390bf78a14.php",
-		"oF": 0
-		},
 	"\/craft\/storage\/runtime\/compiled_templates\/8c\/8cda2d44de687d64fbf3dae7dbafbf7150ff83fd2d98d2f3e170d3e71798e738.php": {
 		"ft": 8192,
 		"oA": 2,
@@ -33167,34 +33161,16 @@
 		"oAP": "\/craft\/storage\/runtime\/compiled_templates\/97\/9753d029d19741ebaa7f2da1ccdcf0fab4ed305d006aad7eb2725e5220ba74bf.php",
 		"oF": 0
 		},
-	"\/craft\/storage\/runtime\/compiled_templates\/bb\/bba90c55dd256486254648bf4bd09c196e876eb44f2500ebbb001a5581a0f50f.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/storage\/runtime\/compiled_templates\/bb\/bba90c55dd256486254648bf4bd09c196e876eb44f2500ebbb001a5581a0f50f.php",
-		"oF": 0
-		},
-	"\/craft\/storage\/runtime\/compiled_templates\/cb\/cb12448dbb300b8747d06629d1e3fee76c9d57169932a4aacf1ad32c8bd9a56f.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/storage\/runtime\/compiled_templates\/cb\/cb12448dbb300b8747d06629d1e3fee76c9d57169932a4aacf1ad32c8bd9a56f.php",
-		"oF": 0
-		},
 	"\/craft\/storage\/runtime\/compiled_templates\/d2\/d26b3370c01fdd5eded9074b2251d93e12d5cd5ff0cb47664999d049ddc6b81b.php": {
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/craft\/storage\/runtime\/compiled_templates\/d2\/d26b3370c01fdd5eded9074b2251d93e12d5cd5ff0cb47664999d049ddc6b81b.php",
 		"oF": 0
 		},
-	"\/craft\/storage\/runtime\/compiled_templates\/d5\/d5e3423c5cf6d2a63eb29130273bce715fd1f380272cd28ea58b60f695cd2d3a.php": {
+	"\/craft\/storage\/runtime\/compiled_templates\/d7\/d7d7ae3f86d6e3a40a3800bf3972895050f189837750a2c801efcf80789ce433.php": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/craft\/storage\/runtime\/compiled_templates\/d5\/d5e3423c5cf6d2a63eb29130273bce715fd1f380272cd28ea58b60f695cd2d3a.php",
-		"oF": 0
-		},
-	"\/craft\/storage\/runtime\/compiled_templates\/db\/dbdc445fd05d7de1a48db219d745f5a5c9fd332a7676cb371a04884215ce152e.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/craft\/storage\/runtime\/compiled_templates\/db\/dbdc445fd05d7de1a48db219d745f5a5c9fd332a7676cb371a04884215ce152e.php",
+		"oAP": "\/craft\/storage\/runtime\/compiled_templates\/d7\/d7d7ae3f86d6e3a40a3800bf3972895050f189837750a2c801efcf80789ce433.php",
 		"oF": 0
 		},
 	"\/craft\/storage\/runtime\/compiled_templates\/de\/de9fe9375a15ab0781e348778d88db70e793405de9be420dd4b5888d9e19c2d6.php": {
@@ -35990,6 +35966,12 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/readme.txt",
+		"oF": 0
+		},
+	"\/riverlifeyouth.org.conf": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/riverlifeyouth.org.conf",
 		"oF": 0
 		},
 	"\/src\/js\/app.js": {
