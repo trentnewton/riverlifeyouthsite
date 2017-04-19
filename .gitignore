@@ -28,18 +28,14 @@
 *.tmproject
 Thumbs.db
 /logs/*
+.htaccess
+htaccess
+web.config
 
-default
-php.ini
 readme.txt
 
 craft/app/*
 craft/config/*
-
-craft/.htaccess
-craft/web.config
-craft/*/.htaccess
-craft/*/web.config
 
 craft/plugins/cheatsheet
 
@@ -50,9 +46,7 @@ public/video
 
 public/favicon.ico
 public/index.php
-public/htaccess
 public/robots.txt
 public/browserconfig.xml
-public/web.config
 
-riverlifeyouth.org.conf
+config
