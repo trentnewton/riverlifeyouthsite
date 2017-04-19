@@ -8,79 +8,77 @@
 	<section class="contact-page page-secondary">
 		<div class="contact-details">
 			<div class="contact-form">
-				<div class="row">
-					<div class="column">
-						<h3 class="heading">{{ 'Contact Form' | translate }}</h3>
-						{% macro errorList(errors) %}
-							{% if errors %}
-								<span class="form-error is-visible">
-									{% for error in errors %}
-										{{ error }}
-									{% endfor %}
-								</span>
-							{% endif %}
-						{% endmacro %}
+				<div class="row column">
+					<h3 class="heading">{{ 'Contact Form' | translate }}</h3>
+					{% macro errorList(errors) %}
+						{% if errors %}
+							<span class="form-error is-visible">
+								{% for error in errors %}
+									{{ error }}
+								{% endfor %}
+							</span>
+						{% endif %}
+					{% endmacro %}
 
-						{% from _self import errorList %}
-						<form method="post" accept-charset="UTF-8" id="ajax-contact">
-							{{ getCsrfInput() }}
-							<input type="hidden" name="action" value="contactForm/sendMessage">
-							<input type="hidden" name="redirect" value="contact/thanks">
-							<div id="thanks" class="callout success" style="display: none;">{{ 'Thank You! Your message has been sent.' | translate }}</div>
-							<div id="error" class="callout error" style="display: none;">{{ 'An error occurred. Please try again.' | translate }}</div>
-							<div class="row">
-								<div class="small-3 medium-2 columns">
-									<label for="fromName" class="left inline">{{ 'Name' | translate }}</label>
-								</div>
-									<div class="small-9 medium-10 columns">
-									<span class="name">
-										<input type="text" id="fromName" name="fromName" value="{% if message is defined %}{{ message.fromName }}{% endif %}" size="40" aria-invalid="false" placeholder="Enter your name here" required>
-										{{ message is defined and message ? errorList(message.getErrors('fromName')) }}
-									</span>
-								</div>
+					{% from _self import errorList %}
+					<form method="post" accept-charset="UTF-8" id="ajax-contact">
+						{{ getCsrfInput() }}
+						<input type="hidden" name="action" value="contactForm/sendMessage">
+						<input type="hidden" name="redirect" value="contact/thanks">
+						<div id="thanks" class="callout success" style="display: none;">{{ 'Thank You! Your message has been sent.' | translate }}</div>
+						<div id="error" class="callout error" style="display: none;">{{ 'An error occurred. Please try again.' | translate }}</div>
+						<div class="row">
+							<div class="small-3 medium-2 columns">
+								<label for="fromName" class="left inline">{{ 'Name' | translate }}</label>
 							</div>
-							<div class="row">
-								<div class="small-3 medium-2 columns">
-									<label for="fromEmail" class="left inline">{{ 'Email' | translate }}</label>
-								</div>
 								<div class="small-9 medium-10 columns">
-									<span class="email">
-										<input type="email" id="fromEmail" name="fromEmail" value="{% if message is defined %}{{ message.fromEmail }}{% endif %}" size="40" class="validates-as-required validates-as-email" aria-invalid="false" placeholder="Enter your email here" required>
-										{{ message is defined and message ? errorList(message.getErrors('fromEmail')) }}
-									</span>
-								</div>
+								<span class="name">
+									<input type="text" id="fromName" name="fromName" value="{% if message is defined %}{{ message.fromName }}{% endif %}" size="40" aria-invalid="false" placeholder="Enter your name here" required>
+									{{ message is defined and message ? errorList(message.getErrors('fromName')) }}
+								</span>
 							</div>
-							<div class="row">
-								<div class="small-3 medium-2 columns">
-									<label for="subject" class="left inline">{{ 'Subject' | translate }}</label>
-								</div>
-								<div class="small-9 medium-10 columns">
-									<span class="email">
-										<input type="email" id="subject" name="subject" value="{% if message is defined %}{{ message.subject }}{% endif %}" size="40" class="validates-as-required validates-as-email" aria-invalid="false" placeholder="Enter your email here" required>
-										{{ message is defined and message ? errorList(message.getErrors('subject')) }}
-									</span>
-								</div>
+						</div>
+						<div class="row">
+							<div class="small-3 medium-2 columns">
+								<label for="fromEmail" class="left inline">{{ 'Email' | translate }}</label>
 							</div>
-							<div class="row">
-								<div class="small-3 medium-2 columns">
-									<label for="message" class="left inline">{{ 'Message' | translate }}</label>
-								</div>
-								<div class="small-9 medium-10 columns">
-									<span class="message">
-										<textarea name="message" id="message" cols="40" rows="10" aria-invalid="false" placeholder="Enter your message here" required>{% if message is defined %}{{ message.message }}{% endif %}</textarea>
-										{{ message is defined and message ? errorList(message.getErrors('message')) }}
-									</span>
-								</div>
+							<div class="small-9 medium-10 columns">
+								<span class="email">
+									<input type="email" id="fromEmail" name="fromEmail" value="{% if message is defined %}{{ message.fromEmail }}{% endif %}" size="40" class="validates-as-required validates-as-email" aria-invalid="false" placeholder="Enter your email here" required>
+									{{ message is defined and message ? errorList(message.getErrors('fromEmail')) }}
+								</span>
 							</div>
-							<input class="hide" id="preferredKitten" name="preferredKitten" type="text">
-							<div class="row">
-								<div class="column text-right">
-									<div id="spinner"></div>
-									<button type="submit" data-text="Send" class="button text-span">Send</button>
-								</div>
+						</div>
+						<div class="row">
+							<div class="small-3 medium-2 columns">
+								<label for="subject" class="left inline">{{ 'Subject' | translate }}</label>
 							</div>
-						</form>
-					</div>
+							<div class="small-9 medium-10 columns">
+								<span class="email">
+									<input type="email" id="subject" name="subject" value="{% if message is defined %}{{ message.subject }}{% endif %}" size="40" class="validates-as-required validates-as-email" aria-invalid="false" placeholder="Enter your email here" required>
+									{{ message is defined and message ? errorList(message.getErrors('subject')) }}
+								</span>
+							</div>
+						</div>
+						<div class="row">
+							<div class="small-3 medium-2 columns">
+								<label for="message" class="left inline">{{ 'Message' | translate }}</label>
+							</div>
+							<div class="small-9 medium-10 columns">
+								<span class="message">
+									<textarea name="message" id="message" cols="40" rows="10" aria-invalid="false" placeholder="Enter your message here" required>{% if message is defined %}{{ message.message }}{% endif %}</textarea>
+									{{ message is defined and message ? errorList(message.getErrors('message')) }}
+								</span>
+							</div>
+						</div>
+						<input class="hide" id="preferredKitten" name="preferredKitten" type="text">
+						<div class="row">
+							<div class="column text-right">
+								<div id="spinner"></div>
+								<button type="submit" data-text="Send" class="button text-span">Send</button>
+							</div>
+						</div>
+					</form>
 				</div>
 			</div>
 			<div class="google-map-container">

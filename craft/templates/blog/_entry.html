@@ -69,10 +69,8 @@
 					</div>
 
 				{% case "videoEmbed" %}
-					<div class="row align-center">
-						<div class="column">
-							<div class="responsive-embed widescreen">{{ block.videoEmbed|raw }}</div>
-						</div>
+					<div class="row column">
+						<div class="responsive-embed widescreen">{{ block.videoEmbed|raw }}</div>
 					</div>
 
 				{% case "callout" %}

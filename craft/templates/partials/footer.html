@@ -1,11 +1,9 @@
 <footer class="footer-section" itemscope itemtype="http://schema.org/WPFooter">
 	<div class="top-footer">
-		<div class="row scroll-to-top">
-			<div class="column">
-				<a href="#top" title="{{ 'Scroll to Top' | translate }}">
-					<svg class="icon icon-chevron-up"><use xlink:href="#icon-chevron-up"></use></svg>
-				</a>
-			</div>
+		<div class="row column scroll-to-top">
+			<a href="#top" title="{{ 'Scroll to Top' | translate }}">
+				<svg class="icon icon-chevron-up"><use xlink:href="#icon-chevron-up"></use></svg>
+			</a>
 		</div>
 		<ul class="social-links menu align-center">
 			{% if socialMedia.facebookPage is defined %}
@@ -62,16 +60,14 @@
 		</div>
 	{% endif %}
 	<div class="bottom-footer">
-		<div class="row">
-			<div class="column">
-				<p class="of-text">{{ 'A ministry of' | translate }}</p>
-				<a href="{% if general.footerLogoLink is defined %}{{ general.footerLogoLink }}{% endif %}" title="{% for block in svgLogos.logos.type('footerLogo').limit(1) %}{% switch block.type %}{% case "footerLogo" %}{{ block.footerLogoName }}{% default %}{% endswitch %}{% endfor %}" target="_blank">
-					<svg class="footer-logo" aria-labelledby="logo" preserveAspectRatio="xMinYMin meet"><use xlink:href="#footer-logo"></use></svg>
-				</a>
-				{% if general.copyright is defined %}
-					<p class="copyright-text">{{ general.copyright }}</p>
-				{% endif %}
-			</div>
+		<div class="row column">
+			<p class="of-text">{{ 'A ministry of' | translate }}</p>
+			<a href="{% if general.footerLogoLink is defined %}{{ general.footerLogoLink }}{% endif %}" title="{% for block in svgLogos.logos.type('footerLogo').limit(1) %}{% switch block.type %}{% case "footerLogo" %}{{ block.footerLogoName }}{% default %}{% endswitch %}{% endfor %}" target="_blank">
+				<svg class="footer-logo" aria-labelledby="logo" preserveAspectRatio="xMinYMin meet"><use xlink:href="#footer-logo"></use></svg>
+			</a>
+			{% if general.copyright is defined %}
+				<p class="copyright-text">{{ general.copyright }}</p>
+			{% endif %}
 		</div>
 	</div>
 </footer>

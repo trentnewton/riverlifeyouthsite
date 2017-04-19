@@ -1,47 +1,54 @@
 <section class="page-main slope-page content">
-	<div class="row">
-		<div class="column">
-			{% if entry.type.handle == 'blog' %}
-				<p class="post-meta">
-					{% for entry in craft.entries.section('blogOverview').find() %}
-						<a href="{{ entry.url }}">
-							<span class="back"><svg class="icon icon-chevron-up"><use xlink:href="#icon-chevron-up"></use></svg>{{ 'Back' | translate }}</span>
-						</a>
-					{% endfor %}
-					<span class="author" itemprop="name"><svg class="icon icon-user"><use xlink:href="#icon-user"></use></svg>{{ entry.author.fullName }}</span>
-					<span class="date"><svg class="icon icon-clock"><use xlink:href="#icon-clock"></use></svg>{{ entry.postDate.format('F d, Y') }}</span>
-				</p>
-				<h2 class="header" itemprop="headline">{{ title }}</h2>
-			{% elseif entry.type.handle == 'gallery' %}
-				<p class="post-meta">
-					{% for entry in craft.entries.section('mediaOverview').find() %}
-						<a href="{{ entry.url }}">
-							<span class="back"><svg class="icon icon-chevron-up"><use xlink:href="#icon-chevron-up"></use></svg>{{ 'Back' | translate }}</span>
-						</a>
-					{% endfor %}
-				</p>
-				<h2 class="header" itemprop="headline">{{ title }}</h2>
-			{% else %}
-				{% for block in entry.lead %}
-					{% switch block.type %}{% case "lead" %}
-						<h2 class="header" itemprop="headline">{{ block.header|raw }}</h2>{% default %}
-					{% endswitch %}
+	<div class="row column">
+		{% if entry.type.handle == 'blogOverview' %}
+			<h2 class="header" itemprop="headline">{{ 'Latest' | translate }}</h2>
+		{% elseif entry.type.handle == 'blog' %}
+			<p class="post-meta">
+				{% for entry in craft.entries.section('blogOverview').find() %}
+					<a href="{{ entry.url }}">
+						<span class="back"><svg class="icon icon-chevron-up"><use xlink:href="#icon-chevron-up"></use></svg>{{ 'Back' | translate }}</span>
+					</a>
 				{% endfor %}
-			{% endif %}
+				<span class="author" itemprop="name"><svg class="icon icon-user"><use xlink:href="#icon-user"></use></svg>{{ entry.author.fullName }}</span>
+				<span class="date"><svg class="icon icon-clock"><use xlink:href="#icon-clock"></use></svg>{{ entry.postDate.format('F d, Y') }}</span>
+			</p>
+			<h2 class="header" itemprop="headline">{{ title }}</h2>
+		{% elseif entry.type.handle == 'gallery' %}
+			<p class="post-meta">
+				{% for entry in craft.entries.section('mediaOverview').find() %}
+					<a href="{{ entry.url }}">
+						<span class="back"><svg class="icon icon-chevron-up"><use xlink:href="#icon-chevron-up"></use></svg>{{ 'Back' | translate }}</span>
+					</a>
+				{% endfor %}
+			</p>
+			<h2 class="header" itemprop="headline">{{ title }}</h2>
+		{% else %}
 			{% for block in entry.lead %}
-				<div class="content">
-					<div class="lead-paragraphs">
-						{% switch block.type %}
+				{% switch block.type %}{% case "lead" %}
+					<h2 class="header" itemprop="headline">{{ block.header|raw }}</h2>{% default %}
+				{% endswitch %}
+			{% endfor %}
+		{% endif %}
+		{% for block in entry.lead %}
+			<div class="content">
+				<div class="lead-paragraphs">
+					{% switch block.type %}
 
-							{% case "lead" %}
-								{{ block.text }}
+						{% case "lead" %}
+							{{ block.text }}
 
-							{% default %}
+						{% default %}
 
-						{% endswitch %}
-					</div>
+					{% endswitch %}
 				</div>
+			</div>
+		{% endfor %}
+	</div>
+	{% if entry.type.handle == 'blogOverview' %}
+		<div class="row small-up-1 medium-up-3">
+			{% for entry in craft.entries.section('blog').limit(3) %}
+				{% include 'partials/snippets.html' %}
 			{% endfor %}
 		</div>
-	</div>
+	{% endif %}
 </section>

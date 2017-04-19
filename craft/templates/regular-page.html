@@ -6,41 +6,39 @@
 	{% include 'partials/hero.html' %}
 	{% include 'partials/lead-section.html' %}
 	<section class="page-secondary content">
-		<div class="row">
-			<div class="column" itemprop="text">
-				{% for block in entry.body %}
-					{% switch block.type %}
+		<div class="row column" itemprop="text">
+			{% for block in entry.body %}
+				{% switch block.type %}
 
-						{% case "header" %}
-							<h2 class="header">{{ block.header }}</h2>
+					{% case "header" %}
+						<h2 class="header">{{ block.header }}</h2>
 
-						{% case "text" %}
+					{% case "text" %}
+						{{ block.text }}
+
+					{% case "pullquote" %}
+						<blockquote>{{ block.quote|striptags('<strong><em><br>')|raw|nl2br }}{% if block.citation|length %}<cite>{{ block.citation }}</cite>{% endif %}</blockquote>
+
+					{% case "button" %}
+						<a href="{{ block.buttonLink.url }}" class="button text-span" data-text="{{ block.buttonLink.text }}">{{ block.buttonLink.text }}</a>
+
+					{% case "videoEmbed" %}
+						<div class="responsive-embed widescreen">{{ block.videoEmbed|raw }}</div>
+
+					{% case "callout" %}
+						<div class="callout">
+							<h3>{{ block.header }}</h3>
 							{{ block.text }}
+						</div>
 
-						{% case "pullquote" %}
-							<blockquote>{{ block.quote|striptags('<strong><em><br>')|raw|nl2br }}{% if block.citation|length %}<cite>{{ block.citation }}</cite>{% endif %}</blockquote>
+					{% for asset in block.image %}
+						<figure><img src="{{ asset.getUrl('entryImageBodyInsert') }}" width="{{ asset.getWidth('entryImageBodyInsert') }}" height="{{ asset.getHeight('entryImageBodyInsert') }}" alt="{{ asset.title }}"></figure>
+					{% endfor %}
 
-						{% case "button" %}
-							<a href="{{ block.buttonLink.url }}" class="button text-span" data-text="{{ block.buttonLink.text }}">{{ block.buttonLink.text }}</a>
+					{% default %}
 
-						{% case "videoEmbed" %}
-							<div class="responsive-embed widescreen">{{ block.videoEmbed|raw }}</div>
-
-						{% case "callout" %}
-							<div class="callout">
-								<h3>{{ block.header }}</h3>
-								{{ block.text }}
-							</div>
-
-						{% for asset in block.image %}
-							<figure><img src="{{ asset.getUrl('entryImageBodyInsert') }}" width="{{ asset.getWidth('entryImageBodyInsert') }}" height="{{ asset.getHeight('entryImageBodyInsert') }}" alt="{{ asset.title }}"></figure>
-						{% endfor %}
-
-						{% default %}
-
-					{% endswitch %}
-				{% endfor %}
-			</div>
+				{% endswitch %}
+			{% endfor %}
 		</div>
 	</section>
 {% endblock %}

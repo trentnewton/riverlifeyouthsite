@@ -21,42 +21,40 @@
 	{% include 'partials/hero.html' %}
 	{% include 'partials/lead-section.html' %}
 	<section class="page-secondary">
-		<div class="row">
-			<div class="column" itemprop="text">
-				{% for block in entry.body %}
-					{% switch block.type %}
+		<div class="row column" itemprop="text">
+			{% for block in entry.body %}
+				{% switch block.type %}
 
-						{% case "header" %}
-							<h4>{{ block.header }}</h4>
+					{% case "header" %}
+						<h4>{{ block.header }}</h4>
 
-						{% case "text" %}
+					{% case "text" %}
+						{{ block.text }}
+
+					{% case "pullquote" %}
+						<blockquote>{{ block.quote|striptags('<strong><em><br>')|raw|nl2br }}{% if block.citation|length %}<cite>{{ block.citation }}</cite>{% endif %}</blockquote>
+
+					{% case "button" %}
+						{{ block.buttonLink }}
+
+					{% case "videoEmbed" %}
+						<div class="responsive-embed widescreen">{{ block.videoEmbed|raw }}</div>
+
+					{% case "callout" %}
+						<div class="callout">
+							<h3>{{ block.header }}</h3>
 							{{ block.text }}
+						</div>
 
-						{% case "pullquote" %}
-							<blockquote>{{ block.quote|striptags('<strong><em><br>')|raw|nl2br }}{% if block.citation|length %}<cite>{{ block.citation }}</cite>{% endif %}</blockquote>
+					{% case "image" %}
+						{% for asset in block.image %}
+							<figure><img src="{{ asset.getUrl('entryImageBodyInsert') }}" width="{{ asset.getWidth('entryImageBodyInsert') }}" height="{{ asset.getHeight('entryImageBodyInsert') }}" alt="{{ asset.title }}"></figure>
+						{% endfor %}
 
-						{% case "button" %}
-							{{ block.buttonLink }}
+					{% default %}
 
-						{% case "videoEmbed" %}
-							<div class="responsive-embed widescreen">{{ block.videoEmbed|raw }}</div>
-
-						{% case "callout" %}
-							<div class="callout">
-								<h3>{{ block.header }}</h3>
-								{{ block.text }}
-							</div>
-
-						{% case "image" %}
-							{% for asset in block.image %}
-								<figure><img src="{{ asset.getUrl('entryImageBodyInsert') }}" width="{{ asset.getWidth('entryImageBodyInsert') }}" height="{{ asset.getHeight('entryImageBodyInsert') }}" alt="{{ asset.title }}"></figure>
-							{% endfor %}
-
-						{% default %}
-
-					{% endswitch %}
-				{% endfor %}
-			</div>
+				{% endswitch %}
+			{% endfor %}
 		</div>
 		<div class="row small-up-2 medium-up-4 media-gallery" id="lightgallery">
 			{% for myAsset in entry.gallery %}
@@ -65,10 +63,8 @@
 				</a>
 			{% endfor %}
 		</div>
-		<div class="row">
-			<div class="column">
-				{% include 'partials/social.html' %}
-			</div>
+		<div class="row column">
+			{% include 'partials/social.html' %}
 		</div>
 		{# next and previous posts #}
 		{% include 'partials/next-and-previous-posts.html' %}
