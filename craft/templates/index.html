@@ -24,61 +24,57 @@
 	<section class="hero-section home">
 		<div class="hero-bg-overlay home--hero-bg-overlay"></div>
 		<div data-interchange="[partials/video-background-image.html, small], [partials/video-background.html, large]"></div>
-		<div class="row carousel-slider">
-			<div class="small-12 column">
-				<div class="homepage-slider">
-					<div class="homepage-slide logo-slide align-self-middle">
-						<svg class="hero-logo" width="181.1px" height="181.1px" aria-labelledby="logo" preserveAspectRatio="xMinYMin meet"><use xlink:href="#logo"></use></svg>
-					</div>
-					<div class="homepage-slide term-flyer align-self-middle">
-						<div class="container">
-							<h3>{{ 'Current Term' | translate }}</h3>
-							<div class="term-dates row small-up-1 medium-up-2">
-								{% set category = craft.categories.group('events') %}
-								{% set entries = craft.entries.section('event').relatedTo(category).order('dayStart asc') %}
-								{% for entry in entries %}
-									<div class="column{% if entry.category | length < 2 %} {{ entry.category.first().title|lower }}{% else %} all-grades{% endif %}">
-										<span class="event-information">{{ entry.dayStart | date('d.m') }}{% if entry.dayEnd | length %}&nbsp;+&nbsp;{{ entry.dayEnd | date('d.m') }}{% endif %}&nbsp;&#8212;&nbsp;{{ entry.title }} ({% if entry.category | length > 2 %}7&#8212;12{% else %}{{ entry.category.first().title }}{% endif %})</span>
-									</div>
-								{% endfor %}
+		<div class="row column carousel-slider">
+			<div class="homepage-slider">
+				<div class="homepage-slide logo-slide align-self-middle">
+					<svg class="hero-logo" width="181.1px" height="181.1px" aria-labelledby="logo" preserveAspectRatio="xMinYMin meet"><use xlink:href="#logo"></use></svg>
+				</div>
+				<div class="homepage-slide term-flyer align-self-middle">
+					<h3>{{ 'Current Term' | translate }}</h3>
+					<div class="term-dates row small-up-1 medium-up-2">
+						{% set category = craft.categories.group('events') %}
+						{% set entries = craft.entries.section('event').relatedTo(category).order('dayStart asc') %}
+						{% for entry in entries %}
+							<div class="column{% if entry.category | length < 2 %} {{ entry.category.first().title|lower }}{% else %} all-grades{% endif %}">
+								<span class="event-information">{{ entry.dayStart | date('d.m') }}{% if entry.dayEnd | length %}&nbsp;+&nbsp;{{ entry.dayEnd | date('d.m') }}{% endif %}&nbsp;&#8212;&nbsp;{{ entry.title }} ({% if entry.category | length > 2 %}7&#8212;12{% else %}{{ entry.category.first().title }}{% endif %})</span>
 							</div>
-							{% for entry in craft.entries.section('whatsOn').find() %}
-								<a href="{{ entry.url }}" title="{{ 'More on term events' | translate }}" data-text="{{ 'More' | translate }}" class="button tiny text-span">{{ 'More' | translate }}</a>
-							{% endfor %}
-						</div>
+						{% endfor %}
 					</div>
-					{% for entry in craft.entries.section('event').search('frontPageSlide:1') %}
-						<div class="homepage-slide event-flyer align-self-middle">
-							<p class="day">
-								{% if entry.reoccurring %}
-									{{ entry.dayStart | date('l') }}s at {{ entry.timeStart | date('g') }}<sub>{{ entry.timeStart | date('a') }}</sub>
-								{% else %}
-									{{ entry.dayStart | date('l') }}{% if entry.dayEnd | length %}&mdash;{{ entry.dayEnd | date('l') }}{% endif %}&nbsp;{{ entry.dayStart | date('F j') }}<sup>{{ entry.dayStart | date('S') }}</sup>
-								{% endif %}
-							</p>
-							<h3 class="event-title">{{ entry.title }}</h3>
-							{% if entry.reoccurring or entry.dayEnd %}
-							{% else %}
-								{% if entry.timeStart | length %}
-									<p class="time">
-										{{ entry.timeStart | date('g:ia') }}{% if entry.timeEnd | length %}&mdash;{{ entry.timeEnd | date('g:ia') }}{% endif %}
-									</p>
-								{% endif %}
-							{% endif %}
-							{% if entry.details | length %}
-								<p class="details">{{ entry.details }}</p>
-							{% endif %}
-							{% if entry.location | length %}
-								<p class="location">
-									{{ 'at' | translate }}&nbsp;{{ entry.location.first().title }}
-								</p>
-							{% endif %}
-							{% if entry.moreInfoLink|length %}
-								<a href="{{ entry.moreInfoLink.url }}"{% if entry.moreInfoLink.target | length %} target="{{ entry.moreInfoLink.target }}"{% endif %} title="{{ 'More about ' | translate }}{{ entry.title }}" class="button text-span" data-text="{{ entry.moreInfoLink.text }}">{{ entry.moreInfoLink.text }}</a>
-							{% endif %}
-						</div>
+					{% for entry in craft.entries.section('whatsOn').find() %}
+						<a href="{{ entry.url }}" title="{{ 'More on term events' | translate }}" data-text="{{ 'More' | translate }}" class="button tiny text-span">{{ 'More' | translate }}</a>
 					{% endfor %}
 				</div>
+				{% for entry in craft.entries.section('event').search('frontPageSlide:1') %}
+					<div class="homepage-slide event-flyer align-self-middle">
+						<p class="day">
+							{% if entry.reoccurring %}
+								{{ entry.dayStart | date('l') }}s at {{ entry.timeStart | date('g') }}<sub>{{ entry.timeStart | date('a') }}</sub>
+							{% else %}
+								{{ entry.dayStart | date('l') }}{% if entry.dayEnd | length %}&mdash;{{ entry.dayEnd | date('l') }}{% endif %}&nbsp;{{ entry.dayStart | date('F j') }}<sup>{{ entry.dayStart | date('S') }}</sup>
+							{% endif %}
+						</p>
+						<h3 class="event-title">{{ entry.title }}</h3>
+						{% if entry.reoccurring or entry.dayEnd %}
+						{% else %}
+							{% if entry.timeStart | length %}
+								<p class="time">
+									{{ entry.timeStart | date('g:ia') }}{% if entry.timeEnd | length %}&mdash;{{ entry.timeEnd | date('g:ia') }}{% endif %}
+								</p>
+							{% endif %}
+						{% endif %}
+						{% if entry.details | length %}
+							<p class="details">{{ entry.details }}</p>
+						{% endif %}
+						{% if entry.location | length %}
+							<p class="location">
+								{{ 'at' | translate }}&nbsp;{{ entry.location.first().title }}
+							</p>
+						{% endif %}
+						{% if entry.moreInfoLink|length %}
+							<a href="{{ entry.moreInfoLink.url }}"{% if entry.moreInfoLink.target | length %} target="{{ entry.moreInfoLink.target }}"{% endif %} title="{{ 'More about ' | translate }}{{ entry.title }}" class="button text-span" data-text="{{ entry.moreInfoLink.text }}">{{ entry.moreInfoLink.text }}</a>
+						{% endif %}
+					</div>
+				{% endfor %}
 			</div>
 		</div>
 	</section>
