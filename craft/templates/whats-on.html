@@ -60,7 +60,7 @@
 											{% endif %}
 											{# event details and link #}
 											{% if entry.details|length or entry.moreInfoLink|length %}
-												<div class="top-container flex-container">
+												<div class="top-container flex-container{% if not entry.moreInfoLink|length %} reveal-full{% endif %}">
 													{% if entry.details|length %}
 														<div class="reveal-details flex-container">
 															<div class="reveal-information flex-child-auto">

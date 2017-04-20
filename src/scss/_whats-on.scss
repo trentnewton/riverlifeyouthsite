@@ -101,7 +101,6 @@
 	.event-meta {
 		font-size: rem-calc(12);
 		text-transform: uppercase;
-		// letter-spacing: 3px;
 
 		span {
 			margin-right: rem-calc(15);
@@ -205,21 +204,6 @@
 
 	}
 
-	// .reveal-details,
-	// .reveal-more-info {
-
-	// 	p {
-	// 		margin-bottom: $paragraph-margin-bottom;
-	// 	}
-
-	// }
-
-	// .reveal-time,
-	// .reveal-location {
-
-
-	// }
-
 	.reveal-details,
 	.reveal-time {
 		padding-right: $accordion-content-padding;
@@ -239,6 +223,16 @@
 
 		.reveal-information {
 			margin-left: 0;
+		}
+
+	}
+
+	.reveal-full {
+
+		.reveal-details {
+			width: 100%;
+			padding-right: 0;
+			border-right: 0px solid $body-font-color;
 		}
 
 	}
