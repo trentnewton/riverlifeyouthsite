@@ -48,7 +48,10 @@
 
 					{% case "image" %}
 						{% for asset in block.image %}
-							<figure><img src="{{ asset.getUrl('entryImageBodyInsert') }}" width="{{ asset.getWidth('entryImageBodyInsert') }}" height="{{ asset.getHeight('entryImageBodyInsert') }}" alt="{{ asset.title }}"></figure>
+						{% set dominantColor = craft.imager.getDominantColor(asset) %}
+							<figure class="image-colour" style="background-color: {{ dominantColor }}">
+								<img src="{{ asset.getUrl('entryImageBodyInsert') }}" width="{{ asset.getWidth('entryImageBodyInsert') }}" height="{{ asset.getHeight('entryImageBodyInsert') }}" alt="{{ asset.title }}">
+							</figure>
 						{% endfor %}
 
 					{% default %}
@@ -58,8 +61,11 @@
 		</div>
 		<div class="row small-up-2 medium-up-4 media-gallery" id="lightgallery">
 			{% for myAsset in entry.gallery %}
+			{% set dominantColor = craft.imager.getDominantColor(myAsset) %}
 				<a class="column" href="{{ myAsset.getUrl('galleryImage') }}">
-					<img alt="{{ myAsset.title }}" class="thumbnail" src="{{ myAsset.getUrl('galleryImageThumbnail') }}" width="540" height="54">
+					<div class="image-colour" style="background-color: {{ dominantColor }}">
+						<img alt="{{ myAsset.title }}" class="thumbnail" src="{{ myAsset.getUrl('galleryImageThumbnail') }}" width="540" height="54">
+					</div>
 				</a>
 			{% endfor %}
 		</div>

@@ -88,7 +88,10 @@
 					<div class="row align-left">
 						<div class="small-12 medium-10 column">
 							{% for asset in block.image %}
-								<figure><img src="{{ asset.getUrl('entryImageBodyInsert') }}" width="{{ asset.getWidth('entryImageBodyInsert') }}" height="{{ asset.getHeight('entryImageBodyInsert') }}" alt="{{ asset.title }}"></figure>
+							{% set dominantColor = craft.imager.getDominantColor(asset) %}
+								<figure class="image-colour" style="background-color: {{ dominantColor }}">
+									<img src="{{ asset.getUrl('entryImageBodyInsert') }}" width="{{ asset.getWidth('entryImageBodyInsert') }}" height="{{ asset.getHeight('entryImageBodyInsert') }}" alt="{{ asset.title }}" class="lazyload">
+								</figure>
 							{% endfor %}
 						</div>
 					</div>

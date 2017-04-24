@@ -2924,7 +2924,7 @@
 	"\/bower_components\/jquery\/dist\/jquery.min.js": {
 		"ft": 64,
 		"mi": 1,
-		"oA": 1,
+		"oA": 2,
 		"oAP": "\/bower_components\/jquery\/dist\/jquery.min.js",
 		"oF": 0,
 		"sC": 1,
@@ -30500,6 +30500,12 @@
 		"oAP": "\/craft\/config\/general.php",
 		"oF": 0
 		},
+	"\/craft\/config\/imager.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/config\/imager.php",
+		"oF": 0
+		},
 	"\/craft\/config\/license.key": {
 		"ft": 8192,
 		"oA": 2,
@@ -30999,6 +31005,452 @@
 		"ft": 8192,
 		"oA": 1,
 		"oAP": "\/craft\/plugins\/htmlcache\/templates\/_settings.html",
+		"oF": 0
+		},
+	"\/craft\/plugins\/imager\/composer.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "\/craft\/plugins\/imager\/composer-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"\/craft\/plugins\/imager\/composer.lock": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/imager\/composer.lock",
+		"oF": 0
+		},
+	"\/craft\/plugins\/imager\/config.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/imager\/config.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/imager\/controllers\/ImagerController.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/imager\/controllers\/ImagerController.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/imager\/elementactions\/Imager_ClearTransformsElementAction.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/imager\/elementactions\/Imager_ClearTransformsElementAction.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/imager\/ImagerPlugin.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/imager\/ImagerPlugin.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/imager\/models\/Imager_ConfigModel.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/imager\/models\/Imager_ConfigModel.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/imager\/models\/Imager_ImageModel.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/imager\/models\/Imager_ImageModel.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/imager\/models\/Imager_ImagePathsModel.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/imager\/models\/Imager_ImagePathsModel.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/imager\/resources\/icon-mask.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/imager\/resources\/icon-mask.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/craft\/plugins\/imager\/resources\/icon.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/imager\/resources\/icon.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/craft\/plugins\/imager\/services\/Imager_AwsService.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/imager\/services\/Imager_AwsService.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/imager\/services\/Imager_ColorService.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/imager\/services\/Imager_ColorService.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/imager\/services\/Imager_GcsService.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/imager\/services\/Imager_GcsService.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/imager\/services\/ImagerService.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/imager\/services\/ImagerService.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/imager\/tasks\/Imager_GifsicleTask.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/imager\/tasks\/Imager_GifsicleTask.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/imager\/tasks\/Imager_JpegoptimTask.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/imager\/tasks\/Imager_JpegoptimTask.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/imager\/tasks\/Imager_JpegtranTask.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/imager\/tasks\/Imager_JpegtranTask.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/imager\/tasks\/Imager_MozjpegTask.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/imager\/tasks\/Imager_MozjpegTask.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/imager\/tasks\/Imager_OptipngTask.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/imager\/tasks\/Imager_OptipngTask.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/imager\/tasks\/Imager_PngquantTask.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/imager\/tasks\/Imager_PngquantTask.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/imager\/tasks\/Imager_TinyPngTask.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/imager\/tasks\/Imager_TinyPngTask.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/imager\/variables\/ImagerVariable.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/imager\/variables\/ImagerVariable.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/imager\/vendor\/autoload.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/imager\/vendor\/autoload.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/imager\/vendor\/composer\/autoload_classmap.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/imager\/vendor\/composer\/autoload_classmap.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/imager\/vendor\/composer\/autoload_files.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/imager\/vendor\/composer\/autoload_files.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/imager\/vendor\/composer\/autoload_namespaces.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/imager\/vendor\/composer\/autoload_namespaces.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/imager\/vendor\/composer\/autoload_psr4.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/imager\/vendor\/composer\/autoload_psr4.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/imager\/vendor\/composer\/autoload_real.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/imager\/vendor\/composer\/autoload_real.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/imager\/vendor\/composer\/autoload_static.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/imager\/vendor\/composer\/autoload_static.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/imager\/vendor\/composer\/ClassLoader.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/imager\/vendor\/composer\/ClassLoader.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/imager\/vendor\/composer\/installed.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "\/craft\/plugins\/imager\/vendor\/composer\/installed-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"\/craft\/plugins\/imager\/vendor\/composer\/LICENSE": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/imager\/vendor\/composer\/LICENSE",
+		"oF": 0
+		},
+	"\/craft\/plugins\/imager\/vendor\/ksubileau\/color-thief-php\/composer.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "\/craft\/plugins\/imager\/vendor\/ksubileau\/color-thief-php\/composer-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"\/craft\/plugins\/imager\/vendor\/ksubileau\/color-thief-php\/lib\/ColorThief\/CMap.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/imager\/vendor\/ksubileau\/color-thief-php\/lib\/ColorThief\/CMap.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/imager\/vendor\/ksubileau\/color-thief-php\/lib\/ColorThief\/ColorThief.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/imager\/vendor\/ksubileau\/color-thief-php\/lib\/ColorThief\/ColorThief.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/imager\/vendor\/ksubileau\/color-thief-php\/lib\/ColorThief\/Image\/Adapter\/GDImageAdapter.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/imager\/vendor\/ksubileau\/color-thief-php\/lib\/ColorThief\/Image\/Adapter\/GDImageAdapter.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/imager\/vendor\/ksubileau\/color-thief-php\/lib\/ColorThief\/Image\/Adapter\/GmagickImageAdapter.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/imager\/vendor\/ksubileau\/color-thief-php\/lib\/ColorThief\/Image\/Adapter\/GmagickImageAdapter.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/imager\/vendor\/ksubileau\/color-thief-php\/lib\/ColorThief\/Image\/Adapter\/IImageAdapter.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/imager\/vendor\/ksubileau\/color-thief-php\/lib\/ColorThief\/Image\/Adapter\/IImageAdapter.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/imager\/vendor\/ksubileau\/color-thief-php\/lib\/ColorThief\/Image\/Adapter\/ImageAdapter.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/imager\/vendor\/ksubileau\/color-thief-php\/lib\/ColorThief\/Image\/Adapter\/ImageAdapter.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/imager\/vendor\/ksubileau\/color-thief-php\/lib\/ColorThief\/Image\/Adapter\/ImagickImageAdapter.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/imager\/vendor\/ksubileau\/color-thief-php\/lib\/ColorThief\/Image\/Adapter\/ImagickImageAdapter.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/imager\/vendor\/ksubileau\/color-thief-php\/lib\/ColorThief\/Image\/ImageLoader.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/imager\/vendor\/ksubileau\/color-thief-php\/lib\/ColorThief\/Image\/ImageLoader.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/imager\/vendor\/ksubileau\/color-thief-php\/lib\/ColorThief\/PQueue.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/imager\/vendor\/ksubileau\/color-thief-php\/lib\/ColorThief\/PQueue.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/imager\/vendor\/ksubileau\/color-thief-php\/lib\/ColorThief\/VBox.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/imager\/vendor\/ksubileau\/color-thief-php\/lib\/ColorThief\/VBox.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/imager\/vendor\/tinify\/tinify\/.gitignore": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/imager\/vendor\/tinify\/tinify\/.gitignore",
+		"oF": 0
+		},
+	"\/craft\/plugins\/imager\/vendor\/tinify\/tinify\/.travis.yml": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/imager\/vendor\/tinify\/tinify\/.travis.yml",
+		"oF": 0
+		},
+	"\/craft\/plugins\/imager\/vendor\/tinify\/tinify\/composer.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "\/craft\/plugins\/imager\/vendor\/tinify\/tinify\/composer-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"\/craft\/plugins\/imager\/vendor\/tinify\/tinify\/composer.lock": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/imager\/vendor\/tinify\/tinify\/composer.lock",
+		"oF": 0
+		},
+	"\/craft\/plugins\/imager\/vendor\/tinify\/tinify\/lib\/data\/cacert.pem": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/imager\/vendor\/tinify\/tinify\/lib\/data\/cacert.pem",
+		"oF": 0
+		},
+	"\/craft\/plugins\/imager\/vendor\/tinify\/tinify\/lib\/Tinify.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/imager\/vendor\/tinify\/tinify\/lib\/Tinify.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/imager\/vendor\/tinify\/tinify\/lib\/Tinify\/Client.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/imager\/vendor\/tinify\/tinify\/lib\/Tinify\/Client.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/imager\/vendor\/tinify\/tinify\/lib\/Tinify\/Exception.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/imager\/vendor\/tinify\/tinify\/lib\/Tinify\/Exception.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/imager\/vendor\/tinify\/tinify\/lib\/Tinify\/Result.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/imager\/vendor\/tinify\/tinify\/lib\/Tinify\/Result.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/imager\/vendor\/tinify\/tinify\/lib\/Tinify\/ResultMeta.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/imager\/vendor\/tinify\/tinify\/lib\/Tinify\/ResultMeta.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/imager\/vendor\/tinify\/tinify\/lib\/Tinify\/Source.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/imager\/vendor\/tinify\/tinify\/lib\/Tinify\/Source.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/imager\/vendor\/tinify\/tinify\/LICENSE": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/imager\/vendor\/tinify\/tinify\/LICENSE",
+		"oF": 0
+		},
+	"\/craft\/plugins\/imager\/vendor\/tinify\/tinify\/phpunit.xml": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/imager\/vendor\/tinify\/tinify\/phpunit.xml",
+		"oF": 0
+		},
+	"\/craft\/plugins\/imager\/vendor\/tinify\/tinify\/README.md": {
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"eLB": 0,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 0,
+		"oAP": "\/craft\/plugins\/imager\/vendor\/tinify\/tinify\/README.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"\/craft\/plugins\/imager\/vendor\/tinify\/tinify\/test\/curl_mock.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/imager\/vendor\/tinify\/tinify\/test\/curl_mock.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/imager\/vendor\/tinify\/tinify\/test\/examples\/dummy.png": {
+		"ft": 32768,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/craft\/plugins\/imager\/vendor\/tinify\/tinify\/test\/examples\/dummy.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/craft\/plugins\/imager\/vendor\/tinify\/tinify\/test\/examples\/voormedia.png": {
+		"ft": 32768,
+		"iS": 17150,
+		"oA": 0,
+		"oAP": "\/craft\/plugins\/imager\/vendor\/tinify\/tinify\/test\/examples\/voormedia.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/craft\/plugins\/imager\/vendor\/tinify\/tinify\/test\/helper.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/imager\/vendor\/tinify\/tinify\/test\/helper.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/imager\/vendor\/tinify\/tinify\/test\/integration.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/imager\/vendor\/tinify\/tinify\/test\/integration.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/imager\/vendor\/tinify\/tinify\/test\/TinifyClientTest.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/imager\/vendor\/tinify\/tinify\/test\/TinifyClientTest.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/imager\/vendor\/tinify\/tinify\/test\/TinifyResultMetaTest.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/imager\/vendor\/tinify\/tinify\/test\/TinifyResultMetaTest.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/imager\/vendor\/tinify\/tinify\/test\/TinifyResultTest.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/imager\/vendor\/tinify\/tinify\/test\/TinifyResultTest.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/imager\/vendor\/tinify\/tinify\/test\/TinifySourceTest.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/imager\/vendor\/tinify\/tinify\/test\/TinifySourceTest.php",
+		"oF": 0
+		},
+	"\/craft\/plugins\/imager\/vendor\/tinify\/tinify\/test\/TinifyTest.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/plugins\/imager\/vendor\/tinify\/tinify\/test\/TinifyTest.php",
 		"oF": 0
 		},
 	"\/craft\/plugins\/minify\/CHANGELOG.md": {
@@ -33361,16 +33813,40 @@
 		"oAP": "\/build\/craft\/storage\/runtime\/cache",
 		"oF": 0
 		},
+	"\/craft\/storage\/runtime\/compiled_templates\/01\/010397af2bbc8a9185d6cc1af709e149f94ca93a297cbbc02651eacd75422a83.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/storage\/runtime\/compiled_templates\/01\/010397af2bbc8a9185d6cc1af709e149f94ca93a297cbbc02651eacd75422a83.php",
+		"oF": 0
+		},
 	"\/craft\/storage\/runtime\/compiled_templates\/04\/043c1d097575c0121e8cdf72964d57aa71a6bf85a3f5a64f242c6b4a59ee9a6f.php": {
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/craft\/storage\/runtime\/compiled_templates\/04\/043c1d097575c0121e8cdf72964d57aa71a6bf85a3f5a64f242c6b4a59ee9a6f.php",
 		"oF": 0
 		},
+	"\/craft\/storage\/runtime\/compiled_templates\/0c\/0c392270775c87e78258751621d1b7e459558643aef9eafd7d772e20406be2da.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/storage\/runtime\/compiled_templates\/0c\/0c392270775c87e78258751621d1b7e459558643aef9eafd7d772e20406be2da.php",
+		"oF": 0
+		},
 	"\/craft\/storage\/runtime\/compiled_templates\/17\/17914ab200ac2e7e36c6ab087e471a86b7859d8fabe583fc47074f06c00e3372.php": {
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/craft\/storage\/runtime\/compiled_templates\/17\/17914ab200ac2e7e36c6ab087e471a86b7859d8fabe583fc47074f06c00e3372.php",
+		"oF": 0
+		},
+	"\/craft\/storage\/runtime\/compiled_templates\/20\/20c8c48825f4f337d49c25203310e35b73a128a7eb51dccfb3b1becfa40e9d4b.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/storage\/runtime\/compiled_templates\/20\/20c8c48825f4f337d49c25203310e35b73a128a7eb51dccfb3b1becfa40e9d4b.php",
+		"oF": 0
+		},
+	"\/craft\/storage\/runtime\/compiled_templates\/30\/30913d9f47842081c782c9ab62e8afbcebb5bcb38e8972fd161d761d2662180d.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/storage\/runtime\/compiled_templates\/30\/30913d9f47842081c782c9ab62e8afbcebb5bcb38e8972fd161d761d2662180d.php",
 		"oF": 0
 		},
 	"\/craft\/storage\/runtime\/compiled_templates\/3e\/3e570f26cd958716dafceff05a8900db87b33642950de9fa4c4d957c5ee7a6ab.php": {
@@ -33385,10 +33861,28 @@
 		"oAP": "\/craft\/storage\/runtime\/compiled_templates\/49\/4901944d62f9dd026df9ab21cb7f9f8c2b59605c435b125c844e159f483b8a86.php",
 		"oF": 0
 		},
+	"\/craft\/storage\/runtime\/compiled_templates\/56\/56ab1e1867a490f81de7d829ffa4aebce5b58af6738008af706d5de2b54ae47b.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/storage\/runtime\/compiled_templates\/56\/56ab1e1867a490f81de7d829ffa4aebce5b58af6738008af706d5de2b54ae47b.php",
+		"oF": 0
+		},
+	"\/craft\/storage\/runtime\/compiled_templates\/5a\/5abcbfef023baabd34ea9a9f559bf18f10e46b2a84e94d5f839b8ee811bd06ba.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/storage\/runtime\/compiled_templates\/5a\/5abcbfef023baabd34ea9a9f559bf18f10e46b2a84e94d5f839b8ee811bd06ba.php",
+		"oF": 0
+		},
 	"\/craft\/storage\/runtime\/compiled_templates\/5f\/5fa6d393d82de5ba63d6a816c80ff5aa0282d20209afa239d62257771e879a40.php": {
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/craft\/storage\/runtime\/compiled_templates\/5f\/5fa6d393d82de5ba63d6a816c80ff5aa0282d20209afa239d62257771e879a40.php",
+		"oF": 0
+		},
+	"\/craft\/storage\/runtime\/compiled_templates\/65\/65f8748ed388debfe9eeff035fee3f4e25e795d94bb1874ca26c1e7e6dd2ff84.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/storage\/runtime\/compiled_templates\/65\/65f8748ed388debfe9eeff035fee3f4e25e795d94bb1874ca26c1e7e6dd2ff84.php",
 		"oF": 0
 		},
 	"\/craft\/storage\/runtime\/compiled_templates\/66\/662266771627ab730377157ddcb46d675e330c55b4f5e2b8a6d23efe3d08a1e1.php": {
@@ -33397,16 +33891,58 @@
 		"oAP": "\/craft\/storage\/runtime\/compiled_templates\/66\/662266771627ab730377157ddcb46d675e330c55b4f5e2b8a6d23efe3d08a1e1.php",
 		"oF": 0
 		},
+	"\/craft\/storage\/runtime\/compiled_templates\/74\/749580a2fbfd99784791d0052e7c4b5e83da78bf16263dd071387a54fc93dcf3.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/storage\/runtime\/compiled_templates\/74\/749580a2fbfd99784791d0052e7c4b5e83da78bf16263dd071387a54fc93dcf3.php",
+		"oF": 0
+		},
+	"\/craft\/storage\/runtime\/compiled_templates\/8d\/8dcebfd7f7e29c58839e1afe513cff747727555b8efc2cbc570ce59af14926d5.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/storage\/runtime\/compiled_templates\/8d\/8dcebfd7f7e29c58839e1afe513cff747727555b8efc2cbc570ce59af14926d5.php",
+		"oF": 0
+		},
+	"\/craft\/storage\/runtime\/compiled_templates\/91\/912e1ea2390e6816523ef5f5f9728e4be9407296560773c8c42b484a90f2ff0f.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/storage\/runtime\/compiled_templates\/91\/912e1ea2390e6816523ef5f5f9728e4be9407296560773c8c42b484a90f2ff0f.php",
+		"oF": 0
+		},
 	"\/craft\/storage\/runtime\/compiled_templates\/93\/931b26656fcdae988f0005533f3819e407a482f41e36c73dbe023aa9dc9ef221.php": {
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/craft\/storage\/runtime\/compiled_templates\/93\/931b26656fcdae988f0005533f3819e407a482f41e36c73dbe023aa9dc9ef221.php",
 		"oF": 0
 		},
+	"\/craft\/storage\/runtime\/compiled_templates\/98\/98259d522ecd46ff965811963dbc1988de57b1c723fbd918e3d85b3e500b8c6f.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/storage\/runtime\/compiled_templates\/98\/98259d522ecd46ff965811963dbc1988de57b1c723fbd918e3d85b3e500b8c6f.php",
+		"oF": 0
+		},
+	"\/craft\/storage\/runtime\/compiled_templates\/a9\/a953171320392f7ff99d47455ca2fc4a6c827d0120b4597b35eb7837c10ebfd9.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/storage\/runtime\/compiled_templates\/a9\/a953171320392f7ff99d47455ca2fc4a6c827d0120b4597b35eb7837c10ebfd9.php",
+		"oF": 0
+		},
 	"\/craft\/storage\/runtime\/compiled_templates\/ad\/ad535ebbce6d2307fc5baddbf41ade882506727ea92af7d765643ab38446800c.php": {
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/craft\/storage\/runtime\/compiled_templates\/ad\/ad535ebbce6d2307fc5baddbf41ade882506727ea92af7d765643ab38446800c.php",
+		"oF": 0
+		},
+	"\/craft\/storage\/runtime\/compiled_templates\/b9\/b9cac788356659f21d651c79ba6f543389e502475d551c31631c6678cf98b5f2.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/storage\/runtime\/compiled_templates\/b9\/b9cac788356659f21d651c79ba6f543389e502475d551c31631c6678cf98b5f2.php",
+		"oF": 0
+		},
+	"\/craft\/storage\/runtime\/compiled_templates\/c2\/c2758c201a2e46736de00448d123b5e952feae2684b06bf40606ab8e61cf6c31.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/storage\/runtime\/compiled_templates\/c2\/c2758c201a2e46736de00448d123b5e952feae2684b06bf40606ab8e61cf6c31.php",
 		"oF": 0
 		},
 	"\/craft\/storage\/runtime\/compiled_templates\/d5\/d5115c743c62ab4ccd0bd1ebaafcdc70d7c215351485e10976f826ccc76f6d31.php": {
@@ -33427,16 +33963,40 @@
 		"oAP": "\/craft\/storage\/runtime\/compiled_templates\/da\/dac81b329d70fb326452a4df959d1ac37c7bf270fa8ee8087e835f627e536047.php",
 		"oF": 0
 		},
+	"\/craft\/storage\/runtime\/compiled_templates\/dc\/dc0a267ffcdbd7176f273dc419c897c6ac9730a78a437b59bc468e4dfa339b6a.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/storage\/runtime\/compiled_templates\/dc\/dc0a267ffcdbd7176f273dc419c897c6ac9730a78a437b59bc468e4dfa339b6a.php",
+		"oF": 0
+		},
+	"\/craft\/storage\/runtime\/compiled_templates\/dc\/dcf7506418401256adf16ca0a563b89190f66e7a8a456608e1b75f72ac631a71.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/storage\/runtime\/compiled_templates\/dc\/dcf7506418401256adf16ca0a563b89190f66e7a8a456608e1b75f72ac631a71.php",
+		"oF": 0
+		},
 	"\/craft\/storage\/runtime\/compiled_templates\/e3\/e363370a5abbc5e3eeb73fe573b2ad826ceda4302ba8bfd158a0397ea88e18df.php": {
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/craft\/storage\/runtime\/compiled_templates\/e3\/e363370a5abbc5e3eeb73fe573b2ad826ceda4302ba8bfd158a0397ea88e18df.php",
 		"oF": 0
 		},
-	"\/craft\/storage\/runtime\/HTML\/4.8.0,8f8ac40458a1a4631e0dfd4a0ed502a22734a66a,1.ser": {
+	"\/craft\/storage\/runtime\/compiled_templates\/f6\/f61ce3024a1eb15f0cbfd95a5957f3ea69d73615521297f1e467e3bb296fd5ee.php": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/craft\/storage\/runtime\/HTML\/4.8.0,8f8ac40458a1a4631e0dfd4a0ed502a22734a66a,1.ser",
+		"oAP": "\/craft\/storage\/runtime\/compiled_templates\/f6\/f61ce3024a1eb15f0cbfd95a5957f3ea69d73615521297f1e467e3bb296fd5ee.php",
+		"oF": 0
+		},
+	"\/craft\/storage\/runtime\/compiled_templates\/fc\/fc68e26eb7100040862653a90ad1fccc4bc48955f772c4830076c4ca952eb09d.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/storage\/runtime\/compiled_templates\/fc\/fc68e26eb7100040862653a90ad1fccc4bc48955f772c4830076c4ca952eb09d.php",
+		"oF": 0
+		},
+	"\/craft\/storage\/runtime\/HTML\/4.9.2,68cea0b171927914e20293510ec5268a4f00e73b,1.ser": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/craft\/storage\/runtime\/HTML\/4.9.2,68cea0b171927914e20293510ec5268a4f00e73b,1.ser",
 		"oF": 0
 		},
 	"\/craft\/storage\/runtime\/htmlcache\/settings.json": {
@@ -33459,10 +34019,10 @@
 		"oAP": "\/craft\/storage\/runtime\/state\/state.bin",
 		"oF": 0
 		},
-	"\/craft\/storage\/runtime\/URI\/4.8.0,3478238e680361cd87bf880f5b3cc50a1e7abc6c,1.ser": {
+	"\/craft\/storage\/runtime\/URI\/4.9.2,3478238e680361cd87bf880f5b3cc50a1e7abc6c,1.ser": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/craft\/storage\/runtime\/URI\/4.8.0,3478238e680361cd87bf880f5b3cc50a1e7abc6c,1.ser",
+		"oAP": "\/craft\/storage\/runtime\/URI\/4.9.2,3478238e680361cd87bf880f5b3cc50a1e7abc6c,1.ser",
 		"oF": 0
 		},
 	"\/craft\/storage\/web.config": {
@@ -34142,6 +34702,16 @@
 		"oF": 1,
 		"oIPL": 0,
 		"opt": 1,
+		"q": 100
+		},
+	"\/public\/images\/covers\/_entryImageBodyInsert\/media.jpg": {
+		"ft": 16384,
+		"iS": 23594,
+		"oA": 0,
+		"oAP": "\/public\/images\/covers\/_entryImageBodyInsert\/media.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
 		"q": 100
 		},
 	"\/public\/images\/covers\/_metaImageFit\/13009728_10153565811533499_214780686_o.jpg": {
@@ -36655,98 +37225,92 @@
 			},
 		{
 			"followForSyntaxChecking": 0,
-			"linkedFileAbbreviatedPath": "\/bower_components\/jquery\/dist\/jquery.min.js",
+			"linkedFileAbbreviatedPath": "\/bower_components\/animsition\/dist\/js\/animsition.min.js",
 			"position": 1,
 			"type": 0
 			},
 		{
 			"followForSyntaxChecking": 0,
-			"linkedFileAbbreviatedPath": "\/bower_components\/animsition\/dist\/js\/animsition.min.js",
+			"linkedFileAbbreviatedPath": "\/bower_components\/clip-path-polygon\/build\/clip-path-polygon.min.js",
 			"position": 2,
 			"type": 0
 			},
 		{
 			"followForSyntaxChecking": 0,
-			"linkedFileAbbreviatedPath": "\/bower_components\/clip-path-polygon\/build\/clip-path-polygon.min.js",
+			"linkedFileAbbreviatedPath": "\/bower_components\/protonet\/jquery.inview\/jquery.inview.min.js",
 			"position": 3,
 			"type": 0
 			},
 		{
 			"followForSyntaxChecking": 0,
-			"linkedFileAbbreviatedPath": "\/bower_components\/protonet\/jquery.inview\/jquery.inview.min.js",
+			"linkedFileAbbreviatedPath": "\/bower_components\/slick-carousel\/slick\/slick.min.js",
 			"position": 4,
 			"type": 0
 			},
 		{
 			"followForSyntaxChecking": 0,
-			"linkedFileAbbreviatedPath": "\/bower_components\/slick-carousel\/slick\/slick.min.js",
+			"linkedFileAbbreviatedPath": "\/bower_components\/foundation-sites\/js\/foundation.core.js",
 			"position": 5,
 			"type": 0
 			},
 		{
 			"followForSyntaxChecking": 0,
-			"linkedFileAbbreviatedPath": "\/bower_components\/foundation-sites\/js\/foundation.core.js",
+			"linkedFileAbbreviatedPath": "\/bower_components\/foundation-sites\/js\/foundation.util.box.js",
 			"position": 6,
 			"type": 0
 			},
 		{
 			"followForSyntaxChecking": 0,
-			"linkedFileAbbreviatedPath": "\/bower_components\/foundation-sites\/js\/foundation.util.box.js",
+			"linkedFileAbbreviatedPath": "\/bower_components\/foundation-sites\/js\/foundation.util.keyboard.js",
 			"position": 7,
 			"type": 0
 			},
 		{
 			"followForSyntaxChecking": 0,
-			"linkedFileAbbreviatedPath": "\/bower_components\/foundation-sites\/js\/foundation.util.keyboard.js",
+			"linkedFileAbbreviatedPath": "\/bower_components\/foundation-sites\/js\/foundation.util.mediaQuery.js",
 			"position": 8,
 			"type": 0
 			},
 		{
 			"followForSyntaxChecking": 0,
-			"linkedFileAbbreviatedPath": "\/bower_components\/foundation-sites\/js\/foundation.util.mediaQuery.js",
+			"linkedFileAbbreviatedPath": "\/bower_components\/foundation-sites\/js\/foundation.util.motion.js",
 			"position": 9,
 			"type": 0
 			},
 		{
 			"followForSyntaxChecking": 0,
-			"linkedFileAbbreviatedPath": "\/bower_components\/foundation-sites\/js\/foundation.util.motion.js",
+			"linkedFileAbbreviatedPath": "\/bower_components\/foundation-sites\/js\/foundation.util.timerAndImageLoader.js",
 			"position": 10,
 			"type": 0
 			},
 		{
 			"followForSyntaxChecking": 0,
-			"linkedFileAbbreviatedPath": "\/bower_components\/foundation-sites\/js\/foundation.util.timerAndImageLoader.js",
+			"linkedFileAbbreviatedPath": "\/bower_components\/foundation-sites\/js\/foundation.util.triggers.js",
 			"position": 11,
 			"type": 0
 			},
 		{
 			"followForSyntaxChecking": 0,
-			"linkedFileAbbreviatedPath": "\/bower_components\/foundation-sites\/js\/foundation.util.triggers.js",
+			"linkedFileAbbreviatedPath": "\/bower_components\/foundation-sites\/js\/foundation.accordion.js",
 			"position": 12,
 			"type": 0
 			},
 		{
 			"followForSyntaxChecking": 0,
-			"linkedFileAbbreviatedPath": "\/bower_components\/foundation-sites\/js\/foundation.accordion.js",
+			"linkedFileAbbreviatedPath": "\/bower_components\/foundation-sites\/js\/foundation.interchange.js",
 			"position": 13,
 			"type": 0
 			},
 		{
 			"followForSyntaxChecking": 0,
-			"linkedFileAbbreviatedPath": "\/bower_components\/foundation-sites\/js\/foundation.interchange.js",
+			"linkedFileAbbreviatedPath": "\/bower_components\/foundation-sites\/js\/foundation.offcanvas.js",
 			"position": 14,
 			"type": 0
 			},
 		{
 			"followForSyntaxChecking": 0,
-			"linkedFileAbbreviatedPath": "\/bower_components\/foundation-sites\/js\/foundation.offcanvas.js",
-			"position": 15,
-			"type": 0
-			},
-		{
-			"followForSyntaxChecking": 0,
 			"linkedFileAbbreviatedPath": "\/bower_components\/foundation-sites\/js\/foundation.reveal.js",
-			"position": 16,
+			"position": 15,
 			"type": 0
 			}
 		]

@@ -66,28 +66,6 @@ function detectIE() {
 
 	// configure animsition
 
-	// $('.animsition').animsition({
-	//     inClass: 'fade-in',
-	//     outClass: 'fade-out',
-	//     inDuration: 1500,
-	//     outDuration: 800,
-	//     linkElement: '.animsition-link',
-	//     // e.g. linkElement: 'a:not([target="_blank"]):not([href^="#"])'
-	//     loading: true,
-	//     loadingParentElement: 'body', //animsition wrapper element
-	//     loadingClass: 'animsition-loading',
-	//     loadingInner: '', // e.g '<img src="loading.svg" />'
-	//     timeout: false,
-	//     timeoutCountdown: 5000,
-	//     onLoadEvent: true,
-	//     browser: [ 'animation-duration', '-webkit-animation-duration'],
-	//     // "browser" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
-	//     // The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
-	//     overlay : true,
-	//     overlayClass : 'animsition-overlay-slide',
-	//     overlayParentElement : 'body',
-	//     transition: function(url){ window.location.href = url; }
-	// });
 	$('.animsition').animsition({
 		inClass: 'overlay-slide-in-top',
 		outClass: 'overlay-slide-out-top',
@@ -154,6 +132,29 @@ function detectIE() {
 			}
 		});
 
+		$('.image-colour').bind('inview', function (event, visible) {
+			if (visible === true) {
+				// detect when images are loaded
+
+				// Iterate through all image wrappers
+				$('.image-colour').each(function () {
+					// Get the wrapper and image elements
+					var $wrapper = $(this);
+					var img = $wrapper.find('img')[0];
+
+					// Create temp image and set the src
+					var tempImg = new Image();
+					tempImg.src = img.src;
+
+					// Callback when the image is loaded
+					tempImg.onload = function () {
+						// Add .loaded class to wrapper
+						$wrapper.addClass('loaded');
+					};
+				});
+			}
+		});
+
 	});
 
 	// Get IE or Edge browser version
@@ -195,7 +196,7 @@ function detectIE() {
 		var ministry3Small = [[0, 20], [100, 0], [100, 100], [0, 100]];
 		var quote = [[100, 70], [0, 0], [0, 100]];
 		var quoteSmall = [[0, 0], [100, 30], [100, 70], [0, 100]];
-		var slope = [[0, 0], [100, 20], [100, 100], [0, 100]];
+		var slope = [[0, 0], [100, 17], [100, 100], [0, 100]];
 		var slopeSmall = [[0, 0], [100, 10], [100, 100], [0, 100]];
 		var current_width = $(window).width();
 		if (current_width < 640){
@@ -288,7 +289,7 @@ function detectIE() {
 				$('#thanks').fadeIn();
 				$('#error').fadeOut();
 				$('.spinner').hide();
-				$('#ajax-contact').each(function (){
+				$('#ajax-contact').each(function () {
 					this.reset();
 				});
 			} else {

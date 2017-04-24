@@ -447,3 +447,20 @@ p.post-meta {
 .previous-post {
 	text-align: right;
 }
+
+// lazy loading images
+
+.image-colour {
+	display: inline-block;
+	margin-bottom: $thumbnail-margin-bottom;
+
+	img {
+		opacity: 0;
+		transition: opacity $transition-time ease;
+	}
+
+	&.loaded img {
+		opacity: 1;
+	}
+
+}
