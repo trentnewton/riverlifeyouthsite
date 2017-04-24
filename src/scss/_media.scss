@@ -61,7 +61,7 @@
 
 	img.thumbnail {
 		width: 100%;
-		transition: border $transition-time;
+		transition: $thumbnail-transition;
 		margin-bottom: 0;
 	}
 
