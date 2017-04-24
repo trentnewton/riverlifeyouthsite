@@ -61,9 +61,8 @@
 		</div>
 		<div class="row small-up-2 medium-up-4 media-gallery" id="lightgallery">
 			{% for myAsset in entry.gallery %}
-			{% set dominantColor = craft.imager.getDominantColor(myAsset) %}
 				<a class="column" href="{{ myAsset.getUrl('galleryImage') }}">
-					<div class="image-colour" style="background-color: {{ dominantColor }}">
+					<div class="image-colour" style="background-color: grey">
 						<img alt="{{ myAsset.title }}" class="thumbnail" src="{{ myAsset.getUrl('galleryImageThumbnail') }}" width="540" height="54">
 					</div>
 				</a>
