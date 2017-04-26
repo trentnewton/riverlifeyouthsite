@@ -350,6 +350,17 @@ p.post-meta {
 
 }
 
+// page elements
+
+figcaption {
+	color: $white;
+	font-size: rem-calc(12);
+	text-transform: uppercase;
+	letter-spacing: rem-calc(3);
+	background: rgba($black, 0.4);
+	padding: rem-calc(10);
+}
+
 // social
 
 .social-share.menu {

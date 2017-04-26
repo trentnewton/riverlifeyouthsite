@@ -35,6 +35,7 @@
 					{% set dominantColor = craft.imager.getDominantColor(asset) %}
 						<figure class="image-colour" style="background-color: {{ dominantColor }}">
 							<img src="{{ asset.getUrl('entryImageBodyInsert') }}" width="{{ asset.getWidth('entryImageBodyInsert') }}" height="{{ asset.getHeight('entryImageBodyInsert') }}" alt="{{ asset.title }}">
+							<figcaption>{{ block.caption }}</figcaption>
 						</figure>
 					{% endfor %}
 
