@@ -6,7 +6,7 @@
 			<p class="post-meta">
 				{% for entry in craft.entries.section('blogOverview').find() %}
 					<a href="{{ entry.url }}">
-						<span class="back"><svg class="icon icon-chevron-up"><use xlink:href="#icon-chevron-up"></use></svg>{{ 'Back' | translate }}</span>
+						<span class="back"><svg class="icon icon-chevron-left"><use xlink:href="#icon-chevron-left"></use></svg>{{ 'Back' | translate }}</span>
 					</a>
 				{% endfor %}
 				<span class="author" itemprop="name"><svg class="icon icon-user"><use xlink:href="#icon-user"></use></svg>{{ entry.author.fullName }}</span>
@@ -17,7 +17,7 @@
 			<p class="post-meta">
 				{% for entry in craft.entries.section('mediaOverview').find() %}
 					<a href="{{ entry.url }}">
-						<span class="back"><svg class="icon icon-chevron-up"><use xlink:href="#icon-chevron-up"></use></svg>{{ 'Back' | translate }}</span>
+						<span class="back"><svg class="icon icon-chevron-left"><use xlink:href="#icon-chevron-left"></use></svg>{{ 'Back' | translate }}</span>
 					</a>
 				{% endfor %}
 			</p>
