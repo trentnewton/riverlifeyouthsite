@@ -50,7 +50,7 @@
 							{% if entry.reoccurring %}
 								{{ entry.dayStart | date('l') }}s at {{ entry.timeStart | date('g') }}<sub>{{ entry.timeStart | date('a') }}</sub>
 							{% else %}
-								{{ entry.dayStart | date('l') }}{% if entry.dayEnd | length %}&mdash;{{ entry.dayEnd | date('l') }}{% endif %}&nbsp;{{ entry.dayStart | date('F j') }}<sup>{{ entry.dayStart | date('S') }}</sup>
+								{{ entry.dayStart | date('l') }}{% if entry.dayEnd | length %}&ndash;{{ entry.dayEnd | date('l') }}{% endif %}&nbsp;{{ entry.dayStart | date('F j') }}<sup>{{ entry.dayStart | date('S') }}</sup>
 							{% endif %}
 						</p>
 						<h3 class="event-title">{{ entry.title }}</h3>
@@ -58,7 +58,7 @@
 						{% else %}
 							{% if entry.timeStart | length %}
 								<p class="time">
-									{{ entry.timeStart | date('g:ia') }}{% if entry.timeEnd | length %}&mdash;{{ entry.timeEnd | date('g:ia') }}{% endif %}
+									{{ entry.timeStart | date('g:ia') }}{% if entry.timeEnd | length %}&ndash;{{ entry.timeEnd | date('g:ia') }}{% endif %}
 								</p>
 							{% endif %}
 						{% endif %}

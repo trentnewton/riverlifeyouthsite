@@ -28,7 +28,7 @@
 											<div class="flex-child-auto event-details">
 												<p class="event-name">{{ entry.title }}</p>
 												<p class="event-meta">
-													<span class="time"><svg class="icon icon-clock"><use xlink:href="#icon-clock"></use></svg>{% if entry.timeStart | length %}{{ entry.timeStart | date('g:ia') }}{% if entry.timeEnd | length %}&mdash;{{ entry.timeEnd | date('g:ia') }}{% endif %}{% else %}N/A{% endif %}</span>
+													<span class="time"><svg class="icon icon-clock"><use xlink:href="#icon-clock"></use></svg>{% if entry.timeStart | length %}{{ entry.timeStart | date('g:ia') }}{% if entry.timeEnd | length %}&ndash;{{ entry.timeEnd | date('g:ia') }}{% endif %}{% else %}N/A{% endif %}</span>
 													<span class="location"><svg class="icon icon-location"><use xlink:href="#icon-location"></use></svg>{% if entry.location | length %}{{ entry.location.first().title }}{% endif %}</span>
 												</p>
 											</div>
@@ -88,7 +88,7 @@
 													</div>
 													<div class="reveal-information flex-child-auto">
 														<p class="title">{{ 'Time' | translate }}</p>
-														<p class="information">({{ entry.dayStart | date('l') }}{% if entry.dayEnd | length %}&mdash;{{ entry.dayEnd | date('l') }}{% endif %}) {% if entry.timeStart | length %}{{ entry.timeStart | date('g:ia') }}{% if entry.timeEnd | length %}&mdash;{{ entry.timeEnd | date('g:ia') }}{% endif %}{% else %}N/A{% endif %}</p>
+														<p class="information">({{ entry.dayStart | date('l') }}{% if entry.dayEnd | length %}&ndash;{{ entry.dayEnd | date('l') }}{% endif %}) {% if entry.timeStart | length %}{{ entry.timeStart | date('g:ia') }}{% if entry.timeEnd | length %}&ndash;{{ entry.timeEnd | date('g:ia') }}{% endif %}{% else %}N/A{% endif %}</p>
 													</div>
 												</div>
 												<div class="reveal-location flex-container">
