@@ -22,6 +22,7 @@
 				{% if metatags.xUaCompatible is defined %}<meta http-equiv="x-ua-compatible" content="{{ metatags.xUaCompatible }}">{% endif %}
 				{% if metatags.viewport is defined %}<meta name="viewport" content="{{ metatags.viewport }}">{% endif %}
 				<title>{% if title is defined %}{{ title }} - {% endif %}{{ siteName }}</title>
+				<link type="text/plain" rel="author" href="{{ siteRoot }}humans.txt">
 				{% for asset in metatags.appleTouchIcon %}
 					<link rel="apple-touch-icon" sizes="180x180" href="{{ asset.url }}">
 				{% endfor %}
@@ -61,6 +62,7 @@
 					<meta property="og:image:height" content="{{ asset.getHeight('metaImageFit') }}">
 					<meta property="og:image:type" content="image/jpg">
 				{% endfor #}
+				<meta property="og:locale" content="{{ craft.locale }}">
 				{% if metatags.facebookAppId is defined %}<meta property="fb:app_id" content="{{ metatags.facebookAppId }}">{% endif %}
 				<meta name="twitter:title" content="{{ title }}">
 				{% if description is defined %}<meta name="twitter:description" content="{{ description }}">{% endif %}

@@ -27,6 +27,7 @@
 				{% else %}
 					<title>{% if title is defined %}{{ title }} - {% endif %}{{ siteName }}</title>
 				{% endif %}
+				<link type="text/plain" rel="author" href="{{ siteRoot }}humans.txt">
 				{% for asset in metatags.appleTouchIcon %}
 					<link rel="apple-touch-icon" sizes="180x180" href="{{ asset.url }}">
 				{% endfor %}
@@ -92,6 +93,7 @@
 					<meta property="og:image:height" content="{{ asset.getHeight('metaImageFit') }}">
 					<meta property="og:image:type" content="{{ asset.getMimeType('metaImageFit') }}">
 				{% endfor %}
+				<meta property="og:locale" content="{{ craft.locale }}">
 				{% if metatags.facebookAppId is defined %}<meta property="fb:app_id" content="{{ metatags.facebookAppId }}">{% endif %}
 				{% if entry.type.handle == 'homepage' %}
 					<meta name="twitter:title" content="{{ siteName }}">
