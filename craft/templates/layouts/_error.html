@@ -42,9 +42,6 @@
 				{% if metatags.themeColor and metatags.themeColor != '#000000' %}
 					<meta name="theme-color" content="{{ metatags.themeColor }}">
 				{% endif %}
-				{% if general.copyright is defined %}
-					<meta name="rights" content="{{ general.copyright }}">
-				{% endif %}
 				{% if metatags.handheldfriendly is defined %}<meta name="HandheldFriendly" content="true">{% endif %}
 				{% if description is defined %}<meta name="description" content="{{ description }}">{% endif %}
 				<meta itemprop="name" content="{{ title }}">
@@ -60,7 +57,7 @@
 					<meta property="og:image" content="{{ siteUrl }}{{ asset.getUrl('metaImageFit') }}">
 					<meta property="og:image:width" content="{{ asset.getWidth('metaImageFit') }}">
 					<meta property="og:image:height" content="{{ asset.getHeight('metaImageFit') }}">
-					<meta property="og:image:type" content="image/jpg">
+					<meta property="og:image:type" content="{{ asset.getMimeType('metaImageFit') }}">
 				{% endfor #}
 				<meta property="og:locale" content="{{ craft.locale }}">
 				{% if metatags.facebookAppId is defined %}<meta property="fb:app_id" content="{{ metatags.facebookAppId }}">{% endif %}
@@ -79,7 +76,6 @@
 					<meta name="twitter:image:height" content="{{ asset.getHeight('metaImageFit') }}">
 					<meta name="twitter:image:alt" content="{% if title is defined %}{{ title }} - {% endif %}{{ siteName }}">
 				{% endfor #}
-				{% if metatags.rating is defined %}<meta name="rating" content="{{ metatags.rating }}">{% endif %}
 				{% if metatags.robots is defined %}<meta name="robots" content="{{ metatags.robots }}">{% endif %}
 				<link rel="alternate" type="application/rss+xml" title="{{ siteName }} | {% for entry in craft.entries.section('blogOverview').find() %}{{ entry.title }}{% endfor %}" href="{{ siteRoot }}feed.rss" />
 				{# load fonts from Typekit #}
