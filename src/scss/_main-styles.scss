@@ -40,6 +40,7 @@ select,
 textarea,
 button {
 	font-family: $body-font-family;
+	font-synthesis: none;
 	transition: all $transition-time ease-in-out;
 
 	&:focus {
