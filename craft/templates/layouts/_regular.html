@@ -62,11 +62,6 @@
 						<meta itemprop="name" content="{{ siteName }}">
 					{% endif %}
 				{% endif %}
-				{% if summary != null %}
-					<meta itemprop="description" content="{{ summary }}&hellip;">
-				{% elseif description is defined %}
-					<meta itemprop="description" content="{{ description }}">
-				{% endif %}
 				{% if entry.type.handle == 'homepage' %}
 					<meta property="og:title" content="{{ siteName }}">
 				{% else %}
