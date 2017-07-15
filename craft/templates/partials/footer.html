@@ -1,21 +1,24 @@
 <footer class="footer-section" itemscope itemtype="http://schema.org/WPFooter">
 	<div class="top-footer">
-		<div class="row column scroll-to-top">
-			<a href="#top" title="{{ 'Scroll to Top' | translate }}">
+		<div class="row column scroll-to-top relative">
+			<svg class="squiggle-footer"><use xlink:href="#squiggle"></use></svg>
+			<svg class="squwilines-footer"><use xlink:href="#squwilines"></use></svg>
+			<svg class="doubletriangle-footer"><use xlink:href="#doubletriangle"></use></svg>
+			<a href="#top" title="{{ 'Scroll to Top' | translate }}" data-smooth-scroll data-animation-duration="1000" data-animation-easing="swing">
 				<svg class="icon icon-chevron-up"><use xlink:href="#icon-chevron-up"></use></svg>
 			</a>
 		</div>
 		<ul class="social-links menu align-center">
 			{% if socialMedia.facebookPage is defined %}
 				<li>
-					<a href="{{ socialMedia.facebookPage }}" title="{{ 'Like us on Facebook' | translate }}" class="facebook" target="_blank">
+					<a href="{{ socialMedia.facebookPage }}" title="{{ 'Like us on Facebook' | translate }}" class="facebook" target="_blank" rel="noreferrer noopener">
 						<svg class="icon icon-facebook"><use xlink:href="#icon-facebook"></use></svg>
 					</a>
 				</li>
 			{% endif %}
 			{% if socialMedia.instagramUserName is defined %}
 				<li>
-					<a href="https://www.instagram.com/{{ socialMedia.instagramUserName }}" title="{{ 'Follow us on Instagram' | translate }}" class="instagram" target="_blank">
+					<a href="https://www.instagram.com/{{ socialMedia.instagramUserName }}" title="{{ 'Follow us on Instagram' | translate }}" class="instagram" target="_blank" rel="noreferrer noopener">
 						<svg class="icon icon-instagram"><use xlink:href="#icon-instagram"></use></svg>
 					</a>
 				</li>
@@ -29,14 +32,14 @@
 			{% endif %}
 			{% if socialMedia.vimeoPage is defined %}
 				<li>
-					<a href="{{ socialMedia.vimeoPage }}" title="{{ 'View our Vimeo page' | translate }}" class="vimeo" target="_blank">
+					<a href="{{ socialMedia.vimeoPage }}" title="{{ 'View our Vimeo page' | translate }}" class="vimeo" target="_blank" rel="noreferrer noopener">
 						<svg class="icon icon-vimeo"><use xlink:href="#icon-vimeo"></use></svg>
 					</a>
 				</li>
 			{% endif %}
 			{% if socialMedia.twitterHandle is defined %}
 				<li>
-					<a href="https://twitter.com/@{{ socialMedia.twitterHandle }}" title="{{ 'Follow us on Twitter' | translate }}" class="twitter" target="_blank">
+					<a href="https://twitter.com/@{{ socialMedia.twitterHandle }}" title="{{ 'Follow us on Twitter' | translate }}" class="twitter" target="_blank" rel="noreferrer noopener">
 						<svg class="icon icon-twitter"><use xlink:href="#icon-twitter"></use></svg>
 					</a>
 				</li>
@@ -50,7 +53,7 @@
 	</div>
 	{% if socialMedia.snapchatUsername is defined %}
 		<div class="reveal text-center" id="snapchatModal" data-reveal data-animation-in="fade-in" data-animation-out="fade-out">
-			<object data="https://feelinsonice-hrd.appspot.com/web/deeplink/snapcode?username={{ socialMedia.snapchatUsername }}&amp;type=PNG" type="image/png" height="200" width="200">
+			<object data="https://feelinsonice-hrd.appspot.com/web/deeplink/snapcode?username={{ socialMedia.snapchatUsername }}&amp;type=SVG" height="200" width="200">
 				<object data="//www.snapchat.com/deeplink/static/image/ghost.svg" height="200" width="200"></object>
 			</object>
 			<h5>{{ socialMedia.snapchatUsername }}</h5>
@@ -62,7 +65,7 @@
 	<div class="bottom-footer">
 		<div class="row column">
 			<p class="of-text">{{ 'A ministry of' | translate }}</p>
-			<a href="{% if general.footerLogoLink is defined %}{{ general.footerLogoLink }}{% endif %}" title="{% for block in svgLogos.logos.type('footerLogo').limit(1) %}{% switch block.type %}{% case "footerLogo" %}{{ block.footerLogoName }}{% default %}{% endswitch %}{% endfor %}" target="_blank">
+			<a href="{% if general.footerLogoLink is defined %}{{ general.footerLogoLink }}{% endif %}" title="{% for block in svgLogos.logos.type('footerLogo').limit(1) %}{% switch block.type %}{% case "footerLogo" %}{{ block.footerLogoName }}{% default %}{% endswitch %}{% endfor %}" target="_blank" rel="noreferrer noopener">
 				<svg class="footer-logo" aria-labelledby="logo" preserveAspectRatio="xMinYMin meet"><use xlink:href="#footer-logo"></use></svg>
 			</a>
 			{% if general.copyright is defined %}

@@ -21,7 +21,9 @@
 	{% include 'partials/hero.html' %}
 	{% include 'partials/lead-section.html' %}
 	<section class="page-secondary">
-		<div class="row column" itemprop="text">
+		<div class="row column relative" itemprop="text">
+			<svg class="spg-media-left svg-page-graphic svg-page-graphic--left"><use xlink:href="#doubletriangle"></use></svg>
+			<svg class="spg-media-right svg-page-graphic svg-page-graphic--right"><use xlink:href="#circlewwaves"></use></svg>
 			{% for block in entry.body %}
 				{% switch block.type %}
 
@@ -61,14 +63,164 @@
 			{% endfor %}
 		</div>
 		<div class="row small-up-2 medium-up-4 media-gallery" id="lightgallery">
-			{% for myAsset in entry.gallery %}
+			{# {% for myAsset in entry.gallery %}
 			{% set dominantColor = craft.imager.getDominantColor(myAsset) %}
 				<a class="column" href="{{ myAsset.getUrl('galleryImage') }}">
 					<div class="image-colour" style="background-color: {{ dominantColor }}">
 						<img alt="{{ myAsset.title }}" class="thumbnail" src="{{ myAsset.getUrl('galleryImageThumbnail') }}" width="540" height="54">
 					</div>
 				</a>
-			{% endfor %}
+			{% endfor %} #}
+<a class="column" href="/images/gallery/_galleryImage/poolparty1.jpg"><div class="image-colour loaded" style="background-color: #38432f">
+<img alt="Poolparty1" class="thumbnail" src="/images/gallery/_galleryImageThumbnail/poolparty1.jpg" width="540" height="54"></div>
+</a>
+<a class="column" href="/images/gallery/_galleryImage/poolparty2.jpg"><div class="image-colour loaded" style="background-color: #334231">
+<img alt="Poolparty2" class="thumbnail" src="/images/gallery/_galleryImageThumbnail/poolparty2.jpg" width="540" height="54"></div>
+</a>
+<a class="column" href="/images/gallery/_galleryImage/poolparty3.jpg"><div class="image-colour loaded" style="background-color: #444444">
+<img alt="Poolparty3" class="thumbnail" src="/images/gallery/_galleryImageThumbnail/poolparty3.jpg" width="540" height="54"></div>
+</a>
+<a class="column" href="/images/gallery/_galleryImage/poolparty4.jpg"><div class="image-colour loaded" style="background-color: #454545">
+<img alt="Poolparty4" class="thumbnail" src="/images/gallery/_galleryImageThumbnail/poolparty4.jpg" width="540" height="54"></div>
+</a>
+<a class="column" href="/images/gallery/_galleryImage/poolparty5.jpg"><div class="image-colour loaded" style="background-color: #373d32">
+<img alt="Poolparty5" class="thumbnail" src="/images/gallery/_galleryImageThumbnail/poolparty5.jpg" width="540" height="54"></div>
+</a>
+<a class="column" href="/images/gallery/_galleryImage/poolparty6.jpg"><div class="image-colour loaded" style="background-color: #464646">
+<img alt="Poolparty6" class="thumbnail" src="/images/gallery/_galleryImageThumbnail/poolparty6.jpg" width="540" height="54"></div>
+</a>
+<a class="column" href="/images/gallery/_galleryImage/poolparty7.jpg"><div class="image-colour loaded" style="background-color: #d9d9d9">
+<img alt="Poolparty7" class="thumbnail" src="/images/gallery/_galleryImageThumbnail/poolparty7.jpg" width="540" height="54"></div>
+</a>
+<a class="column" href="/images/gallery/_galleryImage/poolparty8.jpg"><div class="image-colour loaded" style="background-color: #363f3a">
+<img alt="Poolparty8" class="thumbnail" src="/images/gallery/_galleryImageThumbnail/poolparty8.jpg" width="540" height="54"></div>
+</a>
+<a class="column" href="/images/gallery/_galleryImage/poolparty9.jpg"><div class="image-colour loaded" style="background-color: #3b3f38">
+<img alt="Poolparty9" class="thumbnail" src="/images/gallery/_galleryImageThumbnail/poolparty9.jpg" width="540" height="54"></div>
+</a>
+<a class="column" href="/images/gallery/_galleryImage/poolparty10.jpg"><div class="image-colour loaded" style="background-color: #424242">
+<img alt="Poolparty10" class="thumbnail" src="/images/gallery/_galleryImageThumbnail/poolparty10.jpg" width="540" height="54"></div>
+</a>
+<a class="column" href="/images/gallery/_galleryImage/poolparty11.jpg"><div class="image-colour loaded" style="background-color: #3f3f3f">
+<img alt="Poolparty11" class="thumbnail" src="/images/gallery/_galleryImageThumbnail/poolparty11.jpg" width="540" height="54"></div>
+</a>
+<a class="column" href="/images/gallery/_galleryImage/poolparty12.jpg"><div class="image-colour loaded" style="background-color: #272519">
+<img alt="Poolparty12" class="thumbnail" src="/images/gallery/_galleryImageThumbnail/poolparty12.jpg" width="540" height="54"></div>
+</a>
+<a class="column" href="/images/gallery/_galleryImage/poolparty13.jpg"><div class="image-colour loaded" style="background-color: #444444">
+<img alt="Poolparty13" class="thumbnail" src="/images/gallery/_galleryImageThumbnail/poolparty13.jpg" width="540" height="54"></div>
+</a>
+<a class="column" href="/images/gallery/_galleryImage/poolparty14.jpg"><div class="image-colour loaded" style="background-color: #3f3f3f">
+<img alt="Poolparty14" class="thumbnail" src="/images/gallery/_galleryImageThumbnail/poolparty14.jpg" width="540" height="54"></div>
+</a>
+<a class="column" href="/images/gallery/_galleryImage/poolparty15.jpg"><div class="image-colour loaded" style="background-color: #d6d6d6">
+<img alt="Poolparty15" class="thumbnail" src="/images/gallery/_galleryImageThumbnail/poolparty15.jpg" width="540" height="54"></div>
+</a>
+<a class="column" href="/images/gallery/_galleryImage/poolparty16.jpg"><div class="image-colour loaded" style="background-color: #454545">
+<img alt="Poolparty16" class="thumbnail" src="/images/gallery/_galleryImageThumbnail/poolparty16.jpg" width="540" height="54"></div>
+</a>
+<a class="column" href="/images/gallery/_galleryImage/poolparty17.jpg"><div class="image-colour loaded" style="background-color: #2a261c">
+<img alt="Poolparty17" class="thumbnail" src="/images/gallery/_galleryImageThumbnail/poolparty17.jpg" width="540" height="54"></div>
+</a>
+<a class="column" href="/images/gallery/_galleryImage/poolparty18.jpg"><div class="image-colour loaded" style="background-color: #d4d4d4">
+<img alt="Poolparty18" class="thumbnail" src="/images/gallery/_galleryImageThumbnail/poolparty18.jpg" width="540" height="54"></div>
+</a>
+<a class="column" href="/images/gallery/_galleryImage/poolparty19.jpg"><div class="image-colour loaded" style="background-color: #232118">
+<img alt="Poolparty19" class="thumbnail" src="/images/gallery/_galleryImageThumbnail/poolparty19.jpg" width="540" height="54"></div>
+</a>
+<a class="column" href="/images/gallery/_galleryImage/poolparty20.jpg"><div class="image-colour loaded" style="background-color: #25241b">
+<img alt="Poolparty20" class="thumbnail" src="/images/gallery/_galleryImageThumbnail/poolparty20.jpg" width="540" height="54"></div>
+</a>
+<a class="column" href="/images/gallery/_galleryImage/poolparty21.jpg"><div class="image-colour loaded" style="background-color: #35342a">
+<img alt="Poolparty21" class="thumbnail" src="/images/gallery/_galleryImageThumbnail/poolparty21.jpg" width="540" height="54"></div>
+</a>
+<a class="column" href="/images/gallery/_galleryImage/poolparty22.jpg"><div class="image-colour loaded" style="background-color: #3b3a31">
+<img alt="Poolparty22" class="thumbnail" src="/images/gallery/_galleryImageThumbnail/poolparty22.jpg" width="540" height="54"></div>
+</a>
+<a class="column" href="/images/gallery/_galleryImage/poolparty23.jpg"><div class="image-colour loaded" style="background-color: #454545">
+<img alt="Poolparty23" class="thumbnail" src="/images/gallery/_galleryImageThumbnail/poolparty23.jpg" width="540" height="54"></div>
+</a>
+<a class="column" href="/images/gallery/_galleryImage/poolparty24.jpg"><div class="image-colour loaded" style="background-color: #d4d4d4">
+<img alt="Poolparty24" class="thumbnail" src="/images/gallery/_galleryImageThumbnail/poolparty24.jpg" width="540" height="54"></div>
+</a>
+<a class="column" href="/images/gallery/_galleryImage/poolparty25.jpg"><div class="image-colour loaded" style="background-color: #4d4d4d">
+<img alt="Poolparty25" class="thumbnail" src="/images/gallery/_galleryImageThumbnail/poolparty25.jpg" width="540" height="54"></div>
+</a>
+<a class="column" href="/images/gallery/_galleryImage/poolparty26.jpg"><div class="image-colour loaded" style="background-color: #1e2013">
+<img alt="Poolparty26" class="thumbnail" src="/images/gallery/_galleryImageThumbnail/poolparty26.jpg" width="540" height="54"></div>
+</a>
+<a class="column" href="/images/gallery/_galleryImage/poolparty27.jpg"><div class="image-colour loaded" style="background-color: #3a361b">
+<img alt="Poolparty27" class="thumbnail" src="/images/gallery/_galleryImageThumbnail/poolparty27.jpg" width="540" height="54"></div>
+</a>
+<a class="column" href="/images/gallery/_galleryImage/poolparty28.jpg"><div class="image-colour loaded" style="background-color: #2f2417">
+<img alt="Poolparty28" class="thumbnail" src="/images/gallery/_galleryImageThumbnail/poolparty28.jpg" width="540" height="54"></div>
+</a>
+<a class="column" href="/images/gallery/_galleryImage/poolparty29.jpg"><div class="image-colour loaded" style="background-color: #16170f">
+<img alt="Poolparty29" class="thumbnail" src="/images/gallery/_galleryImageThumbnail/poolparty29.jpg" width="540" height="54"></div>
+</a>
+<a class="column" href="/images/gallery/_galleryImage/poolparty30.jpg"><div class="image-colour loaded" style="background-color: #d7c0a9">
+<img alt="Poolparty30" class="thumbnail" src="/images/gallery/_galleryImageThumbnail/poolparty30.jpg" width="540" height="54"></div>
+</a>
+<a class="column" href="/images/gallery/_galleryImage/poolparty31.jpg"><div class="image-colour loaded" style="background-color: #d2d2d2">
+<img alt="Poolparty31" class="thumbnail" src="/images/gallery/_galleryImageThumbnail/poolparty31.jpg" width="540" height="54"></div>
+</a>
+<a class="column" href="/images/gallery/_galleryImage/poolparty32.jpg"><div class="image-colour loaded" style="background-color: #d4c2ac">
+<img alt="Poolparty32" class="thumbnail" src="/images/gallery/_galleryImageThumbnail/poolparty32.jpg" width="540" height="54"></div>
+</a>
+<a class="column" href="/images/gallery/_galleryImage/poolparty33.jpg"><div class="image-colour loaded" style="background-color: #14140d">
+<img alt="Poolparty33" class="thumbnail" src="/images/gallery/_galleryImageThumbnail/poolparty33.jpg" width="540" height="54"></div>
+</a>
+<a class="column" href="/images/gallery/_galleryImage/poolparty34.jpg"><div class="image-colour loaded" style="background-color: #f3dbb1">
+<img alt="Poolparty34" class="thumbnail" src="/images/gallery/_galleryImageThumbnail/poolparty34.jpg" width="540" height="54"></div>
+</a>
+<a class="column" href="/images/gallery/_galleryImage/poolparty35.jpg"><div class="image-colour loaded" style="background-color: #f3d8a9">
+<img alt="Poolparty35" class="thumbnail" src="/images/gallery/_galleryImageThumbnail/poolparty35.jpg" width="540" height="54"></div>
+</a>
+<a class="column" href="/images/gallery/_galleryImage/poolparty36.jpg"><div class="image-colour loaded" style="background-color: #d1d1d1">
+<img alt="Poolparty36" class="thumbnail" src="/images/gallery/_galleryImageThumbnail/poolparty36.jpg" width="540" height="54"></div>
+</a>
+<a class="column" href="/images/gallery/_galleryImage/poolparty37.jpg"><div class="image-colour loaded" style="background-color: #12160e">
+<img alt="Poolparty37" class="thumbnail" src="/images/gallery/_galleryImageThumbnail/poolparty37.jpg" width="540" height="54"></div>
+</a>
+<a class="column" href="/images/gallery/_galleryImage/poolparty38.jpg"><div class="image-colour loaded" style="background-color: #3f3f3f">
+<img alt="Poolparty38" class="thumbnail" src="/images/gallery/_galleryImageThumbnail/poolparty38.jpg" width="540" height="54"></div>
+</a>
+<a class="column" href="/images/gallery/_galleryImage/poolparty39.jpg"><div class="image-colour loaded" style="background-color: #d1d1d1">
+<img alt="Poolparty39" class="thumbnail" src="/images/gallery/_galleryImageThumbnail/poolparty39.jpg" width="540" height="54"></div>
+</a>
+<a class="column" href="/images/gallery/_galleryImage/poolparty40.jpg"><div class="image-colour loaded" style="background-color: #dddddd">
+<img alt="Poolparty40" class="thumbnail" src="/images/gallery/_galleryImageThumbnail/poolparty40.jpg" width="540" height="54"></div>
+</a>
+<a class="column" href="/images/gallery/_galleryImage/poolparty41.jpg"><div class="image-colour loaded" style="background-color: #d3d3d3">
+<img alt="Poolparty41" class="thumbnail" src="/images/gallery/_galleryImageThumbnail/poolparty41.jpg" width="540" height="54"></div>
+</a>
+<a class="column" href="/images/gallery/_galleryImage/poolparty42.jpg"><div class="image-colour loaded" style="background-color: #444444">
+<img alt="Poolparty42" class="thumbnail" src="/images/gallery/_galleryImageThumbnail/poolparty42.jpg" width="540" height="54"></div>
+</a>
+<a class="column" href="/images/gallery/_galleryImage/poolparty43.jpg"><div class="image-colour loaded" style="background-color: #414141">
+<img alt="Poolparty43" class="thumbnail" src="/images/gallery/_galleryImageThumbnail/poolparty43.jpg" width="540" height="54"></div>
+</a>
+<a class="column" href="/images/gallery/_galleryImage/poolparty44.jpg"><div class="image-colour loaded" style="background-color: #d8d8d8">
+<img alt="Poolparty44" class="thumbnail" src="/images/gallery/_galleryImageThumbnail/poolparty44.jpg" width="540" height="54"></div>
+</a>
+<a class="column" href="/images/gallery/_galleryImage/poolparty45.jpg"><div class="image-colour loaded" style="background-color: #414141">
+<img alt="Poolparty45" class="thumbnail" src="/images/gallery/_galleryImageThumbnail/poolparty45.jpg" width="540" height="54"></div>
+</a>
+<a class="column" href="/images/gallery/_galleryImage/poolparty47.jpg"><div class="image-colour loaded" style="background-color: #42435c">
+<img alt="Poolparty47" class="thumbnail" src="/images/gallery/_galleryImageThumbnail/poolparty47.jpg" width="540" height="54"></div>
+</a>
+<a class="column" href="/images/gallery/_galleryImage/poolparty48.jpg"><div class="image-colour loaded" style="background-color: #242123">
+<img alt="Poolparty48" class="thumbnail" src="/images/gallery/_galleryImageThumbnail/poolparty48.jpg" width="540" height="54"></div>
+</a>
+<a class="column" href="/images/gallery/_galleryImage/poolparty49.jpg"><div class="image-colour loaded" style="background-color: #231e1e">
+<img alt="Poolparty49" class="thumbnail" src="/images/gallery/_galleryImageThumbnail/poolparty49.jpg" width="540" height="54"></div>
+</a>
+<a class="column" href="/images/gallery/_galleryImage/poolparty51.jpg"><div class="image-colour loaded" style="background-color: #211e21">
+<img alt="Poolparty51" class="thumbnail" src="/images/gallery/_galleryImageThumbnail/poolparty51.jpg" width="540" height="54"></div>
+</a>
+<a class="column" href="/images/gallery/_galleryImage/poolparty52.jpg"><div class="image-colour loaded" style="background-color: #2a2428">
+<img alt="Poolparty52" class="thumbnail" src="/images/gallery/_galleryImageThumbnail/poolparty52.jpg" width="540" height="54"></div>
+</a>
 		</div>
 		<div class="row column">
 			{% include 'partials/social.html' %}

@@ -1,0 +1,129 @@
+.main-navigation {
+	position: fixed;
+	z-index: 999;
+	width: 100%;
+	transition: all $transition-time;
+	background: linear-gradient(to bottom, rgba($black, 1) 0%,rgba($black, 0) 100%);
+	top: 0;
+}
+
+.headroom {
+	will-change: transform;
+	transition: transform 200ms linear;
+}
+
+.headroom--pinned {
+	transform: translateY(0%);
+}
+
+.headroom--unpinned {
+	transform: translateY(-100%);
+}
+
+.main-menu ul {
+	@extend .menu;
+}
+
+.logo-border {
+	position: absolute;
+	top: 0;
+	left: 0;
+	visibility: hidden;
+}
+
+.logo-border-path {
+	stroke: $anchor-color;
+	fill: transparent;
+	stroke-width: 9px;
+}
+
+.top-bar {
+	color: $white;
+
+	a.logo {
+		border-radius: 100%;
+		width: rem-calc(80);
+		height: rem-calc(49);
+		display: block;
+		box-shadow: none;
+		position: relative;
+		vertical-align: middle;
+		color: inherit;
+
+		&:hover,
+		&:focus {
+			color: $medium-gray;
+		}
+
+	}
+
+	.top-bar-logo {
+		fill: currentColor;
+	}
+
+	li > a {
+		color: inherit;
+		position: relative;
+		transition: all .3s ease;
+		font-weight: $global-weight-bold;
+		text-transform: uppercase;
+		letter-spacing: rem-calc(2);
+		margin-right: rem-calc(-2);
+
+		&::after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: rem-calc(3);
+			visibility: hidden;
+			transform: scaleX(0);
+			background: $anchor-color;
+			transition: all $transition-time ease;
+		}
+
+		&:hover,
+		&:focus,
+		&.active {
+			color: $medium-gray;
+		}
+
+
+		&:hover,
+		&:focus {
+
+			&::after {
+				transform: scaleX(1);
+				visibility: visible;
+			}
+
+		}
+
+	}
+
+	ul {
+		background: transparent;
+	}
+
+}
+
+.top-bar-title {
+
+	@include breakpoint(medium down) {
+		margin: 0 auto;
+	}
+
+}
+
+.menu-icon {
+	@include hamburger($white, $primary-color, 40px, 30px, 3px, 3);
+	position: absolute;
+	left: 1rem;
+	top: rem-calc(20);
+
+	&::after {
+		transition: all $transition-time ease-in-out;
+	}
+
+}

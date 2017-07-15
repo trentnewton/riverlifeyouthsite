@@ -6,7 +6,9 @@
 	{% include 'partials/hero.html' %}
 	{% include 'partials/lead-section.html' %}
 	<section class="page-secondary content">
-		<div class="row column" itemprop="text">
+		<div class="row column relative" itemprop="text">
+			<svg class="spg-regular-page-left svg-page-graphic svg-page-graphic--left"><use xlink:href="#triwlines"></use></svg>
+			<svg class="spg-regular-page-right svg-page-graphic svg-page-graphic--right"><use xlink:href="#squwiwavylines"></use></svg>
 			{% for block in entry.body %}
 				{% switch block.type %}
 

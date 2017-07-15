@@ -34,8 +34,10 @@
 				{% endfor %}
 				<link rel="manifest" href="{{ siteRoot }}manifest.json">
 				{% for asset in metatags.maskIcon %}
-					<link rel="mask-icon" href="{{ asset.url }}" color="#ff4169">
+					<link rel="mask-icon" href="{{ asset.url }}" color="#5bbad5">
 				{% endfor %}
+				<meta name="apple-mobile-web-app-title" content="{{ siteName }}">
+				<meta name="application-name" content="{{ siteName }}">
 				{# for asset in entry.coverImage %}
 					<link rel="image_src" href="{{ siteUrl }}{{ asset.getUrl('metaImageFit') }}">
 				{% endfor #}
@@ -93,23 +95,24 @@
 				{% endif %}
 	{% endminify %}
 				<style type="text/css">
-					{% include 'css/critical.css' %}
+					{% include 'assets/css/critical.css' %}
 				</style>
 	{% minify %}
 			</head>
 			<body class="error-page" itemscope itemtype="http://schema.org/WebPage">
 				{% include 'partials/svg.html' %}
+				<div id="main-navigation"></div>
 				{% block content %}
 					<p>If you see me, you haven’t set your <code>{% verbatim %}{% block content %}…{% endblock %}{% endverbatim %}</code> yet.</p>
 					<p>See Twig’s <a href="http://twig.sensiolabs.org/doc/templates.html#template-inheritance">Template Inheritance</a> documentation for an explanation.</p>
 				{% endblock %}
-				<script src="{{ siteRoot }}assets/js/app.js"></script>
+				<script src="{{ siteRoot }}dist/assets/js/app.js"></script>
 				<script src="http://cdnjs.cloudflare.com/ajax/libs/three.js/r58/three.min.js"></script>
 				<script>
 					{# generate css after the browser is finished loading #}
 					var cb = function () {
 						var l = document.createElement('link'); l.rel = 'stylesheet';
-						l.href = '{{ siteRoot }}assets/css/app.css';
+						l.href = '{{ siteRoot }}dist/assets/css/app.css';
 						var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
 					};
 					var raf = requestAnimationFrame || mozRequestAnimationFrame ||

@@ -1,5 +1,5 @@
 {% extends 'layouts/_regular' %}
-{% set heroTitle = 'ContacT' %}
+{% set heroTitle = entry.title %}
 {% set summary = null %}
 
 {% block content %}
@@ -8,7 +8,8 @@
 	<section class="contact-page page-secondary">
 		<div class="contact-details">
 			<div class="contact-form">
-				<div class="row column">
+				<div class="row column relative">
+					<svg class="spg-contact-right svg-page-graphic svg-page-graphic--right"><use xlink:href="#trianglewdots"></use></svg>
 					<h3 class="heading">{{ 'Contact Form' | translate }}</h3>
 					{% macro errorList(errors) %}
 						{% if errors %}
@@ -54,8 +55,8 @@
 								<label for="subject" class="left inline">{{ 'Subject' | translate }}</label>
 							</div>
 							<div class="small-9 medium-10 columns">
-								<span class="email">
-									<input type="email" id="subject" name="subject" value="{% if message is defined %}{{ message.subject }}{% endif %}" size="40" class="validates-as-required validates-as-email" aria-invalid="false" placeholder="Enter your email here" required>
+								<span class="subject">
+									<input type="text" id="subject" name="subject" value="{% if message is defined %}{{ message.subject }}{% endif %}" size="40" class="validates-as-required" aria-invalid="false" placeholder="Enter your subject here" required>
 									{{ message is defined and message ? errorList(message.getErrors('subject')) }}
 								</span>
 							</div>
@@ -89,11 +90,240 @@
 
 				function init() {
 				var mapOptions = {
-					zoom: 17,
+					zoom: {{ entry.googleMapZoom }},
 
 					center: new google.maps.LatLng({{ entry.googleMapLatitude }}, {{ entry.googleMapLongitude }}),
 
-					styles: [{"featureType":"all","elementType":"geometry.stroke","stylers":[{"visibility":"simplified"}]},{"featureType":"administrative","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"administrative","elementType":"labels","stylers":[{"visibility":"simplified"},{"color":"#b22d49"}]},{"featureType":"landscape","elementType":"all","stylers":[{"weight":"3.79"},{"visibility":"on"},{"color":"#ffecf0"}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"visibility":"on"}]},{"featureType":"landscape","elementType":"geometry.stroke","stylers":[{"visibility":"on"}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"simplified"},{"color":"#b22d49"}]},{"featureType":"poi","elementType":"geometry","stylers":[{"saturation":"0"},{"lightness":"0"},{"visibility":"off"}]},{"featureType":"poi","elementType":"geometry.stroke","stylers":[{"visibility":"off"}]},{"featureType":"poi.business","elementType":"all","stylers":[{"visibility":"simplified"},{"color":"#ffa0b4"}]},{"featureType":"poi.business","elementType":"geometry","stylers":[{"visibility":"on"}]},{"featureType":"poi.business","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"saturation":"0"}]},{"featureType":"poi.business","elementType":"labels","stylers":[{"color":"#b22d49"}]},{"featureType":"poi.business","elementType":"labels.icon","stylers":[{"visibility":"simplified"},{"lightness":"84"}]},{"featureType":"road","elementType":"all","stylers":[{"saturation":-100},{"lightness":45}]},{"featureType":"road.highway","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"road.arterial","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#ffa0b4"},{"visibility":"on"}]},{"featureType":"water","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#ffd9e1"}]},{"featureType":"water","elementType":"labels","stylers":[{"visibility":"off"}]}]
+					styles: [
+						{
+							"featureType": "all",
+							"elementType": "geometry.stroke",
+							"stylers": [
+								{
+									"visibility": "simplified"
+								}
+							]
+						},
+						{
+							"featureType": "administrative",
+							"elementType": "all",
+							"stylers": [
+								{
+									"visibility": "off"
+								}
+							]
+						},
+						{
+							"featureType": "administrative",
+							"elementType": "labels",
+							"stylers": [
+								{
+									"visibility": "simplified"
+								},
+								{
+									"color": "#2e4498"
+								}
+							]
+						},
+						{
+							"featureType": "landscape",
+							"elementType": "all",
+							"stylers": [
+								{
+									"weight": "3.79"
+								},
+								{
+									"visibility": "on"
+								},
+								{
+									"color": "#ebebe4"
+								}
+							]
+						},
+						{
+							"featureType": "landscape",
+							"elementType": "geometry",
+							"stylers": [
+								{
+									"visibility": "on"
+								}
+							]
+						},
+						{
+							"featureType": "landscape",
+							"elementType": "geometry.stroke",
+							"stylers": [
+								{
+									"visibility": "on"
+								}
+							]
+						},
+						{
+							"featureType": "poi",
+							"elementType": "all",
+							"stylers": [
+								{
+									"visibility": "simplified"
+								},
+								{
+									"color": "#26a78d"
+								}
+							]
+						},
+						{
+							"featureType": "poi.business",
+							"elementType": "labels",
+							"stylers": [
+								{
+									"visibility": "on"
+								},
+								{
+									"color": "#26a78d"
+								}
+							]
+						},
+						{
+							"featureType": "poi",
+							"elementType": "geometry",
+							"stylers": [
+								{
+									"saturation": "0"
+								},
+								{
+									"lightness": "0"
+								},
+								{
+									"visibility": "off"
+								}
+							]
+						},
+						{
+							"featureType": "poi",
+							"elementType": "geometry.stroke",
+							"stylers": [
+								{
+									"visibility": "off"
+								}
+							]
+						},
+						{
+							"featureType": "poi.business",
+							"elementType": "all",
+							"stylers": [
+								{
+									"visibility": "simplified"
+								},
+								{
+									"color": "#fbeff0"
+								}
+							]
+						},
+						{
+							"featureType": "poi.business",
+							"elementType": "geometry",
+							"stylers": [
+								{
+									"visibility": "on"
+								}
+							]
+						},
+						{
+							"featureType": "poi.business",
+							"elementType": "geometry.fill",
+							"stylers": [
+								{
+									"visibility": "on"
+								},
+								{
+									"saturation": "0"
+								}
+							]
+						},
+						{
+							"featureType": "poi.business",
+							"elementType": "labels",
+							"stylers": [
+								{
+									"color": "#eba9c7"
+								}
+							]
+						},
+						{
+							"featureType": "poi.business",
+							"elementType": "labels.icon",
+							"stylers": [
+								{
+									"visibility": "simplified"
+								},
+								{
+									"lightness": "84"
+								}
+							]
+						},
+						{
+							"featureType": "road",
+							"elementType": "all",
+							"stylers": [
+								{
+									"saturation" :-100
+								},
+								{
+									"lightness" :45
+								}
+							]
+						},
+						{
+							"featureType": "road.highway",
+							"elementType": "geometry.fill",
+							"stylers": [
+								{
+									"color": "#efea56"
+								}
+							]
+						},
+						{
+							"featureType": "road.arterial",
+							"elementType": "labels.icon",
+							"stylers": [
+								{
+									"visibility": "off"
+								}
+							]
+						},
+						{
+							"featureType": "transit",
+							"elementType": "all",
+							"stylers": [
+								{
+									"visibility": "off"
+								}
+							]
+						},
+						{
+							"featureType": "water",
+							"elementType": "all",
+							"stylers": [
+								{
+									"color": "#b5e2ea"
+								},
+								{
+									"visibility": "on"
+								}
+							]
+						},
+						{
+							"featureType": "water",
+							"elementType": "labels",
+							"stylers": [
+								{
+									"color": "#23afe5"
+								},
+								{
+									"visibility": "on"
+								}
+							]
+						}
+					]
 				};
 
 				var mapElement = document.getElementById('map');
@@ -101,7 +331,8 @@
 				var marker = new google.maps.Marker({
 					position: new google.maps.LatLng({{ entry.googleMapLatitude }}, {{ entry.googleMapLongitude }}),
 					map: map,
-					title: '{{ entry.googleMapsMarkerTitle }}'
+					title: '{{ entry.googleMapsMarkerTitle }}',
+					icon: '/dist/assets/img/location.svg'
 				});
 				}
 			</script>

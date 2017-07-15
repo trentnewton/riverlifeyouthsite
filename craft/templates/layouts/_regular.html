@@ -39,8 +39,10 @@
 				{% endfor %}
 				<link rel="manifest" href="{{ siteRoot }}manifest.json">
 				{% for asset in metatags.maskIcon %}
-					<link rel="mask-icon" href="{{ asset.url }}" color="#ff4169">
+					<link rel="mask-icon" href="{{ asset.url }}" color="#5bbad5">
 				{% endfor %}
+				<meta name="apple-mobile-web-app-title" content="{{ siteName }}">
+				<meta name="application-name" content="{{ siteName }}">
 				{% for asset in entry.coverImage %}
 					<link rel="image_src" href="{{ siteUrl }}{{ asset.getUrl('metaImageFit') }}">
 				{% endfor %}
@@ -132,7 +134,7 @@
 				{% endif %}
 	{% endminify %}
 				<style type="text/css">
-					{% include 'css/critical.css' %}
+					{% include 'assets/css/critical.css' %}
 					{# create background colour styles for ministry sections #}
 					{% if entry.type.handle == 'homepage' %}
 						{% for entry in craft.entries.section('homepage').find() %}
@@ -210,7 +212,7 @@
 					{# generate css after the browser is finished loading #}
 					var cb = function () {
 						var l = document.createElement('link'); l.rel = 'stylesheet';
-						l.href = '{{ siteRoot }}assets/css/app.css';
+						l.href = '{{ siteRoot }}dist/assets/css/app.css';
 						var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
 					};
 					var raf = requestAnimationFrame || mozRequestAnimationFrame ||
@@ -221,16 +223,9 @@
 				{# load image gallery and social sharing buttons for blog and gallery entries #}
 				{% if entry.type.handle == 'blog' or entry.type.handle == 'gallery' %}
 					{# load site javascript #}
-					<script src="{{ siteRoot }}assets/js/app.js"></script>
+					<script src="{{ siteRoot }}dist/assets/js/app.js"></script>
 					<div id="fb-root"></div>
-					<script src="//cdn.jsdelivr.net/g/lightgallery,lg-fullscreen,lg-pager,lg-share,lg-thumbnail,lg-video,lg-zoom" defer></script>
 					<script>
-						{# initiate lightGallery plugin #}
-						(function ($){
-							$(document).ready(function () {
-								$('#lightgallery').lightGallery();
-							});
-						})(jQuery);
 						{# load Facebook like/share button #}
 						(function (d, s, id) {
 							var js, fjs = d.getElementsByTagName(s)[0];
@@ -247,7 +242,7 @@
 					<script async defer src="//assets.pinterest.com/js/pinit.js"></script>
 				{% else %}
 					{# load site javascript #}
-					<script src="{{ siteRoot }}assets/js/app.js" async defer></script>
+					<script src="{{ siteRoot }}dist/assets/js/app.js" async defer></script>
 				{% endif %}
 			</body>
 		</html>

@@ -6,7 +6,9 @@
 	{% include 'partials/hero.html' %}
 	{% include 'partials/lead-section.html' %}
 	<section class="page-secondary">
-		<div class="row column" itemprop="text">
+		<div class="row column relative" itemprop="text">
+			<svg class="spg-whats-on-left svg-page-graphic svg-page-graphic--left"><use xlink:href="#squwiwavylines"></use></svg>
+			<svg class="spg-whats-on-right svg-page-graphic svg-page-graphic--right"><use xlink:href="#dblerho"></use></svg>
 			{% set eventCategories = craft.categories.group('events').find() %}
 			{% set eventEntries = craft.entries.section('event').order('dayStart asc') %}
 			{% for category in eventCategories %}
@@ -15,7 +17,7 @@
 						<svg class="ministry-logo" aria-labelledby="ministry-{{ category.title|lower }}-logo" preserveAspectRatio="xMinYMin meet"><use xlink:href="#ministry-{{ category.title|lower }}-logo"></use></svg>
 					{% endif %}
 					{% if category.categoryDescription | length %}
-						<h4 class="subheader">{{ category.categoryDescription }}</h4>
+						<h4 class="subheader zig-zag-rule">{{ category.categoryDescription }}</h4>
 					{% endif %}
 					<div class="dates">
 						{% for eventDate, entries in eventEntries | group("dayStart|date('F Y')") %}
@@ -108,7 +110,7 @@
 						{% endfor %}
 						{# descriptions for the event types found in event category fields #}
 						<div class="callout">
-							<ul class="vertical">
+							<ul class="vertical dont-break-out">
 								{% for block in category.eventDescriptions %}
 									{% switch block.type %}
 

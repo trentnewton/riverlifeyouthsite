@@ -36,6 +36,10 @@
 	{% include 'partials/hero.html' %}
 	{% include 'partials/lead-section.html' %}
 	<section class="page-secondary">
+		<div class="row column relative">
+			<svg class="spg-blog-left svg-page-graphic svg-page-graphic--left"><use xlink:href="#dblerho"></use></svg>
+			<svg class="spg-blog-right svg-page-graphic svg-page-graphic--right"><use xlink:href="#circlewlines"></use></svg>
+		</div>
 
 		{% for block in entry.body %}
 			{% switch block.type %}

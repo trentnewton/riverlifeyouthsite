@@ -6,7 +6,9 @@
 	{% include 'partials/hero.html' %}
 	{% include 'partials/lead-section.html' %}
 	<section class="page-secondary">
-		<div class="row small-up-1 medium-up-3">
+		<div class="row small-up-1 medium-up-3 relative">
+			<svg class="spg-media-left svg-page-graphic svg-page-graphic--left"><use xlink:href="#doubletriangle"></use></svg>
+			<svg class="spg-media-right svg-page-graphic svg-page-graphic--right"><use xlink:href="#circlewwaves"></use></svg>
 			{% for entry in craft.entries.section('gallery') %}
 				{% include 'partials/snippets.html' %}
 			{% endfor %}
