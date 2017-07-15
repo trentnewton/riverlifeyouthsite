@@ -29,6 +29,7 @@
 .squiggle-footer {
 	left: rem-calc(100);
 	width: rem-calc(40);
+	height: rem-calc(150);
 	top: rem-calc(-70);
 	fill: $quinary-colour;
 
@@ -42,7 +43,8 @@
 .squwilines-footer {
 	left: rem-calc(200);
 	width: rem-calc(90);
-	top: rem-calc(-110);
+	height: rem-calc(90);
+	top: rem-calc(-80);
 	fill: $black;
 	transform: rotate(60deg);
 
@@ -58,6 +60,7 @@
 	top: rem-calc(-90);
 	right: rem-calc(100);
 	width: rem-calc(170);
+	height: rem-calc(150);
 	fill: $quaternary-colour;
 
 	@include breakpoint(small only) {

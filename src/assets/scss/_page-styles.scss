@@ -633,13 +633,13 @@ figcaption {
 .triwlines-snippet {
 	position: absolute;
 	z-index: 98;
-	height: auto;
 }
 
 .squiggle-blog-latest {
 	left: rem-calc(60);
 	top: rem-calc(-40);
 	width: rem-calc(27);
+	height: rem-calc(150);
 	transform: rotate(180deg);
 	fill: $senary-colour;
 
@@ -651,13 +651,14 @@ figcaption {
 
 .triwlines-snippet {
 	width: rem-calc(90);
+	height: rem-calc(78);
 	right: 0;
-	top: rem-calc(-80);
+	top: rem-calc(-50);
 }
 
 .svg-page-graphic {
 	width: rem-calc(150);
-	height: auto;
+	height: rem-calc(150);
 	position: absolute;
 	z-index: 98;
 	top: rem-calc(-180);
