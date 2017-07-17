@@ -630,9 +630,10 @@ figcaption {
 // svg page graphics
 
 .squiggle-blog-latest,
-.triwlines-snippet {
+.triwlines-snippet,
+.svg-page-graphic {
 	position: absolute;
-	z-index: 98;
+	z-index: 97;
 }
 
 .squiggle-blog-latest {
@@ -659,8 +660,6 @@ figcaption {
 .svg-page-graphic {
 	width: rem-calc(150);
 	height: rem-calc(150);
-	position: absolute;
-	z-index: 98;
 	top: rem-calc(-180);
 }
 
