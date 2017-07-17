@@ -111,9 +111,9 @@ $('.animsition').animsition({
 
 // toggle fade on menu icon when clicked
 
-$('#offCanvas').bind('opened.zf.offcanvas closed.zf.offcanvas', function () {
-	$('.top-bar-title .menu-icon').fadeToggle(1000);
-});
+// $('#offCanvas').bind('opened.zf.offcanvas closed.zf.offcanvas', function () {
+// 	$('.top-bar-title .menu-icon').fadeToggle(1000);
+// });
 
 // add span tags to characters inside selected element
 
