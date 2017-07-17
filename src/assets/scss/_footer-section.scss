@@ -49,7 +49,7 @@
 
 	@include breakpoint(small only) {
 		left: rem-calc(40);
-		top: rem-calc(-140);
+		top: rem-calc(-110);
 		transform: rotate(60deg) scale(0.7);
 	}
 
