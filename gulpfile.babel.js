@@ -75,10 +75,11 @@ function styleGuide(done) {
   }, done);
 }
 
-var multiDest = require('gulp-multi-dest');
-
 // Compile Sass into CSS
 // In production, the CSS is compressed
+
+var multiDest = require('gulp-multi-dest');
+
 function sass() {
   return gulp.src('src/assets/scss/*.scss')
     .pipe($.sourcemaps.init())
