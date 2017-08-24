@@ -1,3 +1,5 @@
+// loading icon
+
 @keyframes lds-ripple {
 
 	0% {
@@ -43,6 +45,8 @@
 	}
 
 }
+
+// page styles
 
 .page-main,
 .page-secondary {
@@ -407,7 +411,7 @@ figcaption {
 	padding: rem-calc(10);
 }
 
-// social
+// social sharing
 
 .social-share.menu {
 	margin-top: $paragraph-margin-bottom;
@@ -423,12 +427,7 @@ figcaption {
 		margin-right: rem-calc(10);
 
 		> a {
-			font-size: rem-calc(map-deep-get($header-styles, 'medium', 'h5', 'font-size') * 1px);
 			padding: 0;
-
-			svg {
-				margin: 0;
-			}
 
 			&::after {
 				content: normal;
@@ -440,6 +439,7 @@ figcaption {
 
 	svg {
 		margin: 0;
+		font-size: rem-calc(map-deep-get($header-styles, 'medium', 'h5', 'font-size') * 1px);
 	}
 
 	// .facebook {
