@@ -7,11 +7,10 @@ namespace Craft;
 class ContactFormController extends BaseController
 {
 	/**
-	 * @var Allows anonymous access to this controller's actions.
+	 * @var bool Allows anonymous access to this controller's actions.
 	 * @access protected
 	 */
 	protected $allowAnonymous = true;
-
 
 	/**
 	 * Sends an email based on the posted params.
@@ -54,17 +53,16 @@ class ContactFormController extends BaseController
 		$event = new ContactFormMessageEvent($this, array('postedMessage' => $postedMessage));
 		craft()->contactForm->onBeforeMessageCompile($event);
 
-		if ($event->message && $event->messageFields)
+		if ($event->message)
 		{
 			$message->message = $event->message;
-			$message->messageFields = $event->messageFields;
 
 			if (!empty($event->htmlMessage))
 			{
 				$message->htmlMessage = $event->htmlMessage;
 			}
 		}
-		elseif ($postedMessage)
+		else if ($postedMessage)
 		{
 			if (is_array($postedMessage))
 			{
@@ -126,33 +124,43 @@ class ContactFormController extends BaseController
 			}
 		}
 
-        if (empty($message->htmlMessage))
-        {
-            $message->htmlMessage = StringHelper::parseMarkdown($message->message);
-        }
+		if (empty($message->htmlMessage))
+		{
+			$message->htmlMessage = StringHelper::parseMarkdown($message->message);
+		}
 
-		if ($message->validate())
+		// Validate!
+		$message->validate();
+
+		// Fire an 'onBeforeSend' event
+		Craft::import('plugins.contactform.events.ContactFormEvent');
+		$event = new ContactFormEvent($this, array('message' => $message));
+		craft()->contactForm->onBeforeSend($event);
+
+		if (!$message->hasErrors() && $event->isValid)
 		{
 			// Only actually send it if the honeypot test was valid
-			if (!$this->validateHoneypot($settings->honeypotField) || craft()->contactForm->sendMessage($message))
+			if ($this->validateHoneypot($settings->honeypotField) && !$event->fakeIt)
 			{
-				if (craft()->request->isAjaxRequest())
-				{
-					$this->returnJson(array('success' => true));
-				}
-				else
-				{
-					// Deprecated. Use 'redirect' instead.
-					$successRedirectUrl = craft()->request->getPost('successRedirectUrl');
+				craft()->contactForm->sendMessage($message);
+			}
 
-					if ($successRedirectUrl)
-					{
-						$_POST['redirect'] = $successRedirectUrl;
-					}
+			if (craft()->request->isAjaxRequest())
+			{
+				$this->returnJson(array('success' => true));
+			}
+			else
+			{
+				// Deprecated. Use 'redirect' instead.
+				$successRedirectUrl = craft()->request->getPost('successRedirectUrl');
 
-					craft()->userSession->setNotice($settings->successFlashMessage);
-					$this->redirectToPostedUrl($message);
+				if ($successRedirectUrl)
+				{
+					$_POST['redirect'] = $successRedirectUrl;
 				}
+
+				craft()->userSession->setNotice($settings->successFlashMessage);
+				$this->redirectToPostedUrl($message);
 			}
 		}
 
