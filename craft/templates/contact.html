@@ -25,7 +25,7 @@
 					<form method="post" accept-charset="UTF-8" id="ajax-contact">
 						{{ getCsrfInput() }}
 						<input type="hidden" name="action" value="contactForm/sendMessage">
-						<input type="hidden" name="redirect" value="contact/thanks">
+						{# <input type="hidden" name="redirect" value="contact/thanks"> #}
 						<div id="thanks" class="callout success" style="display: none;">{{ 'Thank You! Your message has been sent.' | translate }}</div>
 						<div id="error" class="callout error" style="display: none;">{{ 'An error occurred. Please try again.' | translate }}</div>
 						<div class="row">
