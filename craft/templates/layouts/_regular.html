@@ -119,7 +119,7 @@
 				{% if metatags.robots is defined %}<meta name="robots" content="{{ metatags.robots }}">{% endif %}
 				<link rel="alternate" type="application/rss+xml" title="{{ siteName }} | {% for entry in craft.entries.section('blogOverview').find() %}{{ entry.title }}{% endfor %}" href="{{ siteRoot }}feed.rss" />
 				{# load fonts from Typekit #}
-				<script src="//use.typekit.net/wrd6xsa.js" onload="try{Typekit.load({ async: true });}catch(e){}" async></script>
+				<script src="//use.typekit.net/wrd6xsa.js" onload="try{Typekit.load({ async: false });}catch(e){}" async></script>
 				{# Google Analytics #}
 				{% if metatags.googleAnalylticsCode is defined %}
 					<script>
