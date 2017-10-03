@@ -180,6 +180,41 @@ class ImagerService extends BaseApplicationComponent
         IOHelper::clearFolder(craft()->path->getRuntimePath() . 'imager/');
     }
     
+    public function srcset($images, $descriptor = 'w')
+    {
+        $r = '';
+        $generated = array();
+        
+        if (!is_array($images)) {
+            return '';
+        }
+
+        foreach ($images as $image) {
+            switch ($descriptor) {
+                case 'w':
+                    if (!isset($generated[$image->getWidth()])) {
+                        $r .= $image->getUrl().' '.$image->getWidth().'w, ';
+                        $generated[$image->getWidth()] = true;
+                    }
+                    break;
+                case 'h':
+                    if (!isset($generated[$image->getHeight()])) {
+                        $r .= $image->getUrl().' '.$image->getHeight().'h, ';
+                        $generated[$image->getHeight()] = true;
+                    }
+                    break;
+                case 'w+h':
+                    if (!isset($generated[$image->getWidth() . 'x' . $image->getHeight()])) {
+                        $r .= $image->getUrl().' '.$image->getWidth().'w ' .$image->getHeight().'h, ';
+                        $generated[$image->getWidth() . 'x' . $image->getHeight()] = true;
+                    }
+                    break;
+            }
+        }
+        
+        return substr($r, 0, strlen($r) - 2);
+    }
+    
     /**
      * Do an image transform
      *
@@ -515,7 +550,7 @@ class ImagerService extends BaseApplicationComponent
 
                 // Upload to AWS if enabled
                 if ($this->getSetting('awsEnabled')) {
-                    craft()->imager_aws->uploadToAWS($targetFilePath);
+                    craft()->imager_aws->uploadToAWS($targetFilePath, $this->_checkIsFinalVersion($transform));
 
                     // Invalidate cloudfront distribution if enabled
                     if ($this->getSetting('cloudfrontInvalidateEnabled')) {
@@ -526,7 +561,7 @@ class ImagerService extends BaseApplicationComponent
 
                 // if GCS is enabled, upload file
                 if (craft()->imager->getSetting('gcsEnabled')) {
-                    craft()->imager_gcs->uploadToGCS($targetFilePath);
+                    craft()->imager_gcs->uploadToGCS($targetFilePath, $this->_checkIsFinalVersion($transform));
                 }
             }
         }
@@ -1151,8 +1186,14 @@ class ImagerService extends BaseApplicationComponent
                 $instance = $imageInstance->getImagick();
 
                 $instance->setImageFormat('webp');
-                $instance->setImageAlphaChannel(\Imagick::ALPHACHANNEL_ACTIVATE);
-                $instance->setBackgroundColor(new \ImagickPixel('transparent'));
+                
+                $hasTransparency = $instance->getImageAlphaChannel();
+
+                if($hasTransparency){
+                    $instance->setImageAlphaChannel(\Imagick::ALPHACHANNEL_ACTIVATE);
+                    $instance->setBackgroundColor(new \ImagickPixel('transparent'));
+                }
+                
                 $instance->setImageCompressionQuality($saveOptions['webp_quality']);
 
                 $imagickOptions = $saveOptions['webp_imagick_options'];
@@ -1247,11 +1288,11 @@ class ImagerService extends BaseApplicationComponent
              * For GD we only apply effects that exists in Imagine
              */
             if ($this->imageDriver === 'gd') {
-                if ($effect == 'grayscale' || $effect == 'greyscale') { 
+                if (($effect == 'grayscale' || $effect == 'greyscale') && $value) { 
                     $imageInstance->effects()->grayscale();
                 }
 
-                if ($effect == 'negative') {
+                if ($effect == 'negative' && $value) {
                     $imageInstance->effects()->negative();
                 }
 
@@ -1259,7 +1300,7 @@ class ImagerService extends BaseApplicationComponent
                     $imageInstance->effects()->blur(is_int($value) || is_float($value) ? $value : 1);
                 }
 
-                if ($effect == 'sharpen') {
+                if ($effect == 'sharpen' && $value) {
                     $imageInstance->effects()->sharpen();
                 }
 
@@ -1280,11 +1321,18 @@ class ImagerService extends BaseApplicationComponent
             if ($this->imageDriver == 'imagick') {
                 $imagickInstance = $imageInstance->getImagick();
                 
-                if ($effect === 'grayscale' || $effect === 'greyscale') {
+                if (($effect === 'grayscale' || $effect === 'greyscale') && $value) {
+                    $hasTransparency = $imagickInstance->getImageAlphaChannel();
+
                     $imagickInstance->setImageType(\Imagick::IMGTYPE_GRAYSCALE);
+                    
+                    if($hasTransparency){
+                        $imagickInstance->setImageAlphaChannel(\Imagick::ALPHACHANNEL_ACTIVATE);
+                        $imagickInstance->setBackgroundColor(new \ImagickPixel('transparent'));
+                    }                
                 }
 
-                if ($effect === 'negative') {
+                if ($effect === 'negative' && $value) {
                     $imagickInstance->negateImage(false, \Imagick::CHANNEL_ALL);
                 }
 
@@ -1292,7 +1340,7 @@ class ImagerService extends BaseApplicationComponent
                     $imagickInstance->gaussianBlurImage(0, is_int($value) || is_float($value) ? $value : 1);
                 }
 
-                if ($effect === 'sharpen') {
+                if ($effect === 'sharpen' && $value) {
                     $imagickInstance->sharpenImage(2, 1);
                 }
 
@@ -1466,15 +1514,24 @@ class ImagerService extends BaseApplicationComponent
         $temporary->setImageFormat('png32');
         $temporary->drawImage($draw);
 
-        $alphaChannel = clone $imagickInstance;
-        $alphaChannel->setImageAlphaChannel(\Imagick::ALPHACHANNEL_EXTRACT);
-        $alphaChannel->negateImage(false, \Imagick::CHANNEL_ALL);
-        $imagickInstance->setImageClipMask($alphaChannel);
+        if (method_exists($imagickInstance, 'setImageClipMask')) { // ImageMagick < 7
+            $alphaChannel = clone $imagickInstance;
+            $alphaChannel->setImageAlphaChannel(\Imagick::ALPHACHANNEL_EXTRACT);
+            $alphaChannel->negateImage(false, \Imagick::CHANNEL_ALL);
+            $imagickInstance->setImageClipMask($alphaChannel);
+        } else {
+            // need to figure out how to add support for maintaining opacity in ImageMagick 7
+        }
 
         $clone = clone $imagickInstance;
         $clone->compositeImage($temporary, $composite_flag, 0, 0);
-        $clone->setImageOpacity($alpha);
 
+        if (method_exists($clone, 'setImageAlpha')) { // ImageMagick >= 7
+            $clone->setImageAlpha($alpha);
+        } else {
+            $clone->setImageOpacity($alpha);
+        }
+        
         $imagickInstance->compositeImage($clone, \Imagick::COMPOSITE_DEFAULT, 0, 0);
     }
 
@@ -1920,6 +1977,24 @@ class ImagerService extends BaseApplicationComponent
         return $new_arr;
     }
 
+    /**
+     * Check if current file is the final version
+     *
+     * @param $transform
+     * @return bool
+     */
+    private function _checkIsFinalVersion($transform)
+    {
+        if ($this->getSetting('optimizeType', $transform) == 'task')
+        {
+            if ($this->getSetting('jpegoptimEnabled', $transform) || $this->getSetting('jpegtranEnabled', $transform) || $this->getSetting('mozjpegEnabled', $transform) || $this->getSetting('optipngEnabled', $transform) || $this->getSetting('pngquantEnabled', $transform) || $this->getSetting('gifsicleEnabled', $transform) || $this->getSetting('tinyPngEnabled', $transform))
+            {
+                return false;
+            }
+        }
+
+        return true;
+    }
 
     /**
      * Fixes slashes in path
