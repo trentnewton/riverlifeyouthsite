@@ -52,21 +52,23 @@
 						V109.3z"/>
 					</svg>
 				</div>
-				<div class="homepage-slide term-flyer align-self-middle">
-					<h3>{{ 'Current Term' | translate }}</h3>
-					<div class="term-dates row small-up-1 medium-up-2">
-						{% set category = craft.categories.group('events') %}
-						{% set entries = craft.entries.section('event').relatedTo(category).order('dayStart asc') %}
-						{% for entry in entries %}
-							<div class="column{% if entry.category | length < 2 %} {{ entry.category.first().title|lower }}{% else %} all-grades{% endif %}">
-								<span class="event-information">{{ entry.dayStart | date('d.m') }}{% if entry.dayEnd | length %}&nbsp;+&nbsp;{{ entry.dayEnd | date('d.m') }}{% endif %}&nbsp;&#8212;&nbsp;{{ entry.title }} ({% if entry.category | length > 2 %}7&#8212;12{% else %}{{ entry.category.first().title }}{% endif %})</span>
-							</div>
+				{% set category = craft.categories.group('events') %}
+				{% set entries = craft.entries.section('event').relatedTo(category).order('dayStart asc') %}
+				{% if entries|length > 2 %}
+				    <div class="homepage-slide term-flyer align-self-middle">
+						<h3>{{ 'Current Term' | translate }}</h3>
+						<div class="term-dates row small-up-1 medium-up-2">
+							{% for entry in entries %}
+								<div class="column{% if entry.category | length < 2 %} {{ entry.category.first().title|lower }}{% else %} all-grades{% endif %}">
+									<span class="event-information">{{ entry.dayStart | date('d.m') }}{% if entry.dayEnd | length %}&nbsp;+&nbsp;{{ entry.dayEnd | date('d.m') }}{% endif %}&nbsp;&#8212;&nbsp;{{ entry.title }} ({% if entry.category | length > 2 %}7&#8212;12{% else %}{{ entry.category.first().title }}{% endif %})</span>
+								</div>
+							{% endfor %}
+						</div>
+						{% for entry in craft.entries.section('whatsOn').find() %}
+							<a href="{{ entry.url }}" title="{{ 'More on term events' | translate }}" data-text="{{ 'More' | translate }}" class="button tiny text-span">{{ 'More' | translate }}</a>
 						{% endfor %}
 					</div>
-					{% for entry in craft.entries.section('whatsOn').find() %}
-						<a href="{{ entry.url }}" title="{{ 'More on term events' | translate }}" data-text="{{ 'More' | translate }}" class="button tiny text-span">{{ 'More' | translate }}</a>
-					{% endfor %}
-				</div>
+				{% endif %}
 				{% for entry in craft.entries.section('event').search('frontPageSlide:1') %}
 					<div class="homepage-slide event-flyer align-self-middle">
 						<div class="day-container">
