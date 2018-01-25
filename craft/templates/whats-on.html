@@ -128,18 +128,22 @@
 					{% endfor %}
 					{# descriptions for the event types found in event category fields #}
 					<div class="callout">
-						<ul class="vertical dont-break-out">
-							{% for block in entry.eventInformation %}
-								{% switch block.type %}
+						{% for block in entry.eventInformation %}
+							{% switch block.type %}
 
-									{% case "eventInformation" %}
-										<li><strong>{{ block.eventTitle }}</strong> – {{ block.description|striptags('<strong><em><br>')|raw|nl2br }}</li>
+								{% case "ourPrograms" %}
+									<h5>{{ block.heading }}</h5>
 
-									{% default %}
+								<ul class="vertical dont-break-out">
+								{% case "eventInformation" %}
+									<li><strong>{{ block.eventTitle }}</strong> – {{ block.description|striptags('<strong><em><br>')|raw|nl2br }}</li>
 
-								{% endswitch %}
-							{% endfor %}
-						</ul>
+								{% default %}
+
+								</ul>
+
+							{% endswitch %}
+						{% endfor %}
 					</div>
 				</div>
 			</div>
