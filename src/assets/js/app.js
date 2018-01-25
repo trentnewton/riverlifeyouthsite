@@ -331,7 +331,7 @@ $('#ajax-contact').submit(function (ev) {
 
 // hide maps overlay when clicked
 
-$('.google-map-overlay').on('click', function () {
-	$(this).toggleClass('hide');
-	return false;
-});
+// $('.google-map-overlay').on('click', function () {
+// 	$(this).toggleClass('hide');
+// 	return false;
+// });
