@@ -9,7 +9,7 @@
 		</div>
 	</li>
 	<li class="twitter">
-		<a href="https://twitter.com/intent/tweet?text={{ title|url_encode }}%20-%20{{ siteName|url_encode }}" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+		<a href="https://twitter.com/intent/tweet?text={{ title|url_encode }}%20-%20{{ siteName|url_encode }}" class="twitter-share-button" data-show-count="false">{{ 'Tweet' | translate }}</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 	</li>
 	<li class="pinterest">
 		<a data-pin-do="buttonPin" data-pin-save="true" href="https://www.pinterest.com/pin/create/button/?url={{ entry.url|url_encode }}&media={% for asset in entry.coverImage %}{{ siteUrl|url_encode }}{{ asset.getUrl('metaImageFit')|url_encode }}{% endfor %}&description={{ title|url_encode }}%20-%20{{ siteName|url_encode }}"></a>
