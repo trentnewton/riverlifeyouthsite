@@ -32,6 +32,40 @@
 
 	}
 
+	.calendar-heading {
+		margin-bottom: rem-calc(40);
+	}
+
+	.calendar-heading,
+	.ministry-categories {
+		text-transform: uppercase;
+		letter-spacing: 3px;
+	}
+
+	.ministry-categories {
+		font-weight: $global-weight-bold;
+	}
+
+	.ministry-category {
+		padding-top: rem-calc(13);
+		border-bottom: 4px solid $secondary-color;
+
+		&:last-child {
+			border-bottom: 0px solid $secondary-color;
+		}
+
+	}
+
+	.ministry-category-name {
+		display: inline-block;
+		margin-left: rem-calc(17);
+	}
+
+	.ministry-category-description {
+		position: relative;
+    	top: -3px;
+	}
+
 }
 
 .calendar {

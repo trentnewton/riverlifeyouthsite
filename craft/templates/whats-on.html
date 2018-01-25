@@ -10,122 +10,137 @@
 			<svg class="spg-whats-on-left svg-page-graphic svg-page-graphic--left"><use xlink:href="#squwiwavylines"></use></svg>
 			<svg class="spg-whats-on-right svg-page-graphic svg-page-graphic--right"><use xlink:href="#dblerho"></use></svg>
 			{% set eventCategories = craft.categories.group('events').find() %}
-			{% set eventEntries = craft.entries.section('event').order('dayStart asc') %}
-			{% for category in eventCategories %}
-				<div class="calendar">
-					{% if category.title | length %}
-						<svg class="ministry-logo" aria-labelledby="ministry-{{ category.title|lower }}-logo" preserveAspectRatio="xMinYMin meet"><use xlink:href="#ministry-{{ category.title|lower }}-logo"></use></svg>
-					{% endif %}
-					{% if category.categoryDescription | length %}
-						<h4 class="subheader zig-zag-rule">{{ category.categoryDescription }}</h4>
-					{% endif %}
-					<div class="dates">
-						{% for eventDate, entries in eventEntries | group("dayStart|date('F Y')") %}
-							<h5>{{ eventDate }}</h5>
-							<ul class="accordion" data-accordion data-multi-expand="true" data-allow-all-closed="true">
-								{% for entry in entries if (category.id in entry.category.ids()) %}
-									<li class="accordion-item" data-accordion-item>
-										<a href="#" class="accordion-title flex-container" id="{{ random(500) }}-{{ entry.slug }}-{{ entry.id }}">
-											<div class="flex-child-shrink event-date">{{ entry.dayStart | date('j') }}{% if entry.dayEnd|length %}<sup class="date-small">&#8212;{{ entry.dayEnd | date('j') }}</sup>{% endif %}</div>
-											<div class="flex-child-auto event-details">
-												<p class="event-name">{{ entry.title }}</p>
-												<p class="event-meta">
-													<span class="time"><svg class="icon icon-clock"><use xlink:href="#icon-clock"></use></svg>{% if entry.timeStart | length %}{{ entry.timeStart | date('g:ia') }}{% if entry.timeEnd | length %}&ndash;{{ entry.timeEnd | date('g:ia') }}{% endif %}{% else %}N/A{% endif %}</span>
-													<span class="location"><svg class="icon icon-location"><use xlink:href="#icon-location"></use></svg>{% if entry.location | length %}{{ entry.location.first().title }}{% endif %}</span>
-												</p>
+			{% set eventEntries = craft.entries.section('event').relatedTo(eventCategories).order('dayStart asc') %}
+			<div class="calendar">
+				{% if entry.calendarHeading is defined %}
+					<h4 class="calendar-heading">{{ entry.calendarHeading }}</h4>
+				{% endif %}
+				<div class="row align-center">
+					<div class="small-12 medium-4 columns">
+						<svg class="fridays-graphic" aria-labelledby="fridays-6-30-9-00pm" preserveAspectRatio="xMinYMin meet">
+							<use xlink:href="#fridays-6-30-9-00pm"></use>
+						</svg>
+					</div>
+					<div class="small-12 medium-4 columns ministry-categories">
+						{% for category in eventCategories %}
+							<div class="ministry-category">
+								{% if category.categoryDescription | length %}
+									<span class="ministry-category-description">{{ category.categoryDescription }}</span>
+								{% endif %}
+								{% if category.title | length %}
+									<h5 class="ministry-category-name">{{ category.title }}</h5>
+								{% endif %}
+							</div>
+						{% endfor %}
+					</div>
+				</div>
+				<h4 class="subheader zig-zag-rule">Grade 7&#8212;12</h4>
+				<div class="dates">
+					{% for eventDate, entries in eventEntries | group("dayStart|date('F Y')") %}
+						<h5>{{ eventDate }}</h5>
+						<ul class="accordion" data-accordion data-multi-expand="true" data-allow-all-closed="true">
+							{% for entry in eventEntries %}
+								<li class="accordion-item" data-accordion-item>
+									<a href="#" class="accordion-title flex-container" id="{{ random(500) }}-{{ entry.slug }}-{{ entry.id }}">
+										<div class="flex-child-shrink event-date">{{ entry.dayStart | date('j') }}{% if entry.dayEnd|length %}<sup class="date-small">&#8212;{{ entry.dayEnd | date('j') }}</sup>{% endif %}</div>
+										<div class="flex-child-auto event-details">
+											<p class="event-name">{{ entry.title }}</p>
+											<p class="event-meta">
+												<span class="time"><svg class="icon icon-clock"><use xlink:href="#icon-clock"></use></svg>{% if entry.timeStart | length %}{{ entry.timeStart | date('g:ia') }}{% if entry.timeEnd | length %}&ndash;{{ entry.timeEnd | date('g:ia') }}{% endif %}{% else %}N/A{% endif %}</span>
+												<span class="location"><svg class="icon icon-location"><use xlink:href="#icon-location"></use></svg>{% if entry.location | length %}{{ entry.location.first().title }}{% endif %}</span>
+											</p>
+										</div>
+									</a>
+									{# accordion expanded content #}
+									<div class="accordion-content" data-tab-content>
+										{# oc night details #}
+										{% if entry.ocNightDetails|length %}
+											<div class="oc-night-details top-container ">
+												<h5>{{ 'Details' | translate }}</h5>
+												<div class="oc-night-details-body row small-up-1 medium-up-2">
+													{% for block in entry.ocNightDetails %}
+														{% switch block.type %}
+
+															{% case "ocNightDetail" %}
+																<div class="column">
+																	{% for field in block.getFieldLayout().getFields() %}
+																		{# get properties #}
+																		<p><strong>{{ field.getField().name }}:</strong>&nbsp;{% set handle = field.getField().handle %}{{ block[handle] }}</p>
+																	{% endfor %}
+																</div>
+
+															{% default %}
+
+														{% endswitch %}
+													{% endfor %}
+												</div>
 											</div>
-										</a>
-										{# accordion expanded content #}
-										<div class="accordion-content" data-tab-content>
-											{# oc night details #}
-											{% if entry.ocNightDetails|length %}
-												<div class="oc-night-details top-container ">
-													<h5>{{ 'Details' | translate }}</h5>
-													<div class="oc-night-details-body row small-up-1 medium-up-2">
-														{% for block in entry.ocNightDetails %}
-															{% switch block.type %}
-
-																{% case "ocNightDetail" %}
-																	<div class="column">
-																		{% for field in block.getFieldLayout().getFields() %}
-																			{# get properties #}
-																			<p><strong>{{ field.getField().name }}:</strong>&nbsp;{% set handle = field.getField().handle %}{{ block[handle] }}</p>
-																		{% endfor %}
-																	</div>
-
-																{% default %}
-
-															{% endswitch %}
-														{% endfor %}
-													</div>
-												</div>
-											{% endif %}
-											{# event details and link #}
-											{% if entry.details|length or entry.moreInfoLink|length %}
-												<div class="top-container flex-container{% if not entry.moreInfoLink|length %} reveal-full{% endif %}">
-													{% if entry.details|length %}
-														<div class="reveal-details flex-container">
-															<div class="reveal-information flex-child-auto">
-																<p>{{ entry.details }}</p>
-															</div>
+										{% endif %}
+										{# event details and link #}
+										{% if entry.details|length or entry.moreInfoLink|length %}
+											<div class="top-container flex-container{% if not entry.moreInfoLink|length %} reveal-full{% endif %}">
+												{% if entry.details|length %}
+													<div class="reveal-details flex-container">
+														<div class="reveal-information flex-child-auto">
+															<p>{{ entry.details }}</p>
 														</div>
-													{% endif %}
-													{% if entry.moreInfoLink|length %}
-														<div class="reveal-more-info flex-container">
-															<div class="reveal-icon flex-child-shrink">
-																<svg class="icon icon-link-external"><use xlink:href="#icon-link-external"></use></svg>
-															</div>
-															<div class="reveal-information flex-child-auto">
-																<p><a href="{{ entry.moreInfoLink.url }}"{% if entry.moreInfoLink.target | length %} target="{{ entry.moreInfoLink.target }}"{% endif %} title="{{ 'More about ' | translate }}{{ entry.title }}">{{ entry.moreInfoLink.text }}</a></p>
-															</div>
+													</div>
+												{% endif %}
+												{% if entry.moreInfoLink|length %}
+													<div class="reveal-more-info flex-container">
+														<div class="reveal-icon flex-child-shrink">
+															<svg class="icon icon-link-external"><use xlink:href="#icon-link-external"></use></svg>
 														</div>
-													{% endif %}
+														<div class="reveal-information flex-child-auto">
+															<p><a href="{{ entry.moreInfoLink.url }}"{% if entry.moreInfoLink.target | length %} target="{{ entry.moreInfoLink.target }}"{% endif %} title="{{ 'More about ' | translate }}{{ entry.title }}">{{ entry.moreInfoLink.text }}</a></p>
+														</div>
+													</div>
+												{% endif %}
+											</div>
+										{% endif %}
+										{# time and location #}
+										<div class="flex-container">
+											<div class="reveal-time flex-container">
+												<div class="reveal-icon flex-child-shrink">
+													<svg class="icon icon-clock"><use xlink:href="#icon-clock"></use></svg>
 												</div>
-											{% endif %}
-											{# time and location #}
-											<div class="flex-container">
-												<div class="reveal-time flex-container">
-													<div class="reveal-icon flex-child-shrink">
-														<svg class="icon icon-clock"><use xlink:href="#icon-clock"></use></svg>
-													</div>
-													<div class="reveal-information flex-child-auto">
-														<p class="title">{{ 'Time' | translate }}</p>
-														<p class="information">({{ entry.dayStart | date('l') }}{% if entry.dayEnd | length %}&ndash;{{ entry.dayEnd | date('l') }}{% endif %}) {% if entry.timeStart | length %}{{ entry.timeStart | date('g:ia') }}{% if entry.timeEnd | length %}&ndash;{{ entry.timeEnd | date('g:ia') }}{% endif %}{% else %}N/A{% endif %}</p>
-													</div>
+												<div class="reveal-information flex-child-auto">
+													<p class="title">{{ 'Time' | translate }}</p>
+													<p class="information">({{ entry.dayStart | date('l') }}{% if entry.dayEnd | length %}&ndash;{{ entry.dayEnd | date('l') }}{% endif %}) {% if entry.timeStart | length %}{{ entry.timeStart | date('g:ia') }}{% if entry.timeEnd | length %}&ndash;{{ entry.timeEnd | date('g:ia') }}{% endif %}{% else %}N/A{% endif %}</p>
 												</div>
-												<div class="reveal-location flex-container">
-													<div class="reveal-icon flex-child-shrink">
-														<svg class="icon icon-location"><use xlink:href="#icon-location"></use></svg>
-													</div>
-													<div class="reveal-information flex-child-auto">
-														<p class="title">{{ 'Location' | translate }}</p>
-														<p class="information">{% if entry.location | length %}{{ entry.location.first().title }}{% if entry.location.first().address | length %}, {{ entry.location.first().address }}{% endif %}{% if entry.location.first().address2 | length %}, {{ entry.location.first().address2 }}{% endif %}{% if entry.location.first().suburbTown | length %}, {{ entry.location.first().suburbTown }}{% endif %}{% if entry.location.first().postCode | length %} {{ entry.location.first().postCode }}{% endif %}{% if entry.location.first().state | length %} {{ entry.location.first().state|upper }}{% endif %}{% endif %}</p>
-													</div>
+											</div>
+											<div class="reveal-location flex-container">
+												<div class="reveal-icon flex-child-shrink">
+													<svg class="icon icon-location"><use xlink:href="#icon-location"></use></svg>
+												</div>
+												<div class="reveal-information flex-child-auto">
+													<p class="title">{{ 'Location' | translate }}</p>
+													<p class="information">{% if entry.location | length %}{{ entry.location.first().title }}{% if entry.location.first().address | length %}, {{ entry.location.first().address }}{% endif %}{% if entry.location.first().address2 | length %}, {{ entry.location.first().address2 }}{% endif %}{% if entry.location.first().suburbTown | length %}, {{ entry.location.first().suburbTown }}{% endif %}{% if entry.location.first().postCode | length %} {{ entry.location.first().postCode }}{% endif %}{% if entry.location.first().state | length %} {{ entry.location.first().state|upper }}{% endif %}{% endif %}</p>
 												</div>
 											</div>
 										</div>
-									</li>
-								{% endfor %}
-							</ul>
-						{% endfor %}
-						{# descriptions for the event types found in event category fields #}
-						<div class="callout">
-							<ul class="vertical dont-break-out">
-								{% for block in category.eventDescriptions %}
-									{% switch block.type %}
+									</div>
+								</li>
+							{% endfor %}
+						</ul>
+					{% endfor %}
+					{# descriptions for the event types found in event category fields #}
+					<div class="callout">
+						<ul class="vertical dont-break-out">
+							{% for block in entry.eventInformation %}
+								{% switch block.type %}
 
-										{% case "eventDescription" %}
-											<li><strong>{{ block.eventTitle }}</strong> – {{ block.description|striptags('<strong><em><br>')|raw|nl2br }}</li>
+									{% case "eventInformation" %}
+										<li><strong>{{ block.eventTitle }}</strong> – {{ block.description|striptags('<strong><em><br>')|raw|nl2br }}</li>
 
-										{% default %}
+									{% default %}
 
-									{% endswitch %}
-								{% endfor %}
-							</ul>
-						</div>
+								{% endswitch %}
+							{% endfor %}
+						</ul>
 					</div>
 				</div>
-			{% endfor %}
+			</div>
 		</div>
 	</section>
 {% endblock %}
