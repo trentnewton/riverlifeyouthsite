@@ -122,7 +122,8 @@
 	border-bottom: 9px solid $white;
 	letter-spacing: rem-calc(6);
 	margin-right: rem-calc(-6);
-	padding: 0;
+	padding-top: 0px;
+	padding-bottom: rem-calc(12);
 
 	@include breakpoint(small only) {
 		font-size: rem-calc(map-deep-get($header-styles, 'small', 'h2', 'font-size') * 1px);
