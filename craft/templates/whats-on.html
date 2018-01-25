@@ -9,8 +9,6 @@
 		<div class="row column relative" itemprop="text">
 			<svg class="spg-whats-on-left svg-page-graphic svg-page-graphic--left"><use xlink:href="#squwiwavylines"></use></svg>
 			<svg class="spg-whats-on-right svg-page-graphic svg-page-graphic--right"><use xlink:href="#dblerho"></use></svg>
-			{% set eventCategories = craft.categories.group('events').find() %}
-			{% set eventEntries = craft.entries.section('event').relatedTo(eventCategories).order('dayStart asc') %}
 			<div class="calendar">
 				{% if entry.calendarHeading is defined %}
 					<h4 class="calendar-heading">{{ entry.calendarHeading }}</h4>
@@ -22,6 +20,7 @@
 						</svg>
 					</div>
 					<div class="small-12 medium-4 columns ministry-categories">
+						{% set eventCategories = craft.categories.group('events').find() %}
 						{% for category in eventCategories %}
 							<div class="ministry-category">
 								{% if category.categoryDescription | length %}
@@ -34,12 +33,15 @@
 						{% endfor %}
 					</div>
 				</div>
-				<h4 class="subheader zig-zag-rule">Grade 7&#8212;12</h4>
+				{% if entry.calendarSubheading is defined %}
+					<h4 class="subheader zig-zag-rule">{{ entry.calendarSubheading }}</h4>
+				{% endif %}
 				<div class="dates">
+					{% set eventEntries = craft.entries.section('event').limit(null).order('dayStart asc').search('reoccurring:0') %}
 					{% for eventDate, entries in eventEntries | group("dayStart|date('F Y')") %}
 						<h5>{{ eventDate }}</h5>
 						<ul class="accordion" data-accordion data-multi-expand="true" data-allow-all-closed="true">
-							{% for entry in eventEntries %}
+							{% for entry in entries %}
 								<li class="accordion-item" data-accordion-item>
 									<a href="#" class="accordion-title flex-container" id="{{ random(500) }}-{{ entry.slug }}-{{ entry.id }}">
 										<div class="flex-child-shrink event-date">{{ entry.dayStart | date('j') }}{% if entry.dayEnd|length %}<sup class="date-small">&#8212;{{ entry.dayEnd | date('j') }}</sup>{% endif %}</div>
