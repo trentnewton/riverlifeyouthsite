@@ -9,38 +9,45 @@
 			</a>
 		</div>
 		<ul class="social-links menu align-center">
-			{% if socialMedia.facebookPage is defined %}
+			{% if socialMedia.facebookPage is defined and socialMedia.facebookPage is not empty %}
 				<li>
 					<a href="{{ socialMedia.facebookPage }}" title="{{ 'Like us on Facebook' | translate }}" class="facebook" target="_blank" rel="noreferrer noopener">
 						<svg class="icon icon-facebook"><use xlink:href="#icon-facebook"></use></svg>
 					</a>
 				</li>
 			{% endif %}
-			{% if socialMedia.instagramUserName is defined %}
+			{% if socialMedia.instagramUserName is defined and socialMedia.instagramUserName is not empty %}
 				<li>
 					<a href="https://www.instagram.com/{{ socialMedia.instagramUserName }}" title="{{ 'Follow us on Instagram' | translate }}" class="instagram" target="_blank" rel="noreferrer noopener">
 						<svg class="icon icon-instagram"><use xlink:href="#icon-instagram"></use></svg>
 					</a>
 				</li>
 			{% endif %}
-			{% if socialMedia.snapchatUsername is defined %}
+			{% if socialMedia.snapchatUsername is defined and socialMedia.snapchatUsername is not empty %}
 				<li>
 					<a data-open="snapchatModal" title="{{ 'Add us on Snapchat' | translate }}" class="snapchat">
 						<svg class="icon icon-snapchat"><use xlink:href="#icon-snapchat"></use></svg>
 					</a>
 				</li>
 			{% endif %}
-			{% if socialMedia.vimeoPage is defined %}
+			{% if socialMedia.vimeoPage is defined and socialMedia.vimeoPage is not empty %}
 				<li>
 					<a href="{{ socialMedia.vimeoPage }}" title="{{ 'View our Vimeo page' | translate }}" class="vimeo" target="_blank" rel="noreferrer noopener">
 						<svg class="icon icon-vimeo"><use xlink:href="#icon-vimeo"></use></svg>
 					</a>
 				</li>
 			{% endif %}
-			{% if socialMedia.twitterHandle is defined %}
+			{% if socialMedia.twitterHandle is defined and socialMedia.twitterHandle is not empty %}
 				<li>
 					<a href="https://twitter.com/@{{ socialMedia.twitterHandle }}" title="{{ 'Follow us on Twitter' | translate }}" class="twitter" target="_blank" rel="noreferrer noopener">
 						<svg class="icon icon-twitter"><use xlink:href="#icon-twitter"></use></svg>
+					</a>
+				</li>
+			{% endif %}
+			{% if socialMedia.youtube is defined and socialMedia.youtube is not empty %}
+				<li>
+					<a href="{{ socialMedia.youtube }}" title="{{ 'Visit our YouTube Channel' | translate }}" class="youtube" target="_blank" rel="noreferrer noopener">
+						<svg class="icon icon-youtube"><use xlink:href="#icon-youtube"></use></svg>
 					</a>
 				</li>
 			{% endif %}
@@ -51,7 +58,7 @@
 			</li>
 		</ul>
 	</div>
-	{% if socialMedia.snapchatUsername is defined %}
+	{% if socialMedia.snapchatUsername is defined and socialMedia.snapchatUsername is not empty %}
 		<div class="reveal text-center" id="snapchatModal" data-reveal data-animation-in="fade-in" data-animation-out="fade-out">
 			<object data="https://feelinsonice-hrd.appspot.com/web/deeplink/snapcode?username={{ socialMedia.snapchatUsername }}&amp;type=SVG" height="200" width="200">
 				<object data="//www.snapchat.com/deeplink/static/image/ghost.svg" height="200" width="200"></object>
@@ -68,7 +75,7 @@
 			<a href="{% if general.footerLogoLink is defined %}{{ general.footerLogoLink }}{% endif %}" title="{% for block in svgLogos.logos.type('footerLogo').limit(1) %}{% switch block.type %}{% case "footerLogo" %}{{ block.footerLogoName }}{% default %}{% endswitch %}{% endfor %}" target="_blank" rel="noreferrer noopener">
 				<svg class="footer-logo" aria-labelledby="logo" preserveAspectRatio="xMinYMin meet"><use xlink:href="#footer-logo"></use></svg>
 			</a>
-			{% if general.copyright is defined %}
+			{% if general.copyright is defined and general.copyright is not empty %}
 				<p class="copyright-text">{{ general.copyright }}</p>
 			{% endif %}
 		</div>
